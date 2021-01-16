@@ -1,0 +1,18 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/node_modules": true
+    },
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/dist": true
+    },
+    "files.eol": "\n",
+        "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "editor.rulers": [ 140 ],
+    "css.validate": false,
+    "less.validate": false
+}
