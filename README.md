@@ -13,7 +13,7 @@ This code will make little sense if you don't read
 
 ## What do you get?
 
-The code only compiles the [Method 1](github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-1) and [Method 4](github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-4) variants (for BS5) of the topics discussed in the original body of work?
+The code only compiles the [Method 1](github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-1) and [Method 4](github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-4) variants (for BS5) of the topics discussed in the original body of work.
 
 i.e.:
 
@@ -26,7 +26,7 @@ Yes.
 
 ### Github
 
-If you're a theme builder or want to use its principles in your own project you'll need to have [Git][41] and [Node][42] installed.
+If you're a theme builder or want to use its principles in your own project you'll need to have [Git](https://help.github.com/articles/set-up-git) and [Node](https://nodejs.org/) installed.
 
 1. Fork or download the repository: `git clone https://github.com/vinorodrigues/bootstrap-dark-5.git`
 2. Install Node dependencies: `npm install`
