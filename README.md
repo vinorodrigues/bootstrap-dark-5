@@ -30,10 +30,11 @@ If you're a theme builder or want to use its principles in your own project you'
 
 1. Fork or download the repository: `git clone https://github.com/vinorodrigues/bootstrap-dark-5.git`
 2. Install Node dependencies: `npm install`
-3. Modify `_variables.scss ` and `_variables-alt.scss` in the `scss` sub-folder.
+3. Modify `_variables.scss` and `_variables-alt.scss` in the `scss` sub-folder.
 4. Run `npm run css` to build your theme.
 5. The compiled code will be in the `dist` folder.
 
+> **Note:** The build system is based on [NPM Scripts](https://docs.npmjs.com/cli/v6/using-npm/scripts). Most of the build tools _(NPM modules)_ will need to be installed as global to ensure the scripts are executable from the command line.
 
 ### CDN
 
