@@ -1,7 +1,7 @@
 node_modules/**
 .cache/**
-_*
 ~*
+_/*
 !scss/**/_*
 *.sublime-*
 package-lock.json

@@ -12,9 +12,13 @@
 // scss-docs-start import-stack
 // Configuration
 @import "functions";
+@import "variables";  // defaults are here
 @import "variables-alt";  // dark color set is here
+@import "dark/variables-map-back";  // map the `-alt`'s back to core colors
 @import "mixins";
 @import "utilities";
+
+:root { color-scheme: dark; }  // TODO: this should be code based.
 
 // Layout & components
 @import "root";
