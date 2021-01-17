@@ -13,7 +13,7 @@
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  * !!!                                                                      !!!
- * !!!    DON'T USE!  NOT READY YET!  (This is just normal BS, no dark.)    !!!
+ * !!!    DON'T USE!  NOT READY YET!  (This is just BS repeated twice.)     !!!
  * !!!                                                                      !!!
  * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -25,6 +25,8 @@
 @import "variables";
 @import "mixins";
 @import "utilities";
+
+:root { color-scheme: light dark; }  // TODO: this should be code based.
 
 // Layout & components
 @import "root";
@@ -63,3 +65,55 @@
 // Utilities
 @import "utilities/api";
 // scss-docs-end import-stack
+
+
+// ______________________________________
+
+
+@media (prefers-color-scheme: dark) {
+
+  @import "variables-alt";  // dark color set is here
+  @import "dark/variables-map-alt-to-core";  // map the `-alt`'s back to core colors
+
+  /* stylelint-disable no-duplicate-at-import-rules */
+
+  // Layout & components
+  @import "root";
+  @import "reboot";
+  @import "type";
+  @import "images";
+  // @import "containers";
+  @import "grid";
+  @import "tables";
+  @import "forms";
+  @import "buttons";
+  @import "transitions";
+  @import "dropdown";
+  @import "button-group";
+  @import "nav";
+  @import "navbar";
+  @import "card";
+  @import "accordion";
+  @import "breadcrumb";
+  @import "pagination";
+  @import "badge";
+  @import "alert";
+  @import "progress";
+  @import "list-group";
+  @import "close";
+  @import "toasts";
+  @import "modal";
+  @import "tooltip";
+  @import "popover";
+  @import "carousel";
+  @import "spinners";
+
+  // Helpers
+  @import "helpers";
+
+  // Utilities
+  @import "utilities/api";
+  // scss-docs-end import-stack
+
+  /* stylelint-enable no-duplicate-at-import-rules */
+}
