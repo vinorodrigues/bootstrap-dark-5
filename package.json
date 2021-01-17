@@ -14,7 +14,7 @@
     "css-minify": "npm-run-all --parallel css-minify-*",
     "css-minify-main": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/bootstrap.min.css dist/css/bootstrap.css",
     "css-minify-night": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/bootstrap-night.min.css dist/css/bootstrap-night.css",
-    "css-minify-dark": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/bootstrap-dark.min.css dist/css/bootstrap-dark.css",
+    "DISABLE-css-minify-dark": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/bootstrap-dark.min.css dist/css/bootstrap-dark.css",
     "DISABLE-css-minify-rtl": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/bootstrap.rtl.min.css dist/css/bootstrap.rtl.css",
     "css-lint": "npm-run-all --continue-on-error --parallel css-lint-*",
     "css-lint-stylelint": "stylelint \"**/*.scss\" --cache --cache-location .cache/.stylelintcache --rd",

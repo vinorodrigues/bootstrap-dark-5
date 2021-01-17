@@ -9,8 +9,6 @@
  * Copyright 2020-2021 Vino Rodrigues
  * This version is a fullfledged dark theme
  */
-/* stylelint-disable */
-/* stylelint-enable */
 :root {
   color-scheme: dark;
 }
