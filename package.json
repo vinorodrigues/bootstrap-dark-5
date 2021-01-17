@@ -21,7 +21,10 @@
     "DISABLE-css-lint-vars": "fusv scss/",
     "watch": "npm-run-all --parallel watch-*",
     "watch-css-main": "nodemon --watch scss/ --ext scss --exec \"npm-run-all css-lint css-compile css-prefix css-minify\"",
-    "serve": "browser-sync start --server --files \"dist/css/*.css\""
+    "serve": "browser-sync start --server --files \"dist/css/*.css\"",
+    "map-dark-vars": "npm-run-all --parallel map-dark-vars-*",
+    "map-dark-vars-alt-to-core": "node ./build/make-dark-map.js ./build/dark-map-list.json '' '-alt' > ./scss/dark/_variables-map-alt-to-core.scss",
+    "build": "npm-run-all map-dark-vars css"
   },
   "author": "Vino Rodrigues",
   "license": "MIT",

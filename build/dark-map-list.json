@@ -1,0 +1,422 @@
+{
+  "items": [
+    "white",
+    "gray-100",
+    "gray-200",
+    "gray-300",
+    "gray-400",
+    "gray-500",
+    "gray-600",
+    "gray-700",
+    "gray-800",
+    "gray-900",
+    "black",
+
+    "grays",
+
+    "blue",
+    "indigo",
+    "purple",
+    "pink",
+    "red",
+    "orange",
+    "yellow",
+    "green",
+    "teal",
+    "cyan",
+
+    "colors",
+
+    "primary",
+    "secondary",
+    "success",
+    "info",
+    "warning",
+    "danger",
+    "light",
+    "dark",
+
+    "theme-colors",
+
+    "//color-contrast-dark",
+    "//color-contrast-light",
+
+    "//gradient",
+
+    "body-bg",
+    "body-color",
+
+    "link-color",
+    "link-shade-percentage",
+    "link-hover-color",
+
+    "border-color",
+    "box-shadow",
+    "box-shadow-sm",
+    "box-shadow-lg",
+    "box-shadow-inset",
+
+    "component-active-color",
+    "component-active-bg",
+
+    "headings-color",
+    "text-muted",
+    "blockquote-footer-color",
+    "hr-color",
+    "hr-opacity",
+    "mark-bg",
+
+    "table-color",
+    "table-bg",
+    "table-striped-color",
+    "table-striped-bg-factor",
+    "table-striped-bg",
+    "table-active-color",
+    "table-active-bg-factor",
+    "table-active-bg",
+    "table-hover-color",
+    "table-hover-bg-factor",
+    "table-hover-bg",
+    "table-border-factor",
+    "table-border-color",
+    "table-group-separator-color",
+    "table-caption-color",
+    "table-bg-scale",
+    "table-variants",
+
+    "input-btn-focus-color-opacity",
+    "input-btn-focus-color",
+    "input-btn-focus-box-shadow",
+
+    "btn-box-shadow",
+    "btn-focus-box-shadow",
+    "btn-disabled-opacity",
+    "btn-active-box-shadow",
+
+    "btn-link-color",
+    "btn-link-hover-color",
+    "btn-link-disabled-color",
+
+    "btn-hover-bg-shade-amount",
+    "btn-hover-bg-tint-amount",
+    "btn-hover-border-shade-amount",
+    "btn-hover-border-tint-amount",
+    "btn-active-bg-shade-amount",
+    "btn-active-bg-tint-amount",
+    "btn-active-border-shade-amount",
+    "btn-active-border-tint-amount",
+
+    "form-text-color",
+
+    "form-label-color",
+
+    "input-bg",
+    "input-disabled-bg",
+    "input-disabled-border-color",
+
+    "input-color",
+    "input-border-color",
+    "input-box-shadow",
+
+    "input-focus-bg",
+    "input-focus-border-color",
+    "input-focus-color",
+    "input-focus-box-shadow",
+
+    "input-placeholder-color",
+    "input-plaintext-color",
+
+    "form-check-label-color",
+
+    "form-check-input-active-filter",
+
+    "form-check-input-bg",
+    "form-check-input-border",
+    "form-check-input-focus-border",
+    "form-check-input-focus-box-shadow",
+
+    "form-check-input-checked-color",
+    "form-check-input-checked-bg-color",
+    "form-check-input-checked-border-color",
+    "form-check-input-checked-bg-image",
+    "form-check-radio-checked-bg-image",
+
+    "form-check-input-indeterminate-color",
+    "form-check-input-indeterminate-bg-color",
+    "form-check-input-indeterminate-border-color",
+    "form-check-input-indeterminate-bg-image",
+
+    "form-check-input-disabled-opacity",
+    "form-check-label-disabled-opacity",
+    "form-check-btn-check-disabled-opacity",
+
+    "form-switch-color",
+    "form-switch-bg-image",
+
+    "form-switch-focus-color",
+    "form-switch-focus-bg-image",
+
+    "form-switch-checked-color",
+    "form-switch-checked-bg-image",
+
+    "input-group-addon-color",
+    "input-group-addon-bg",
+    "input-group-addon-border-color",
+
+    "form-select-color",
+    "form-select-disabled-color",
+    "form-select-bg",
+    "form-select-disabled-bg",
+    "form-select-disabled-border-color",
+    "form-select-indicator-color",
+    "form-select-indicator",
+
+    "form-select-border-color",
+    "form-select-box-shadow",
+
+    "form-select-focus-border-color",
+    "form-select-focus-box-shadow",
+
+    "form-range-track-bg",
+    "form-range-track-box-shadow",
+
+    "form-range-thumb-bg",
+    "form-range-thumb-border",
+    "form-range-thumb-box-shadow",
+    "form-range-thumb-focus-box-shadow",
+    "form-range-thumb-active-bg",
+    "form-range-thumb-disabled-bg",
+
+    "form-file-button-color",
+    "form-file-button-bg",
+    "form-file-button-hover-bg",
+
+    "form-floating-label-opacity",
+
+    "form-feedback-valid-color",
+    "form-feedback-invalid-color",
+
+    "form-feedback-icon-valid-color",
+    "form-feedback-icon-valid",
+    "form-feedback-icon-invalid-color",
+    "form-feedback-icon-invalid",
+
+    "form-validation-states",
+
+    "nav-link-color",
+    "nav-link-hover-color",
+    "nav-link-disabled-color",
+
+    "nav-tabs-border-color",
+    "nav-tabs-link-hover-border-color",
+    "nav-tabs-link-active-color",
+    "nav-tabs-link-active-bg",
+    "nav-tabs-link-active-border-color",
+
+    "nav-pills-link-active-color",
+    "nav-pills-link-active-bg",
+
+    "navbar-dark-color",
+    "navbar-dark-hover-color",
+    "navbar-dark-active-color",
+    "navbar-dark-disabled-color",
+    "navbar-dark-toggler-icon-bg",
+    "navbar-dark-toggler-border-color",
+
+    "navbar-light-color",
+    "navbar-light-hover-color",
+    "navbar-light-active-color",
+    "navbar-light-disabled-color",
+    "navbar-light-toggler-icon-bg",
+    "navbar-light-toggler-border-color",
+
+    "navbar-light-brand-color",
+    "navbar-light-brand-hover-color",
+    "navbar-dark-brand-color",
+    "navbar-dark-brand-hover-color",
+
+    "dropdown-color",
+    "dropdown-bg",
+    "dropdown-border-color",
+    "dropdown-divider-bg",
+    "dropdown-box-shadow",
+
+    "dropdown-link-color",
+    "dropdown-link-hover-color",
+    "dropdown-link-hover-bg",
+
+    "dropdown-link-active-color",
+    "dropdown-link-active-bg",
+
+    "dropdown-link-disabled-color",
+
+    "dropdown-header-color",
+
+    "dropdown-dark-color",
+    "dropdown-dark-bg",
+    "dropdown-dark-border-color",
+    "dropdown-dark-divider-bg",
+    "dropdown-dark-box-shadow",
+    "dropdown-dark-link-color",
+    "dropdown-dark-link-hover-color",
+    "dropdown-dark-link-hover-bg",
+    "dropdown-dark-link-active-color",
+    "dropdown-dark-link-active-bg",
+    "dropdown-dark-link-disabled-color",
+    "dropdown-dark-header-color",
+
+    "pagination-color",
+    "pagination-bg",
+    "pagination-border-color",
+
+    "pagination-focus-color",
+    "pagination-focus-bg",
+    "pagination-focus-box-shadow",
+    "pagination-focus-outline",
+
+    "pagination-hover-color",
+    "pagination-hover-bg",
+    "pagination-hover-border-color",
+
+    "pagination-active-color",
+    "pagination-active-bg",
+    "pagination-active-border-color",
+
+    "pagination-disabled-color",
+    "pagination-disabled-bg",
+    "pagination-disabled-border-color",
+
+    "card-border-color",
+    "card-cap-bg",
+    "card-cap-color",
+    "card-color",
+    "card-bg",
+
+    "accordion-color",
+    "accordion-bg",
+    "accordion-border-color",
+
+    "accordion-button-color",
+    "accordion-button-bg",
+    "accordion-button-active-bg",
+    "accordion-button-active-color",
+
+    "accordion-button-focus-border-color",
+    "accordion-button-focus-box-shadow",
+
+    "accordion-icon-color",
+    "accordion-icon-active-color",
+
+    "accordion-button-icon",
+    "accordion-button-active-icon",
+
+    "tooltip-color",
+    "tooltip-bg",
+    "tooltip-opacity",
+
+    "tooltip-arrow-color",
+
+    "form-feedback-tooltip-opacity",
+
+    "popover-bg",
+    "popover-border-color",
+    "popover-box-shadow",
+
+    "popover-header-bg",
+    "popover-header-color",
+
+    "popover-body-color",
+
+    "popover-arrow-color",
+
+    "popover-arrow-outer-color",
+
+    "toast-color",
+    "toast-background-color",
+    "toast-border-color",
+    "toast-box-shadow",
+
+    "toast-header-color",
+    "toast-header-background-color",
+    "toast-header-border-color",
+
+    "badge-color",
+
+    "modal-content-color",
+    "modal-content-bg",
+    "modal-content-border-color",
+    "modal-content-box-shadow-xs",
+    "modal-content-box-shadow-sm-up",
+
+    "modal-backdrop-bg",
+    "modal-backdrop-opacity",
+    "modal-header-border-color",
+    "modal-footer-border-color",
+
+    "progress-bg",
+    "progress-box-shadow",
+    "progress-bar-color",
+    "progress-bar-bg",
+
+    "list-group-color",
+    "list-group-bg",
+    "list-group-border-color",
+
+    "list-group-hover-bg",
+    "list-group-active-color",
+    "list-group-active-bg",
+    "list-group-active-border-color",
+
+    "list-group-disabled-color",
+    "list-group-disabled-bg",
+
+    "list-group-action-color",
+    "list-group-action-hover-color",
+
+    "list-group-action-active-color",
+    "list-group-action-active-bg",
+
+    "thumbnail-bg",
+    "thumbnail-border-color",
+    "thumbnail-box-shadow",
+
+    "figure-caption-color",
+
+    "breadcrumb-bg",
+    "breadcrumb-divider-color",
+    "breadcrumb-active-color",
+
+    "carousel-control-color",
+    "carousel-control-opacity",
+    "carousel-control-hover-opacity",
+
+    "carousel-indicator-opacity",
+    "carousel-indicator-active-bg",
+    "carousel-indicator-active-opacity",
+
+    "carousel-caption-color",
+
+    "carousel-control-prev-icon-bg",
+    "carousel-control-next-icon-bg",
+
+    "carousel-dark-indicator-active-bg",
+    "carousel-dark-caption-color",
+    "carousel-dark-control-icon-filter",
+
+    "btn-close-color",
+    "btn-close-bg",
+    "btn-close-focus-shadow",
+    "btn-close-opacity",
+    "btn-close-hover-opacity",
+    "btn-close-focus-opacity",
+    "btn-close-disabled-opacity",
+    "btn-close-white-filter",
+
+    "code-color",
+
+    "kbd-color",
+    "kbd-bg",
+
+    "pre-color"
+  ]
+}
