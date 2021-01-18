@@ -28,13 +28,17 @@ Yes.
 If you're a theme builder or want to use its principles in your own project you'll need to have [Git](https://help.github.com/articles/set-up-git) and [Node](https://nodejs.org/) installed.
 
 1. Fork or download the repository: `git clone https://github.com/vinorodrigues/bootstrap-dark-5.git`
-2. Install Node dependencies: `npm install`
-3. ***Optional:*** Some Node dependencies are required to be *"global"* for Node-Scripts to work.  Install these with: `npm install -g autoprefixer browser-sync clean-css-cli cross-env find-unused-sass-variables nodemon npm-run-all postcss postcss-cli rtlcss sass stylelint stylelint-config-twbs-bootstrap`
-4. Modify `_variables.scss` and `_variables-alt.scss` in the `scss` sub-folder.
-5. Run `npm run css` to build your theme.
-6. The compiled code will be in the `dist` folder.
+2. Install Node dependencies: `npm install`  *(See note below.)*
+3. Modify `_variables.scss` and `_variables-alt.scss` in the `scss` sub-folder.
+4. Run `npm run css` to build your theme.
+5. The compiled code will be in the `dist` folder.
 
-> **Note:** The build system is based on [NPM Scripts](https://docs.npmjs.com/cli/v6/using-npm/scripts). Most of the build tools _(NPM modules)_ will need to be installed as global to ensure the scripts are executable from the command line.
+> **Note:** The build system is based on [NPM Scripts](https://docs.npmjs.com/cli/v6/using-npm/scripts). Most of the build tools _(NPM modules)_ will need to be installed as *"global"* to ensure the scripts are executable from the command line.
+
+```bash
+npm install -g autoprefixer browser-sync clean-css-cli cross-env find-unused-sass-variables nodemon npm-run-all postcss postcss-cli rtlcss sass stylelint stylelint-config-twbs-bootstrap
+```
+
 
 ### CDN
 
