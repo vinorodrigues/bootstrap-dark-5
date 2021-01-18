@@ -88,8 +88,12 @@ $theme-colors-alt: (
 ) !default;
 // scss-docs-end theme-colors-map
 
-//// $color-contrast-dark-alt:      $white-alt !default;
-/// $color-contrast-light-alt:     $black-alt !default;
+// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
+// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
+$min-contrast-ratio-alt:   4.5 !default;
+
+$color-contrast-dark-alt:      $black-alt !default;
+$color-contrast-light-alt:     $white-alt !default;
 
 
 // Gradient
@@ -142,17 +146,16 @@ $text-muted-alt:                  $gray-600-alt !default;
 
 $blockquote-footer-color-alt:     $gray-400-alt !default;
 
-$hr-color-alt:                    inherit !default;  // TODO: how does this play out in dark mode?
-$hr-opacity-alt:                  .25 !default;  // TODO: how does this play out in dark mode?
+$hr-color-alt:                    $white-alt !default;
+$hr-opacity-alt:                  .1 !default;
 
 $mark-bg-alt:                     rgba($yellow-alt, .3) !default;
 
 
 // Tables
-// ______________________________________  // TODO: revisit colors
+// ______________________________________
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-// scss-docs-start table-variables
 $table-color-alt:                 $body-color-alt !default;
 $table-bg-alt:                    transparent !default;
 
@@ -175,7 +178,7 @@ $table-group-separator-color-alt: currentColor !default;
 
 $table-caption-color-alt:         $text-muted-alt !default;
 
-$table-bg-scale-alt:              -80% !default;
+$table-bg-scale-alt:              50% !default;
 
 $table-variants-alt: (
   "primary":    shift-color($primary-alt, $table-bg-scale-alt),
@@ -187,7 +190,6 @@ $table-variants-alt: (
   "light":      $light-alt,
   "dark":       $dark-alt,
 ) !default;
-// scss-docs-end table-variables
 
 
 // Buttons + Forms

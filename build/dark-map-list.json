@@ -40,8 +40,9 @@
 
   "theme-colors",
 
-  "// $color-contrast-dark",
-  "// $color-contrast-light",
+  "min-contrast-ratio",
+  "color-contrast-dark",
+  "color-contrast-light",
 
   "// --- Gradient ---",
 

@@ -40,8 +40,9 @@ $danger:                                      $danger-alt;
 $light:                                       $light-alt;
 $dark:                                        $dark-alt;
 $theme-colors:                                $theme-colors-alt;
-// $color-contrast-dark
-// $color-contrast-light
+$min-contrast-ratio:                          $min-contrast-ratio-alt;
+$color-contrast-dark:                         $color-contrast-dark-alt;
+$color-contrast-light:                        $color-contrast-light-alt;
 // --- Gradient ---
 // $gradient
 // --- Body ---
@@ -362,4 +363,4 @@ $pre-color:                                   $pre-color-alt;
 // !! Don't remove the next 2 lines
 // fusv-enable
 // stylelint-enable
-// Generated: Mon Jan 18 2021 00:02:17 GMT+1100 (Australian Eastern Daylight Time)
+// Generated: Mon Jan 18 2021 13:51:24 GMT+1100 (Australian Eastern Daylight Time)
