@@ -90,7 +90,7 @@ $theme-colors-alt: (
 
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
 // See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
-$min-contrast-ratio-alt:   4.5 !default;
+$min-contrast-ratio-alt:   2.5 !default;
 
 $color-contrast-dark-alt:      $black-alt !default;
 $color-contrast-light-alt:     $white-alt !default;
@@ -142,9 +142,9 @@ $component-active-bg-alt:         $primary-alt !default;
 
 $headings-color-alt:              null !default;
 
-$text-muted-alt:                  $gray-600-alt !default;
+$text-muted-alt:                  $gray-400-alt !default;
 
-$blockquote-footer-color-alt:     $gray-400-alt !default;
+$blockquote-footer-color-alt:     $gray-600-alt !default;
 
 $hr-color-alt:                    $white-alt !default;
 $hr-opacity-alt:                  .1 !default;
@@ -301,7 +301,7 @@ $form-select-focus-box-shadow-alt:    0 0 0 $form-select-focus-width $input-btn-
 $form-range-track-bg-alt:             $gray-700-alt !default;
 $form-range-track-box-shadow-alt:     $box-shadow-inset-alt !default;
 
-$form-range-thumb-bg-alt:                      $component-active-bg !default;
+$form-range-thumb-bg-alt:                      $component-active-bg-alt !default;
 $form-range-thumb-border-alt:                  0 !default;
 $form-range-thumb-box-shadow-alt:              0 .1rem .25rem rgba($black-alt, .1) !default;
 $form-range-thumb-focus-box-shadow-alt:        0 0 0 1px $body-bg-alt, $input-focus-box-shadow-alt !default;
@@ -314,7 +314,9 @@ $form-file-button-hover-bg-alt:       shade-color($form-file-button-bg-alt, 5%) 
 
 $form-floating-label-opacity-alt:     .65 !default;
 
+
 // Form validation
+// ______________________________________
 
 $form-feedback-valid-color-alt:         $success-alt !default;
 $form-feedback-invalid-color-alt:       $danger-alt !default;
@@ -324,7 +326,6 @@ $form-feedback-icon-valid-alt:          url("data:image/svg+xml,<svg xmlns='http
 $form-feedback-icon-invalid-color-alt:  $form-feedback-invalid-color-alt !default;
 $form-feedback-icon-invalid-alt:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='#{$form-feedback-icon-invalid-color-alt}'><circle cx='6' cy='6' r='4.5'/><path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/><circle cx='6' cy='8.2' r='.6' fill='#{$form-feedback-icon-invalid-color}' stroke='none'/></svg>") !default;
 
-// scss-docs-start form-validation-states
 $form-validation-states-alt: (
   "valid": (
     "color": $form-feedback-valid-color-alt,
@@ -335,10 +336,10 @@ $form-validation-states-alt: (
     "icon": $form-feedback-icon-invalid-alt
   )
 ) !default;
-// scss-docs-end form-validation-states
 
 
 // Navs
+// ______________________________________
 
 $nav-link-color-alt:                    null !default;
 $nav-link-hover-color-alt:              null !default;
@@ -389,7 +390,7 @@ $dropdown-box-shadow-alt:               $box-shadow-alt !default;
 
 $dropdown-link-color-alt:               $gray-100 !default;
 $dropdown-link-hover-color-alt:         shade-color($gray-100, 10%) !default;
-$dropdown-link-hover-bg-alt:            $gray-800 !default;
+$dropdown-link-hover-bg-alt:            $gray-900 !default;
 
 $dropdown-link-active-color-alt:        $component-active-color-alt !default;
 $dropdown-link-active-bg-alt:           $component-active-bg-alt !default;
@@ -416,7 +417,7 @@ $dropdown-dark-header-color-alt:        $gray-500-alt !default;
 // ______________________________________
 
 $pagination-color-alt:                  $link-color-alt !default;
-$pagination-bg-alt:                     $black-alt !default;
+$pagination-bg-alt:                     $gray-800-alt !default;
 $pagination-border-color-alt:           $gray-700-alt !default;
 
 $pagination-focus-color-alt:            $link-hover-color-alt !default;
@@ -425,15 +426,15 @@ $pagination-focus-box-shadow-alt:       $input-btn-focus-box-shadow-alt !default
 $pagination-focus-outline-alt:          0 !default;  // ???
 
 $pagination-hover-color-alt:            $link-hover-color-alt !default;
-$pagination-hover-bg-alt:               $gray-800-alt !default;
-$pagination-hover-border-color-alt:     $gray-700-alt !default;
+$pagination-hover-bg-alt:               $gray-700-alt !default;
+$pagination-hover-border-color-alt:     mix($gray-700-alt, $gray-700-alt, 50%) !default;
 
 $pagination-active-color-alt:           $component-active-color-alt !default;
 $pagination-active-bg-alt:              $component-active-bg-alt !default;
 $pagination-active-border-color-alt:    $pagination-active-bg-alt !default;
 
-$pagination-disabled-color-alt:         $gray-400-alt !default;
-$pagination-disabled-bg-alt:            $black-alt !default;
+$pagination-disabled-color-alt:         mix($gray-600-alt, $gray-700-alt, 50%) !default;
+$pagination-disabled-bg-alt:            $gray-900-alt !default;
 $pagination-disabled-border-color-alt:  $gray-700-alt !default;
 
 
@@ -444,7 +445,7 @@ $card-border-color-alt: rgba($white-alt, .125) !default;
 $card-cap-bg-alt:       rgba($white-alt, .03) !default;
 $card-cap-color-alt:    null !default;
 $card-color-alt:        null !default;
-$card-bg-alt:           $black-alt !default;
+$card-bg-alt:           mix($gray-800-alt, $gray-900-alt, 50%) !default;
 
 
 // Accordion
@@ -495,7 +496,7 @@ $popover-body-color-alt:                $body-color-alt !default;
 
 $popover-arrow-color-alt:               $popover-bg-alt !default;
 
-$popover-arrow-outer-color-alt:         fade-out($popover-border-color-alt, .05) !default;
+$popover-arrow-outer-color-alt:         fade-in($popover-border-color-alt, .05) !default;
 
 
 // Toasts
@@ -514,20 +515,20 @@ $toast-header-border-color-alt:         rgba(255, 255, 255, .05) !default;
 // Badges
 // ______________________________________
 
-$badge-color-alt:                       $black-alt !default;
+$badge-color-alt:                       $white-alt !default;
 
 
 // Modals
 // ______________________________________
 
 $modal-content-color-alt:               null !default;
-$modal-content-bg-alt:                  $black-alt !default;
+$modal-content-bg-alt:                  mix($gray-800-alt, $gray-900-alt, 50%) !default;
 $modal-content-border-color-alt:        rgba($white-alt, .2) !default;
 $modal-content-box-shadow-xs-alt:       $box-shadow-sm-alt !default;
 $modal-content-box-shadow-sm-up-alt:    $box-shadow-alt !default;
 
-$modal-backdrop-bg-alt:                 $white-alt !default;
-$modal-backdrop-opacity-alt:            .5 !default;
+$modal-backdrop-bg-alt:                 $black-alt !default;
+$modal-backdrop-opacity-alt:            .85 !default;
 $modal-header-border-color-alt:         $border-color-alt !default;
 $modal-footer-border-color-alt:         $modal-header-border-color-alt !default;
 
@@ -536,7 +537,9 @@ $modal-footer-border-color-alt:         $modal-header-border-color-alt !default;
 // ______________________________________
 // Define alert colors, border radius, and padding.
 
-// ...nada
+$alert-bg-scale-alt:                    50% !default;
+$alert-border-scale-alt:                40% !default;
+$alert-color-scale-alt:                 -30% !default;
 
 
 // Progress bars
@@ -555,7 +558,10 @@ $list-group-color-alt:                  null !default;
 $list-group-bg-alt:                     $black-alt !default;
 $list-group-border-color-alt:           rgba($white-alt, .125) !default;
 
-$list-group-hover-bg-alt:               $gray-900-alt !default;
+$list-group-item-bg-scale-alt:          50% !default;
+$list-group-item-color-scale-alt:       -30% !default;
+
+$list-group-hover-bg-alt:               mix($gray-800-alt, $gray-900-alt, 50%) !default;
 $list-group-active-color-alt:           $component-active-color-alt !default;
 $list-group-active-bg-alt:              $component-active-bg-alt !default;
 $list-group-active-border-color-alt:    $list-group-active-bg-alt !default;
@@ -587,14 +593,14 @@ $figure-caption-color-alt:              $gray-400-alt !default;
 // Breadcrumbs
 // ______________________________________
 
-$breadcrumb-bg-alt:                     null !default;
+$breadcrumb-bg-alt:                     $gray-800-alt !default;  // null !default;
 $breadcrumb-divider-color-alt:          $gray-400-alt !default;
 $breadcrumb-active-color-alt:           $gray-400-alt !default;
 
 // Carousel
 // ______________________________________
 
-$carousel-control-color-alt:             $black-alt !default;
+$carousel-control-color-alt:             $white-alt !default;
 $carousel-control-opacity-alt:           .5 !default;
 $carousel-control-hover-opacity-alt:     .9 !default;
 
@@ -633,9 +639,9 @@ $btn-close-white-filter-alt:     invert(1) grayscale(100%) brightness(200%) !def
 // Code
 // ______________________________________
 
-$code-color-alt:                        $pink-alt !default;
+$code-color-alt:                        $teal-alt !default;
 
-$kbd-color-alt:                         $black-alt !default;
-$kbd-bg-alt:                            $gray-100-alt !default;
+$kbd-color-alt:                         $gray-100-alt !default;
+$kbd-bg-alt:                            $gray-800-alt !default;
 
-$pre-color-alt:                         null !default;
+$pre-color-alt:                         $gray-100-alt !default;

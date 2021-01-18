@@ -398,6 +398,12 @@
   "modal-header-border-color",
   "modal-footer-border-color",
 
+  "// --- Alerts ---",
+
+  "alert-bg-scale",
+  "alert-border-scale",
+  "alert-color-scale",
+
   "// --- Progress bars ---",
 
   "progress-bg",
@@ -410,6 +416,9 @@
   "list-group-color",
   "list-group-bg",
   "list-group-border-color",
+
+  "list-group-item-bg-scale",
+  "list-group-item-color-scale",
 
   "list-group-hover-bg",
   "list-group-active-color",

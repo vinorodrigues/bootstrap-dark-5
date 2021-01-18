@@ -17,8 +17,8 @@ The code only compiles the [Method 1](github.com/vinorodrigues/bootstrap-dark/bl
 
 i.e.:
 
-* `bootstrap-night`, _and;_
-* `bootstrap-dark`
+* `bootstrap-night` *(done for now)*, _and;_
+* `bootstrap-dark` *(not done **yet**!)*
 
 ## Can you use this?
 
