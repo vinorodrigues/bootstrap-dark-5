@@ -6,7 +6,13 @@
 // Color system
 // ______________________________________
 
-$color-scheme-alt: dark !default;
+$color-scheme: light !default;
+
+$color-schemes: (
+  light,
+  dark
+  // no-preference
+) !default;
 
 // items marked //** from https://bootswatch.com/darkly/
 // items marked //~~ from https://uxdesign.cc/dark-mode-ui-design-the-definitive-guide-part-1-color-53dcfaea5129
@@ -635,6 +641,7 @@ $btn-close-hover-opacity-alt:    .75 !default;
 $btn-close-focus-opacity-alt:    1 !default;
 $btn-close-disabled-opacity-alt: .25 !default;
 $btn-close-white-filter-alt:     invert(1) grayscale(100%) brightness(200%) !default;
+
 
 // Code
 // ______________________________________

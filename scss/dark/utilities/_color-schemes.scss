@@ -1,0 +1,7 @@
+:root {
+  @if $color-scheme == dark {
+    color-scheme: dark light;
+  } @else {
+    color-scheme: light dark;
+  }
+}

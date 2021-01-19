@@ -1,0 +1,9 @@
+@use "sass:map";
+
+@each $color-scheme in $color-schemes {
+  @include prefers-color-scheme($color-scheme) {
+    @each $value in map.get(map.get($utilities, "display"), "values") {
+      .d-#{$color-scheme}-#{$value} { display: $value; }
+    }
+  }
+}
