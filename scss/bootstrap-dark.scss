@@ -64,20 +64,23 @@
 // Helpers
 @import "helpers";
 
+// Utilities
+@import "utilities/api";
+
 // ______________________________________
 
 @media (prefers-color-scheme: dark) {
 
-  /* stylelint-disable no-duplicate-at-import-rules */
+  // xstylelint-disable no-duplicate-at-import-rules
 
   // Layout & components
-  // @import "root";
-  // @import "reboot";
-  // @import "type";
-  // @import "images";
-  // @import "containers";
-  // @import "grid";
-  // @import "tables";
+  @import "dark/root";
+  @import "dark/reboot";
+  @import "dark/type";
+  @import "dark/images";
+  // @import "dark/containers";  // no colors here
+  // @import "dark/grid";  // no colors here
+  @import "dark/tables";
   // @import "forms";
   // @import "buttons";
   // @import "transitions";
@@ -104,12 +107,8 @@
   // Helpers
   // @import "helpers";
 
-  // Utilities
-  // @import "utilities/api";
-
-  /* stylelint-enable no-duplicate-at-import-rules */
+  // xstylelint-enable no-duplicate-at-import-rules
 }
 
 // Utilities
-@import "utilities/api";
 @import "dark/utilities/api";

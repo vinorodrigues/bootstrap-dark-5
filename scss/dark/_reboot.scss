@@ -1,0 +1,103 @@
+// stylelint-disable declaration-no-important, selector-no-qualifying-type, property-no-vendor-prefix
+
+
+// Reboot
+//
+// Normalization of HTML elements, manually forked from Normalize.css ... (see core `_reboot.scss` file)
+// Normalize is licensed MIT. https://github.com/necolas/normalize.css
+
+
+// Body
+//
+// 1. Remove the margin in all browsers.
+// 2. As a best practice, apply a default `background-color`.
+// 3. Prevent adjustments of font size after orientation changes in iOS.
+// 4. Change the default tap highlight to be completely transparent in iOS.
+
+body {
+  color: $body-color-alt;
+  background-color: $body-bg-alt; // 2
+}
+
+
+// Content grouping
+//
+// 1. Reset Firefox's gray color
+// 2. Set correct height and prevent the `size` attribute to make the `hr` look like an input field
+
+hr {
+  color: $hr-color-alt; // 1
+  // background-color: currentColor;
+  opacity: $hr-opacity-alt;
+}
+
+
+// Typography
+//
+// 1. Remove top margins from headings
+//    By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
+//    margin for easier control within type scales as it avoids margin collapsing.
+
+%heading {
+  color: $headings-color-alt;
+}
+
+
+// Mark
+
+mark {
+  background-color: $mark-bg-alt;
+}
+
+
+// Links
+
+a {
+  color: $link-color;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+a:not([href]):not([class]) {
+  &,
+  &:hover {
+    color: inherit;
+  }
+}
+
+
+// Code
+
+pre {
+  color: $pre-color-alt;
+
+  // Account for some code outputs that place code tags in pre tags
+  code {
+    color: inherit;
+  }
+}
+
+code {
+  color: $code-color-alt;
+
+  // Streamline the style when inside anchors to avoid broken underline and more
+  a > & {
+    color: inherit;
+  }
+}
+
+kbd {
+  color: $kbd-color-alt;
+  background-color: $kbd-bg-alt;
+}
+
+
+// Tables
+//
+// Prevent double borders
+
+caption {
+  color: $table-caption-color-alt;
+}

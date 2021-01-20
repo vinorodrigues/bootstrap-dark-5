@@ -106,7 +106,7 @@ $color-contrast-light-alt:     $white-alt !default;
 // ______________________________________
 // The gradient which is added to components if `$enable-gradients` is `true`
 // This gradient is also added to elements with `.bg-gradient`
-//// $gradient-alt: linear-gradient(180deg, rgba($white-alt, .15), rgba($white-alt, 0)) !default;
+$gradient-alt: linear-gradient(180deg, rgba($black-alt, .15), rgba($black-alt, 0)) !default;
 
 
 // Body
