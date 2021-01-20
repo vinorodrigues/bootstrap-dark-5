@@ -13,7 +13,7 @@ This code will make little sense if you don't read
 
 ## What do you get?
 
-The code only compiles the [Method 1](github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-1) and [Method 4](github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-4) variants (for BS5) of the topics discussed in the original body of work.
+The code only compiles the [Method 1](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-1) and [Method 4](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-4) variants (for BS5) of the topics discussed in the original body of work.
 
 i.e.:
 
