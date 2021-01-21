@@ -55,5 +55,12 @@
 // Utilities
 @import "utilities/api";
 
+// missing from BS, unsupported patch/hack
+// ---------------------------------------------------------------------------
+.text-black { color: $black if($enable-important-utilities, !important, null); }
+.bg-black { background-color: $black if($enable-important-utilities, !important, null); }
+.border-black { border-color: $black if($enable-important-utilities, !important, null); }
+// ---------------------------------------------------------------------------
+
 // Unique to dark-mode
 @import "dark/dark";
