@@ -47,12 +47,24 @@ npm install -g autoprefixer browser-sync clean-css-cli cross-env find-unused-sas
 
 ### CDN
 
-*(Comming soon...)*
+[![](https://data.jsdelivr.com/v1/package/gh/vinorodrigues/bootstrap-dark-5/badge?style=rounded)](https://www.jsdelivr.com/package/gh/vinorodrigues/bootstrap-dark-5)
+
+You can also hotlink the theme via CDN with [jsdelivr.com](https://www.jsdelivr.com).
+
+You can access the theme CSS file from the GitHub release:
+
+* [`https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5@0.0/dist/bootstrap-dark.min.css`](https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5@0.0/dist/bootstrap-dark.min.css)
+* [`https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5@0.0/dist/bootstrap-dark.css`](https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5@0.0/dist/bootstrap-dark.css)
+* [`https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5@0.0/dist/bootstrap-night.min.css`](https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5@0.0/dist/bootstrap-night.min.css)
+* [`https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5@0.0/dist/bootstrap-night.css`](https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5@0.0/dist/bootstrap-night.css)
+* Source etc. are [here](https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark/dist/), but I recommend using [GitHub](https://github.com/vinorodrigues/bootstrap-dark-5).
 
 
 ### Feedback
 
 If you have useful feedback drop me an "Issue" on the [GitHub Issues](https://github.com/vinorodrigues/bootstrap-dark-5/issues) page.
+
+> During the WIP period I'll be open to feedback on my Slack channel:  [tecsmith -> bootstrap-dark](https://tecsmith.slack.com/messages/boostrap-dark/)
 
 
 ---
