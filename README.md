@@ -1,10 +1,15 @@
 # The Ancillary Guide to Dark Mode and Bootstrap 5
-**A continuation of the v4 Dark Mode POC**
+**A continuation of the v4 Dark Mode POC, but this time for v5**
 
 > This is a follow up to [The Definitive Guide to Dark Mode and Bootstrap 4](http://vinorodrigues.github.io/bootstrap-dark) body of work,
 > and pertains to [Bootstrap 5](https://getbootstrap.com) *([Github repo.](https://github.com/twbs/bootstrap))*.
 
 > If you're after the same work for [Bootstrap 4](https://getbootstrap.com/docs/4.5/) please visit the [vinorodrigues/bootstrap-dark](https://github.com/vinorodrigues/bootstrap-dark) repo.
+
+
+- <u>***NOTE:***</u> This is a 'Work In Progress' and is specifically based on Bootstrap 5 - Beta 1 - https://github.com/twbs/bootstrap/tree/v5.0.0-beta1
+
+- <u>***NOTE:***</u> The recomendation is to ***not*** use this in a production environment.
 
 ## About
 

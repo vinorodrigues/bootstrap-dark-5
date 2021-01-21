@@ -1,3 +1,6 @@
+
+// (DELETE FILE) REPLACE THIS FILE WITH https://github.com/twbs/bootstrap/pull/32763 WHEN IT GETS INCLUDED
+
 @mixin prefers-color-scheme( $scheme: dark ) {
   @media (prefers-color-scheme: #{$scheme}) {
     @content;

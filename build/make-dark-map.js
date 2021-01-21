@@ -12,7 +12,6 @@ const header = [
   '// !! Don\'t remove the next 2 lines',
   '// stylelint-disable',
   '// fusv-disable',
-  ''
 ];
 
 const footer = [
@@ -58,10 +57,12 @@ len += from.length + 1;
 
 data.forEach(item => {
   if (item.startsWith('//')) {
-    console.log( '// ' + item.substring(2).trim() );
+    let str = item.substring(2).trim();
+    if (str.startsWith('-')) console.log();
+    console.log( '// ' + str );
   } else {
-    let str2 = item + from + ':';
-    console.log( '$' + str2.padEnd(len, ' ') + ' $' + item + to + ';' );
+    let str = item + from + ':';
+    console.log( '$' + str.padEnd(len, ' ') + ' $' + item + to + ';' );
   }
 });
 

@@ -9,7 +9,6 @@
  * This version is a fullfledged dark theme
  */
 
-// scss-docs-start import-stack
 // Configuration
 @import "functions";
 @import "variables";  // defaults are here
@@ -18,9 +17,8 @@
 @import "mixins";
 @import "utilities";
 
-:root { color-scheme: dark; }  // TODO: this should be code based.
-
 // Layout & components
+:root { color-scheme: dark; }  // TODO: this should be code based.
 @import "root";
 @import "reboot";
 @import "type";
@@ -56,4 +54,6 @@
 
 // Utilities
 @import "utilities/api";
-// scss-docs-end import-stack
+
+// Unique to dark-mode
+@import "dark/dark";

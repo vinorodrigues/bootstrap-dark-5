@@ -10740,5 +10740,18 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body::-moz-selection {
+  color: #cfcfcf;
+  background: rgba(23, 162, 184, 0.5);
+}
+body::selection {
+  color: #cfcfcf;
+  background: rgba(23, 162, 184, 0.5);
+}
+
+body::-moz-selection {
+  color: #cfcfcf;
+  background: rgba(23, 162, 184, 0.5);
+}
 
 /*# sourceMappingURL=bootstrap-night.css.map */

@@ -28,9 +28,9 @@
 @import "dark/mixins";
 @import "utilities";
 @import "dark/utilities";
-@import "dark/utilities/color-schemes";
 
 // Layout & components
+@import "dark/color-scheme";
 @import "root";
 @import "reboot";
 @import "type";
@@ -64,8 +64,14 @@
 // Helpers
 @import "helpers";
 
+// missing from BS, unsupported patch
+.text-black { color: $black if($enable-important-utilities, !important, null); }
+.bg-black { background-color: $black if($enable-important-utilities, !important, null); }
+.border-black { border-color: $black if($enable-important-utilities, !important, null); }
+
 // Utilities
 @import "utilities/api";
+
 
 /*
  * ---------- Dark Mode ------------------------------------------------------
@@ -83,37 +89,43 @@
   // @import "dark/containers";  // no colors here
   // @import "dark/grid";  // no colors here
   @import "dark/tables";
-  // @import "dark/forms";
+
+  /* vvvvvvvvvv WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP vvvvvvvvvv */
+
+  @import "dark/forms";
+
+  /* ^^^^^^^^^^ WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP ^^^^^^^^^^ */
+
   @import "dark/buttons";
   // @import "dark/transitions";  // no colors here
   @import "dark/dropdown";
   @import "dark/button-group";
   @import "dark/nav";
-
-  /* ---------- WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP ---------- */
-
-  // @import "dark/navbar";
-  // @import "dark/card";
-  // @import "dark/accordion";
-  // @import "dark/breadcrumb";
-  // @import "dark/pagination";
-  // @import "dark/badge";
-  // @import "dark/alert";
-  // @import "dark/progress";
-  // @import "dark/list-group";
-  // @import "dark/close";
-  // @import "dark/toasts";
-  // @import "dark/modal";
-  // @import "dark/tooltip";
-  // @import "dark/popover";
-  // @import "dark/carousel";
-  // @import "dark/spinners";
+  @import "dark/navbar";
+  @import "dark/card";
+  @import "dark/accordion";
+  @import "dark/breadcrumb";
+  @import "dark/pagination";
+  @import "dark/badge";
+  @import "dark/alert";
+  @import "dark/progress";
+  @import "dark/list-group";
+  @import "dark/close";
+  @import "dark/toasts";
+  @import "dark/modal";
+  @import "dark/tooltip";
+  @import "dark/popover";
+  @import "dark/carousel";
+  // @import "dark/spinners";  // no colors here
 
   // Helpers
-  // @import "dark/helpers";
+  @import "dark/helpers";
 
   // Utilities
   @import "dark/utilities/api";
+
+  // Unique to dark-mode
+  @import "dark/dark";
 
   // xstylelint-enable no-duplicate-at-import-rules
 }
