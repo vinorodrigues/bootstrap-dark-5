@@ -1,0 +1,57 @@
+{
+  "name": "bootstrap-dark-5",
+  "version": "0.0.1",
+  "description": "no",
+  "main": "",
+  "scripts": {
+    "start": "npm-run-all --parallel serve watch",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "css": "npm-run-all css-compile css-prefix css-minify",
+    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css --load-path=node_modules/bootstrap/scss scss/:dist/css/",
+    "css-prefix": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.rtl*.css\" \"!dist/css/*.min.css\"",
+    "css-minify": "npm-run-all --parallel css-minify-*",
+    "css-minify-main": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/bootstrap.min.css dist/css/bootstrap.css",
+    "css-minify-night": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/bootstrap-night.min.css dist/css/bootstrap-night.css",
+    "css-minify-dark": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/bootstrap-dark.min.css dist/css/bootstrap-dark.css",
+    "css-lint": "npm-run-all --continue-on-error --parallel css-lint-*",
+    "css-lint-stylelint": "stylelint \"**/*.scss\" --cache --cache-location .cache/.stylelintcache --rd",
+    "css-lint-vars": "fusv scss/",
+    "watch": "npm-run-all --parallel watch-*",
+    "watch-css-main": "nodemon --watch scss/ --ext scss --exec \"npm-run-all css-lint css-compile css-prefix\"",
+    "serve": "browser-sync start --server --files \"dist/css/*.css\"",
+    "map-dark-vars": "npm-run-all --parallel map-dark-vars-*",
+    "map-dark-vars-alt-to-core": "node ./build/make-dark-map.js ./build/dark-map-list.json '' '-alt' > ./scss/dark/_variables-map-alt-to-core.scss",
+    "build": "npm-run-all map-dark-vars css"
+  },
+  "author": "Vino Rodrigues",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinorodrigues/bootstrap-dark-5.git"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "browser-sync": "^2.26.13",
+    "clean-css-cli": "^4.3.0",
+    "cross-env": "^7.0.3",
+    "find-unused-sass-variables": "^3.1.0",
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1",
+    "rtlcss": "^3.0.0",
+    "sass": "^1.32.5",
+    "stylelint": "^13.9.0",
+    "stylelint-config-twbs-bootstrap": "^2.1.0"
+  },
+  "style": "dist/css/bootstrap.css",
+  "sass": "scss/bootstrap.scss",
+  "files": [
+    "dist/css/*.{css,map}",
+    "scss/**/*.scss"
+  ],
+  "dependencies": {
+    "@popperjs/core": "^2.6.0",
+    "bootstrap": "^5.0.0-beta1"
+  }
+}
