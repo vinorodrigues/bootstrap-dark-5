@@ -1,11 +1,12 @@
 {
   "name": "bootstrap-dark-5",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "no",
   "main": "",
   "scripts": {
     "start": "npm-run-all --parallel serve watch",
     "test": "echo \"Error: no test specified\" && exit 0",
+    "build": "npm-run-all css",
     "css": "npm-run-all css-compile css-prefix css-minify",
     "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css --load-path=node_modules/bootstrap/scss scss/:dist/",
     "css-prefix": "postcss --config build/postcss.config.js --replace \"dist/*.css\" \"!dist/*.rtl*.css\" \"!dist/*.min.css\"",
@@ -20,8 +21,7 @@
     "watch-css-main": "nodemon --watch scss/ --ext scss --exec \"npm-run-all css-lint css-compile css-prefix\"",
     "serve": "browser-sync start --server --files \"dist/*.css\"",
     "map-dark-vars": "npm-run-all --parallel map-dark-vars-*",
-    "map-dark-vars-alt-to-core": "node ./build/make-dark-map.js ./build/dark-map-list.json '' '-alt' > ./scss/dark/_variables-map-alt-to-core.scss",
-    "build": "npm-run-all map-dark-vars css"
+    "map-dark-vars-alt-to-core": "node ./build/make-dark-map.js ./build/dark-map-list.json '-alt' '' > ./scss/dark/_variables-map-alt-to-core.scss"
   },
   "author": "Vino Rodrigues",
   "license": "MIT",

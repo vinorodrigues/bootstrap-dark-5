@@ -4,7 +4,6 @@
   //   border: $input-border-width solid transparent; // Required for aligning label's text with the input as it affects inner box model
   // }
 
-  // stylelint-disable no-duplicate-selectors
   > .form-control {
     // &::placeholder {
     //   color: transparent;
@@ -24,5 +23,4 @@
       opacity: $form-floating-label-opacity-alt;
     }
   }
-  // stylelint-enable no-duplicate-selectors
 }

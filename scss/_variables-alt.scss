@@ -54,7 +54,6 @@ $green-alt:   #00bc8c !default;  //**
 $teal-alt:    #45b5aa !default;  // Panatone CotY 2010
 $cyan-alt:    #17a2b8 !default;
 
-// scss-docs-start colors-map
 $colors-alt: (
   "blue":       $blue-alt,
   "indigo":     $indigo-alt,
@@ -67,10 +66,10 @@ $colors-alt: (
   "teal":       $teal-alt,
   "cyan":       $cyan-alt,
   "white":      $white-alt,
+  "black":      $black-alt,
   "gray":       #7e7e7e,  // $gray-600,
   "gray-dark":  #121212  //$gray-800
 ) !default;
-// scss-docs-end colors-map
 
 $primary-alt:       $blue-alt !default;
 $secondary-alt:     $gray-600-alt !default;
@@ -81,7 +80,6 @@ $danger-alt:        $red-alt !default;
 $light-alt:         $gray-500-alt !default;
 $dark-alt:          $gray-800-alt !default;
 
-// scss-docs-start theme-colors-map
 $theme-colors-alt: (
   "primary":    $primary-alt,
   "secondary":  $secondary-alt,
@@ -92,7 +90,6 @@ $theme-colors-alt: (
   "light":      $light-alt,
   "dark":       $dark-alt
 ) !default;
-// scss-docs-end theme-colors-map
 
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
 // See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
