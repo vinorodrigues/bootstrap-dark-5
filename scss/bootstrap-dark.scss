@@ -27,7 +27,7 @@
 @import "mixins";
 @import "dark/mixins";
 @import "utilities";
-
+@import "dark/utilities";
 @import "dark/utilities/color-schemes";
 
 // Layout & components
@@ -67,9 +67,11 @@
 // Utilities
 @import "utilities/api";
 
-// ______________________________________
+/*
+ * ---------- Dark Mode ------------------------------------------------------
+ */
 
-@media (prefers-color-scheme: dark) {
+@include prefers-color-scheme("dark") {
 
   // xstylelint-disable no-duplicate-at-import-rules
 
@@ -81,34 +83,40 @@
   // @import "dark/containers";  // no colors here
   // @import "dark/grid";  // no colors here
   @import "dark/tables";
-  // @import "forms";
-  // @import "buttons";
-  // @import "transitions";
-  // @import "dropdown";
-  // @import "button-group";
-  // @import "nav";
-  // @import "navbar";
-  // @import "card";
-  // @import "accordion";
-  // @import "breadcrumb";
-  // @import "pagination";
-  // @import "badge";
-  // @import "alert";
-  // @import "progress";
-  // @import "list-group";
-  // @import "close";
-  // @import "toasts";
-  // @import "modal";
-  // @import "tooltip";
-  // @import "popover";
-  // @import "carousel";
-  // @import "spinners";
+  // @import "dark/forms";
+  @import "dark/buttons";
+  // @import "dark/transitions";  // no colors here
+  @import "dark/dropdown";
+  @import "dark/button-group";
+  @import "dark/nav";
+
+  /* ---------- WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP ---------- */
+
+  // @import "dark/navbar";
+  // @import "dark/card";
+  // @import "dark/accordion";
+  // @import "dark/breadcrumb";
+  // @import "dark/pagination";
+  // @import "dark/badge";
+  // @import "dark/alert";
+  // @import "dark/progress";
+  // @import "dark/list-group";
+  // @import "dark/close";
+  // @import "dark/toasts";
+  // @import "dark/modal";
+  // @import "dark/tooltip";
+  // @import "dark/popover";
+  // @import "dark/carousel";
+  // @import "dark/spinners";
 
   // Helpers
-  // @import "helpers";
+  // @import "dark/helpers";
+
+  // Utilities
+  @import "dark/utilities/api";
 
   // xstylelint-enable no-duplicate-at-import-rules
 }
 
-// Utilities
-@import "dark/utilities/api";
+// Additional Global Utilities
+@import "dark/utilities/api-all";

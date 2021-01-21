@@ -14,6 +14,7 @@
   color: $table-color-alt;
   border-color: $table-border-color-alt;
 
+  // DONT NEED TO DARK, CSS VARS TAKES CARE OF THIS.
   // Target th & td
   // xstylelint-disable-next-line selector-max-universal
   // > :not(caption) > * > * {
@@ -30,6 +31,7 @@
 
 // Zebra-striping
 
+// DONT NEED TO DARK, CSS VARS TAKES CARE OF THIS.
 // .table-striped {
 //   > tbody > tr:nth-of-type(#{$table-striped-order}) {
 //     --#{$variable-prefix}table-accent-bg: var(--#{$variable-prefix}table-striped-bg);
@@ -39,6 +41,7 @@
 
 // Active table
 
+// DONT NEED TO DARK, CSS VARS TAKES CARE OF THIS.
 // .table-active {
 //   --#{$variable-prefix}table-accent-bg: var(--#{$variable-prefix}table-active-bg);
 //   color: var(--#{$variable-prefix}table-active-color);
@@ -46,6 +49,7 @@
 
 // Hover effect
 
+// DONT NEED TO DARK, CSS VARS TAKES CARE OF THIS.
 // .table-hover {
 //   > tbody > tr:hover {
 //     --#{$variable-prefix}table-accent-bg: var(--#{$variable-prefix}table-hover-bg);

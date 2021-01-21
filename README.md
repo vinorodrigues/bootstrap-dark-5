@@ -2,7 +2,7 @@
 **A continuation of the v4 Dark Mode POC**
 
 > This is a follow up to [The Definitive Guide to Dark Mode and Bootstrap 4](http://vinorodrigues.github.io/bootstrap-dark) body of work,
-> and pertains to [Bootstrap 5](https://getbootstrap.com).
+> and pertains to [Bootstrap 5](https://getbootstrap.com) *([Github repo.](https://github.com/twbs/bootstrap))*.
 
 > If you're after the same work for [Bootstrap 4](https://getbootstrap.com/docs/4.5/) please visit the [vinorodrigues/bootstrap-dark](https://github.com/vinorodrigues/bootstrap-dark) repo.
 
@@ -13,7 +13,7 @@ This code will make little sense if you don't read
 
 ## What do you get?
 
-The code only compiles the [Method 1](github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-1) and [Method 4](github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-4) variants (for BS5) of the topics discussed in the original body of work.
+The code only compiles the [Method 1](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-1) and [Method 4](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-4) variants (for BS5) of the topics discussed in the original body of work.
 
 i.e.:
 
@@ -52,4 +52,4 @@ If you have useful feedback drop me an "Issue" on the [GitHub Issues](https://gi
 
 ---
 
-<p align="center" style="text-align:center;display:block;font-size:75%;">&copy; 2021</p>
+<p align="center" style="display: block; font-size: 75%; text-align: center;">&copy; 2021</p>

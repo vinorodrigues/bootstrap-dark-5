@@ -1,9 +1,17 @@
-@use "sass:map";
+// Loop over each breakpoint
+@each $breakpoint in map-keys($grid-breakpoints) {
 
-@each $color-scheme in $color-schemes {
-  @include prefers-color-scheme($color-scheme) {
-    @each $value in map.get(map.get($utilities, "display"), "values") {
-      .d-#{$color-scheme}-#{$value} { display: $value; }
+  // Generate media query if needed
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    // Loop over each utility property
+    @each $key, $utility in $utilities-alt {
+      // The utility can be disabled with `false`, thus check if the utility is a map first
+      // Only proceed if responsive media queries are enabled or if it's the base media query
+      @if type-of($utility) == "map" and (map-get($utility, responsive) or $infix == "") {
+        @include generate-utility($utility, $infix);
+      }
     }
   }
 }
