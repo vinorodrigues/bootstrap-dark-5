@@ -57,7 +57,7 @@ You can access the theme CSS file from the GitHub release:
 * [`https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5@0.0/dist/bootstrap-dark.css`](https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5@0.0/dist/bootstrap-dark.css)
 * [`https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5@0.0/dist/bootstrap-night.min.css`](https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5@0.0/dist/bootstrap-night.min.css)
 * [`https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5@0.0/dist/bootstrap-night.css`](https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5@0.0/dist/bootstrap-night.css)
-* Source etc. are [here](https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark/dist/), but I recommend using [GitHub](https://github.com/vinorodrigues/bootstrap-dark-5).
+* Source etc. are [here](https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5/dist/), but I recommend using [GitHub](https://github.com/vinorodrigues/bootstrap-dark-5).
 
 
 ### Feedback
