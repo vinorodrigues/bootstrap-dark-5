@@ -25,6 +25,7 @@
   --bs-teal: #45b5aa;
   --bs-cyan: #17a2b8;
   --bs-white: #fafafa;
+  --bs-black: #111;
   --bs-gray: #7e7e7e;
   --bs-gray-dark: #121212;
   --bs-primary: #375a7f;
@@ -10740,10 +10741,23 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.text-black {
+  color: #111 !important;
+}
+
+.bg-black {
+  background-color: #111 !important;
+}
+
+.border-black {
+  border-color: #111 !important;
+}
+
 body::-moz-selection {
   color: #cfcfcf;
   background: rgba(23, 162, 184, 0.5);
 }
+
 body::selection {
   color: #cfcfcf;
   background: rgba(23, 162, 184, 0.5);

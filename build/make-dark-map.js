@@ -22,8 +22,8 @@ const footer = [
 ];
 
 let fn = process.argv.slice(2)[0];
-let from = process.argv.slice(3)[0] || '';  from = from.replace(/['"]+/g, '').trim();
-let to = process.argv.slice(4)[0] || '';  to = to.replace(/['"]+/g, '').trim();
+let to = process.argv.slice(3)[0] || '';  to = to.replace(/['"]+/g, '').trim();
+let from = process.argv.slice(4)[0] || '';  from = from.replace(/['"]+/g, '').trim();
 
 if (from == to) {
   console.error('// Error:', 'usage:  `node make-dark-map.js path-to-items-json map-from-sufix map-to-sufix`');

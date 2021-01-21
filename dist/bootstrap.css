@@ -6114,6 +6114,22 @@ textarea.form-control-lg {
   white-space: nowrap;
 }
 
+:root {
+  --bs-black: #000;
+}
+
+.text-black {
+  color: #000 !important;
+}
+
+.bg-black {
+  background-color: #000 !important;
+}
+
+.border-black {
+  border-color: #000 !important;
+}
+
 .align-baseline {
   vertical-align: baseline !important;
 }
