@@ -1,6 +1,4 @@
-//
 // Base styles
-//
 
 .btn {
   color: $body-color-alt;
@@ -36,26 +34,21 @@
 }
 
 
-//
 // Alternate buttons
-//
 
 @each $color, $value in $theme-colors-alt {
   .btn-#{$color} {
-    @include button-variant($value, $value);
+    @include button-variant-alt($value, $value);
   }
 }
 
 @each $color, $value in $theme-colors-alt {
   .btn-outline-#{$color} {
-    @include button-outline-variant($value);
+    @include button-outline-variant-alt($value);
   }
 }
 
-
-//
 // Link buttons
-//
 
 // Make a button look and behave like a link
 .btn-link {
@@ -64,9 +57,6 @@
   &:hover {
     color: $btn-link-hover-color-alt;
   }
-
-  // &:focus {
-  // }
 
   &:disabled,
   &.disabled {

@@ -17,7 +17,7 @@
   $alert-border: shift-color($value, $alert-border-scale-alt);
   $alert-color: shift-color($value, $alert-color-scale-alt);
   @if (contrast-ratio($alert-background, $alert-color) < $min-contrast-ratio-alt) {
-    $alert-color: mix($value, color-contrast($alert-background), abs($alert-color-scale-alt));
+    $alert-color: mix($value, color-contrast($alert-background, $color-contrast-dark-alt, $color-contrast-light-alt, $min-contrast-ratio-alt), abs($alert-color-scale-alt));
   }
   .alert-#{$state} {
     @include alert-variant($alert-background, $alert-border, $alert-color);
