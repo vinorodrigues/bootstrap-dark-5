@@ -16,6 +16,7 @@
 This code will make little sense if you don't read
 [The Definitive Guide to Dark Mode and Bootstrap 4](http://vinorodrigues.github.io/bootstrap-dark) first.
 
+
 ## What do you get?
 
 The code only compiles the [Method 1](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-1) and [Method 4](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-4) variants (for BS5) of the topics discussed in the original body of work.
@@ -24,6 +25,12 @@ i.e.:
 
 * `bootstrap-night`, _and;_
 * `bootstrap-dark`.
+
+
+## The Proof Is in the Pudding
+
+Test pages have been set up at [vinorodrigues.github.io/bootstrap-dark-5](https://vinorodrigues.github.io/bootstrap-dark-5/)
+
 
 ## Can you use this?
 
