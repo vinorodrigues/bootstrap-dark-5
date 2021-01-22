@@ -22,13 +22,14 @@ The code only compiles the [Method 1](https://github.com/vinorodrigues/bootstrap
 
 i.e.:
 
-* `bootstrap-night` *(done for now)*, _and;_
-* `bootstrap-dark` *(not done **yet**!)*
+* `bootstrap-night`, _and;_
+* `bootstrap-dark`.
 
 ## Can you use this?
 
 Yes.
 
+> Licence is MIT.  *i.e. use as you whish as long as you credit the original authors and leave the copyright in situ.*
 
 If you're a theme builder or want to use its principles in your own project you'll need to have [Git](https://help.github.com/articles/set-up-git) and [Node](https://nodejs.org/) installed.
 
