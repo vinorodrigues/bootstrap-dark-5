@@ -13,23 +13,18 @@
     <!-- Cheatsheet -->
 
     <meta name="theme-color" content="#7952b3">
+
+    <link href="cheatsheet.css" rel="stylesheet">
     <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
+      .bd-cheatsheet section > h2::before {
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) calc(100% - 3rem), rgba(255, 255, 255, .01));
       }
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
+      @media (prefers-color-scheme: dark) {
+        .bd-cheatsheet section > h2::before {
+          background-image: linear-gradient(to bottom, rgba(34, 34, 34, 1) calc(100% - 3rem), rgba(34, 34, 34, .01));
         }
       }
     </style>
-
-    <link href="cheatsheet.css" rel="stylesheet">
-
   </head>
   <body class="bg-body">
 
