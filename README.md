@@ -7,9 +7,9 @@
 > If you're after the same work for [Bootstrap 4](https://getbootstrap.com/docs/4.5/) please visit the [vinorodrigues/bootstrap-dark](https://github.com/vinorodrigues/bootstrap-dark) repo.
 
 
-- <u>***NOTE:***</u> This is a 'Work In Progress' and is specifically based on Bootstrap 5 - Beta 1 - https://github.com/twbs/bootstrap/tree/v5.0.0-beta1
+> <u style="text-decoration:none;color:red">***NOTE:***</u> This is a 'Work In Progress' and is specifically based on Bootstrap 5 - Beta 1 - https://github.com/twbs/bootstrap/tree/v5.0.0-beta1
 
-- <u>***NOTE:***</u> The recomendation is to ***not*** use this in a production environment.
+> <u style="text-decoration:none;color:red">***NOTE:***</u> The recomendation is to ***not*** use this in a production environment.
 
 ## About
 
@@ -39,7 +39,7 @@ If you're a theme builder or want to use its principles in your own project you'
 4. Run `npm run build` to build your theme.
 5. The compiled code will be in the `dist` folder.
 
-> **Note:** The build system is based on [NPM Scripts](https://docs.npmjs.com/cli/v6/using-npm/scripts). Most of the build tools _(NPM modules)_ will need to be installed as *"global"* to ensure the scripts are executable from the command line.
+> <u style="text-decoration:none;color:red">***NOTE:***</u> The build system is based on [NPM Scripts](https://docs.npmjs.com/cli/v6/using-npm/scripts). Most of the build tools _(NPM modules)_ will need to be installed as *"global"* to ensure the scripts are executable from the command line.
 
 ```bash
 npm install -g autoprefixer browser-sync clean-css-cli cross-env find-unused-sass-variables nodemon npm-run-all postcss postcss-cli rtlcss sass stylelint stylelint-config-twbs-bootstrap
@@ -70,4 +70,4 @@ If you have useful feedback drop me an "Issue" on the [GitHub Issues](https://gi
 
 ---
 
-<p align="center" style="display: block; font-size: 75%; text-align: center;">&copy; 2021</p>
+<p align="center" style="display:block;font-size:75%;text-align:center">&copy; 2021</p>
