@@ -77,8 +77,8 @@ $success-alt:       $green-alt !default;
 $info-alt:          $cyan-alt !default;
 $warning-alt:       $yellow-alt !default;
 $danger-alt:        $red-alt !default;
-$light-alt:         $gray-500-alt !default;
-$dark-alt:          $gray-800-alt !default;
+$light-alt:         $gray-700-alt !default;
+$dark-alt:          mix($gray-900-alt, $black-alt, 50%) !default;
 
 $theme-colors-alt: (
   "primary":    $primary-alt,
@@ -368,12 +368,12 @@ $navbar-dark-disabled-color-alt:        rgba($white-alt, .25) !default;
 $navbar-dark-toggler-icon-bg-alt:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color-alt}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
 $navbar-dark-toggler-border-color-alt:  rgba($white-alt, .1) !default;
 
-$navbar-light-color-alt:                rgba($black-alt, .55) !default;
-$navbar-light-hover-color-alt:          rgba($black-alt, .7) !default;
-$navbar-light-active-color-alt:         rgba($black-alt, .9) !default;
-$navbar-light-disabled-color-alt:       rgba($black-alt, .3) !default;
+$navbar-light-color-alt:                rgba($white-alt, .55) !default;
+$navbar-light-hover-color-alt:          rgba($white-alt, .7) !default;
+$navbar-light-active-color-alt:         rgba($white-alt, .9) !default;
+$navbar-light-disabled-color-alt:       rgba($white-alt, .3) !default;
 $navbar-light-toggler-icon-bg-alt:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color-alt}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
-$navbar-light-toggler-border-color-alt: rgba($black-alt, .1) !default;
+$navbar-light-toggler-border-color-alt: rgba($white-alt, .1) !default;
 
 $navbar-light-brand-color-alt:                $navbar-light-active-color-alt !default;
 $navbar-light-brand-hover-color-alt:          $navbar-light-active-color-alt !default;
