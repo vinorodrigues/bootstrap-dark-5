@@ -78,7 +78,7 @@ $info-alt:          $cyan-alt !default;
 $warning-alt:       $yellow-alt !default;
 $danger-alt:        $red-alt !default;
 $light-alt:         $gray-700-alt !default;
-$dark-alt:          mix($gray-900-alt, $black-alt, 50%) !default;
+$dark-alt:          $gray-900-alt !default;  // mix($gray-900-alt, $black-alt, 50%) !default;
 
 $theme-colors-alt: (
   "primary":    $primary-alt,
@@ -152,7 +152,7 @@ $blockquote-footer-color-alt:     $gray-600-alt !default;
 $hr-color-alt:                    $white-alt !default;
 $hr-opacity-alt:                  .1 !default;
 
-$mark-bg-alt:                     rgba($yellow-alt, .3) !default;
+$mark-bg-alt:                     rgba($yellow-alt, .5) !default;
 
 
 // Tables
@@ -460,8 +460,8 @@ $accordion-border-color-alt:                  rgba($white-alt, .125) !default;
 
 $accordion-button-color-alt:                  $accordion-color-alt !default;
 $accordion-button-bg-alt:                     $accordion-bg-alt !default;
-$accordion-button-active-bg-alt:              shade-color($component-active-bg-alt, 65%) !default;
-$accordion-button-active-color-alt:           tint-color($primary-alt, 25%) !default;
+$accordion-button-active-bg-alt:              shade-color($component-active-bg-alt, 50%) !default;
+$accordion-button-active-color-alt:           tint-color($primary-alt, 40%) !default;
 
 $accordion-button-focus-border-color-alt:     $input-focus-border-color-alt !default;
 $accordion-button-focus-box-shadow-alt:       $btn-focus-box-shadow-alt !default;
