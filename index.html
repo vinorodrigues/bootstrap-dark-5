@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap CSS -->
-  <link href="dist/bootstrap.min.css" rel="stylesheet">
+  <link href="dist/bootstrap-dark.css" rel="stylesheet">
 
   <title>boostrap-dark-5</title>
 </head>
@@ -14,7 +14,45 @@
   <div class="container">
     <h1>boostrap-dark-5</h1>
 
-    <hr class="mt-5 mb-5">
+    <hr class="mt-3 mb-3">
+
+    <div class="row row-cols-1">
+      <div class="col">
+
+        <h2>The Dark Mode Conundrum</h2>
+
+        <p>Dark mode is not easy ... I discussed (and POC'ed) this at length back in May 2020 in my quasi-white-paper
+          <a href="">The Definitive Guide to Dark Mode and Bootstrap 4</a> (Also on <a href="">GitHub</a>.) And subsequently also churned the
+          Bootstrap 5β1 variant <i>(This page!)</i> (Also on <a href="">GitHub</a>.)</p>
+
+        <p>There are huge contentions around how to make "dark mode" available. For example:</p>
+
+        <ul>
+        <li>Toggle button (with all it's JS, persistence issues and the FOUC that goes with it),</li>
+        <li>vs. leverage a pure prefers-color-scheme implementation.</li>
+        </ul>
+
+        <p>and</p>
+
+        <ul>
+
+        <li>Does each UI concept have it's own @media (prefers-... line, thus creating a larger-than-needs-to-be CSS (like prefers-reduced-motion does in 5β1),</li>
+        <li>vs. inject all the @media (prefers-... at the end of the CSS, thus forcing the coders to maintain two sets of SCSS, leading to maintenance nightmares,</li>
+        <li>vs. go with a whole bunch of sibling classes that can be switched with JS, like <a href="https://tailwindcss.com/docs/dark-mode">Tailwind</a> does.</li>
+        </ul>
+
+        <p>I guess it comes down to time ... both to decide on how to do this and then churn the code, then test it.</p>
+
+        <p>This body of work explores two methods:</p>
+
+        <ol>
+          <li><code>bootstrap-night</code> - Two CSS files, auto-loaded, but with JS to offer toggle button,</li>
+          <li>and, <code>bootstrap-dark</code> - Pure form, one CSS to drop-replace any, auto OS switching dark mode.</li>
+        </ol>
+      </div>
+    </div>
+
+    <hr class="mt-3 mb-3">
 
     <div class="row row-cols-1 row-cols-md-2 mb-3 text-center">
       <div class="col">
