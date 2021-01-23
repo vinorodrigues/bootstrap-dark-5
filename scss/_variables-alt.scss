@@ -460,8 +460,8 @@ $accordion-border-color-alt:                  rgba($white-alt, .125) !default;
 
 $accordion-button-color-alt:                  $accordion-color-alt !default;
 $accordion-button-bg-alt:                     $accordion-bg-alt !default;
-$accordion-button-active-bg-alt:              tint-color($component-active-bg-alt, 90%) !default;
-$accordion-button-active-color-alt:           shade-color($primary-alt, 10%) !default;
+$accordion-button-active-bg-alt:              shade-color($component-active-bg-alt, 65%) !default;
+$accordion-button-active-color-alt:           tint-color($primary-alt, 25%) !default;
 
 $accordion-button-focus-border-color-alt:     $input-focus-border-color-alt !default;
 $accordion-button-focus-box-shadow-alt:       $btn-focus-box-shadow-alt !default;
