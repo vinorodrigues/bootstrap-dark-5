@@ -68,6 +68,15 @@ You can access the theme CSS file from the GitHub release:
 * Source etc. are [here](https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5/dist/), but I recommend using [GitHub](https://github.com/vinorodrigues/bootstrap-dark-5).
 
 
+### NPM
+
+[![](https://img.shields.io/npm/v/bootstrap-dark-5)](http://npmjs.com/package/bootstrap-dark-5)
+
+Developers can include the `scss` and `dist` folders into your own project with:
+
+`npm install bootstrap-dark-5`
+
+
 ### Feedback
 
 If you have useful feedback drop me an "Issue" on the [GitHub Issues](https://github.com/vinorodrigues/bootstrap-dark-5/issues) page.

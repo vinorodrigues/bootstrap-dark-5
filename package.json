@@ -1,11 +1,11 @@
 {
   "name": "bootstrap-dark-5",
-  "version": "0.0.2",
-  "description": "no",
+  "version": "0.0.3",
+  "description": "The Ancillary Guide to Dark Mode and Bootstrap 5 - A continuation of the v4 Dark Mode POC",
   "main": "",
   "scripts": {
     "start": "npm-run-all --parallel serve watch",
-    "test": "echo \"Error: no test specified\" && exit 0",
+    "test": "echo \"Info: no test specified\" && exit 0",
     "build": "npm-run-all css",
     "css": "npm-run-all css-compile css-prefix css-minify",
     "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css --load-path=node_modules/bootstrap/scss scss/:dist/",
@@ -29,6 +29,27 @@
     "type": "git",
     "url": "git+https://github.com/vinorodrigues/bootstrap-dark-5.git"
   },
+  "bugs": {
+    "url": "https://github.com/vinorodrigues/bootstrap-dark-5/issues"
+  },
+  "style": "dist/bootstrap-dark.css",
+  "sass": "scss/bootstrap-dark.scss",
+  "files": [
+    "dist/*.{css,map}",
+    "scss/**/*.scss",
+    "README.md",
+    "LICENSE.md"
+  ],
+  "keywords": [
+    "bootstrap",
+    "css",
+    "sass",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
   "devDependencies": {
     "autoprefixer": "^9.8.6",
     "browser-sync": "^2.26.13",
@@ -44,14 +65,7 @@
     "stylelint": "^13.9.0",
     "stylelint-config-twbs-bootstrap": "^2.1.0"
   },
-  "style": "dist/bootstrap.css",
-  "sass": "scss/bootstrap.scss",
-  "files": [
-    "dist/*.{css,map}",
-    "scss/**/*.scss"
-  ],
   "dependencies": {
-    "@popperjs/core": "^2.6.0",
     "bootstrap": "5.0.0-beta1"
   }
 }
