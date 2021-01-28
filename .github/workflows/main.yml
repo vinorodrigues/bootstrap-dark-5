@@ -35,8 +35,8 @@ jobs:
           architecture: ${{ matrix.architecture }}
 
       - run: npm i
-      - run: npm test
       - run: npm run build
+      - run: npm test
 
   publish-npm:
     runs-on: ubuntu-latest
