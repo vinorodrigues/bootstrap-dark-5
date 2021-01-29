@@ -53,21 +53,6 @@ npm install -g autoprefixer browser-sync clean-css-cli cross-env find-unused-sas
 ```
 
 
-### CDN
-
-[![](https://data.jsdelivr.com/v1/package/gh/vinorodrigues/bootstrap-dark-5/badge?style=rounded)](https://www.jsdelivr.com/package/gh/vinorodrigues/bootstrap-dark-5)
-
-You can also hotlink the theme via CDN with [jsdelivr.com](https://www.jsdelivr.com).
-
-You can access the theme CSS file from the GitHub release:
-
-* [`https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5@0.0/dist/bootstrap-dark.min.css`](https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5@0.0/dist/bootstrap-dark.min.css)
-* [`https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5@0.0/dist/bootstrap-dark.css`](https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5@0.0/dist/bootstrap-dark.css)
-* [`https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5@0.0/dist/bootstrap-night.min.css`](https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5@0.0/dist/bootstrap-night.min.css)
-* [`https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5@0.0/dist/bootstrap-night.css`](https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5@0.0/dist/bootstrap-night.css)
-* Source etc. are [here](https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5/dist/), but I recommend using [GitHub](https://github.com/vinorodrigues/bootstrap-dark-5).
-
-
 ### NPM
 
 [![](https://img.shields.io/npm/v/bootstrap-dark-5)](http://npmjs.com/package/bootstrap-dark-5)
@@ -75,6 +60,21 @@ You can access the theme CSS file from the GitHub release:
 Developers can include the `scss` and `dist` folders into your own project with:
 
 `npm install bootstrap-dark-5`
+
+
+### CDN
+
+[![](https://data.jsdelivr.com/v1/package/npm/bootstrap-dark-5/badge?style=rounded)](https://www.jsdelivr.com/package/npm/bootstrap-dark-5)
+
+You can also hotlink the theme via CDN with [jsdelivr.com](https://www.jsdelivr.com).
+
+You can access the theme CSS file from the GitHub release:
+
+* [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.0/dist/bootstrap-dark.min.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.0/dist/bootstrap-dark.min.css)
+* [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.0/dist/bootstrap-dark.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.0/dist/bootstrap-dark.css)
+* [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.0/dist/bootstrap-night.min.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.0/dist/bootstrap-night.min.css)
+* [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.0/dist/bootstrap-night.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.0/dist/bootstrap-night.css)
+* Source etc. are [here](https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5), but I recommend using [GitHub](https://github.com/vinorodrigues/bootstrap-dark-5).
 
 
 ### Feedback
