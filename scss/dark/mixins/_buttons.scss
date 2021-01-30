@@ -12,12 +12,13 @@
   $active-color: color-contrast($active-background, $color-contrast-dark-alt, $color-contrast-light-alt, $min-contrast-ratio-alt),
   $disabled-background: $background,
   $disabled-border: $border,
-  $disabled-color: color-contrast($disabled-background, $color-contrast-dark-alt, $color-contrast-light-alt, $min-contrast-ratio-alt)
+  $disabled-color: color-contrast($disabled-background, $color-contrast-dark-alt, $color-contrast-light-alt, $min-contrast-ratio-alt),
+  $btn-box-shadow: $btn-box-shadow-alt
 ) {
   color: $color;
   @include gradient-bg($background);
   border-color: $border;
-  @include box-shadow($btn-box-shadow-alt);
+  @include box-shadow($btn-box-shadow);
 
   &:hover {
     color: $hover-color;
@@ -31,7 +32,7 @@
     @include gradient-bg($hover-background);
     border-color: $hover-border;
     @if $enable-shadows {
-      @include box-shadow($btn-box-shadow-alt, 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), .5));
+      @include box-shadow($btn-box-shadow, 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), .5));
     } @else {
       // Avoid using mixin so we can pass custom focus shadow properly
       box-shadow: 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), .5);
@@ -51,7 +52,7 @@
 
     &:focus {
       @if $enable-shadows {
-        @include box-shadow($btn-active-box-shadow-alt, 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), .5));
+        @include box-shadow($btn-active-box-shadow, 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), .5));
       } @else {
         // Avoid using mixin so we can pass custom focus shadow properly
         box-shadow: 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), .5);
@@ -74,7 +75,8 @@
   $color-hover: color-contrast($color),
   $active-background: $color,
   $active-border: $color,
-  $active-color: color-contrast($active-background)
+  $active-color: color-contrast($active-background),
+  $btn-active-box-shadow: $btn-active-box-shadow-alt
 ) {
   color: $color;
   border-color: $color;
@@ -101,7 +103,7 @@
 
     &:focus {
       @if $enable-shadows {
-        @include box-shadow($btn-active-box-shadow-alt, 0 0 0 $btn-focus-width rgba($color, .5));
+        @include box-shadow($btn-active-box-shadow, 0 0 0 $btn-focus-width rgba($color, .5));
       } @else {
         // Avoid using mixin so we can pass custom focus shadow properly
         box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
