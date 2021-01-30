@@ -6,12 +6,11 @@
 // Color system
 // ______________________________________
 
-$color-scheme: light !default;
+$default-color-scheme: light !default;
 
 $color-schemes: (
   light,
   dark
-  // no-preference
 ) !default;
 
 // items marked //** from https://bootswatch.com/darkly/
@@ -77,7 +76,7 @@ $success-alt:       $green-alt !default;
 $info-alt:          $cyan-alt !default;
 $warning-alt:       $yellow-alt !default;
 $danger-alt:        $red-alt !default;
-$light-alt:         $gray-700-alt !default;
+$light-alt:         $gray-400-alt !default;
 $dark-alt:          $gray-900-alt !default;  // mix($gray-900-alt, $black-alt, 50%) !default;
 
 $theme-colors-alt: (

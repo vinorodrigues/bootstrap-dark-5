@@ -2,6 +2,6 @@
 
 @each $color-scheme in $color-schemes {
   @include prefers-color-scheme($color-scheme) {
-    @include generate-utility(map.get($utilities, "display"), "-#{$color-scheme}");
+    @include generate-utility(map-get($utilities, "display"), "-#{$color-scheme}");
   }
 }
