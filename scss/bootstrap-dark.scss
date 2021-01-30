@@ -69,7 +69,7 @@
  * ---------- Dark Mode ------------------------------------------------------
  */
 
-@include prefers-color-scheme("dark") {
+@include prefers-color-scheme(alternative-color-scheme($default-color-scheme)) {
 
   // Layout & components
   @import "dark/root";
