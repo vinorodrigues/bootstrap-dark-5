@@ -29,17 +29,17 @@
         <p>There are huge contentions around how to make "dark mode" available. For example:</p>
 
         <ul>
-        <li>Toggle button (with all it's JS, persistence issues and the FOUC that goes with it),</li>
-        <li>vs. leverage a pure prefers-color-scheme implementation.</li>
+          <li>Toggle button (with all it's JS, persistence issues and the FOUC that goes with it),</li>
+          <li>vs. leverage a pure prefers-color-scheme implementation.</li>
         </ul>
 
         <p>and</p>
 
         <ul>
-
-        <li>Does each UI concept have it's own @media (prefers-... line, thus creating a larger-than-needs-to-be CSS (like prefers-reduced-motion does in 5β1),</li>
-        <li>vs. inject all the @media (prefers-... at the end of the CSS, thus forcing the coders to maintain two sets of SCSS, leading to maintenance nightmares,</li>
-        <li>vs. go with a whole bunch of sibling classes that can be switched with JS, like <a href="https://tailwindcss.com/docs/dark-mode">Tailwind</a> does.</li>
+          <li>Does each UI concept have it's own @media (prefers-... line, thus creating a larger-than-needs-to-be CSS (like prefers-reduced-motion does in 5β1),</li>
+          <li>vs. inject all the @media (prefers-... at the end of the CSS, thus forcing the coders to maintain two sets of SCSS, leading to maintenance nightmares,</li>
+          <li>vs. go with a whole bunch of sibling classes that can be switched with JS, like <a href="https://tailwindcss.com/docs/dark-mode">Tailwind</a> does.</li>
+          <li>vs. go with a known base class the is switched with JS, like <a href="https://www.gethalfmoon.com/docs/core-javascript-library/#toggling-dark-mode">Halfmoon</a> does.</li>
         </ul>
 
         <p>I guess it comes down to time ... both to decide on how to do this and then churn the code, then test it.</p>
