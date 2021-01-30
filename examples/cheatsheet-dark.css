@@ -2,19 +2,6 @@ body {
   scroll-behavior: smooth;
 }
 
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
-}
-
 /**
  * Bootstrap "Journal code" icon
  * @link https://icons.getbootstrap.com/icons/journal-code/
@@ -39,50 +26,74 @@ body {
   padding: .1875rem .5rem;
   margin-top: .125rem;
   margin-left: .3125rem;
+  color: rgba(0, 0, 0, .65);
   text-decoration: none;
-
-  /* color: rgba(0, 0, 0, .65); */
 }
 
 .bd-aside a:hover,
 .bd-aside a:focus {
-  /*
   color: rgba(0, 0, 0, .85);
   background-color: rgba(121, 82, 179, .1);
-  */
 }
 
 .bd-aside .active {
   font-weight: 600;
-
-  /* color: rgba(0, 0, 0, .85); */
+  color: rgba(0, 0, 0, .85);
 }
 
 .bd-aside .btn {
   padding: .25rem .5rem;
   font-weight: 600;
+  color: rgba(0, 0, 0, .65);
   border: 0;
-
-  /* color: rgba(0, 0, 0, .65); */
 }
+
 
 .bd-aside .btn:hover,
 .bd-aside .btn:focus {
-
-  /*
   color: rgba(0, 0, 0, .85);
   background-color: rgba(121, 82, 179, .1);
-  */
 }
 
 .bd-aside .btn:focus {
   box-shadow: 0 0 0 1px rgba(121, 82, 179, .7);
 }
 
+@media (prefers-color-scheme: dark) {
+  .bd-aside a {
+    color: rgba(255, 255, 255, .65);
+  }
+
+  .bd-aside a:hover,
+  .bd-aside a:focus {
+    color: rgba(255, 255, 255, .85);
+    background-color: rgba(140, 179, 82, .1);
+  }
+
+  .bd-aside .active {
+    color: rgba(255, 255, 255, .85);
+  }
+
+  .bd-aside .btn {
+    color: rgba(255, 255, 255, .65);
+  }
+
+  .bd-aside .btn:hover,
+  .bd-aside .btn:focus {
+    color: rgba(255, 255, 255, .85);
+    background-color: rgba(140, 179, 82, .1);
+  }
+
+  .bd-aside .btn:focus {
+    box-shadow: 0 0 0 1px rgba(140, 179, 82, .7);
+  }
+}
+
 .bd-aside .btn::before {
   width: 1.25em;
   line-height: 0;
   content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%28127,127,127,1%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+  transition: transform .35s ease;
 
   /* rtl:raw:
   transform: rotate(180deg) translateX(-2px);
@@ -127,11 +138,9 @@ body {
   .bd-header {
     position: fixed;
     top: 0;
-
     /* rtl:begin:ignore */
     right: 0;
     left: 0;
-
     /* rtl:end:ignore */
     z-index: 1030;
     grid-column: 1 / span 3;
@@ -168,16 +177,20 @@ body {
 
   .bd-cheatsheet section > h2::before {
     position: absolute;
-
     /* rtl:begin:ignore */
     top: 0;
     right: 0;
     bottom: -2rem;
     left: 0;
-
     /* rtl:end:ignore */
     z-index: -1;
     content: "";
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) calc(100% - 3rem), rgba(255, 255, 255, .01));
+  }
+  @media (prefers-color-scheme: dark) {
+    .bd-cheatsheet section > h2::before {
+      background-image: linear-gradient(to bottom, rgba(34, 34, 34, 1) calc(100% - 3rem), rgba(34, 34, 34, .01));
+    }
   }
 
   .bd-cheatsheet article,
