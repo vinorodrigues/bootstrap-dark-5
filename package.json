@@ -11,7 +11,7 @@
     "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css --load-path=node_modules/bootstrap/scss scss/:dist/",
     "css-prefix": "postcss --config build/postcss.config.js --replace \"dist/*.css\" \"!dist/*.rtl*.css\" \"!dist/*.min.css\"",
     "css-beautify": "npm-run-all --parallel css-beautify-*",
-    "css-beautify-main": "cleancss -O1 --format keep-breaks --source-map --source-map-inline-sources --output dist/bootstrap.css dist/bootstrap.css",
+    "css-beautify-main": "cleancss -O1 --format beautify  --source-map --source-map-inline-sources --output dist/bootstrap.css dist/bootstrap.css",
     "css-beautify-night": "cleancss -O1 --format beautify --source-map --source-map-inline-sources --output dist/bootstrap-night.css dist/bootstrap-night.css",
     "css-beautify-dark": "cleancss -O1 --format beautify --source-map --source-map-inline-sources --output dist/bootstrap-dark.css dist/bootstrap-dark.css",
     "css-minify": "npm-run-all --parallel css-minify-*",
