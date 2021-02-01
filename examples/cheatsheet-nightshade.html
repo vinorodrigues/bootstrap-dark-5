@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-darkmode-onload="true">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -13,16 +13,6 @@
     <!-- Cheatsheet -->
 
     <link href="cheatsheet-nights.css" rel="stylesheet">
-    <style>
-      .bd-cheatsheet section > h2::before {
-        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) calc(100% - 3rem), rgba(255, 255, 255, .01));
-      }
-      @media (prefers-color-scheme: dark) {
-        .bd-cheatsheet section > h2::before {
-          background-image: linear-gradient(to bottom, rgba(34, 34, 34, 1) calc(100% - 3rem), rgba(34, 34, 34, .01));
-        }
-      }
-    </style>
   </head>
   <body class="bg-body">
 
@@ -34,10 +24,7 @@
       <div class="container-fluid d-flex align-items-center">
         <h1 class="d-flex align-items-center fs-4 text-white mb-0">
           <img src="bootstrap-logo-white.svg" width="38" height="30" class="me-3" alt="Bootstrap">
-          Cheatsheet (
-          <span class="d-dark-inline d-light-none">Dark</span>
-          <span class="d-light-inline d-dark-none">Light</span>
-          )
+          Cheatsheet
         </h1>
         <!-- ***** ***** ***** THE BUTTON GOES HERE ***** ***** ***** -->
         <!-- ***** ***** ***** THE BUTTON GOES HERE ***** ***** ***** -->
@@ -109,7 +96,7 @@
             <div class="bd-example">
             <p class="display-1">Display 1</p>
             <p class="display-2">Display 2</p>
-            <p class="display-3 ">Display 3</p>
+            <p class="display-3">Display 3</p>
             <p class="display-4">Display 4</p>
             <p class="display-5">Display 5</p>
             <p class="display-6">Display 6</p>
@@ -1758,11 +1745,11 @@
       </div>
     </div>
 
-
-
-
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <!-- DarkMode.js -->
+    <script src="../js/src/darkmode.js"></script>
 
     <!-- Cheatsheet -->
     <script src="cheatsheet.js"></script>

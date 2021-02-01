@@ -1,0 +1,5 @@
+**/build/
+**/*.min.js
+**/dist/
+**/examples/
+*.html
