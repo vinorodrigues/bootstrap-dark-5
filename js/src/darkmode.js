@@ -1,7 +1,13 @@
-/**
- * ------------------------------------------------------------------------------------------------
- * Bootstrap-Dark (v0.0.0-unreleased): darkmode.js
- * Licensed under MIT (https://github.com/vinorodrigues/bootstrap-dark-5/blob/main/LICENSE.md)
- * ------------------------------------------------------------------------------------------------
- */
+// eslint-disable-next-line
+var darkmode = {
+  toggleDarkMode: function() {
+    // console.error('TODO: toggleDarkMode')
+  }
+}
 
+function darkmodeOnDOMContentLoaded() {
+  // darkmode.toggleDarkMode()
+  // console.error('TODO: darkmodeOnDOMContentLoaded')
+}
+
+document.addEventListener("DOMContentLoaded", darkmodeOnDOMContentLoaded)

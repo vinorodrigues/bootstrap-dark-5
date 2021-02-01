@@ -1,5 +1,8 @@
-**/build/
+node_modules
+.vscode
+dist
+build
+examples
+.cache
 **/*.min.js
-**/dist/
-**/examples/
 *.html
