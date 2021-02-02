@@ -12,3 +12,7 @@ insert_final_newline = true
 [*.json]
 indent_size = 4
 tab_width = 4
+
+[.eslintrc]
+indent_size = 4
+tab_width = 4

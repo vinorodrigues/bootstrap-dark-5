@@ -5,9 +5,3 @@ body::selection {
   color: $selection-color-alt;
   background: $selection-bg-alt;
 }
-
-// stylelint-disable-next-line selector-no-vendor-prefix
-body::-moz-selection {
-  color: $selection-color-alt;
-  background: $selection-bg-alt;
-}

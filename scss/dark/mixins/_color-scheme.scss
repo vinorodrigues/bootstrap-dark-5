@@ -10,7 +10,7 @@
     }
   } @else {
     // assume what gets passed here is not light or dark, thus is a CSS element,
-    // e.g. "body.dark", or "[data-theme-dark]"
+    // e.g. "html.dark", or "[data-theme-dark]"
     #{$scheme} {
       @content;
     }

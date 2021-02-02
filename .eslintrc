@@ -1,0 +1,64 @@
+{
+    "root": true,
+    "env": {
+      "browser": true,
+      "node": true,
+      "jquery": false,
+      "es6": true
+    },
+    "parserOptions": {
+      "sourceType": "module",
+      "allowImportExportEverywhere": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "parser": "babel-eslint",
+    "rules": {
+        "capitalized-comments": "off",
+        "indent": [
+            "error",
+            2,
+            {
+                "MemberExpression": "off",
+                "SwitchCase": 1
+            }
+        ],
+        "max-params": [
+            "warn",
+            5
+        ],
+        "multiline-ternary": [
+            "error",
+            "always-multiline"
+        ],
+        "new-cap": [
+            "error",
+            {
+                "properties": false
+            }
+        ],
+        "no-console": "warn",
+        "object-curly-spacing": [
+            "error",
+            "always"
+        ],
+        "semi": [
+            "error",
+            "never"
+        ],
+        "unicorn/consistent-function-scoping": "off",
+        "unicorn/explicit-length-check": "off",
+        "unicorn/no-array-callback-reference": "off",
+        "unicorn/no-array-for-each": "off",
+        "unicorn/no-for-loop": "off",
+        "unicorn/no-null": "off",
+        "unicorn/no-useless-undefined": "off",
+        "unicorn/prefer-dom-node-append": "off",
+        "unicorn/prefer-dom-node-dataset": "off",
+        "unicorn/prefer-dom-node-remove": "off",
+        "unicorn/prefer-query-selector": "off",
+        "unicorn/prefer-spread": "off",
+        "unicorn/prevent-abbreviations": "off"
+    }
+}
