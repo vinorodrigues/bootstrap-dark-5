@@ -75,7 +75,7 @@ You can access the theme CSS file from the GitHub release:
   * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-dark.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-dark.css)
 
 * **`bootstrap-nightshade`** - the `html.body` css class + JS library variant
-  * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-nightshade.min.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/css/dist/bootstrap-nightshade.min.css)
+  * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-nightshade.min.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-nightshade.min.css)
   * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/js/darkmode.min.js`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/js/darkmode.min.js)
   * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-nightshade.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-nightshade.css)
   * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/js/darkmode.js`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/js/darkmode.js)
