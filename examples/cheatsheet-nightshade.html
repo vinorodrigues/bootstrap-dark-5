@@ -6,13 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="../dist/bootstrap-nightshade.css" rel="stylesheet">
+    <link href="../dist/css/bootstrap-nightshade.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <title>Cheatsheet · Bootstrap v5.0</title>
 
     <!-- Cheatsheet -->
 
     <link href="cheatsheet-nights.css" rel="stylesheet">
+    <style>
+      .d-light-inline { display: inline !important; }
+      .d-dark-inline { display: none !important; }
+      html.dark .d-light-inline { display: none !important; }
+      html.dark .d-dark-inline { display: inline !important; }
+    </style>
   </head>
   <body class="bg-body">
 
@@ -27,6 +34,22 @@
           Cheatsheet
         </h1>
         <!-- ***** ***** ***** THE BUTTON GOES HERE ***** ***** ***** -->
+
+        <div class="btn-group" role="group">
+          <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+          </ul>
+        </div>
+
+
+
+
+
+        <a id="darkmode-button" class="btn btn-outline-secondary ms-auto"><i class="fa fa-moon-o fa-fw d-none d-light-inline" title="Switch to dark mode"></i><i class="fa fa-sun-o fa-fw d-none d-dark-inline" title="Switch to light mode"></i></a>
         <!-- ***** ***** ***** THE BUTTON GOES HERE ***** ***** ***** -->
       </div>
     </header>
@@ -1751,7 +1774,10 @@
     <!-- DarkMode.js -->
     <script src="../dist/js/darkmode.js"></script>
     <script>
-      darkmode.toggleDarkMode();
+      document.querySelector("#darkmode-button").onclick = function(e){
+        console.log('Click');
+        darkmode.toggleDarkMode();
+      }
     </script>
 
     <!-- Cheatsheet -->
