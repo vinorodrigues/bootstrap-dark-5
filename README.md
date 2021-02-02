@@ -89,7 +89,7 @@ You can access the theme CSS file from the GitHub release:
 
 ### Feedback
 
-If you have useful feedback drop me an "Issue" on the [GitHub Issues](https://github.com/vinorodrigues/bootstrap-dark-5/issues) page.
+If you have [useful feedback](https://alearningaday.blog/2020/08/04/useful-feedback/) drop me an "Issue" on the [GitHub Issues](https://github.com/vinorodrigues/bootstrap-dark-5/issues) page.
 
 > During the WIP period I'll be open to feedback on my Slack channel:  [tecsmith -> bootstrap-dark](https://tecsmith.slack.com/messages/boostrap-dark/)
 
