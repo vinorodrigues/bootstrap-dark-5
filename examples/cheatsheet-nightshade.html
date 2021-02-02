@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-darkmode-onload="true">
+<html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -20,9 +20,9 @@
       html.dark .d-light-inline { display: none !important; }
       html.dark .d-dark-inline { display: inline !important; }
     </style>
+    <link rel="icon" href="../favicon.ico">
   </head>
   <body class="bg-body">
-
 
 
 
@@ -34,22 +34,18 @@
           Cheatsheet
         </h1>
         <!-- ***** ***** ***** THE BUTTON GOES HERE ***** ***** ***** -->
+        <div class="btn-group ms-auto" role="group">
+          <a id="darkmode-button" class="btn btn-outline-secondary"><i class="fa fa-moon-o fa-fw d-none d-light-inline" title="Switch to dark mode"></i><i class="fa fa-sun-o fa-fw d-none d-dark-inline" title="Switch to light mode"></i></a>
 
-        <div class="btn-group" role="group">
-          <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-            <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-          </ul>
+          <div class="btn-group" role="group">
+            <button id="btnGroupDrop1" type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"></button>
+            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+              <li><a id="darkmode-button-l" class="dropdown-item">Set Light Mode</a></li>
+              <li><a id="darkmode-button-d" class="dropdown-item">Set Dark Mode</a></li>
+              <li><a id="darkmode-forget" class="dropdown-item">Reset Mode</a></li>
+            </ul>
+          </div>
         </div>
-
-
-
-
-
-        <a id="darkmode-button" class="btn btn-outline-secondary ms-auto"><i class="fa fa-moon-o fa-fw d-none d-light-inline" title="Switch to dark mode"></i><i class="fa fa-sun-o fa-fw d-none d-dark-inline" title="Switch to light mode"></i></a>
         <!-- ***** ***** ***** THE BUTTON GOES HERE ***** ***** ***** -->
       </div>
     </header>
@@ -1775,8 +1771,16 @@
     <script src="../dist/js/darkmode.js"></script>
     <script>
       document.querySelector("#darkmode-button").onclick = function(e){
-        console.log('Click');
         darkmode.toggleDarkMode();
+      }
+      document.querySelector("#darkmode-button-l").onclick = function(e){
+        darkmode.setDarkMode(false);
+      }
+      document.querySelector("#darkmode-button-d").onclick = function(e){
+        darkmode.setDarkMode(true);
+      }
+      document.querySelector("#darkmode-forget").onclick = function(e){
+        darkmode.resetDarkMode();
       }
     </script>
 

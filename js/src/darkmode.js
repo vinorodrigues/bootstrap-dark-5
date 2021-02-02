@@ -1,8 +1,14 @@
+const DATA_NAME = "bs_prefers_color_scheme"
+const LIGHT = "light"
+const DARK = "dark"
 
 var darkmode = {
+  // public
   isInDarkMode: false,
   hasGDPRConsent: false,
-  __documentRoot: document.getElementsByTagName('html')[0],
+
+  // private
+  __documentRoot: document.getElementsByTagName("html")[0],
 
   saveValue: function(name, value, days = 365) {
     if (this.hasGDPRConsent) {
@@ -15,7 +21,7 @@ var darkmode = {
       } else {
         exp = ""
       }
-      document.cookie = name + "=" + value + exp + "; path=/"
+      document.cookie = name + "=" + value + exp + "; SameSite=Strict; path=/"
     } else {
       // use local storage
       localStorage.setItem(name, value)
@@ -37,7 +43,7 @@ var darkmode = {
 
       return null
     } else {
-      return localStorage.getItem("lastname")
+      return localStorage.getItem(name)
     }
   },
 
@@ -50,7 +56,7 @@ var darkmode = {
   },
 
   getSavedColorScheme: function() {
-    var val = this.readValue("prefers-color-scheme")
+    var val = this.readValue(DATA_NAME)
     if (val) {
       return val
     } else {
@@ -59,64 +65,71 @@ var darkmode = {
   },
 
   getPreferedColorScheme: function() {
-    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      return "dark"
-    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
-      return "light"
+    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: "+DARK+")").matches) {
+      return DARK
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: "+LIGHT+")").matches) {
+      return LIGHT
     } else {
       return null
     }
   },
 
-  updatePreferedColorScheme: function(e) {
-    // TODO: WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP WIP
-    console.log( JSON.stringify(e) )
-  },
-
-  setColorScheme: function(darkMode) {
+  setDarkMode: function(darkMode, doSave = true) {
     if (!darkMode) {
       // light
-      this.__documentRoot.classList.remove("dark")
-      this.__documentRoot.classList.add("light")
+      this.__documentRoot.classList.remove(DARK)
+      this.__documentRoot.classList.add(LIGHT)
       this.isInDarkMode = false
-      this.saveValue("prefers-color-scheme", "light")
+      if (doSave) this.saveValue(DATA_NAME, LIGHT)
     } else {
       // dark
-      this.__documentRoot.classList.remove("light")
-      this.__documentRoot.classList.add("dark")
+      this.__documentRoot.classList.remove(LIGHT)
+      this.__documentRoot.classList.add(DARK)
       this.isInDarkMode = true
-      this.saveValue("prefers-color-scheme", "dark")
+      if (doSave) this.saveValue(DATA_NAME, DARK)
     }
   },
 
   toggleDarkMode: function() {
-    this.setColorScheme( !this.__documentRoot.classList.contains("dark") )
+    this.setDarkMode( !this.__documentRoot.classList.contains(DARK), true )
+  },
+
+  resetDarkMode: function() {
+    this.eraseValue(DATA_NAME)
+    var darkMode = this.getPreferedColorScheme()
+    if (darkMode) this.setDarkMode( darkMode == DARK, false )
+  }
+}
+
+function darkmodeUpdateEvent() {
+  var darkMode = darkmode.getSavedColorScheme()
+  if (!darkMode) {
+    darkMode = darkmode.getPreferedColorScheme()
+    if (darkMode) darkmode.setDarkMode( darkMode == DARK, false )
   }
 }
 
 function darkmodeOnDOMContentLoaded() {
-  darkmode.hasGDPRConsent = true  // TODO: NB! Remove this!!
-
-  var pref = darkmode.readValue("prefers-color-scheme")
+  var pref = darkmode.readValue(DATA_NAME)
   if (!pref) {
     // user has not set pref. so get from `<HTML>` tag incase developer has set pref.
-    if (this.__documentRoot.classList.contains("dark")) {
-      pref = "dark"
-    } else if (this.__documentRoot.classList.contains("light")) {
-      pref = "light"
+    if (darkmode.__documentRoot.classList.contains(DARK)) {
+      pref = DARK
+    } else if (darkmode.__documentRoot.classList.contains(LIGHT)) {
+      pref = LIGHT
     } else {
       // when all else fails, get pref. from OS/browser
       pref = darkmode.getPreferedColorScheme()
     }
   }
-  darkmode.isInDarkMode = pref == "dark"
+  darkmode.isInDarkMode = pref == DARK
 
   // initalize the `HTML` tag
-  darkmode.setColorScheme(darkmode.isInDarkMode)
+  darkmode.setDarkMode(darkmode.isInDarkMode, false)
 
   // update every time it changes
   if (window.matchMedia) {
-    window.matchMedia("(prefers-color-scheme: dark)").addEventListener( 'change', darkmode.updatePreferedColorScheme )
+    window.matchMedia("(prefers-color-scheme: "+DARK+")").addEventListener( "change", darkmodeUpdateEvent )
   }
 }
 

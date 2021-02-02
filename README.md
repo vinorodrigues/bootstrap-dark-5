@@ -98,6 +98,8 @@ You can access the theme CSS file from the GitHub release:
 
 * CSS-TRICKS, Adhuham, Sep 9, 2020 [A Complete Guide to Dark Mode on the Web](https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/)
 
+* My bit about [images and other considerations](https://vinorodrigues.github.io/bootstrap-dark/readme.html#but-thats-not-enough) in my [.. Definitive Guide ..](http://vinorodrigues.github.io/bootstrap-dark) piece.
+
 
 ## Feedback
 
