@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-set-darkmode-onload="true">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -23,14 +23,14 @@
         document.documentElement.style.display = "none";
         document.head.insertAdjacentHTML(
           "beforeend",
-          "<link id=\"css\" rel=\"stylesheet\" href=\"../dist/bootstrap.css\" onload=\"document.documentElement.style.display = ''\">"
+          "<link id=\"css\" rel=\"stylesheet\" href=\"../dist/css/bootstrap.css\" onload=\"document.documentElement.style.display = ''\">"
         );
       }
     </script>
     <!-- Load the alternate CSS first ... -->
-    <link id="css-dark" rel="stylesheet" href="../dist/bootstrap-night.css" media="(prefers-color-scheme: dark)">
+    <link id="css-dark" rel="stylesheet" href="../dist/css/bootstrap-night.css" media="(prefers-color-scheme: dark)">
     <!-- ... and then the primary CSS last for a fallback on very old browsers that don't support media filtering -->
-    <link id="css-light" rel="stylesheet" href="../dist/bootstrap.css" media="(prefers-color-scheme: light)">
+    <link id="css-light" rel="stylesheet" href="../dist/css/bootstrap.css" media="(prefers-color-scheme: light)">
     <!-- / Bootstrap CSS -->
 
     <!--
@@ -39,20 +39,11 @@
       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     -->
 
-
     <title>Cheatsheet · Bootstrap v5.0</title>
 
     <!-- Cheatsheet -->
 
-    <link href="cheatsheet-dark.css" rel="stylesheet">
-    <style>
-      body.color-scheme-light .bd-cheatsheet section > h2::before {
-        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) calc(100% - 3rem), rgba(255, 255, 255, .01));
-      }
-      body.color-scheme-dark .bd-cheatsheet section > h2::before {
-        background-image: linear-gradient(to bottom, rgba(34, 34, 34, 1) calc(100% - 3rem), rgba(34, 34, 34, .01));
-      }
-    </style>
+    <link href="cheatsheet-nights.css" rel="stylesheet">
 
     <!--
       *************************************************************************
@@ -159,6 +150,7 @@
       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     -->
 
+    <link rel="icon" href="../favicon.ico">
   </head>
   <body class="bg-body">
 
@@ -173,8 +165,8 @@
           Cheatsheet
         </h1>
         <form class="ms-auto d-flex">
-          <div class="form-check form-switch" title="" data-toggle="tooltip" data-placement="left" data-original-title="Toggle Dark Mode<small><br>or press [D] hot-key</small>">
-            <input class="form-check-input" type="checkbox" id="toggle-btn">
+          <div class="form-check form-switch tooltip-demo">
+            <input class="form-check-input" type="checkbox" id="toggle-btn" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Toggle Dark Mode or press [D] hot-key">
             <label class="form-check-label" for="toggle-btn"></label>
           </div>
         </form>
@@ -1649,8 +1641,8 @@
 
             <div class="bd-example">
             <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-              <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             </div>
           </div>
@@ -1894,6 +1886,7 @@
         </div>
       </div>
     </div>
+
 
 
 

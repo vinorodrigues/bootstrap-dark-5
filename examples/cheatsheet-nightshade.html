@@ -6,13 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="../dist/css/bootstrap-dark.css" rel="stylesheet">
+    <link href="../dist/css/bootstrap-nightshade.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <title>Cheatsheet · Bootstrap v5.0</title>
 
     <!-- Cheatsheet -->
 
-    <link href="cheatsheet-dark.css" rel="stylesheet">
+    <link href="cheatsheet-nights.css" rel="stylesheet">
+    <style>
+      .d-light-inline { display: inline !important; }
+      .d-dark-inline { display: none !important; }
+      html.dark .d-light-inline { display: none !important; }
+      html.dark .d-dark-inline { display: inline !important; }
+    </style>
     <link rel="icon" href="../favicon.ico">
   </head>
   <body class="bg-body">
@@ -24,13 +31,22 @@
       <div class="container-fluid d-flex align-items-center">
         <h1 class="d-flex align-items-center fs-4 text-white mb-0">
           <img src="bootstrap-logo-white.svg" width="38" height="30" class="me-3" alt="Bootstrap">
-          Cheatsheet (in&nbsp;
-          <span class="d-none d-dark-inline">Dark</span>
-          <span class="d-none d-light-inline">Light</span>
-          <span class="d-light-none d-dark-none">Unknown</span>
-          &nbsp;Mode)
+          Cheatsheet
         </h1>
-        <span class="ms-auto text-light"><span style="font-size:80%">	ℹ</span>&nbsp; <span class="d-none d-light-inline">Switch your OS to Dark Mode</span><span class="d-none d-dark-inline">Try toggling your OS to and from Dark Mode</span></span>
+        <!-- ***** ***** ***** THE BUTTON GOES HERE ***** ***** ***** -->
+        <div class="btn-group ms-auto" role="group">
+          <a id="darkmode-button" class="btn btn-outline-secondary"><i class="fa fa-moon-o fa-fw d-none d-light-inline" title="Switch to dark mode"></i><i class="fa fa-sun-o fa-fw d-none d-dark-inline" title="Switch to light mode"></i></a>
+
+          <div class="btn-group" role="group">
+            <button id="btnGroupDrop1" type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"></button>
+            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+              <li><a id="darkmode-button-l" class="dropdown-item">Set Light Mode</a></li>
+              <li><a id="darkmode-button-d" class="dropdown-item">Set Dark Mode</a></li>
+              <li><a id="darkmode-forget" class="dropdown-item">Reset Mode</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- ***** ***** ***** THE BUTTON GOES HERE ***** ***** ***** -->
       </div>
     </header>
     <aside class="bd-aside sticky-xl-top text-muted align-self-start mb-3 mb-xl-5 px-2">
@@ -99,7 +115,7 @@
             <div class="bd-example">
             <p class="display-1">Display 1</p>
             <p class="display-2">Display 2</p>
-            <p class="display-3 ">Display 3</p>
+            <p class="display-3">Display 3</p>
             <p class="display-4">Display 4</p>
             <p class="display-5">Display 5</p>
             <p class="display-6">Display 6</p>
@@ -1748,16 +1764,25 @@
       </div>
     </div>
 
-
-
-
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
     <!-- DarkMode.js -->
-    <!-- NOT REALLY NEEDED, JUST ADDED HERE TO SHOW PORTABILITY -->
-    <script src="../dist/js/darkmode.esm.js"></script>
-
+    <script src="../dist/js/darkmode.js"></script>
+    <script>
+      document.querySelector("#darkmode-button").onclick = function(e){
+        darkmode.toggleDarkMode();
+      }
+      document.querySelector("#darkmode-button-l").onclick = function(e){
+        darkmode.setDarkMode(false);
+      }
+      document.querySelector("#darkmode-button-d").onclick = function(e){
+        darkmode.setDarkMode(true);
+      }
+      document.querySelector("#darkmode-forget").onclick = function(e){
+        darkmode.resetDarkMode();
+      }
+    </script>
 
     <!-- Cheatsheet -->
     <script src="cheatsheet.js"></script>
