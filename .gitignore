@@ -1,8 +1,35 @@
 node_modules
-dist
 .cache
 ~*
 _/*
 !scss/**/_*
 package-lock.json
 .DS_store
+
+# specifically ignore most of dist, except the files needed for GitHub pages
+# (yes... maps with be broken, but not needed on GitHub)
+#dist/css/bootstrap-dark.css
+dist/css/bootstrap-dark.css.map
+dist/css/bootstrap-dark.min.css
+dist/css/bootstrap-dark.min.css.map
+#dist/css/bootstrap-night.css
+dist/css/bootstrap-night.css.map
+dist/css/bootstrap-night.min.css
+dist/css/bootstrap-night.min.css.map
+dist/css/bootstrap-nightfall.css
+dist/css/bootstrap-nightfall.css.map
+dist/css/bootstrap-nightfall.min.css
+dist/css/bootstrap-nightfall.min.css.map
+#dist/css/bootstrap-nightshade.css
+dist/css/bootstrap-nightshade.css.map
+dist/css/bootstrap-nightshade.min.css
+dist/css/bootstrap-nightshade.min.css.map
+dist/css/bootstrap.css.map
+dist/css/bootstrap.min.css
+dist/css/bootstrap.min.css.map
+dist/js/darkmode.d.ts
+dist/js/darkmode.d.ts.map
+#dist/js/darkmode.js
+dist/js/darkmode.js.map
+dist/js/darkmode.min.js
+dist/js/darkmode.min.js.map
