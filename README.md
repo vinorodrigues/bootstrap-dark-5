@@ -11,6 +11,8 @@
 
 > <u style="text-decoration:none;color:red">***NOTE:***</u> The recomendation is to ***not*** use this in a production environment.
 
+> <u style="text-decoration:none;color:purple">***A note on Bootstrap core:***</u> I have tried to merge this project in to Boostrap core *(see [pull request #32936](https://github.com/twbs/bootstrap/pull/32936))*, but while that's beeing considered I will continue to work on this project.  If you wish this to be added to Bootstrap core then let the authors know by adding a comment to the [pull request](https://github.com/twbs/bootstrap/pull/32936).
+
 ## About
 
 This code will make little sense if you don't read
