@@ -19,6 +19,10 @@
       "plugin:@typescript-eslint/recommended"
     ],
     "parser": "@typescript-eslint/parser",
+    "ignorePatterns": [
+        "*.html",
+        "*.md"
+    ],
     "rules": {
         "capitalized-comments": "off",
         "indent": [

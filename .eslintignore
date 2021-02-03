@@ -1,8 +1,7 @@
-node_modules
-.vscode
-dist
-build
-examples
+node_modules/*
+.vscode/*
+dist/*
+build/*
+examples/*
 .cache
 **/*.min.js
-*.html

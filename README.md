@@ -23,9 +23,13 @@ The code only compiles the [Method 1](https://github.com/vinorodrigues/bootstrap
 
 i.e.:
 
-* `bootstrap-night`;
-* `bootstrap-nightshade`, _and;_
+* `bootstrap-night`,
+  * [Quick Start Guide](docs/bootstrap-night.md)
+* `bootstrap-nightshade`,
+  * [Quick Start Guide](docs/bootstrap-nightshade.md)
+  * [`darkmode.js` Reference](docs/darkmode.js.md)
 * `bootstrap-dark`.
+  * [Quick Start Guide](docs/bootstrap-dark.md)
 
 
 ## The Proof Is in the Pudding
@@ -50,7 +54,7 @@ If you're a theme builder or want to use its principles in your own project you'
 > <u style="text-decoration:none;color:red">***NOTE:***</u> The build system is based on [NPM Scripts](https://docs.npmjs.com/cli/v6/using-npm/scripts). Most of the build tools _(NPM modules)_ will need to be installed as *"global"* to ensure the scripts are executable from the command line.
 
 ```bash
-npm install -g  autoprefixer  browser-sync  clean-css-cli  cross-env  eslint  eslint-config-xo  eslint-plugin-import  eslint-plugin-unicorn  find-unused-sass-variables  imagemin-cli  nodemon  npm-run-all  postcss-cli  rtlcss  sass  stylelint  stylelint-config-twbs-bootstrap  svgo  terser
+npm i -g  autoprefixer  documentation browser-sync  clean-css-cli  cross-env  eslint  eslint-config-xo  eslint-plugin-import  eslint-plugin-unicorn  find-unused-sass-variables  imagemin-cli  nodemon  npm-run-all  postcss-cli  rtlcss  sass  stylelint  stylelint-config-twbs-bootstrap  svgo  terser typescript
 ```
 
 
@@ -72,20 +76,42 @@ You can also hotlink the theme via CDN with [jsdelivr.com](https://www.jsdelivr.
 You can access the theme CSS file from the GitHub release:
 
 * **`bootstrap-dark`** - the @media `perfers-color-scheme` variant
-  * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-dark.min.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-dark.min.css)
-  * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-dark.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-dark.css)
+  * Production / minified variant:
+    * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-dark.min.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-dark.min.css)
+  * Development / Debug variant:
+    * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-dark.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-dark.css)
+  * Also, read the [Quick Start Guide](docs/bootstrap-dark.md).
 
 * **`bootstrap-nightshade`** - the `html.body` css class + JS library variant
-  * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-nightshade.min.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-nightshade.min.css)
-  * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/js/darkmode.min.js`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/js/darkmode.min.js)
-  * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-nightshade.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-nightshade.css)
-  * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/js/darkmode.js`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/js/darkmode.js)
+  * Production / minified variants:
+    * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-nightshade.min.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-nightshade.min.css)
+    * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/js/darkmode.min.js`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/js/darkmode.min.js)
+  * Development / Debug variants:
+    * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-nightshade.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-nightshade.css)
+    * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/js/darkmode.js`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/js/darkmode.js)
+  * Also, read the [Quick Start Guide](docs/bootstrap-nightshade.md) and the [`darkmode.js` Reference](docs/darkmode.js.md).
 
 * **`bootstrap-night`** - that dark theme only variant
-  * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-night.min.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css.bootstrap-night.min.css)
-  * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-night.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-night.css)
+  * Production / minified variant:
+    * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-night.min.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css.bootstrap-night.min.css)
+  * Development / Debug variant:
+    * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-night.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-night.css)
+  * Also, read the [Quick Start Guide](docs/bootstrap-night.md).
 
 * Source etc. are [here](https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5/), but I recommend using [GitHub](https://github.com/vinorodrigues/bootstrap-dark-5).
+
+
+## Further Reading
+
+**Must reads** for all developers wanting to write for dark mode:
+
+* web.dev, Thomas Steiner ([@tomayac](https://github.com/tomayac)), Jun 27, 2019 *(updated Jun 9, 2020)*, "[prefers-color-scheme: Hello darkness, my old friend](https://web.dev/prefers-color-scheme/)"
+
+* web.dev, Thomas Steiner ([@tomayac](https://github.com/tomayac)), Apr 8, 2020 *(updated Jun 16, 2020)*, "[Improved dark mode default styling with the color-scheme CSS property and the corresponding meta tag](https://web.dev/color-scheme/)"
+
+* CSS-TRICKS, Adhuham, Sep 9, 2020 "[A Complete Guide to Dark Mode on the Web](https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/)"
+
+* My bit about [images and other considerations](https://vinorodrigues.github.io/bootstrap-dark/readme.html#but-thats-not-enough) in my "[.. Definitive Guide ..](http://vinorodrigues.github.io/bootstrap-dark)" piece.
 
 
 ## Feedback
