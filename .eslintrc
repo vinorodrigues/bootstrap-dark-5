@@ -2,7 +2,7 @@
     "root": true,
     "env": {
       "browser": true,
-      "node": true,
+      "node": false,
       "jquery": false,
       "es6": true
     },
@@ -10,10 +10,19 @@
       "sourceType": "module",
       "allowImportExportEverywhere": true
     },
-    "extends": [
-      "eslint:recommended"
+    "plugins": [
+        "@typescript-eslint"
     ],
-    "parser": "babel-eslint",
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "ignorePatterns": [
+        "*.html",
+        "*.md"
+    ],
     "rules": {
         "capitalized-comments": "off",
         "indent": [
