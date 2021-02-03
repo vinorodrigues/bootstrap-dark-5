@@ -19,11 +19,12 @@ This code will make little sense if you don't read
 
 ## What do you get?
 
-The code only compiles the [Method 1](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-1) and [Method 4](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-4) variants (for BS5) of the topics discussed in the original body of work.
+The code only compiles the [Method 1](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-1), [Method 3](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-3) and [Method 4](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-4) variants (for BS5) of the topics discussed in the original body of work.
 
 i.e.:
 
-* `bootstrap-night`, _and;_
+* `bootstrap-night`;
+* `bootstrap-nightshade`, _and;_
 * `bootstrap-dark`.
 
 
@@ -49,7 +50,7 @@ If you're a theme builder or want to use its principles in your own project you'
 > <u style="text-decoration:none;color:red">***NOTE:***</u> The build system is based on [NPM Scripts](https://docs.npmjs.com/cli/v6/using-npm/scripts). Most of the build tools _(NPM modules)_ will need to be installed as *"global"* to ensure the scripts are executable from the command line.
 
 ```bash
-npm install -g autoprefixer browser-sync clean-css-cli cross-env find-unused-sass-variables nodemon npm-run-all postcss postcss-cli rtlcss sass stylelint stylelint-config-twbs-bootstrap
+npm install -g  autoprefixer  browser-sync  clean-css-cli  cross-env  eslint  eslint-config-xo  eslint-plugin-import  eslint-plugin-unicorn  find-unused-sass-variables  imagemin-cli  nodemon  npm-run-all  postcss-cli  rtlcss  sass  stylelint  stylelint-config-twbs-bootstrap  svgo  terser
 ```
 
 
@@ -87,11 +88,9 @@ You can access the theme CSS file from the GitHub release:
 * Source etc. are [here](https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5/), but I recommend using [GitHub](https://github.com/vinorodrigues/bootstrap-dark-5).
 
 
-### Feedback
+## Feedback
 
 If you have [useful feedback](https://alearningaday.blog/2020/08/04/useful-feedback/) drop me an "Issue" on the [GitHub Issues](https://github.com/vinorodrigues/bootstrap-dark-5/issues) page.
-
-> During the WIP period I'll be open to feedback on my Slack channel:  [tecsmith -> bootstrap-dark](https://tecsmith.slack.com/messages/boostrap-dark/)
 
 
 ---
