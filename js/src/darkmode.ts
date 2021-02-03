@@ -33,7 +33,7 @@ class DarkMode {
   /**
    * Variable to store GDPR Consent
    *
-   * Used in {@link DarkMode~saveValue} to determin if a cookie or the `localStorage` object should be used.
+   * Used in {@link #saveValue} to determin if a cookie or the `localStorage` object should be used.
    * * Set to `true` when GDPR Consent has been given to enable storage to cookie *(useful in Server-Side knowlage of user preference)*
    * * Default is `false`, thus storage will use the browsers localStorage object *(Note: No expiry is set)*
    */
@@ -60,7 +60,7 @@ class DarkMode {
   /**
    * Save the current color-scheme mode
    *
-   * @param {string} name -- Name of the cookie or localStorage->name, is dependant on {@link DarkMode#hasGDPRConsent}
+   * @param {string} name -- Name of the cookie or localStorage->name, is dependant on {@link #hasGDPRConsent}
    * @param {string} value -- Should be one of `light` or `dark`
    * @param {number} days -- Number of days to expire the cookie when the cookie is used
    * @returns {void}
@@ -87,7 +87,7 @@ class DarkMode {
   /**
    * Retrieves the color-scheme last saved
    *
-   * NOTE: is dependant on {@link DarkMode#hasGDPRConsent}
+   * NOTE: is dependant on {@link #hasGDPRConsent}
    *
    * @param {string} name -- Name of the cookie or localStorage->name
    * @returns {string} -- The saved value, iether `light` or `dark`, or an empty string if not saved prior
@@ -115,7 +115,7 @@ class DarkMode {
   /**
    * Deletes the saved color-scheme
    *
-   * NOTE: is dependant on {@link DarkMode#hasGDPRConsent}
+   * NOTE: is dependant on {@link #hasGDPRConsent}
    *
    * @param {string} name
    * @returns {void} -- Nothing, erasure is assumed
@@ -131,7 +131,7 @@ class DarkMode {
   /**
    * Queries the `<HTML>` tag for the current color-scheme
    *
-   * (This value is set prior via the {@link DarkMode~setDarkMode}) function.)
+   * (This value is set prior via the {@link #setDarkMode}) function.)
    *
    * @returns {string} -- The current value, iether `light` or `dark`, or an empty string if not saved prior
    */
@@ -147,7 +147,7 @@ class DarkMode {
   /**
    * Queries the `prefers-color-scheme` media query for the current color-scheme
    *
-   * (This value is set prior via the {@link DarkMode~setDarkMode}) function.)
+   * (This value is set prior via the {@link #setDarkMode}) function.)
    *
    * @returns {string} -- The current value, iether `light` or `dark`, or an empty string if the media query is not supported
    */
@@ -170,7 +170,7 @@ class DarkMode {
    * `<html lang="en" class="light">`
    *
    * @param {bool} darkMode -- `true` for "dark", `false` for 'light'
-   * @param {bool} doSave -- If `true`, then will also call {@link DarkMode~saveValue} to save that state
+   * @param {bool} doSave -- If `true`, then will also call {@link #saveValue} to save that state
    * @returns {void} -- Nothing, assumes saved
    */
   setDarkMode(darkMode: boolean, doSave = true): void {
@@ -193,7 +193,7 @@ class DarkMode {
    * Toggles the color-scheme in the `<HTML>` tag as a class called either `light` or `dark`
    * based on the inverse of it's prior state.
    *
-   * See {@link DarkMode~setDarkMode}
+   * See {@link #setDarkMode}
    *
    * @returns {void} - Nothing, assumes success
    */
@@ -202,9 +202,9 @@ class DarkMode {
   }
 
   /**
-   * Calls {@link DarkMode~eraseValue} to erase any saved value, and then
-   * calls {@link DarkMode~getPreferedColorScheme} to retrieve the `prefers-color-scheme` media query,
-   * passing its value to {@link DarkMode~setDarkMode} to reset the users preference.
+   * Calls {@link #eraseValue} to erase any saved value, and then
+   * calls {@link #getPreferedColorScheme} to retrieve the `prefers-color-scheme` media query,
+   * passing its value to {@link #setDarkMode} to reset the users preference.
    *
    * @returns {void} - Nothing, no error handling is performed.
    */
@@ -224,7 +224,7 @@ class DarkMode {
    * ***static*** -- function called by the media query on change event.
    *
    * First retrieves any saved value, and if present ignores the event, but
-   * if not set then triggers the {@link darkmode~setDarkMode} function to chnage the current mode.
+   * if not set then triggers the {@link #setDarkMode} function to chnage the current mode.
    *
    * @returns {void} -- Nothing, assumes success
    */
@@ -243,7 +243,7 @@ class DarkMode {
    * * Loading any prior stored preference (GDPR consent is ***not*** assumed)
    * * else, honoring any `<HTML>` tag `class="dark|light"` that Server-Side may set
    * * else, honoring the browser / OS `prefers-color-scheme` preference
-   * and setting the derived mode by calling {@link darkmode~setDarkMode}
+   * and setting the derived mode by calling {@link #setDarkMode}
    *
    * Followd by setting up the media query on change event
    *
