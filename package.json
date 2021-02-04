@@ -42,7 +42,7 @@
     "watch-root": "nodemon --watch . --ext html --exec \"browser-sync reload\"",
     "map-dark-vars": "npm-run-all --parallel map-dark-vars-*",
     "docs": "npm-run-all --parallel docs-js-*",
-    "docs-js-darkmode": "documentation build js/src/darkmode.ts --parse-extension ts -f md -o docs/darkmode.js.md --markdown-toc false --shallow true",
+    "docs-js-darkmode": "documentation build js/src/darkmode.ts --parse-extension ts -f md -o docs/darkmode.js.md --markdown-toc true --shallow false",
     "map-dark-vars-alt-to-core": "node ./build/make-dark-map.js ./build/dark-map-list.json '-alt' '' > ./scss/dark/_variables-map-alt-to-core.scss"
   },
   "author": "Vino Rodrigues",
