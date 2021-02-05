@@ -3,6 +3,7 @@ class DarkMode {
     constructor() {
         this._hasGDPRConsent = false;
         this.cookieExpiry = 365;
+        this._dataSelector = "";
         document.addEventListener("DOMContentLoaded", function () {
             DarkMode.onDOMContentLoaded();
         });
@@ -32,6 +33,12 @@ class DarkMode {
                 DarkMode.saveCookie(DarkMode.DATA_KEY, prior);
             }
         }
+    }
+    get dataSelector() {
+        return this._dataSelector;
+    }
+    set dataSelector(val) {
+        this._dataSelector = val;
     }
     get documentRoot() {
         return document.getElementsByTagName("html")[0];
@@ -103,42 +110,70 @@ class DarkMode {
         }
     }
     setDarkMode(darkMode, doSave = true) {
-        if (!darkMode) {
-            this.documentRoot.classList.remove(DarkMode.CLASS_NAME_DARK);
-            this.documentRoot.classList.add(DarkMode.CLASS_NAME_LIGHT);
-            if (doSave)
-                this.saveValue(DarkMode.DATA_KEY, DarkMode.VALUE_LIGHT);
+        if (!this._dataSelector) {
+            if (!darkMode) {
+                this.documentRoot.classList.remove(DarkMode.CLASS_NAME_DARK);
+                this.documentRoot.classList.add(DarkMode.CLASS_NAME_LIGHT);
+            }
+            else {
+                this.documentRoot.classList.remove(DarkMode.CLASS_NAME_LIGHT);
+                this.documentRoot.classList.add(DarkMode.CLASS_NAME_DARK);
+            }
         }
         else {
-            this.documentRoot.classList.remove(DarkMode.CLASS_NAME_LIGHT);
-            this.documentRoot.classList.add(DarkMode.CLASS_NAME_DARK);
-            if (doSave)
-                this.saveValue(DarkMode.DATA_KEY, DarkMode.VALUE_DARK);
+            this.documentRoot.setAttribute(this._dataSelector, darkMode ? DarkMode.VALUE_DARK : DarkMode.VALUE_LIGHT);
         }
+        if (doSave)
+            this.saveValue(DarkMode.DATA_KEY, darkMode ? DarkMode.VALUE_DARK : DarkMode.VALUE_LIGHT);
     }
     toggleDarkMode(doSave = true) {
-        this.setDarkMode(!this.documentRoot.classList.contains(DarkMode.CLASS_NAME_DARK), doSave);
+        let darkMode;
+        if (!this._dataSelector) {
+            console.log('Y[' + this._dataSelector + ']');
+            darkMode = this.documentRoot.classList.contains(DarkMode.CLASS_NAME_DARK);
+        }
+        else {
+            console.log('X[' + this._dataSelector + ']');
+            darkMode = this.documentRoot.getAttribute(this._dataSelector) == DarkMode.VALUE_DARK;
+        }
+        this.setDarkMode(!darkMode, doSave);
     }
     resetDarkMode() {
         this.eraseValue(DarkMode.DATA_KEY);
-        const darkMode = this.getPreferedColorScheme();
-        if (darkMode) {
-            this.setDarkMode(darkMode == DarkMode.VALUE_DARK, false);
+        const dm = this.getPreferedColorScheme();
+        if (dm) {
+            this.setDarkMode(dm == DarkMode.VALUE_DARK, false);
         }
         else {
-            this.documentRoot.classList.remove(DarkMode.CLASS_NAME_LIGHT);
-            this.documentRoot.classList.remove(DarkMode.CLASS_NAME_DARK);
+            if (!this._dataSelector) {
+                this.documentRoot.classList.remove(DarkMode.CLASS_NAME_LIGHT);
+                this.documentRoot.classList.remove(DarkMode.CLASS_NAME_DARK);
+            }
+            else {
+                this.documentRoot.removeAttribute(this._dataSelector);
+            }
         }
     }
     static getColorScheme() {
-        if (darkmode.documentRoot.classList.contains(DarkMode.CLASS_NAME_DARK)) {
-            return DarkMode.VALUE_DARK;
-        }
-        else if (darkmode.documentRoot.classList.contains(DarkMode.CLASS_NAME_LIGHT)) {
-            return DarkMode.VALUE_LIGHT;
+        if (!darkmode.dataSelector) {
+            if (darkmode.documentRoot.classList.contains(DarkMode.CLASS_NAME_DARK)) {
+                return DarkMode.VALUE_DARK;
+            }
+            else if (darkmode.documentRoot.classList.contains(DarkMode.CLASS_NAME_LIGHT)) {
+                return DarkMode.VALUE_LIGHT;
+            }
+            else {
+                return "";
+            }
         }
         else {
-            return "";
+            const data = darkmode.documentRoot.getAttribute(darkmode.dataSelector);
+            if ((data == DarkMode.VALUE_DARK) || (data == DarkMode.VALUE_LIGHT)) {
+                return data;
+            }
+            else {
+                return "";
+            }
         }
     }
     static updatePreferedColorSchemeEvent() {

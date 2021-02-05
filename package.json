@@ -26,6 +26,8 @@
     "css-minify-nightfall": "cleancss -O1 --format breakWith=lf --output dist/css/bootstrap-nightfall.min.css dist/css/bootstrap-nightfall.css",
     "css-minify-nightshade": "cleancss -O1 --format breakWith=lf --output dist/css/bootstrap-nightshade.min.css dist/css/bootstrap-nightshade.css",
     "css-minify-dark": "cleancss -O1 --format breakWith=lf --output dist/css/bootstrap-dark.min.css dist/css/bootstrap-dark.css",
+    "NOT-IN-B1-YET--WAIT_css-minify-unlit": "cleancss -O1 --format breakWith=lf --output dist/css/bootstrap-unlit.min.css dist/css/bootstrap-unlit.css",
+    "css-minify-blackbox": "cleancss -O1 --format breakWith=lf --output dist/css/bootstrap-blackbox.min.css dist/css/bootstrap-blackbox.css",
     "css-lint": "npm-run-all --continue-on-error --parallel css-lint-*",
     "css-lint-stylelint": "stylelint \"**/*.scss\" --cache --cache-location .cache/.stylelintcache --rd",
     "css-lint-vars": "fusv scss/",
@@ -40,10 +42,12 @@
     "watch-js-main": "nodemon --watch js/src/ --ext ts --exec \"npm-run-all js-lint js-compile js-minify docs-js-* && browser-sync reload\"",
     "watch-examples": "nodemon --watch examples/ --ext html --exec \"browser-sync reload\"",
     "watch-root": "nodemon --watch . --ext html --exec \"browser-sync reload\"",
-    "map-dark-vars": "npm-run-all --parallel map-dark-vars-*",
     "docs": "npm-run-all --parallel docs-js-*",
     "docs-js-darkmode": "documentation build js/src/darkmode.ts --parse-extension ts -f md -o docs/darkmode.js.md --markdown-toc true --shallow false",
-    "map-dark-vars-alt-to-core": "node ./build/make-dark-map.js ./build/dark-map-list.json '-alt' '' > ./scss/dark/_variables-map-alt-to-core.scss"
+    "map-dark-vars": "npm-run-all --parallel map-dark-vars-*",
+    "map-dark-vars-alt-to-core": "node ./build/make-dark-map.js ./build/dark-map-list.json '-alt' '' > ./scss/dark/_variables-map-alt-to-core.scss",
+    "NOT-IN-B1-YET--WAIT_map-dark-vars-core-to-temp": "node ./build/make-dark-map.js ./build/dark-map-list.json '' '-temp-dnu' > ./scss/dark/_variables-map-core-to-temp.scss",
+    "NOT-IN-B1-YET--WAIT_map-dark-vars-temp-to-alt": "node ./build/make-dark-map.js ./build/dark-map-list.json '-temp-dnu' '-alt' > ./scss/dark/_variables-map-temp-to-alt.scss"
   },
   "author": "Vino Rodrigues",
   "homepage": "https://vinorodrigues.github.io/bootstrap-dark-5/",

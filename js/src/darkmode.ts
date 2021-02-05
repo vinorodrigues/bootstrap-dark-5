@@ -27,13 +27,18 @@ class DarkMode {
   /** ***const*** -- String used to identify dark mode as a class in the `<HTML>` tag */
   static readonly CLASS_NAME_DARK = "dark"
 
-
   /**
    * ***property***
    *
    * Used to get the current state, `true` when in dark mode, `false` when in light mode or when mode not set
    *
    * Can also be used to set the current mode *(with no persistance saving)*
+   *
+   * @example <caption>Get if page is in "Dark" mode</caption>
+   * var myVal = darkmode.inDarkMode;
+   *
+   * @example <caption>Set the page to the "Dark" mode</caption>
+   * darkmode.inDarkMode = true;
    *
    * @public
    * @type {boolean}
@@ -56,6 +61,9 @@ class DarkMode {
    * * Set to `true` when GDPR Consent has been given to enable storage to cookie *(useful in Server-Side knowlage of user preference)*
    * * The setter takes care of swapping the cookie and localStorage if appropriate
    * * Default is `false`, thus storage will use the browsers localStorage object *(Note: No expiry is set)*
+   *
+   * @example <caption>Set once GDPR consent is given by the user</caption>
+   * darkmode.hasGDPRConsent = true;
    */
   get hasGDPRConsent() {
     return this._hasGDPRConsent
@@ -82,6 +90,24 @@ class DarkMode {
 
   /** Expiry time in days when saving and GDPR consent is give */
   cookieExpiry = 365;
+
+  /** @private */
+  private _dataSelector = "";
+
+  /**
+   * When set will use the given data selector instead of a class in the `<html>`tag
+   *
+   * @example <caption>Setting the dataSelector</caption>
+   * // use the full name attribute, starting with "data-"
+   * darkmode.dataSelector = "data-bs-theme";
+   */
+  get dataSelector(): string {
+    return this._dataSelector
+  }
+
+  set dataSelector(val: string) {
+    this._dataSelector = val
+  }
 
   /**
    * Saves the instance of the documentRoot (i.e. `<html>` tag) when the object is created.
@@ -155,7 +181,7 @@ class DarkMode {
   /**
    * Retrieves the color-scheme last saved
    *
-   * NOTE: is dependant on {@link #hasGDPRConsent}
+   * **NOTE:** is dependant on {@link #hasGDPRConsent}
    *
    * @param {string} name -- Name of the cookie or localStorage->name
    * @returns {string} -- The saved value, iether `light` or `dark`, or an empty string if not saved prior
@@ -172,7 +198,7 @@ class DarkMode {
   /**
    * Deletes the saved color-scheme
    *
-   * NOTE: is dependant on {@link #hasGDPRConsent}
+   * **NOTE:** is dependant on {@link #hasGDPRConsent}
    *
    * @param {string} name
    * @returns {void} -- Nothing, erasure is assumed
@@ -188,7 +214,7 @@ class DarkMode {
   /**
    * Queries the `<HTML>` tag for the current color-scheme
    *
-   * (This value is set prior via the {@link #setDarkMode}) function.)
+   * *(This value is set prior via the {@link #setDarkMode}) function.)*
    *
    * @returns {string} -- The current value, iether `light` or `dark`, or an empty string if not saved prior
    */
@@ -204,7 +230,7 @@ class DarkMode {
   /**
    * Queries the `prefers-color-scheme` media query for the current color-scheme
    *
-   * (This value is set prior via the {@link #setDarkMode}) function.)
+   * *(This value is set prior via the {@link #setDarkMode}) function.)*
    *
    * @returns {string} -- The current value, iether `light` or `dark`, or an empty string if the media query is not supported
    */
@@ -221,39 +247,60 @@ class DarkMode {
   /**
    * Sets the color-scheme in the `<HTML>` tag as a class called either `light` or `dark`
    *
-   * @example
-   * `<html lang="en" class="dark">`
-   * @example
-   * `<html lang="en" class="light">`
+   * @example <caption>Dark mode when the class name is set</caption>
+   * <html lang="en" class="dark">
+   * <!-- Note: the "light" class is removed -->
+   *
+   * @example <caption>Light mode when the class name is set</caption>
+   * <html lang="en" class="light">
+   * <!-- Note: the "dark" class is removed -->
+   *
+   * @example <caption>Dark mode when `dataSelector = "data-bs-theme"` is set</caption>
+   * <html lang="en" data-bs-theme="dark">
+   *
+   * @example <caption>Light mode when `dataSelector = "data-bs-theme"` is set</caption>
+   * <html lang="en" data-bs-theme="light">
    *
    * @param {boolean} darkMode -- `true` for "dark", `false` for 'light'
    * @param {boolean} doSave -- If `true`, then will also call {@link #saveValue} to save that state
    * @returns {void} -- Nothing, assumes saved
    */
   setDarkMode(darkMode: boolean, doSave = true): void {
-    if (!darkMode) {
-      // DarkMode.LIGHT
-      this.documentRoot.classList.remove(DarkMode.CLASS_NAME_DARK)
-      this.documentRoot.classList.add(DarkMode.CLASS_NAME_LIGHT)
-      if (doSave) this.saveValue(DarkMode.DATA_KEY, DarkMode.VALUE_LIGHT)
+    if (!this._dataSelector) {
+      if (!darkMode) {
+        // light
+        this.documentRoot.classList.remove(DarkMode.CLASS_NAME_DARK)
+        this.documentRoot.classList.add(DarkMode.CLASS_NAME_LIGHT)
+      } else {
+        // dark
+        this.documentRoot.classList.remove(DarkMode.CLASS_NAME_LIGHT)
+        this.documentRoot.classList.add(DarkMode.CLASS_NAME_DARK)
+      }
     } else {
-      // dark
-      this.documentRoot.classList.remove(DarkMode.CLASS_NAME_LIGHT)
-      this.documentRoot.classList.add(DarkMode.CLASS_NAME_DARK)
-      if (doSave) this.saveValue(DarkMode.DATA_KEY, DarkMode.VALUE_DARK)
+      this.documentRoot.setAttribute(this._dataSelector, darkMode ? DarkMode.VALUE_DARK : DarkMode.VALUE_LIGHT)
     }
+
+    if (doSave) this.saveValue(DarkMode.DATA_KEY, darkMode ? DarkMode.VALUE_DARK : DarkMode.VALUE_LIGHT)
   }
 
   /**
    * Toggles the color-scheme in the `<HTML>` tag as a class called either `light` or `dark`
    * based on the inverse of it's prior state.
    *
-   * See {@link #setDarkMode}
+   * *(See {@link #setDarkMode})*
    *
    * @returns {void} - Nothing, assumes success
    */
   toggleDarkMode(doSave = true): void {
-    this.setDarkMode( !this.documentRoot.classList.contains(DarkMode.CLASS_NAME_DARK), doSave )
+    let darkMode
+    if (!this._dataSelector) {
+      console.log('Y['+this._dataSelector+']')
+      darkMode = this.documentRoot.classList.contains(DarkMode.CLASS_NAME_DARK)
+    } else {
+      console.log('X['+this._dataSelector+']')
+      darkMode = this.documentRoot.getAttribute(this._dataSelector) == DarkMode.VALUE_DARK
+    }
+    this.setDarkMode( !darkMode, doSave )
   }
 
   /**
@@ -265,13 +312,17 @@ class DarkMode {
    */
   resetDarkMode(): void {
     this.eraseValue(DarkMode.DATA_KEY)
-    const darkMode = this.getPreferedColorScheme()
-    if (darkMode) {
-      this.setDarkMode( darkMode == DarkMode.VALUE_DARK, false )
+    const dm = this.getPreferedColorScheme()
+    if (dm) {
+      this.setDarkMode( dm == DarkMode.VALUE_DARK, false )
     } else {
       // make good when `prefers-color-scheme` not supported
-      this.documentRoot.classList.remove(DarkMode.CLASS_NAME_LIGHT)
-      this.documentRoot.classList.remove(DarkMode.CLASS_NAME_DARK)
+      if (!this._dataSelector) {
+        this.documentRoot.classList.remove(DarkMode.CLASS_NAME_LIGHT)
+        this.documentRoot.classList.remove(DarkMode.CLASS_NAME_DARK)
+      } else {
+        this.documentRoot.removeAttribute(this._dataSelector)
+      }
     }
   }
 
@@ -281,12 +332,21 @@ class DarkMode {
    * @returns {string} -- The current value, iether `light` or `dark`, or an empty string if not present
    */
   static getColorScheme(): string {
-    if (darkmode.documentRoot.classList.contains(DarkMode.CLASS_NAME_DARK)) {
-      return DarkMode.VALUE_DARK
-    } else if (darkmode.documentRoot.classList.contains(DarkMode.CLASS_NAME_LIGHT)) {
-      return DarkMode.VALUE_LIGHT
+    if (!darkmode.dataSelector) {
+      if (darkmode.documentRoot.classList.contains(DarkMode.CLASS_NAME_DARK)) {
+        return DarkMode.VALUE_DARK
+      } else if (darkmode.documentRoot.classList.contains(DarkMode.CLASS_NAME_LIGHT)) {
+        return DarkMode.VALUE_LIGHT
+      } else {
+        return ""
+      }
     } else {
-      return ""
+      const data = darkmode.documentRoot.getAttribute(darkmode.dataSelector)
+      if ((data == DarkMode.VALUE_DARK) || (data == DarkMode.VALUE_LIGHT)) {
+        return data
+      } else {
+        return ""
+      }
     }
   }
 
