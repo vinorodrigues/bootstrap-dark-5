@@ -215,6 +215,10 @@ html.dark .bd-aside .btn:focus,
   }
 }
 
+.dropdown-item {
+  cursor: pointer;
+}
+
 /* BrowserSync */
 #__bs_notify__ {
   position: fixed;
