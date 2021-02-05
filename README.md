@@ -32,7 +32,7 @@ i.e.:
 |:---:|:---:|:---:|
 | [Quick Start Guide](docs/bootstrap-night.md) | [Quick Start Guide](docs/bootstrap-nightshade.md) | [Quick Start Guide](docs/bootstrap-dark.md) |
 | | [`darkmode.js` Reference](docs/darkmode.js.md) | |
-
+| [See Example](https://vinorodrigues.github.io/bootstrap-dark-5/examples/cheatsheet-night.html) | [See Example](https://vinorodrigues.github.io/bootstrap-dark-5/examples/cheatsheet-nightshade.html) | [See Example](https://vinorodrigues.github.io/bootstrap-dark-5/examples/cheatsheet-dark.html) |
 
 ## The Proof Is in the Pudding
 
