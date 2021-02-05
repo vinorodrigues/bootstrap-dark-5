@@ -40,11 +40,11 @@
           <div class="btn-group" role="group">
             <button id="btnGroupDrop1" type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"></button>
             <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-              <li><a id="darkmode-button-l-1" class="dropdown-item">Set Light Mode</a></li>
-              <li><a id="darkmode-button-d-1" class="dropdown-item">Set Dark Mode</a></li>
+              <li><a id="darkmode-off-button" class="dropdown-item">Set Light Mode</a></li>
+              <li><a id="darkmode-on-button" class="dropdown-item">Set Dark Mode</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a id="darkmode-button-l-2" class="dropdown-item">Set Light Mode (no save)</a></li>
-              <li><a id="darkmode-button-d-2" class="dropdown-item">Set Dark Mode (no save)</a></li>
+              <li><a id="darkmode-off-button-no-save" class="dropdown-item">Set Light Mode (no save)</a></li>
+              <li><a id="darkmode-on-button-no-save" class="dropdown-item">Set Dark Mode (no save)</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a id="darkmode-forget" class="dropdown-item">Reset Mode</a></li>
             </ul>
@@ -1777,16 +1777,16 @@
       document.querySelector("#darkmode-button").onclick = function(e){
         darkmode.toggleDarkMode();
       }
-      document.querySelector("#darkmode-button-l-1").onclick = function(e){
+      document.querySelector("#darkmode-off-button").onclick = function(e){
         darkmode.setDarkMode(false);  // save=true is default
       }
-      document.querySelector("#darkmode-button-d-1").onclick = function(e){
+      document.querySelector("#darkmode-on-button").onclick = function(e){
         darkmode.setDarkMode(true);  // save=true is default
       }
-      document.querySelector("#darkmode-button-l-2").onclick = function(e){
+      document.querySelector("#darkmode-off-button-no-save").onclick = function(e){
         darkmode.setDarkMode(false, false);
       }
-      document.querySelector("#darkmode-button-d-2").onclick = function(e){
+      document.querySelector("#darkmode-on-button-no-save").onclick = function(e){
         darkmode.setDarkMode(true, false);
       }
       document.querySelector("#darkmode-forget").onclick = function(e){

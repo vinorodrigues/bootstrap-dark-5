@@ -1,15 +1,22 @@
 /**
  * *boostrap-dark-5* `darkmode.js` -- the JavaScript module.
  *
+ * ***class*** **DarkMode**
+ *
  * Use this JS file, and its `darkmode` object, in your HTML to automatically capture `prefers-color-scheme` media query
  * events and also initialize the document root (`<HTML>` tag) with the user prefered color scheme.
  *
  * The `darkmode` object can also be used to drive a dark mode toggle event, with optional persistance
  * storage in either a cookie (if GDPR consent is given) or the browsers `localStorage` object.
- * @module bootstrap-dark-5
- * @author Vino Rodrigues
  *
- * @class
+ * The module can be loaded into a html page using a standard script command.
+ * ```html
+ * <script src="darkmode.js"></script>
+ * ```
+ * This will create a variable `darkmode` that is an instace of the DarkMode class.
+ *
+ * @module DarkMode
+ * @_author Vino Rodrigues
  */
 class DarkMode {
   /** ***const*** -- Name of the cookie or localStorage->name when saving */
@@ -55,7 +62,7 @@ class DarkMode {
   private _hasGDPRConsent = false
 
   /**
-   * Variable to store GDPR Consent
+   * Variable to store GDPR Consent.  This setting drives the persistance mechanism.
    *
    * Used in {@link #saveValue} to determin if a cookie or the `localStorage` object should be used.
    * * Set to `true` when GDPR Consent has been given to enable storage to cookie *(useful in Server-Side knowlage of user preference)*
@@ -127,8 +134,9 @@ class DarkMode {
   }
 
   /**
-   * writes a cookie
+   * Writes a cookie, assumes SameSite = Strict & path = /
    *
+   * @private
    * @param name -- Name of the cookie
    * @param value -- Value to be saved
    * @param days -- Number of days to expire the cookie
@@ -152,7 +160,7 @@ class DarkMode {
    * @param {number} days -- Number of days to expire the cookie when the cookie is used, ignored for `localStorage`
    * @returns {void}
    */
-  saveValue(name: string, value: string, days = this.cookieExpiry): void {
+  private saveValue(name: string, value: string, days = this.cookieExpiry): void {
     if (this.hasGDPRConsent) {
       // use cookies
       DarkMode.saveCookie(name, value, days)
@@ -163,7 +171,10 @@ class DarkMode {
     return
   }
 
-  /** reads a cookie */
+  /**
+   * Reads a cookie
+   * @private
+   */
   static readCookie(name: string): string {
     const n = name + "="
     const parts = document.cookie.split(";")
@@ -220,11 +231,7 @@ class DarkMode {
    */
   getSavedColorScheme(): string {
     const val = this.readValue(DarkMode.DATA_KEY)
-    if (val) {
-      return val
-    } else {
-      return ""
-    }
+    return val ? val : ""
   }
 
   /**
@@ -247,19 +254,43 @@ class DarkMode {
   /**
    * Sets the color-scheme in the `<HTML>` tag as a class called either `light` or `dark`
    *
-   * @example <caption>Dark mode when the class name is set</caption>
+   * **Note:** This function will modify your document root element, i.e. the `<HTML>` tag
+   *
+   * Default behaviour when setting dark mode `true`
+   *
+   * ```html
    * <html lang="en" class="dark">
    * <!-- Note: the "light" class is removed -->
+   * ```
    *
-   * @example <caption>Light mode when the class name is set</caption>
+   * Default behaviour when setting dark mode `false`
+   *
+   * ```html
    * <html lang="en" class="light">
    * <!-- Note: the "dark" class is removed -->
+   * ```
    *
-   * @example <caption>Dark mode when `dataSelector = "data-bs-theme"` is set</caption>
+   * Behaviour when setting dark mode `true`, and `dataSelector = "data-bs-theme"`
+   *
+   * ```html
    * <html lang="en" data-bs-theme="dark">
+   * ```
    *
-   * @example <caption>Light mode when `dataSelector = "data-bs-theme"` is set</caption>
+   * Behaviour when setting dark mode `false`, and `dataSelector = "data-bs-theme"`
+   *
+   * ```html
    * <html lang="en" data-bs-theme="light">
+   * ```
+   *
+   * @example <caption>Set the color scheme to ***dark***, saving the state to the persistance mechanism</caption>
+   * document.querySelector("#darkmode-on-button").onclick = function(e){
+   *   darkmode.setDarkMode(true);  // save=true is default
+   * }
+   *
+   * @example <caption>Set the color scheme to ***light***, but not saving the state</caption>
+   * document.querySelector("#darkmode-off-button-no-save").onclick = function(e){
+   *   darkmode.setDarkMode(false, false);
+   * }
    *
    * @param {boolean} darkMode -- `true` for "dark", `false` for 'light'
    * @param {boolean} doSave -- If `true`, then will also call {@link #saveValue} to save that state
@@ -284,29 +315,41 @@ class DarkMode {
   }
 
   /**
-   * Toggles the color-scheme in the `<HTML>` tag as a class called either `light` or `dark`
+   * Toggles the color scheme in the `<HTML>` tag as a class called either `light` or `dark`
    * based on the inverse of it's prior state.
    *
+   * When {@link #dataSelector} is set, this is set in the given data selector as the data value.
+   *
    * *(See {@link #setDarkMode})*
+   *
+   * @example <caption>Bind an UI Element `click` event to toggle dark mode</caption>
+   * document.querySelector("#darkmode-button").onclick = function(e){
+   *   darkmode.toggleDarkMode();
+   * }
    *
    * @returns {void} - Nothing, assumes success
    */
   toggleDarkMode(doSave = true): void {
-    let darkMode
+    let dm
     if (!this._dataSelector) {
-      console.log('Y['+this._dataSelector+']')
-      darkMode = this.documentRoot.classList.contains(DarkMode.CLASS_NAME_DARK)
+      dm = this.documentRoot.classList.contains(DarkMode.CLASS_NAME_DARK)
     } else {
-      console.log('X['+this._dataSelector+']')
-      darkMode = this.documentRoot.getAttribute(this._dataSelector) == DarkMode.VALUE_DARK
+      dm = this.documentRoot.getAttribute(this._dataSelector) == DarkMode.VALUE_DARK
     }
-    this.setDarkMode( !darkMode, doSave )
+    this.setDarkMode( !dm, doSave )
   }
 
   /**
+   * Clears the persistance state of the module and resets the document to the default mode.
+   *
    * Calls {@link #eraseValue} to erase any saved value, and then
    * calls {@link #getPreferedColorScheme} to retrieve the `prefers-color-scheme` media query,
    * passing its value to {@link #setDarkMode} to reset the users preference.
+   *
+   * @example <caption>Bind a reset UI Element `click` event to reset the dark mode </caption>
+   * document.querySelector("#darkmode-forget").onclick = function(e){
+   *   darkmode.resetDarkMode();
+   * }
    *
    * @returns {void} - Nothing, no error handling is performed.
    */
@@ -353,8 +396,8 @@ class DarkMode {
   /**
    * ***static*** -- function called by the media query on change event.
    *
-   * First retrieves any saved value, and if present ignores the event, but
-   * if not set then triggers the {@link #setDarkMode} function to chnage the current mode.
+   * First retrieves any persistant/saved value, and if present ignores the event, but
+   * if not set then triggers the {@link #setDarkMode} function to change the current mode.
    *
    * @returns {void} -- Nothing, assumes success
    */
@@ -376,6 +419,8 @@ class DarkMode {
    * and setting the derived mode by calling {@link #setDarkMode}
    *
    * Followd by setting up the media query on change event
+   *
+   * ***Warning:*** This function is automatically called when loading this module.
    *
    * @returns {void}
    */
