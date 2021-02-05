@@ -39,6 +39,6 @@ dist/css/bootstrap-unlit.css
 dist/css/bootstrap-unlit.css.map
 dist/css/bootstrap-unlit.min.css
 
-dist/css/bootstrap-blackbox.css
+#dist/css/bootstrap-blackbox.css
 dist/css/bootstrap-blackbox.css.map
 dist/css/bootstrap-blackbox.min.css
