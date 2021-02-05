@@ -67,6 +67,7 @@ body {
 }
 
 .color-scheme-dark .bd-aside a,
+[data-bs-theme="dark"] .bd-aside a
 html.dark .bd-aside a {
     color: rgba(255, 255, 255, .65);
 }
@@ -74,31 +75,38 @@ html.dark .bd-aside a {
 .color-scheme-dark .bd-aside a:hover,
 .color-scheme-dark .bd-aside a:focus,
 html.dark .bd-aside a:hover,
-html.dark .bd-aside a:focus {
+html.dark .bd-aside a:focus,
+[data-bs-theme="dark"] .bd-aside a:hover,
+[data-bs-theme="dark"] .bd-aside a:focus {
     color: rgba(255, 255, 255, .85);
   background-color: rgba(140, 179, 82, .1);
 }
 
 .color-scheme-dark .bd-aside .active,
-html.dark .bd-aside .active {
+html.dark .bd-aside .active,
+[data-bs-theme="dark"] .bd-aside .active {
     color: rgba(255, 255, 255, .85);
 }
 
 .color-scheme-dark .bd-aside .btn,
-html.dark .bd-aside .btn {
+html.dark .bd-aside .btn,
+[data-bs-theme="dark"] .bd-aside .btn {
     color: rgba(255, 255, 255, .65);
 }
 
 .color-scheme-dark .bd-aside .btn:hover,
 .color-scheme-dark .bd-aside .btn:focus,
 html.dark .bd-aside .btn:hover,
-html.dark .bd-aside .btn:focus {
+html.dark .bd-aside .btn:focus,
+[data-bs-theme="dark"] .bd-aside .btn:hover,
+[data-bs-theme="dark"] .bd-aside .btn:focus {
     color: rgba(255, 255, 255, .85);
   background-color: rgba(140, 179, 82, .1);
 }
 
 .color-scheme-dark .bd-aside .btn:focus,
-html.dark .bd-aside .btn:focus {
+html.dark .bd-aside .btn:focus,
+[data-bs-theme="dark"] .bd-aside .btn:focus {
     box-shadow: 0 0 0 1px rgba(140, 179, 82, .7);
 }
 
@@ -191,7 +199,8 @@ html.dark .bd-aside .btn:focus {
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) calc(100% - 3rem), rgba(255, 255, 255, .01));
   }
   .color-scheme-dark .bd-cheatsheet section > h2::before,
-  html.dark .bd-cheatsheet section > h2::before {
+  html.dark .bd-cheatsheet section > h2::before,
+  [data-bs-theme="dark"] .bd-cheatsheet section > h2::before {
     background-image: linear-gradient(to bottom, rgba(34, 34, 34, 1) calc(100% - 3rem), rgba(34, 34, 34, .01));
   }
 
