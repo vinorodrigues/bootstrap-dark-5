@@ -21,17 +21,17 @@ This code will make little sense if you don't read
 
 ## What do you get?
 
-The code only compiles the [Method 1](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-1), [Method 3](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-3) and [Method 4](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-4) variants (for BS5) of the topics discussed in the original body of work.
+The code only compiles the [Method 1](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-1),
+[Method 3](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-3) and
+[Method 4](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-4) variants *(for Bootstrap 5)* of the topics
+discussed in the original body of work.
 
 i.e.:
 
-* `bootstrap-night`,
-  * [Quick Start Guide](docs/bootstrap-night.md)
-* `bootstrap-nightshade`,
-  * [Quick Start Guide](docs/bootstrap-nightshade.md)
-  * [`darkmode.js` Reference](docs/darkmode.js.md)
-* `bootstrap-dark`.
-  * [Quick Start Guide](docs/bootstrap-dark.md)
+| `bootstrap-night` | `bootstrap-nightshade` | `bootstrap-dark` |
+|:---:|:---:|:---:|
+| [Quick Start Guide](docs/bootstrap-night.md) | [Quick Start Guide](docs/bootstrap-nightshade.md) | [Quick Start Guide](docs/bootstrap-dark.md) |
+| | [`darkmode.js` Reference](docs/darkmode.js.md) | |
 
 
 ## The Proof Is in the Pudding
@@ -45,7 +45,8 @@ Yes.
 
 > Licence is MIT.  *i.e. use as you whish as long as you credit the original authors and leave the copyright in situ.*
 
-If you're a theme builder or want to use its principles in your own project you'll need to have [Git](https://help.github.com/articles/set-up-git) and [Node](https://nodejs.org/) installed.
+If you're a theme builder or want to use its principles in your own project you'll need to have
+[Git](https://help.github.com/articles/set-up-git) and [Node](https://nodejs.org/) installed.
 
 1. Fork or download the repository: `git clone https://github.com/vinorodrigues/bootstrap-dark-5.git`
 2. Install Node dependencies: `npm install`  *(See note below.)*
