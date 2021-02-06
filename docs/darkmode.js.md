@@ -42,7 +42,7 @@ _boostrap-dark-5_ `darkmode.js` -- the JavaScript module.
 **_class_** **DarkMode**
 
 Use this JS file, and its `darkmode` object, in your HTML to automatically capture `prefers-color-scheme` media query
-events and also initialize the document root (`<HTML>` tag) with the user prefered color scheme.
+events and also initialize the document root (`<HTML>` tag) with the user preferred color scheme.
 
 The `darkmode` object can also be used to drive a dark mode toggle event, with optional persistance
 storage in either a cookie (if GDPR consent is given) or the browsers `localStorage` object.
@@ -53,7 +53,7 @@ The module can be loaded into a html page using a standard script command.
 <script src="darkmode.js"></script>
 ```
 
-This will create a variable `darkmode` that is an instace of the DarkMode class.
+This will create a variable `darkmode` that is an instance of the DarkMode class.
 
 ### inDarkMode
 
@@ -85,9 +85,9 @@ darkmode.inDarkMode = true;
 
 Variable to store GDPR Consent.  This setting drives the persistance mechanism.
 
-Used in [#saveValue][34] to determin if a cookie or the `localStorage` object should be used.
+Used in [#saveValue][34] to determine if a cookie or the `localStorage` object should be used.
 
--   Set to `true` when GDPR Consent has been given to enable storage to cookie _(useful in Server-Side knowlage of user preference)_
+-   Set to `true` when GDPR Consent has been given to enable storage to cookie _(useful in Server-Side knowledge of user preference)_
 -   The setter takes care of swapping the cookie and localStorage if appropriate
 -   Default is `false`, thus storage will use the browsers localStorage object _(Note: No expiry is set)_
 
@@ -140,7 +140,7 @@ Retrieves the color-scheme last saved
 
 -   `name` **[string][35]** \-- Name of the cookie or localStorage->name
 
-Returns **[string][35]** \-- The saved value, iether `light` or `dark`, or an empty string if not saved prior
+Returns **[string][35]** \-- The saved value, either `light` or `dark`, or an empty string if not saved prior
 
 ### eraseValue
 
@@ -160,7 +160,7 @@ Queries the `<HTML>` tag for the current color-scheme
 
 _(This value is set prior via the [#setDarkMode][38]) function.)_
 
-Returns **[string][35]** \-- The current value, iether `light` or `dark`, or an empty string if not saved prior
+Returns **[string][35]** \-- The current value, either `light` or `dark`, or an empty string if not saved prior
 
 ### getPreferedColorScheme
 
@@ -168,7 +168,7 @@ Queries the `prefers-color-scheme` media query for the current color-scheme
 
 _(This value is set prior via the [#setDarkMode][38]) function.)_
 
-Returns **[string][35]** \-- The current value, iether `light` or `dark`, or an empty string if the media query is not supported
+Returns **[string][35]** \-- The current value, either `light` or `dark`, or an empty string if the media query is not supported
 
 ### setDarkMode
 
@@ -176,27 +176,27 @@ Sets the color-scheme in the `<HTML>` tag as a class called either `light` or `d
 
 **Note:** This function will modify your document root element, i.e. the `<HTML>` tag
 
-Default behaviour when setting dark mode `true`
+Default behavior when setting dark mode `true`
 
 ```html
 <html lang="en" class="dark">
 <!-- Note: the "light" class is removed -->
 ```
 
-Default behaviour when setting dark mode `false`
+Default behavior when setting dark mode `false`
 
 ```html
 <html lang="en" class="light">
 <!-- Note: the "dark" class is removed -->
 ```
 
-Behaviour when setting dark mode `true`, and `dataSelector = "data-bs-theme"`
+Behavior when setting dark mode `true`, and `dataSelector = "data-bs-theme"`
 
 ```html
 <html lang="en" data-bs-theme="dark">
 ```
 
-Behaviour when setting dark mode `false`, and `dataSelector = "data-bs-theme"`
+Behavior when setting dark mode `false`, and `dataSelector = "data-bs-theme"`
 
 ```html
 <html lang="en" data-bs-theme="light">
@@ -306,7 +306,7 @@ Returns **[string][35]** \-- The current value, iether `light` or `dark`, or an 
 
 **_static_** -- function called by the media query on change event.
 
-First retrieves any persistant/saved value, and if present ignores the event, but
+First retrieves any persistent/saved value, and if present ignores the event, but
 if not set then triggers the [#setDarkMode][38] function to change the current mode.
 
 Returns **void** \-- Nothing, assumes success
@@ -322,7 +322,7 @@ Does all the DarkMode initialization, including:
 -   else, honoring the browser / OS `prefers-color-scheme` preference
     and setting the derived mode by calling [#setDarkMode][38]
 
-Followd by setting up the media query on change event
+Followed by setting up the media query on change event
 
 **_Warning:_** This function is automatically called when loading this module.
 

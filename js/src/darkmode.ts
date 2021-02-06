@@ -4,7 +4,7 @@
  * ***class*** **DarkMode**
  *
  * Use this JS file, and its `darkmode` object, in your HTML to automatically capture `prefers-color-scheme` media query
- * events and also initialize the document root (`<HTML>` tag) with the user prefered color scheme.
+ * events and also initialize the document root (`<HTML>` tag) with the user preferred color scheme.
  *
  * The `darkmode` object can also be used to drive a dark mode toggle event, with optional persistance
  * storage in either a cookie (if GDPR consent is given) or the browsers `localStorage` object.
@@ -13,7 +13,7 @@
  * ```html
  * <script src="darkmode.js"></script>
  * ```
- * This will create a variable `darkmode` that is an instace of the DarkMode class.
+ * This will create a variable `darkmode` that is an instance of the DarkMode class.
  *
  * @module DarkMode
  * @_author Vino Rodrigues
@@ -64,8 +64,8 @@ class DarkMode {
   /**
    * Variable to store GDPR Consent.  This setting drives the persistance mechanism.
    *
-   * Used in {@link #saveValue} to determin if a cookie or the `localStorage` object should be used.
-   * * Set to `true` when GDPR Consent has been given to enable storage to cookie *(useful in Server-Side knowlage of user preference)*
+   * Used in {@link #saveValue} to determine if a cookie or the `localStorage` object should be used.
+   * * Set to `true` when GDPR Consent has been given to enable storage to cookie *(useful in Server-Side knowledge of user preference)*
    * * The setter takes care of swapping the cookie and localStorage if appropriate
    * * Default is `false`, thus storage will use the browsers localStorage object *(Note: No expiry is set)*
    *
@@ -125,12 +125,16 @@ class DarkMode {
 
   /**
    * @constructor
-   * The constructor intializes the `darkmode` object (that should be used as a singleton).
+   * The constructor initializes the `darkmode` object (that should be used as a singleton).
    */
   constructor() {
-    document.addEventListener("DOMContentLoaded", function() {
+    if (document.readyState === 'loading') {
+      document.addEventListener("DOMContentLoaded", function() {
+        DarkMode.onDOMContentLoaded()
+      })
+    } else {
       DarkMode.onDOMContentLoaded()
-    })
+    }
   }
 
   /**
@@ -195,7 +199,7 @@ class DarkMode {
    * **NOTE:** is dependant on {@link #hasGDPRConsent}
    *
    * @param {string} name -- Name of the cookie or localStorage->name
-   * @returns {string} -- The saved value, iether `light` or `dark`, or an empty string if not saved prior
+   * @returns {string} -- The saved value, either `light` or `dark`, or an empty string if not saved prior
    */
   readValue(name: string): string {
     if (this.hasGDPRConsent) {
@@ -227,7 +231,7 @@ class DarkMode {
    *
    * *(This value is set prior via the {@link #setDarkMode}) function.)*
    *
-   * @returns {string} -- The current value, iether `light` or `dark`, or an empty string if not saved prior
+   * @returns {string} -- The current value, either `light` or `dark`, or an empty string if not saved prior
    */
   getSavedColorScheme(): string {
     const val = this.readValue(DarkMode.DATA_KEY)
@@ -239,7 +243,7 @@ class DarkMode {
    *
    * *(This value is set prior via the {@link #setDarkMode}) function.)*
    *
-   * @returns {string} -- The current value, iether `light` or `dark`, or an empty string if the media query is not supported
+   * @returns {string} -- The current value, either `light` or `dark`, or an empty string if the media query is not supported
    */
   getPreferedColorScheme(): string {
     if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
@@ -256,27 +260,27 @@ class DarkMode {
    *
    * **Note:** This function will modify your document root element, i.e. the `<HTML>` tag
    *
-   * Default behaviour when setting dark mode `true`
+   * Default behavior when setting dark mode `true`
    *
    * ```html
    * <html lang="en" class="dark">
    * <!-- Note: the "light" class is removed -->
    * ```
    *
-   * Default behaviour when setting dark mode `false`
+   * Default behavior when setting dark mode `false`
    *
    * ```html
    * <html lang="en" class="light">
    * <!-- Note: the "dark" class is removed -->
    * ```
    *
-   * Behaviour when setting dark mode `true`, and `dataSelector = "data-bs-theme"`
+   * Behavior when setting dark mode `true`, and `dataSelector = "data-bs-theme"`
    *
    * ```html
    * <html lang="en" data-bs-theme="dark">
    * ```
    *
-   * Behaviour when setting dark mode `false`, and `dataSelector = "data-bs-theme"`
+   * Behavior when setting dark mode `false`, and `dataSelector = "data-bs-theme"`
    *
    * ```html
    * <html lang="en" data-bs-theme="light">
@@ -393,7 +397,7 @@ class DarkMode {
   /**
    * ***static*** -- function called by the media query on change event.
    *
-   * First retrieves any persistant/saved value, and if present ignores the event, but
+   * First retrieves any persistent/saved value, and if present ignores the event, but
    * if not set then triggers the {@link #setDarkMode} function to change the current mode.
    *
    * @returns {void} -- Nothing, assumes success
@@ -415,7 +419,7 @@ class DarkMode {
    * * else, honoring the browser / OS `prefers-color-scheme` preference
    * and setting the derived mode by calling {@link #setDarkMode}
    *
-   * Followd by setting up the media query on change event
+   * Followed by setting up the media query on change event
    *
    * ***Warning:*** This function is automatically called when loading this module.
    *
@@ -433,7 +437,7 @@ class DarkMode {
     }
     const dm = (pref == DarkMode.VALUE_DARK)
 
-    // initalize the `HTML` tag
+    // initialize the `HTML` tag
     darkmode.setDarkMode(dm, false)
 
     // update every time it changes

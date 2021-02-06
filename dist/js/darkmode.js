@@ -4,9 +4,14 @@ class DarkMode {
         this._hasGDPRConsent = false;
         this.cookieExpiry = 365;
         this._dataSelector = "";
-        document.addEventListener("DOMContentLoaded", function () {
+        if (document.readyState === 'loading') {
+            document.addEventListener("DOMContentLoaded", function () {
+                DarkMode.onDOMContentLoaded();
+            });
+        }
+        else {
             DarkMode.onDOMContentLoaded();
-        });
+        }
     }
     get inDarkMode() {
         return DarkMode.getColorScheme() == DarkMode.VALUE_DARK;
