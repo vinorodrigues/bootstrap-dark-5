@@ -91,12 +91,7 @@ class DarkMode {
     }
     getSavedColorScheme() {
         const val = this.readValue(DarkMode.DATA_KEY);
-        if (val) {
-            return val;
-        }
-        else {
-            return "";
-        }
+        return val ? val : "";
     }
     getPreferedColorScheme() {
         if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
@@ -127,16 +122,14 @@ class DarkMode {
             this.saveValue(DarkMode.DATA_KEY, darkMode ? DarkMode.VALUE_DARK : DarkMode.VALUE_LIGHT);
     }
     toggleDarkMode(doSave = true) {
-        let darkMode;
+        let dm;
         if (!this._dataSelector) {
-            console.log('Y[' + this._dataSelector + ']');
-            darkMode = this.documentRoot.classList.contains(DarkMode.CLASS_NAME_DARK);
+            dm = this.documentRoot.classList.contains(DarkMode.CLASS_NAME_DARK);
         }
         else {
-            console.log('X[' + this._dataSelector + ']');
-            darkMode = this.documentRoot.getAttribute(this._dataSelector) == DarkMode.VALUE_DARK;
+            dm = this.documentRoot.getAttribute(this._dataSelector) == DarkMode.VALUE_DARK;
         }
-        this.setDarkMode(!darkMode, doSave);
+        this.setDarkMode(!dm, doSave);
     }
     resetDarkMode() {
         this.eraseValue(DarkMode.DATA_KEY);
@@ -168,12 +161,7 @@ class DarkMode {
         }
         else {
             const data = darkmode.documentRoot.getAttribute(darkmode.dataSelector);
-            if ((data == DarkMode.VALUE_DARK) || (data == DarkMode.VALUE_LIGHT)) {
-                return data;
-            }
-            else {
-                return "";
-            }
+            return ((data == DarkMode.VALUE_DARK) || (data == DarkMode.VALUE_LIGHT)) ? data : "";
         }
     }
     static updatePreferedColorSchemeEvent() {

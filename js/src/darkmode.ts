@@ -385,11 +385,8 @@ class DarkMode {
       }
     } else {
       const data = darkmode.documentRoot.getAttribute(darkmode.dataSelector)
-      if ((data == DarkMode.VALUE_DARK) || (data == DarkMode.VALUE_LIGHT)) {
-        return data
-      } else {
-        return ""
-      }
+      // exact match only
+      return ((data == DarkMode.VALUE_DARK) || (data == DarkMode.VALUE_LIGHT)) ? data : ""
     }
   }
 
