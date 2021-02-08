@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" data-bs-color-scheme="dark">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -17,8 +17,8 @@
     <style>
       .d-light-inline { display: inline !important; }
       .d-dark-inline { display: none !important; }
-      [data-bs-theme="dark"] .d-light-inline { display: none !important; }
-      [data-bs-theme="dark"] .d-dark-inline { display: inline !important; }
+      [data-bs-color-scheme="dark"] .d-light-inline { display: none !important; }
+      [data-bs-color-scheme="dark"] .d-dark-inline { display: inline !important; }
     </style>
     <link rel="icon" href="../favicon.ico">
   </head>
@@ -27,7 +27,7 @@
 
 
 
-    <header class="bd-header bg-dark py-3 d-flex align-items-stretch border-bottom border-dark">
+    <header class="bd-header bg-dark py-3 d-flex align-items-stretch border-bottom border-dark" data-bs-color-scheme>
       <div class="container-fluid d-flex align-items-center">
         <h1 class="d-flex align-items-center fs-4 text-white mb-0">
           <img src="bootstrap-logo-white.svg" width="38" height="30" class="me-3" alt="Bootstrap">
@@ -72,8 +72,6 @@
     <!-- DarkMode.js -->
     <script src="../dist/js/darkmode.js"></script>
     <script>
-      darkmode.dataSelector = "data-bs-theme";
-
       document.querySelector("#darkmode-button").onclick = function(e){
         darkmode.toggleDarkMode();
       }

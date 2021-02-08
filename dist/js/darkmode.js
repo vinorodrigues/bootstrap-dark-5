@@ -3,7 +3,6 @@ class DarkMode {
     constructor() {
         this._hasGDPRConsent = false;
         this.cookieExpiry = 365;
-        this._dataSelector = "";
         if (document.readyState === 'loading') {
             document.addEventListener("DOMContentLoaded", function () {
                 DarkMode.onDOMContentLoaded();
@@ -38,12 +37,6 @@ class DarkMode {
                 DarkMode.saveCookie(DarkMode.DATA_KEY, prior);
             }
         }
-    }
-    get dataSelector() {
-        return this._dataSelector;
-    }
-    set dataSelector(val) {
-        this._dataSelector = val;
     }
     get documentRoot() {
         return document.getElementsByTagName("html")[0];
@@ -110,7 +103,8 @@ class DarkMode {
         }
     }
     setDarkMode(darkMode, doSave = true) {
-        if (!this._dataSelector) {
+        const nodeList = document.querySelectorAll("[data-" + DarkMode.DATA_SELECTOR + "]");
+        if (nodeList.length == 0) {
             if (!darkMode) {
                 this.documentRoot.classList.remove(DarkMode.CLASS_NAME_DARK);
                 this.documentRoot.classList.add(DarkMode.CLASS_NAME_LIGHT);
@@ -121,18 +115,21 @@ class DarkMode {
             }
         }
         else {
-            this.documentRoot.setAttribute(this._dataSelector, darkMode ? DarkMode.VALUE_DARK : DarkMode.VALUE_LIGHT);
+            for (let i = 0; i < nodeList.length; i++) {
+                nodeList[i].setAttribute("data-" + DarkMode.DATA_SELECTOR, darkMode ? DarkMode.VALUE_DARK : DarkMode.VALUE_LIGHT);
+            }
         }
         if (doSave)
             this.saveValue(DarkMode.DATA_KEY, darkMode ? DarkMode.VALUE_DARK : DarkMode.VALUE_LIGHT);
     }
     toggleDarkMode(doSave = true) {
         let dm;
-        if (!this._dataSelector) {
+        const node = document.querySelector("[data-" + DarkMode.DATA_SELECTOR + "]");
+        if (!node) {
             dm = this.documentRoot.classList.contains(DarkMode.CLASS_NAME_DARK);
         }
         else {
-            dm = this.documentRoot.getAttribute(this._dataSelector) == DarkMode.VALUE_DARK;
+            dm = node.getAttribute("data-" + DarkMode.DATA_SELECTOR) == DarkMode.VALUE_DARK;
         }
         this.setDarkMode(!dm, doSave);
     }
@@ -143,17 +140,21 @@ class DarkMode {
             this.setDarkMode(dm == DarkMode.VALUE_DARK, false);
         }
         else {
-            if (!this._dataSelector) {
+            const nodeList = document.querySelectorAll("[data-" + DarkMode.DATA_SELECTOR + "]");
+            if (nodeList.length == 0) {
                 this.documentRoot.classList.remove(DarkMode.CLASS_NAME_LIGHT);
                 this.documentRoot.classList.remove(DarkMode.CLASS_NAME_DARK);
             }
             else {
-                this.documentRoot.removeAttribute(this._dataSelector);
+                for (let i = 0; i < nodeList.length; i++) {
+                    nodeList[i].setAttribute("data-" + DarkMode.DATA_SELECTOR, "");
+                }
             }
         }
     }
     static getColorScheme() {
-        if (!darkmode.dataSelector) {
+        const node = document.querySelector("[data-" + DarkMode.DATA_SELECTOR + "]");
+        if (!node) {
             if (darkmode.documentRoot.classList.contains(DarkMode.CLASS_NAME_DARK)) {
                 return DarkMode.VALUE_DARK;
             }
@@ -165,7 +166,7 @@ class DarkMode {
             }
         }
         else {
-            const data = darkmode.documentRoot.getAttribute(darkmode.dataSelector);
+            const data = node.getAttribute("data-" + DarkMode.DATA_SELECTOR);
             return ((data == DarkMode.VALUE_DARK) || (data == DarkMode.VALUE_LIGHT)) ? data : "";
         }
     }
@@ -195,6 +196,7 @@ class DarkMode {
     }
 }
 DarkMode.DATA_KEY = "bs.prefers-color-scheme";
+DarkMode.DATA_SELECTOR = "bs-color-scheme";
 DarkMode.VALUE_LIGHT = "light";
 DarkMode.VALUE_DARK = "dark";
 DarkMode.CLASS_NAME_LIGHT = "light";

@@ -4,7 +4,8 @@
  * ***class*** **DarkMode**
  *
  * Use this JS file, and its `darkmode` object, in your HTML to automatically capture `prefers-color-scheme` media query
- * events and also initialize the document root (`<HTML>` tag) with the user preferred color scheme.
+ * events and also initialize tags with the `data-bs-color-scheme` attribute, or the document root (`<HTML>` tag) with the
+ * user preferred color scheme.
  *
  * The `darkmode` object can also be used to drive a dark mode toggle event, with optional persistance
  * storage in either a cookie (if GDPR consent is given) or the browsers `localStorage` object.
@@ -13,7 +14,26 @@
  * ```html
  * <script src="darkmode.js"></script>
  * ```
+ *
  * This will create a variable `darkmode` that is an instance of the DarkMode class.
+ *
+ * Once the DOM is loaded the script will then look for any html tag with a `data-bs-color-scheme` attribute, and, if found
+ * will use these tags to populate the current mode.  If this data attribute is not found then the script will use the document
+ * root (`<HTML>` tag) with the class `dark` or `light`.
+ *
+ * For example, the `bootstrap-blackbox.css` variant requires the `<HTML>` to be initialized:
+ *
+ * ```html
+ * <!doctype html>
+ * <html lang="en" data-bs-color-scheme>
+ *   <head>
+ *     <!-- ... -->
+ * ```
+ * You can also pre-initialize the mode by populating the data attribute:
+ *
+ * ```html
+ * <html lang="en" data-bs-color-scheme="dark">
+ * ```
  *
  * @module DarkMode
  * @_author Vino Rodrigues
@@ -21,6 +41,9 @@
 class DarkMode {
   /** ***const*** -- Name of the cookie or localStorage->name when saving */
   static readonly DATA_KEY = "bs.prefers-color-scheme"
+
+  //** ***const*** -- Data selector, when present in HTML will populate with `dark` or `light` as appropriate */
+  static readonly DATA_SELECTOR = "bs-color-scheme";
 
   /** ***const*** -- String used to identify light mode *(do not change)*, @see https://www.w3.org/TR/mediaqueries-5/#prefers-color-scheme */
   static readonly VALUE_LIGHT = "light"
@@ -97,24 +120,6 @@ class DarkMode {
 
   /** Expiry time in days when saving and GDPR consent is give */
   cookieExpiry = 365;
-
-  /** @private */
-  private _dataSelector = "";
-
-  /**
-   * When set will use the given data selector instead of a class in the `<html>`tag
-   *
-   * @example <caption>Setting the dataSelector</caption>
-   * // use the full name attribute, starting with "data-"
-   * darkmode.dataSelector = "data-bs-theme";
-   */
-  get dataSelector(): string {
-    return this._dataSelector
-  }
-
-  set dataSelector(val: string) {
-    this._dataSelector = val
-  }
 
   /**
    * Saves the instance of the documentRoot (i.e. `<html>` tag) when the object is created.
@@ -263,27 +268,27 @@ class DarkMode {
    * Default behavior when setting dark mode `true`
    *
    * ```html
-   * <html lang="en" class="dark">
+   * <html lang="en" class="other-classes dark">
    * <!-- Note: the "light" class is removed -->
    * ```
    *
    * Default behavior when setting dark mode `false`
    *
    * ```html
-   * <html lang="en" class="light">
+   * <html lang="en" class="other-classes light">
    * <!-- Note: the "dark" class is removed -->
    * ```
    *
-   * Behavior when setting dark mode `true`, and `dataSelector = "data-bs-theme"`
+   * Behavior when setting dark mode `true`, and `dataSelector = "data-bs-color-scheme"`
    *
    * ```html
-   * <html lang="en" data-bs-theme="dark">
+   * <html lang="en" data-bs-color-scheme="dark">
    * ```
    *
-   * Behavior when setting dark mode `false`, and `dataSelector = "data-bs-theme"`
+   * Behavior when setting dark mode `false`, and `dataSelector = "data-bs-color-scheme"`
    *
    * ```html
-   * <html lang="en" data-bs-theme="light">
+   * <html lang="en" data-bs-color-scheme="light">
    * ```
    *
    * @example <caption>Set the color scheme to ***dark***, saving the state to the persistance mechanism</caption>
@@ -301,7 +306,9 @@ class DarkMode {
    * @returns {void} -- Nothing, assumes saved
    */
   setDarkMode(darkMode: boolean, doSave = true): void {
-    if (!this._dataSelector) {
+    const nodeList = document.querySelectorAll("[data-"+DarkMode.DATA_SELECTOR+"]")
+
+    if (nodeList.length == 0) {
       if (!darkMode) {
         // light
         this.documentRoot.classList.remove(DarkMode.CLASS_NAME_DARK)
@@ -312,7 +319,9 @@ class DarkMode {
         this.documentRoot.classList.add(DarkMode.CLASS_NAME_DARK)
       }
     } else {
-      this.documentRoot.setAttribute(this._dataSelector, darkMode ? DarkMode.VALUE_DARK : DarkMode.VALUE_LIGHT)
+      for (let i = 0; i < nodeList.length; i++) {
+        nodeList[i].setAttribute("data-"+DarkMode.DATA_SELECTOR, darkMode ? DarkMode.VALUE_DARK : DarkMode.VALUE_LIGHT)
+      }
     }
 
     if (doSave) this.saveValue(DarkMode.DATA_KEY, darkMode ? DarkMode.VALUE_DARK : DarkMode.VALUE_LIGHT)
@@ -335,10 +344,12 @@ class DarkMode {
    */
   toggleDarkMode(doSave = true): void {
     let dm
-    if (!this._dataSelector) {
+    const node = document.querySelector("[data-"+DarkMode.DATA_SELECTOR+"]")  // only get first one
+
+    if (!node) {
       dm = this.documentRoot.classList.contains(DarkMode.CLASS_NAME_DARK)
     } else {
-      dm = this.documentRoot.getAttribute(this._dataSelector) == DarkMode.VALUE_DARK
+      dm = node.getAttribute("data-"+DarkMode.DATA_SELECTOR) == DarkMode.VALUE_DARK
     }
     this.setDarkMode( !dm, doSave )
   }
@@ -364,11 +375,14 @@ class DarkMode {
       this.setDarkMode( dm == DarkMode.VALUE_DARK, false )
     } else {
       // make good when `prefers-color-scheme` not supported
-      if (!this._dataSelector) {
+      const nodeList = document.querySelectorAll("[data-"+DarkMode.DATA_SELECTOR+"]")
+      if (nodeList.length == 0) {
         this.documentRoot.classList.remove(DarkMode.CLASS_NAME_LIGHT)
         this.documentRoot.classList.remove(DarkMode.CLASS_NAME_DARK)
       } else {
-        this.documentRoot.removeAttribute(this._dataSelector)
+        for (let i = 0; i < nodeList.length; i++) {
+          nodeList[i].setAttribute("data-"+DarkMode.DATA_SELECTOR, "")
+        }
       }
     }
   }
@@ -376,10 +390,11 @@ class DarkMode {
   /**
    * Gets the current color-scheme from the document `<HTML>` tag
    *
-   * @returns {string} -- The current value, iether `light` or `dark`, or an empty string if not present
+   * @returns {string} -- The current value, either `light` or `dark`, or an empty string if not present
    */
   static getColorScheme(): string {
-    if (!darkmode.dataSelector) {
+    const node = document.querySelector("[data-"+DarkMode.DATA_SELECTOR+"]")
+    if (!node) {
       if (darkmode.documentRoot.classList.contains(DarkMode.CLASS_NAME_DARK)) {
         return DarkMode.VALUE_DARK
       } else if (darkmode.documentRoot.classList.contains(DarkMode.CLASS_NAME_LIGHT)) {
@@ -388,7 +403,7 @@ class DarkMode {
         return ""
       }
     } else {
-      const data = darkmode.documentRoot.getAttribute(darkmode.dataSelector)
+      const data = node.getAttribute("data-"+DarkMode.DATA_SELECTOR)
       // exact match only
       return ((data == DarkMode.VALUE_DARK) || (data == DarkMode.VALUE_LIGHT)) ? data : ""
     }

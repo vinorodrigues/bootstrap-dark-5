@@ -7,7 +7,7 @@
  * Bootstrap-Nightshade (https://vinorodrigues.github.io/bootstrap-dark-5/)
  * Copyright 2020-2021 Vino Rodrigues
  * This version is a dual color theme, with the default light mode and the dark
- * elements optioned in by a `data-bs-theme` data attribute in `<html>` tag.
+ * elements optioned in by a `data-bs-color-scheme` data attribute in `<html>` OR `<body>` (and any other) tag.
  * @see: https://css-tricks.com/a-complete-guide-to-data-attributes/
  * Why `<html>`? See https://css-tricks.com/html-vs-body-in-css/#quirky-background-color
  */
@@ -71,7 +71,7 @@
  * ---------- Dark Mode ------------------------------------------------------
  */
 
-@include prefers-color-scheme("[data-bs-theme=\"dark\"]") {
+@include prefers-color-scheme("[data-bs-color-scheme=\"dark\"]") {
 
   :root { color-scheme: dark; }
 

@@ -8,32 +8,30 @@
     -   [hasGDPRConsent][4]
         -   [Examples][5]
     -   [cookieExpiry][6]
-    -   [dataSelector][7]
-        -   [Examples][8]
-    -   [documentRoot][9]
-    -   [readValue][10]
+    -   [documentRoot][7]
+    -   [readValue][8]
+        -   [Parameters][9]
+    -   [eraseValue][10]
         -   [Parameters][11]
-    -   [eraseValue][12]
-        -   [Parameters][13]
-    -   [getSavedColorScheme][14]
-    -   [getPreferedColorScheme][15]
-    -   [setDarkMode][16]
-        -   [Parameters][17]
-        -   [Examples][18]
-    -   [toggleDarkMode][19]
-        -   [Parameters][20]
+    -   [getSavedColorScheme][12]
+    -   [getPreferedColorScheme][13]
+    -   [setDarkMode][14]
+        -   [Parameters][15]
+        -   [Examples][16]
+    -   [toggleDarkMode][17]
+        -   [Parameters][18]
+        -   [Examples][19]
+    -   [resetDarkMode][20]
         -   [Examples][21]
-    -   [resetDarkMode][22]
-        -   [Examples][23]
-    -   [DATA_KEY][24]
-    -   [VALUE_LIGHT][25]
-    -   [VALUE_DARK][26]
-    -   [CLASS_NAME_LIGHT][27]
-    -   [CLASS_NAME_DARK][28]
-    -   [getColorScheme][29]
-    -   [updatePreferedColorSchemeEvent][30]
-    -   [onDOMContentLoaded][31]
--   [darkmode][32]
+    -   [DATA_KEY][22]
+    -   [VALUE_LIGHT][23]
+    -   [VALUE_DARK][24]
+    -   [CLASS_NAME_LIGHT][25]
+    -   [CLASS_NAME_DARK][26]
+    -   [getColorScheme][27]
+    -   [updatePreferedColorSchemeEvent][28]
+    -   [onDOMContentLoaded][29]
+-   [darkmode][30]
 
 ## DarkMode
 
@@ -42,7 +40,8 @@ _boostrap-dark-5_ `darkmode.js` -- the JavaScript module.
 **_class_** **DarkMode**
 
 Use this JS file, and its `darkmode` object, in your HTML to automatically capture `prefers-color-scheme` media query
-events and also initialize the document root (`<HTML>` tag) with the user preferred color scheme.
+events and also initialize tags with the `data-bs-color-scheme` attribute, or the document root (`<HTML>` tag) with the
+user preferred color scheme.
 
 The `darkmode` object can also be used to drive a dark mode toggle event, with optional persistance
 storage in either a cookie (if GDPR consent is given) or the browsers `localStorage` object.
@@ -55,6 +54,25 @@ The module can be loaded into a html page using a standard script command.
 
 This will create a variable `darkmode` that is an instance of the DarkMode class.
 
+Once the DOM is loaded the script will then look for any html tag with a `data-bs-color-scheme` attribute, and, if found
+will use these tags to populate the current mode.  If this data attribute is not found then the script will use the document
+root (`<HTML>` tag) with the class `dark` or `light`.
+
+For example, the `bootstrap-blackbox.css` variant requires the `<HTML>` to be initialized:
+
+```html
+<!doctype html>
+<html lang="en" data-bs-color-scheme>
+  <head>
+    <!-- ... -->
+```
+
+You can also pre-initialize the mode by populating the data attribute:
+
+```html
+<html lang="en" data-bs-color-scheme="dark">
+```
+
 ### inDarkMode
 
 **_property_**
@@ -63,7 +81,7 @@ Used to get the current state, `true` when in dark mode, `false` when in light m
 
 Can also be used to set the current mode _(with no persistance saving)_
 
-Type: [boolean][33]
+Type: [boolean][31]
 
 #### Examples
 
@@ -85,7 +103,7 @@ darkmode.inDarkMode = true;
 
 Variable to store GDPR Consent.  This setting drives the persistance mechanism.
 
-Used in [#saveValue][34] to determine if a cookie or the `localStorage` object should be used.
+Used in [#saveValue][32] to determine if a cookie or the `localStorage` object should be used.
 
 -   Set to `true` when GDPR Consent has been given to enable storage to cookie _(useful in Server-Side knowledge of user preference)_
 -   The setter takes care of swapping the cookie and localStorage if appropriate
@@ -104,37 +122,19 @@ darkmode.hasGDPRConsent = true;
 
 Expiry time in days when saving and GDPR consent is give
 
-### dataSelector
-
-When set will use the given data selector instead of a class in the `<html>`tag
-
-Type: [string][35]
-
-#### Examples
-
-Setting the dataSelector
-
-
-```javascript
-// use the full name attribute, starting with "data-"
-darkmode.dataSelector = "data-bs-theme";
-```
-
-Returns **[string][35]** 
-
 ### documentRoot
 
 Saves the instance of the documentRoot (i.e. `<html>` tag) when the object is created.
 
-Type: [HTMLHtmlElement][36]
+Type: [HTMLHtmlElement][33]
 
-Returns **[HTMLHtmlElement][36]** 
+Returns **[HTMLHtmlElement][33]** 
 
 ### readValue
 
 Retrieves the color-scheme last saved
 
-**NOTE:** is dependant on [#hasGDPRConsent][37]
+**NOTE:** is dependant on [#hasGDPRConsent][34]
 
 #### Parameters
 
@@ -146,7 +146,7 @@ Returns **[string][35]** \-- The saved value, either `light` or `dark`, or an em
 
 Deletes the saved color-scheme
 
-**NOTE:** is dependant on [#hasGDPRConsent][37]
+**NOTE:** is dependant on [#hasGDPRConsent][34]
 
 #### Parameters
 
@@ -158,7 +158,7 @@ Returns **void** \-- Nothing, erasure is assumed
 
 Queries the `<HTML>` tag for the current color-scheme
 
-_(This value is set prior via the [#setDarkMode][38]) function.)_
+_(This value is set prior via the [#setDarkMode][36]) function.)_
 
 Returns **[string][35]** \-- The current value, either `light` or `dark`, or an empty string if not saved prior
 
@@ -166,7 +166,7 @@ Returns **[string][35]** \-- The current value, either `light` or `dark`, or an 
 
 Queries the `prefers-color-scheme` media query for the current color-scheme
 
-_(This value is set prior via the [#setDarkMode][38]) function.)_
+_(This value is set prior via the [#setDarkMode][36]) function.)_
 
 Returns **[string][35]** \-- The current value, either `light` or `dark`, or an empty string if the media query is not supported
 
@@ -179,33 +179,33 @@ Sets the color-scheme in the `<HTML>` tag as a class called either `light` or `d
 Default behavior when setting dark mode `true`
 
 ```html
-<html lang="en" class="dark">
+<html lang="en" class="other-classes dark">
 <!-- Note: the "light" class is removed -->
 ```
 
 Default behavior when setting dark mode `false`
 
 ```html
-<html lang="en" class="light">
+<html lang="en" class="other-classes light">
 <!-- Note: the "dark" class is removed -->
 ```
 
-Behavior when setting dark mode `true`, and `dataSelector = "data-bs-theme"`
+Behavior when setting dark mode `true`, and `dataSelector = "data-bs-color-scheme"`
 
 ```html
-<html lang="en" data-bs-theme="dark">
+<html lang="en" data-bs-color-scheme="dark">
 ```
 
-Behavior when setting dark mode `false`, and `dataSelector = "data-bs-theme"`
+Behavior when setting dark mode `false`, and `dataSelector = "data-bs-color-scheme"`
 
 ```html
-<html lang="en" data-bs-theme="light">
+<html lang="en" data-bs-color-scheme="light">
 ```
 
 #### Parameters
 
--   `darkMode` **[boolean][33]** \-- `true` for "dark", `false` for 'light'
--   `doSave` **[boolean][33]** \-- If `true`, then will also call [#saveValue][34] to save that state (optional, default `true`)
+-   `darkMode` **[boolean][31]** \-- `true` for "dark", `false` for 'light'
+-   `doSave` **[boolean][31]** \-- If `true`, then will also call [#saveValue][32] to save that state (optional, default `true`)
 
 #### Examples
 
@@ -234,9 +234,9 @@ Returns **void** \-- Nothing, assumes saved
 Toggles the color scheme in the `<HTML>` tag as a class called either `light` or `dark`
 based on the inverse of it's prior state.
 
-When [#dataSelector][39] is set, this is set in the given data selector as the data value.
+When [#dataSelector][37] is set, this is set in the given data selector as the data value.
 
-_(See [#setDarkMode][38])_
+_(See [#setDarkMode][36])_
 
 #### Parameters
 
@@ -259,9 +259,9 @@ Returns **void** Nothing, assumes success
 
 Clears the persistance state of the module and resets the document to the default mode.
 
-Calls [#eraseValue][40] to erase any saved value, and then
-calls [#getPreferedColorScheme][41] to retrieve the `prefers-color-scheme` media query,
-passing its value to [#setDarkMode][38] to reset the users preference.
+Calls [#eraseValue][38] to erase any saved value, and then
+calls [#getPreferedColorScheme][39] to retrieve the `prefers-color-scheme` media query,
+passing its value to [#setDarkMode][36] to reset the users preference.
 
 #### Examples
 
@@ -282,11 +282,11 @@ Returns **void** Nothing, no error handling is performed.
 
 ### VALUE_LIGHT
 
-**_const_** -- String used to identify light mode _(do not change)_, @see [https://www.w3.org/TR/mediaqueries-5/#prefers-color-scheme][42]
+**_const_** -- String used to identify light mode _(do not change)_, @see [https://www.w3.org/TR/mediaqueries-5/#prefers-color-scheme][40]
 
 ### VALUE_DARK
 
-**_const_** -- String used to identify dark mode _(do not change)_, @see [https://www.w3.org/TR/mediaqueries-5/#prefers-color-scheme][42]
+**_const_** -- String used to identify dark mode _(do not change)_, @see [https://www.w3.org/TR/mediaqueries-5/#prefers-color-scheme][40]
 
 ### CLASS_NAME_LIGHT
 
@@ -300,14 +300,14 @@ Returns **void** Nothing, no error handling is performed.
 
 Gets the current color-scheme from the document `<HTML>` tag
 
-Returns **[string][35]** \-- The current value, iether `light` or `dark`, or an empty string if not present
+Returns **[string][35]** \-- The current value, either `light` or `dark`, or an empty string if not present
 
 ### updatePreferedColorSchemeEvent
 
 **_static_** -- function called by the media query on change event.
 
 First retrieves any persistent/saved value, and if present ignores the event, but
-if not set then triggers the [#setDarkMode][38] function to change the current mode.
+if not set then triggers the [#setDarkMode][36] function to change the current mode.
 
 Returns **void** \-- Nothing, assumes success
 
@@ -320,7 +320,7 @@ Does all the DarkMode initialization, including:
 -   Loading any prior stored preference (GDPR consent is **_not_** assumed)
 -   else, honoring any `<HTML>` tag `class="dark|light"` that Server-Side may set
 -   else, honoring the browser / OS `prefers-color-scheme` preference
-    and setting the derived mode by calling [#setDarkMode][38]
+    and setting the derived mode by calling [#setDarkMode][36]
 
 Followed by setting up the media query on change event
 
@@ -344,74 +344,70 @@ Returns **void**
 
 [6]: #cookieexpiry
 
-[7]: #dataselector
+[7]: #documentroot
 
-[8]: #examples-2
+[8]: #readvalue
 
-[9]: #documentroot
+[9]: #parameters
 
-[10]: #readvalue
+[10]: #erasevalue
 
-[11]: #parameters
+[11]: #parameters-1
 
-[12]: #erasevalue
+[12]: #getsavedcolorscheme
 
-[13]: #parameters-1
+[13]: #getpreferedcolorscheme
 
-[14]: #getsavedcolorscheme
+[14]: #setdarkmode
 
-[15]: #getpreferedcolorscheme
+[15]: #parameters-2
 
-[16]: #setdarkmode
+[16]: #examples-2
 
-[17]: #parameters-2
+[17]: #toggledarkmode
 
-[18]: #examples-3
+[18]: #parameters-3
 
-[19]: #toggledarkmode
+[19]: #examples-3
 
-[20]: #parameters-3
+[20]: #resetdarkmode
 
 [21]: #examples-4
 
-[22]: #resetdarkmode
+[22]: #data_key
 
-[23]: #examples-5
+[23]: #value_light
 
-[24]: #data_key
+[24]: #value_dark
 
-[25]: #value_light
+[25]: #class_name_light
 
-[26]: #value_dark
+[26]: #class_name_dark
 
-[27]: #class_name_light
+[27]: #getcolorscheme
 
-[28]: #class_name_dark
+[28]: #updatepreferedcolorschemeevent
 
-[29]: #getcolorscheme
+[29]: #ondomcontentloaded
 
-[30]: #updatepreferedcolorschemeevent
+[30]: #darkmode-1
 
-[31]: #ondomcontentloaded
+[31]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 
-[32]: #darkmode-1
+[32]: #saveValue
 
-[33]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+[33]: https://developer.mozilla.org/docs/Web/API/HTMLHtmlElement
 
-[34]: #saveValue
+[34]: #hasGDPRConsent
 
 [35]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
 
-[36]: https://developer.mozilla.org/docs/Web/API/HTMLHtmlElement
+[36]: #setDarkMode
 
-[37]: #hasGDPRConsent
+[37]: #dataSelector
 
-[38]: #setDarkMode
+[38]: #eraseValue
 
-[39]: #dataSelector
+[39]: #getPreferedColorScheme
 
-[40]: #eraseValue
-
-[41]: #getPreferedColorScheme
-
-[42]: https://www.w3.org/TR/mediaqueries-5/#prefers-color-scheme
+[40]: https://www.w3.org/TR/mediaqueries-5/#prefers-color-scheme
