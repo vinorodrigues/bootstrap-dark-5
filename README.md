@@ -7,7 +7,7 @@
 > If you're after the same work for [Bootstrap 4](https://getbootstrap.com/docs/4.5/) please visit the [vinorodrigues/bootstrap-dark](https://github.com/vinorodrigues/bootstrap-dark) repo.
 
 
-> <u style="text-decoration:none;color:red">***NOTE:***</u> This is a 'Work In Progress' and is specifically based on Bootstrap 5 - Beta 1 - https://github.com/twbs/bootstrap/tree/v5.0.0-beta1
+> <u style="text-decoration:none;color:red">***NOTE:***</u> This is a 'Work In Progress' and is specifically based on Bootstrap 5 - Beta 1 - https://github.com/twbs/bootstrap/tree/v5.0.0-beta2
 
 > <u style="text-decoration:none;color:red">***NOTE:***</u> The recomendation is to ***not*** use this in a production environment.
 
