@@ -1,4 +1,4 @@
-# Bootstrap-Dark Quick Start
+# Bootstrap-Nightfall Quick Start
 
 A basic HTML file should look like this:
 
@@ -10,13 +10,13 @@ A basic HTML file should look like this:
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- The page supports both dark and light color schemes,
-         and the page author prefers / default is light. -->
+    <!-- The page supports both light and dark color schemes, with light being default -->
     <meta name="color-scheme" content="light dark">
 
-    <!-- Replace the Bootstrap CSS with the
-         Bootstrap-Dark Variant CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-dark.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS (as per normal) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Add the Bootstrap-Dark Variant CSS (the media attribute is for dark auto-switching) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap.min.css" rel="stylesheet" media="(prefers-color-scheme: dark)">
 
     <title>Hello, world!</title>
   </head>
@@ -30,7 +30,5 @@ A basic HTML file should look like this:
   </body>
 </html>
 ```
-
-That's all.  The page will automatically transition to Dark Mode when the users sets their OS *(or Firefox theme)* to Dark Mode.
 
 Refer to the [Bootstrap 5 Docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/#starter-template) for more help.

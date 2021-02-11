@@ -22,6 +22,7 @@
   border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color-alt;
 
   .nav-link {
+    // background: none;
     border: $nav-tabs-border-width solid transparent;
 
     &:hover,
@@ -50,6 +51,11 @@
 //
 
 .nav-pills {
+  // .nav-link {
+  //   background: none;
+  //   border: 0;
+  // }
+
   .nav-link.active,
   .show > .nav-link {
     color: $nav-pills-link-active-color-alt;
