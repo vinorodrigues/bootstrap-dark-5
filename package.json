@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-dark-5",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "The Ancillary Guide to Dark Mode and Bootstrap 5 - A continuation of the v4 Dark Mode POC",
   "main": "",
   "scripts": {
@@ -16,17 +16,12 @@
     "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css --load-path=node_modules/bootstrap/scss scss/:dist/css/",
     "css-prefix": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.rtl*.css\" \"!dist/css/*.min.css\"",
     "css-minify": "npm-run-all --parallel css-minify-*",
-    "DISABLED_css-minify-main": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/bootstrap.min.css dist/css/bootstrap.css",
-    "DISABLED_css-minify-night": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/bootstrap-night.min.css dist/css/bootstrap-night.css",
-    "DISABLED_css-minify-nightfall": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/bootstrap-nightfall.min.css dist/css/bootstrap-nightfall.css",
-    "DISABLED_css-minify-nightshade": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/bootstrap-nightshade.min.css dist/css/bootstrap-nightshade.css",
-    "DISABLED_css-minify-dark": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/bootstrap-dark.min.css dist/css/bootstrap-dark.css",
     "css-minify-main": "cleancss -O1 --format breakWith=lf --output dist/css/bootstrap.min.css dist/css/bootstrap.css",
     "css-minify-night": "cleancss -O1 --format breakWith=lf --output dist/css/bootstrap-night.min.css dist/css/bootstrap-night.css",
     "css-minify-nightfall": "cleancss -O1 --format breakWith=lf --output dist/css/bootstrap-nightfall.min.css dist/css/bootstrap-nightfall.css",
     "css-minify-nightshade": "cleancss -O1 --format breakWith=lf --output dist/css/bootstrap-nightshade.min.css dist/css/bootstrap-nightshade.css",
     "css-minify-dark": "cleancss -O1 --format breakWith=lf --output dist/css/bootstrap-dark.min.css dist/css/bootstrap-dark.css",
-    "NOT-IN-B1-YET--WAIT_css-minify-unlit": "cleancss -O1 --format breakWith=lf --output dist/css/bootstrap-unlit.min.css dist/css/bootstrap-unlit.css",
+    "css-minify-unlit": "cleancss -O1 --format breakWith=lf --output dist/css/bootstrap-unlit.min.css dist/css/bootstrap-unlit.css",
     "css-minify-blackbox": "cleancss -O1 --format breakWith=lf --output dist/css/bootstrap-blackbox.min.css dist/css/bootstrap-blackbox.css",
     "css-lint": "npm-run-all --continue-on-error --parallel css-lint-*",
     "css-lint-stylelint": "stylelint \"**/*.scss\" --cache --cache-location .cache/.stylelintcache --rd",
@@ -34,7 +29,6 @@
     "js": "npm-run-all js-wipe js-compile js-minify",
     "js-wipe": "rimraf ./dist/js",
     "js-compile": "tsc -p build",
-    "DISABLED_js-minify": "terser -c -m -o ./dist/js/darkmode.min.js ./dist/js/darkmode.js --source-map \"content='./dist/js/darkmode.js.map'\"",
     "js-minify": "terser -c -m -o ./dist/js/darkmode.min.js ./dist/js/darkmode.js",
     "js-lint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives . --ext .ts",
     "watch": "npm-run-all --parallel watch-*",
@@ -46,8 +40,12 @@
     "docs-js-darkmode": "documentation build js/src/darkmode.ts --parse-extension ts -f md -o docs/darkmode.js.md --markdown-toc true --shallow false",
     "map-dark-vars": "npm-run-all --parallel map-dark-vars-*",
     "map-dark-vars-alt-to-core": "node ./build/make-dark-map.js ./build/dark-map-list.json '-alt' '' > ./scss/dark/_variables-map-alt-to-core.scss",
-    "NOT-IN-B1-YET--WAIT_map-dark-vars-core-to-temp": "node ./build/make-dark-map.js ./build/dark-map-list.json '' '-temp-dnu' > ./scss/dark/_variables-map-core-to-temp.scss",
-    "NOT-IN-B1-YET--WAIT_map-dark-vars-temp-to-alt": "node ./build/make-dark-map.js ./build/dark-map-list.json '-temp-dnu' '-alt' > ./scss/dark/_variables-map-temp-to-alt.scss"
+    "map-dark-vars-core-to-temp": "node ./build/make-dark-map.js ./build/dark-map-list.json '' '-temp-dnu' > ./scss/dark/_variables-map-core-to-temp.scss",
+    "map-dark-vars-temp-to-alt": "node ./build/make-dark-map.js ./build/dark-map-list.json '-temp-dnu' '-alt' > ./scss/dark/_variables-map-temp-to-alt.scss",
+    "bump": "echo \"Use bump-major, bump-minor, bump-patch\" && echo \"\" && exit 0",
+    "bump-major": "npm version major",
+    "bump-minor": "npm version minor",
+    "bump-patch": "npm version patch"
   },
   "author": "Vino Rodrigues",
   "homepage": "https://vinorodrigues.github.io/bootstrap-dark-5/",
@@ -109,6 +107,6 @@
     "typescript": "^4.1.3"
   },
   "dependencies": {
-    "bootstrap": "5.0.0-beta1"
+    "bootstrap": "5.0.0-beta2"
   }
 }

@@ -27,10 +27,10 @@
   background-image: escape-svg($carousel-control-next-icon-bg-alt);
 }
 
-// Optional indicator pips
+// Optional indicator pips/controls
 
 .carousel-indicators {
-  li {
+  [data-bs-target] {
     background-color: $carousel-indicator-active-bg-alt;
     opacity: $carousel-indicator-opacity-alt;
   }
@@ -54,7 +54,7 @@
     filter: $carousel-dark-control-icon-filter-alt;
   }
 
-  .carousel-indicators li {
+  .carousel-indicators [data-bs-target] {
     background-color: $carousel-dark-indicator-active-bg-alt;
   }
 

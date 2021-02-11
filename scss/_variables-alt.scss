@@ -250,7 +250,7 @@ $form-check-label-color-alt:                  null !default;
 
 $form-check-input-active-filter-alt:          brightness(90%) !default;  // TODO: test
 
-$form-check-input-bg-alt:                     $body-bg-alt !default;
+$form-check-input-bg-alt:                     $input-bg-alt !default;
 $form-check-input-border-alt:                 1px solid rgba(255, 255, 255, .25) !default;
 $form-check-input-focus-border-alt:           $input-focus-border-color-alt !default;
 $form-check-input-focus-box-shadow-alt:       $input-btn-focus-box-shadow-alt !default;
@@ -389,12 +389,12 @@ $dropdown-box-shadow-alt:               $box-shadow-alt !default;
 
 $dropdown-link-color-alt:               $gray-100 !default;
 $dropdown-link-hover-color-alt:         shade-color($gray-100, 10%) !default;
-$dropdown-link-hover-bg-alt:            $gray-900 !default;
+$dropdown-link-hover-bg-alt:            $gray-800 !default;
 
 $dropdown-link-active-color-alt:        $component-active-color-alt !default;
 $dropdown-link-active-bg-alt:           $component-active-bg-alt !default;
 
-$dropdown-link-disabled-color-alt:      $gray-400-alt !default;
+$dropdown-link-disabled-color-alt:      $gray-500-alt !default;
 
 $dropdown-header-color-alt:             $gray-400-alt !default;
 

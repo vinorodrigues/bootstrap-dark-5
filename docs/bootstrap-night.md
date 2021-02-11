@@ -34,7 +34,7 @@ Refer to the [Bootstrap 5 Docs](https://getbootstrap.com/docs/5.0/getting-starte
 
 ***
 
-The theme can also be used in conjunction with the orignial Bootstrap variant to provide a dark mode / light mode switch bcased on the user's OS dark mode setting.
+The theme can also be used in conjunction with the original Bootstrap variant to provide a dark mode / light mode switch based on the user's OS dark mode setting.
 
 This HTML file could look like this:
 

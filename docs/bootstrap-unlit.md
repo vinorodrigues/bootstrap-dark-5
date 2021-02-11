@@ -1,4 +1,4 @@
-# Bootstrap-Dark Quick Start
+# Bootstrap-Unlit Quick Start
 
 A basic HTML file should look like this:
 
@@ -11,12 +11,12 @@ A basic HTML file should look like this:
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- The page supports both dark and light color schemes,
-         and the page author prefers / default is light. -->
-    <meta name="color-scheme" content="light dark">
+         and the page author prefers / default is DARK. -->
+    <meta name="color-scheme" content="dark light">
 
     <!-- Replace the Bootstrap CSS with the
          Bootstrap-Dark Variant CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-dark.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@0.1/dist/css/bootstrap-unlit.min.css" rel="stylesheet">
 
     <title>Hello, world!</title>
   </head>
@@ -32,5 +32,7 @@ A basic HTML file should look like this:
 ```
 
 That's all.  The page will automatically transition to Dark Mode when the users sets their OS *(or Firefox theme)* to Dark Mode.
+
+> ***Please note:*** On browsers that support dark move *(via the `preferes-color-scheme` media query)* this variant produces exactly the some outcomce, i.e. dark when `preferes-color-scheme` = dark and light when `preferes-color-scheme` = ligh.  The only visible difference will be on browsers that do not support `preferes-color-scheme`. *(However, thoes browsers may not work with BS5 at all ... see docs: [Bootstrap 5 Browsers and devices](https://getbootstrap.com/docs/5.0/getting-started/browsers-devices/))*
 
 Refer to the [Bootstrap 5 Docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/#starter-template) for more help.

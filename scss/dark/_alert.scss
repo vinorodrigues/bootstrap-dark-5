@@ -13,13 +13,13 @@
 // Generate contextual modifier classes for colorizing the alert.
 
 @each $state, $value in $theme-colors-alt {
-  $alert-background: shift-color($value, $alert-bg-scale-alt);
-  $alert-border: shift-color($value, $alert-border-scale-alt);
-  $alert-color: shift-color($value, $alert-color-scale-alt);
-  @if (contrast-ratio($alert-background, $alert-color) < $min-contrast-ratio-alt) {
-    $alert-color: mix($value, color-contrast($alert-background, $color-contrast-dark-alt, $color-contrast-light-alt, $min-contrast-ratio-alt), abs($alert-color-scale-alt));
+  $alert-background-alt: shift-color($value, $alert-bg-scale-alt);
+  $alert-border-alt: shift-color($value, $alert-border-scale-alt);
+  $alert-color-alt: shift-color($value, $alert-color-scale-alt);
+  @if (contrast-ratio($alert-background-alt, $alert-color-alt) < $min-contrast-ratio-alt) {
+    $alert-color-alt: mix($value, color-contrast($alert-background-alt, $color-contrast-dark-alt, $color-contrast-light-alt, $min-contrast-ratio-alt), abs($alert-color-scale-alt));
   }
   .alert-#{$state} {
-    @include alert-variant($alert-background, $alert-border, $alert-color);
+    @include alert-variant($alert-background-alt, $alert-border-alt, $alert-color-alt);
   }
 }
