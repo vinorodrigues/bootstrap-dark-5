@@ -41,7 +41,11 @@
     "map-dark-vars": "npm-run-all --parallel map-dark-vars-*",
     "map-dark-vars-alt-to-core": "node ./build/make-dark-map.js ./build/dark-map-list.json '-alt' '' > ./scss/dark/_variables-map-alt-to-core.scss",
     "map-dark-vars-core-to-temp": "node ./build/make-dark-map.js ./build/dark-map-list.json '' '-temp-dnu' > ./scss/dark/_variables-map-core-to-temp.scss",
-    "map-dark-vars-temp-to-alt": "node ./build/make-dark-map.js ./build/dark-map-list.json '-temp-dnu' '-alt' > ./scss/dark/_variables-map-temp-to-alt.scss"
+    "map-dark-vars-temp-to-alt": "node ./build/make-dark-map.js ./build/dark-map-list.json '-temp-dnu' '-alt' > ./scss/dark/_variables-map-temp-to-alt.scss",
+    "bump": "echo \"Use bump-major, bump-minor, bump-patch\" && echo \"\" && exit 0",
+    "bump-major": "npm version major",
+    "bump-minor": "npm version minor",
+    "bump-patch": "npm version patch"
   },
   "author": "Vino Rodrigues",
   "homepage": "https://vinorodrigues.github.io/bootstrap-dark-5/",
