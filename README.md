@@ -9,9 +9,9 @@
 
 > ![NOTE:](https://img.shields.io/badge/NOTE%3A-069?style=for-the-badge) This is a 'Work In Progress' and is specifically based on Bootstrap 5 - Beta 2 - https://github.com/twbs/bootstrap/tree/v5.0.0-beta2
 
-> ![NOTE:](https://img.shields.io/badge/NOTE%3A-069?style=for-the-badge) The recommendation is to ***not*** use this in a production environment.
+> ![NOTE:](https://img.shields.io/badge/NOTE%3A-069?style=for-the-badge) This work is ***not*** recommended for production environments, yet.
 
-> ![NOTE: on Bootstrap core](https://img.shields.io/badge/NOTE-on%20Bootstrap%20core%3A-069?style=for-the-badge) I have tried to merge this project in to Bootstrap core *(see [pull request #32936](https://github.com/twbs/bootstrap/pull/32936))*, but while that's being considered I will continue to work on this project.  If you wish this to be added to Bootstrap core then let the authors know by adding a comment to the [pull request](https://github.com/twbs/bootstrap/pull/32936).
+> ![NOTE: on Bootstrap core](https://img.shields.io/badge/NOTE-on%20Bootstrap%20core%3A-069?style=for-the-badge) I have tried to merge this project *(`-dark' variant)* into Bootstrap core *(see [pull request #32936](https://github.com/twbs/bootstrap/pull/32936))*, but while that's being considered I will continue to work on this add-on.  If you wish this to be added to Bootstrap core then let the authors know by adding a comment to the [pull request](https://github.com/twbs/bootstrap/pull/32936).
 
 ## About
 
@@ -23,21 +23,29 @@ This code will make little sense if you don't read
 
 The code compiles the four methods *(and variants - **six in total**)* of the original body of work, but compiled for and sourcing **Bootstrap 5**.  These are:
 
-* [Method 1](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-1) <small>*(link to original)*</small>
+### Method 1
 
-  *  **`bootstrap-night`**: This is simply a dark bootstrap theme.  I can however be used with the Bootstrap core CSS to deliver a 2-file dark mode functionality.
+<small>*([link to original](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-1))*</small>
 
-* [Method 2](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-2) <small>*(link to original)*</small>
+  *  **`bootstrap-night`**: This is simply a dark bootstrap theme.  It can however be used with the Bootstrap core CSS to deliver a 2-file dark mode functionality.
 
-  * **`bootstrap-nightfall`**: This is simply the "color only" CSS of all the  components of Bootstrap core CSS, but dark, and is intended to be used as a add-on.  It can however with a simple media query drive automatic dark mode switching.
+### Method 2
 
-* [Method 3](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-3) <small>*(link to original)*</small>
+<small>*([link to original](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-2))*</small>
 
-  * **`bootstrap-nightshade`**: This a modification of the Bootstrap core and adds dark color CSS for all the components, but dark, nested in a `html.dark` class wrapper.  By itself it cannot offer dark mode switching, but add the included `darkmode.js` library and you have an interactive dark mode switching variant of Bootstrap with built in ***"toggle"*** button support.
+  * **`bootstrap-nightfall`**: This is simply the "color only" CSS of all the  components of Bootstrap core, but dark, and is intended to be used as an add-on.  It can also, with a simple media query, drive automatic dark mode switching.
+
+### Method 3
+
+<small>*([link to original](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-3))*</small>
+
+  * **`bootstrap-nightshade`**: This is a modification of the Bootstrap core and adds dark color CSS for all the components, but dark, nested in a `html.dark` class wrapper.  By itself it cannot offer dark mode switching, but add the included `darkmode.js` library and you have an interactive dark mode switching variant of Bootstrap with built in ***"toggle"*** button support.
 
   * **`bootstrap-blackbox`**: ![New](https://img.shields.io/badge/NEW-red) This variant is essentially the same as the "nightshade" variant, but instead of using a HTML tag class, it uses a HTML tag data attribute; `data-bs-color-scheme`.  The same `darkmode.js` library drives this one, all you need to do is add the data attribute to your HTML tag.
 
-* [Method 4](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-4) <small>*(link to original)*</small>
+### Method 4
+
+<small>*([link to original](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-4))*</small>
 
   * **`bootstrap-dark`**: This is the recommended method; one CSS with both light and dark themes, toggle-able only with the OS or browser `prefers-color-scheme` media query.
 
