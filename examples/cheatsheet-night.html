@@ -130,6 +130,13 @@
           updateUI(color_p);
         });
 
+        document.addEventListener("keypress", function(event){
+          var keyName = event.key;
+          if ((keyName == 'd') || (keyName == 'D')) {
+            toggle_btn.click();
+          }
+        });
+
         /* Set Preference on load */
         const osColorPreference = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
         // console.log('OS wants ' + osColorPreference);
