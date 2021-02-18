@@ -6449,6 +6449,10 @@ textarea.form-control-lg {
   border-color: #fafafa !important;
 }
 
+.border-black {
+  border-color: #111 !important;
+}
+
 .border-0 {
   border-width: 0 !important;
 }
@@ -7255,6 +7259,10 @@ textarea.form-control-lg {
   color: inherit !important;
 }
 
+.text-black {
+  color: #111 !important;
+}
+
 .lh-1 {
   line-height: 1 !important;
 }
@@ -7313,6 +7321,10 @@ textarea.form-control-lg {
 
 .bg-transparent {
   background-color: transparent !important;
+}
+
+.bg-black {
+  background-color: #111 !important;
 }
 
 .bg-gradient {
@@ -10748,23 +10760,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.text-black {
-  color: #111 !important;
-}
-
-.bg-black {
-  background-color: #111 !important;
-}
-
-.border-black {
-  border-color: #111 !important;
-}
-
 body::-moz-selection {
   color: #cfcfcf;
   background: rgba(23, 162, 184, 0.5);
 }
-
 body::selection {
   color: #cfcfcf;
   background: rgba(23, 162, 184, 0.5);
