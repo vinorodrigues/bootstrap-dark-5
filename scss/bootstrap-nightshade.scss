@@ -19,6 +19,7 @@
 @import "dark/mixins";
 @import "utilities";
 @import "dark/utilities";
+@import "dark/patch";  // missing from BS, unsupported patch/hack
 
 // Layout & components
 :root { color-scheme: light; }
@@ -54,14 +55,6 @@
 
 // Helpers
 @import "helpers";
-
-// missing from BS, unsupported patch/hack
-// ---------------------------------------------------------------------------
-:root { --bs-black: #{$black}; }  // stylelint-disable-line
-.text-black { color: $black if($enable-important-utilities, !important, null); }
-.bg-black { background-color: $black if($enable-important-utilities, !important, null); }
-.border-black { border-color: $black if($enable-important-utilities, !important, null); }
-// ---------------------------------------------------------------------------
 
 // Utilities
 @import "utilities/api";

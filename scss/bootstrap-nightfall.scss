@@ -18,6 +18,7 @@
 @import "dark/mixins";
 @import "utilities";
 @import "dark/utilities";
+@import "dark/patch";  // missing from BS, unsupported patch/hack
 
 // Layout & components
 :root { color-scheme: dark; }

@@ -17,11 +17,14 @@
 @import "dark/variables-map-core-to-temp";  // map the core colors to `-temp` placeholders
 @import "dark/variables-map-alt-to-core";  // map the `-alt`'s back to core colors
 @import "dark/variables-map-temp-to-alt";  // map the `-temp`'s back to the `-alt`'s, in effect swapping them
-$default-color-scheme: dark;  // stylelint-disable-line
 @import "mixins";
 @import "dark/mixins";
 @import "utilities";
 @import "dark/utilities";
+@import "dark/patch";  // missing from BS, unsupported patch/hack
+
+// stylelint-disable-next-line scss/dollar-variable-default
+$default-color-scheme: dark;
 
 // Layout & components
 @import "dark/color-scheme";
@@ -57,14 +60,6 @@ $default-color-scheme: dark;  // stylelint-disable-line
 
 // Helpers
 @import "helpers";
-
-// missing from BS, unsupported patch/hack
-// ---------------------------------------------------------------------------
-:root { --bs-black: #{$black}; }
-.text-black { color: $black if($enable-important-utilities, !important, null); }
-.bg-black { background-color: $black if($enable-important-utilities, !important, null); }
-.border-black { border-color: $black if($enable-important-utilities, !important, null); }
-// ---------------------------------------------------------------------------
 
 // Utilities
 @import "utilities/api";
