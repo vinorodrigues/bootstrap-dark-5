@@ -7,11 +7,11 @@
 > If you're after the same work for [Bootstrap 4](https://getbootstrap.com/docs/4.5/) please visit the [vinorodrigues/bootstrap-dark](https://github.com/vinorodrigues/bootstrap-dark) repo.
 
 
-> ![NOTE:](https://img.shields.io/badge/NOTE%3A-069?style=for-the-badge) This is a 'Work In Progress' and is specifically based on Bootstrap 5 - Beta 2 - https://github.com/twbs/bootstrap/tree/v5.0.0-beta2
+> ![NOTE:](https://img.shields.io/badge/NOTE%3A-069) This is a 'Work In Progress' and is specifically based on Bootstrap 5 - Beta 2 - https://github.com/twbs/bootstrap/tree/v5.0.0-beta2
 
-> ![NOTE:](https://img.shields.io/badge/NOTE%3A-069?style=for-the-badge) This work is ***not*** recommended for production environments, yet.
+> ![NOTE:](https://img.shields.io/badge/NOTE%3A-069) This work is ***not*** recommended for production environments, yet.
 
-> ![NOTE: on Bootstrap core](https://img.shields.io/badge/NOTE-on%20Bootstrap%20core%3A-069?style=for-the-badge) I have tried to merge this project *(`-dark' variant)* into Bootstrap core *(see [pull request #32936](https://github.com/twbs/bootstrap/pull/32936))*, but while that's being considered I will continue to work on this add-on.  If you wish this to be added to Bootstrap core then let the authors know by adding a comment to the [pull request](https://github.com/twbs/bootstrap/pull/32936).
+> ![NOTE: on Bootstrap core](https://img.shields.io/badge/NOTE-on%20Bootstrap%20core%3A-069) I have tried to merge this project *(`-dark' variant)* into Bootstrap core *(see [pull request #32936](https://github.com/twbs/bootstrap/pull/32936))*, but while that's being considered I will continue to work on this add-on.  If you wish this to be added to Bootstrap core then let the authors know by adding a comment to the [pull request](https://github.com/twbs/bootstrap/pull/32936).
 
 ## About
 
@@ -79,7 +79,7 @@ If you're a theme builder or want to use its principles in your own project you'
 4. Run `npm run build` to build your theme.
 5. The compiled code will be in the `dist` folder.
 
-> ![NOTE:](https://img.shields.io/badge/NOTE%3A-069?style=for-the-badge) The build system is based on [NPM Scripts](https://docs.npmjs.com/cli/v6/using-npm/scripts). Most of the build tools _(NPM modules)_ will need to be installed as *"global"* to ensure the scripts are executable from the command line.
+> ![NOTE:](https://img.shields.io/badge/NOTE%3A-069) The build system is based on [NPM Scripts](https://docs.npmjs.com/cli/v6/using-npm/scripts). Most of the build tools _(NPM modules)_ will need to be installed as *"global"* to ensure the scripts are executable from the command line.
 
 ```bash
 npm i -g  autoprefixer  documentation browser-sync  clean-css-cli  cross-env  eslint  eslint-config-xo  eslint-plugin-import  eslint-plugin-unicorn  find-unused-sass-variables  imagemin-cli  nodemon  npm-run-all  postcss-cli  rtlcss  sass  stylelint  stylelint-config-twbs-bootstrap  svgo  terser typescript
