@@ -11,6 +11,7 @@
 @import "variables";
 @import "mixins";
 @import "utilities";
+@import "dark/patch";  // missing from BS, unsupported patch/hack
 
 // Layout & components
 @import "root";
@@ -45,14 +46,6 @@
 
 // Helpers
 @import "helpers";
-
-// missing from BS, unsupported patch/hack
-// ---------------------------------------------------------------------------
-:root { --bs-black: #{$black}; }
-.text-black { color: $black if($enable-important-utilities, !important, null); }
-.bg-black { background-color: $black if($enable-important-utilities, !important, null); }
-.border-black { border-color: $black if($enable-important-utilities, !important, null); }
-// ---------------------------------------------------------------------------
 
 // Utilities
 @import "utilities/api";
