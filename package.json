@@ -60,10 +60,9 @@
   "style": "dist/css/bootstrap-dark.css",
   "sass": "scss/bootstrap-dark.scss",
   "files": [
-    "dist/css/*.{css,map}",
-    "dist/js/*.{js,map}",
-    "scss/**/*.scss",
-    "js/src/*.ts",
+    "dist/**/*",
+    "scss/**/*",
+    "js/src/*",
     "README.md",
     "LICENSE.md"
   ],
