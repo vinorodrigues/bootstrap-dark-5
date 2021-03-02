@@ -19,6 +19,7 @@
   --bs-white: #fff;
   --bs-gray: #6c757d;
   --bs-gray-dark: #343a40;
+  --bs-black: #000;
   --bs-primary: #0d6efd;
   --bs-secondary: #6c757d;
   --bs-success: #198754;
@@ -6169,22 +6170,6 @@ textarea.form-control-lg {
   white-space: nowrap;
 }
 
-:root {
-  --bs-black: #000;
-}
-
-.text-black {
-  color: #000 !important;
-}
-
-.bg-black {
-  background-color: #000 !important;
-}
-
-.border-black {
-  border-color: #000 !important;
-}
-
 .align-baseline {
   vertical-align: baseline !important;
 }
@@ -6448,6 +6433,10 @@ textarea.form-control-lg {
 
 .border-white {
   border-color: #fff !important;
+}
+
+.border-black {
+  border-color: #000 !important;
 }
 
 .border-0 {
@@ -7256,6 +7245,10 @@ textarea.form-control-lg {
   color: inherit !important;
 }
 
+.text-black {
+  color: #000 !important;
+}
+
 .lh-1 {
   line-height: 1 !important;
 }
@@ -7316,6 +7309,10 @@ textarea.form-control-lg {
   background-color: transparent !important;
 }
 
+.bg-black {
+  background-color: #000 !important;
+}
+
 .bg-gradient {
   background-image: var(--bs-gradient) !important;
 }
@@ -7354,7 +7351,6 @@ textarea.form-control-lg {
 .user-select-all {
   -webkit-user-select: all !important;
   -moz-user-select: all !important;
-  -ms-user-select: all !important;
   user-select: all !important;
 }
 
