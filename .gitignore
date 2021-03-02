@@ -3,7 +3,7 @@ node_modules
 ~*
 _/*
 !scss/**/_*
-package-lock.json
+#package-lock.json
 .DS_store
 
 # specifically ignore most of dist, except the files needed for GitHub pages
