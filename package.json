@@ -28,7 +28,7 @@
     "css-lint-vars": "fusv scss/",
     "js": "npm-run-all js-wipe js-compile js-minify",
     "js-wipe": "rimraf ./dist/js",
-    "js-compile": "tsc -p build",
+    "js-compile": "tsc -p build && node ./build/make-banner.js ./dist/js/darkmode.js",
     "js-minify": "terser -c -m -o ./dist/js/darkmode.min.js ./dist/js/darkmode.js",
     "js-lint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives . --ext .ts",
     "watch": "npm-run-all --parallel watch-*",
