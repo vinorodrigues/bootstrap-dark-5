@@ -51,6 +51,7 @@
 @import "popover";
 @import "carousel";
 @import "spinners";
+@import "offcanvas";
 
 // Helpers
 @import "helpers";
@@ -94,6 +95,7 @@
   @import "dark/popover";
   @import "dark/carousel";
   // no colors in spinners
+  @import "dark/offcanvas";
 
   // Helpers
   @import "dark/helpers";

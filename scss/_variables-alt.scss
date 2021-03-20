@@ -197,7 +197,8 @@ $table-variants-alt: (
 
 $input-btn-focus-color-opacity-alt: .25 !default;
 $input-btn-focus-color-alt:         rgba($component-active-bg-alt, $input-btn-focus-color-opacity-alt) !default;
-$input-btn-focus-box-shadow-alt:    0 0 0 $input-btn-focus-width $input-btn-focus-color-alt !default;
+$input-btn-focus-blur-alt:          0 !default;
+$input-btn-focus-box-shadow-alt:    0 0 $input-btn-focus-blur-alt $input-btn-focus-width $input-btn-focus-color-alt !default;
 
 
 // Buttons
@@ -284,7 +285,7 @@ $input-group-addon-bg-alt:                  $gray-800-alt !default;
 $input-group-addon-border-color-alt:        $input-border-color-alt !default;
 
 $form-select-color-alt:                 $input-color-alt !default;
-$form-select-disabled-color-alt:        $gray-400-alt !default;
+$form-select-disabled-color-alt:        null !default;
 $form-select-bg-alt:                    $input-bg-alt !default;
 $form-select-disabled-bg-alt:           $gray-800-alt !default;
 $form-select-disabled-border-color-alt: $input-disabled-border-color-alt !default;
@@ -451,7 +452,7 @@ $card-bg-alt:           mix($gray-800-alt, $gray-900-alt, 50%) !default;
 // ______________________________________
 
 $accordion-color-alt:                         $body-color-alt !default;
-$accordion-bg-alt:                            transparent !default;
+$accordion-bg-alt:                            $body-bg-alt !default;
 $accordion-border-color-alt:                  rgba($white-alt, .125) !default;
 
 $accordion-button-color-alt:                  $accordion-color-alt !default;
@@ -553,7 +554,7 @@ $progress-bar-bg-alt:                   $primary-alt !default;
 // List group
 // ______________________________________
 
-$list-group-color-alt:                  null !default;
+$list-group-color-alt:                  $gray-100-alt !default;
 $list-group-bg-alt:                     $black-alt !default;
 $list-group-border-color-alt:           rgba($white-alt, .125) !default;
 
@@ -634,6 +635,16 @@ $btn-close-hover-opacity-alt:    .75 !default;
 $btn-close-focus-opacity-alt:    1 !default;
 $btn-close-disabled-opacity-alt: .25 !default;
 $btn-close-white-filter-alt:     invert(1) grayscale(100%) brightness(200%) !default;
+
+
+// Offcanvas
+// ______________________________________
+
+$offcanvas-border-color-alt:            $modal-content-border-color-alt !default;
+$offcanvas-bg-color-alt:                $modal-content-bg-alt !default;
+$offcanvas-color-alt:                   $modal-content-color-alt !default;
+$offcanvas-body-backdrop-color-alt:     rgba($modal-backdrop-bg-alt, $modal-backdrop-opacity-alt) !default;
+$offcanvas-box-shadow-alt:              $modal-content-box-shadow-xs-alt !default;
 
 
 // Code

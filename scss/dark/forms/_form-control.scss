@@ -34,14 +34,12 @@
   }
 
   // File input buttons theming
-  // stylelint-disable-next-line selector-pseudo-element-no-unknown
   &::file-selector-button {
     color: $form-file-button-color-alt;
     @include gradient-bg($form-file-button-bg-alt);
     border-color: inherit;
   }
 
-  // stylelint-disable-next-line selector-pseudo-element-no-unknown
   &:hover:not(:disabled):not([readonly])::file-selector-button {
     background-color: $form-file-button-hover-bg-alt;
   }

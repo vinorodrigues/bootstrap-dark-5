@@ -5,7 +5,7 @@
   $icon,
   $tooltip-color: color-contrast($color, $color-contrast-dark-alt, $color-contrast-light-alt, $min-contrast-ratio-alt),
   $tooltip-bg-color: rgba($color, $form-feedback-tooltip-opacity-alt),
-  $focus-box-shadow: 0 0 0 $input-focus-width rgba($color, $input-btn-focus-color-opacity-alt)
+  $focus-box-shadow: 0 0 $input-btn-focus-blur-alt $input-focus-width rgba($color, $input-btn-focus-color-opacity-alt)
 ) {
   .#{$state}-feedback {
     color: $color;

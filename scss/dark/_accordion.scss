@@ -3,11 +3,11 @@
 .accordion-button {
   color: $accordion-button-color-alt;
   background-color: $accordion-button-bg-alt;
-  border: $accordion-border-width solid $accordion-border-color-alt;
 
   &:not(.collapsed) {
     color: $accordion-button-active-color-alt;
     background-color: $accordion-button-active-bg-alt;
+    box-shadow: inset 0 ($accordion-border-width * -1) 0 $accordion-border-color-alt;
 
     &::after {
       background-image: escape-svg($accordion-button-active-icon-alt);
@@ -19,12 +19,17 @@
     background-image: escape-svg($accordion-button-icon-alt);
   }
 
+  &:hover {
+    z-index: 2;
+  }
+
   &:focus {
     border-color: $accordion-button-focus-border-color-alt;
     box-shadow: $accordion-button-focus-box-shadow-alt;
   }
 }
 
-.accordion-collapse {
-  border: solid $accordion-border-color-alt;
+.accordion-item {
+  background-color: $accordion-bg-alt;
+  border: $accordion-border-width solid $accordion-border-color-alt;
 }
