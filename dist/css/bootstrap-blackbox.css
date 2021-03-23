@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Bootstrap v5.0.0-beta2 (https://getbootstrap.com/)
+ * Bootstrap v5.0.0-beta3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -4499,11 +4499,17 @@ textarea.form-control-lg {
   border-width: 0;
 }
 .accordion-flush .accordion-item {
-  border-radius: 0;
-}
-.accordion-flush .accordion-item .accordion-button {
   border-right: 0;
   border-left: 0;
+  border-radius: 0;
+}
+.accordion-flush .accordion-item:first-child {
+  border-top: 0;
+}
+.accordion-flush .accordion-item:last-child {
+  border-bottom: 0;
+}
+.accordion-flush .accordion-item .accordion-button {
   border-radius: 0;
 }
 
@@ -11902,6 +11908,19 @@ a > [data-bs-color-scheme=dark] code {
 [data-bs-color-scheme=dark] .accordion-item {
   background-color: #222;
   border: 1px solid rgba(250, 250, 250, 0.125);
+}
+[data-bs-color-scheme=dark] .accordion-flush .accordion-collapse {
+  border-width: 0;
+}
+[data-bs-color-scheme=dark] .accordion-flush .accordion-item {
+  border-right: 0;
+  border-left: 0;
+}
+[data-bs-color-scheme=dark] .accordion-flush .accordion-item:first-child {
+  border-top: 0;
+}
+[data-bs-color-scheme=dark] .accordion-flush .accordion-item:last-child {
+  border-bottom: 0;
 }
 [data-bs-color-scheme=dark] .breadcrumb {
   background-color: #3b3b3b;
