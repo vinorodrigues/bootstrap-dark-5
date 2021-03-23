@@ -445,7 +445,7 @@ $card-border-color-alt: rgba($white-alt, .125) !default;
 $card-cap-bg-alt:       rgba($white-alt, .03) !default;
 $card-cap-color-alt:    null !default;
 $card-color-alt:        null !default;
-$card-bg-alt:           mix($gray-800-alt, $gray-900-alt, 50%) !default;
+$card-bg-alt:           $gray-900-alt !default;
 
 
 // Accordion
@@ -555,7 +555,7 @@ $progress-bar-bg-alt:                   $primary-alt !default;
 // ______________________________________
 
 $list-group-color-alt:                  $gray-100-alt !default;
-$list-group-bg-alt:                     $black-alt !default;
+$list-group-bg-alt:                     $gray-900-alt !default;  // $white !default;
 $list-group-border-color-alt:           rgba($white-alt, .125) !default;
 
 $list-group-item-bg-scale-alt:          50% !default;
