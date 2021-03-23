@@ -12136,6 +12136,13 @@ textarea.form-control-lg {
     border-color: #375a7f;
   }
 
+  .list-group-flush > .list-group-item {
+    border-width: 0 0 1px;
+  }
+  .list-group-flush > .list-group-item:last-child {
+    border-bottom-width: 0;
+  }
+
   .list-group-item-primary {
     color: #738ca5;
     background-color: #1c2d40;
