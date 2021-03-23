@@ -4249,7 +4249,7 @@ textarea.form-control-lg {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #2f2f2f;
+  background-color: #222;
   background-clip: border-box;
   border: 1px solid rgba(250, 250, 250, 0.125);
   border-radius: 0.25rem;
@@ -4326,10 +4326,6 @@ textarea.form-control-lg {
   margin-bottom: -0.5rem;
   margin-left: -0.5rem;
   border-bottom: 0;
-}
-.card-header-tabs .nav-link.active {
-  background-color: #2f2f2f;
-  border-bottom-color: #2f2f2f;
 }
 
 .card-header-pills {
@@ -4832,7 +4828,7 @@ textarea.form-control-lg {
   padding: 0.5rem 1rem;
   color: #e1e1e1;
   text-decoration: none;
-  background-color: #111;
+  background-color: #222;
   border: 1px solid rgba(250, 250, 250, 0.125);
 }
 .list-group-item:first-child {
@@ -4846,7 +4842,7 @@ textarea.form-control-lg {
 .list-group-item.disabled, .list-group-item:disabled {
   color: #9e9e9e;
   pointer-events: none;
-  background-color: #111;
+  background-color: #222;
 }
 .list-group-item.active {
   z-index: 2;
