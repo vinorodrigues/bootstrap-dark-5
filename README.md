@@ -7,7 +7,7 @@
 > If you're after the same work for [Bootstrap 4](https://getbootstrap.com/docs/4.5/) please visit the [vinorodrigues/bootstrap-dark](https://github.com/vinorodrigues/bootstrap-dark) repo.
 
 
-> ![NOTE:](https://img.shields.io/badge/NOTE%3A-069) This is a 'Work In Progress' and is specifically based on Bootstrap 5 - Beta 2 - https://github.com/twbs/bootstrap/tree/v5.0.0-beta2
+> ![NOTE:](https://img.shields.io/badge/NOTE%3A-069) This is a 'Work In Progress' and is specifically based on Bootstrap 5 - Beta 3 - https://github.com/twbs/bootstrap/tree/v5.0.0-beta3
 
 > ![NOTE:](https://img.shields.io/badge/NOTE%3A-069) This work is ***not*** recommended for production environments, yet.
 
