@@ -37,6 +37,19 @@
   }
 }
 
+// Flush list items
+
+.list-group-flush {
+
+  > .list-group-item {
+    border-width: 0 0 $list-group-border-width;  // needed for nightshade variants
+
+    &:last-child {
+      border-bottom-width: 0;
+    }
+  }
+}
+
 // List group contextual variants
 
 @each $state, $value in $theme-colors-alt {
