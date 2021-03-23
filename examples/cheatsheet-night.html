@@ -140,7 +140,7 @@
         /* Set Preference on load */
         const osColorPreference = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
         // console.log('OS wants ' + osColorPreference);
-        const preferredColorScheme = localStorage.getItem('preferred-color-scheme');
+        var preferredColorScheme = localStorage.getItem('preferred-color-scheme');
         if (preferredColorScheme !== null) {
           initColorCSS(preferredColorScheme);
         } else {
