@@ -6027,7 +6027,7 @@ textarea.form-control-lg {
   flex-direction: column;
   max-width: 100%;
   visibility: hidden;
-  background-color: #fff;
+  background-color: #2f2f2f;
   background-clip: padding-box;
   outline: 0;
   transition: transform 0.3s ease-in-out;
@@ -6063,7 +6063,7 @@ textarea.form-control-lg {
   top: 0;
   left: 0;
   width: 400px;
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(250, 250, 250, 0.2);
   transform: translateX(-100%);
 }
 
@@ -6071,7 +6071,7 @@ textarea.form-control-lg {
   top: 0;
   right: 0;
   width: 400px;
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  border-left: 1px solid rgba(250, 250, 250, 0.2);
   transform: translateX(100%);
 }
 
@@ -6080,7 +6080,7 @@ textarea.form-control-lg {
   left: 0;
   height: 30vh;
   max-height: 100%;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(250, 250, 250, 0.2);
   transform: translateY(100%);
 }
 
@@ -6096,7 +6096,7 @@ textarea.form-control-lg {
   width: 100vw;
   height: 100vh;
   content: "";
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(17, 17, 17, 0.85);
 }
 
 .clearfix::after {

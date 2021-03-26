@@ -103,6 +103,7 @@
 
   "input-btn-focus-color-opacity",
   "input-btn-focus-color",
+  "input-btn-focus-blur",
   "input-btn-focus-box-shadow",
 
   "// --- Buttons ---",
@@ -479,6 +480,14 @@
   "btn-close-focus-opacity",
   "btn-close-disabled-opacity",
   "btn-close-white-filter",
+
+  "// --- Offcanvas ---",
+
+  "offcanvas-border-color",
+  "offcanvas-bg-color",
+  "offcanvas-color",
+  "offcanvas-body-backdrop-color",
+  "offcanvas-box-shadow",
 
   "// --- Code ---",
 

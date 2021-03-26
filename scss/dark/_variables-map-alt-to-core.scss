@@ -95,6 +95,7 @@ $table-variants:                              $table-variants-alt;
 // --- Buttons + Forms ---
 $input-btn-focus-color-opacity:               $input-btn-focus-color-opacity-alt;
 $input-btn-focus-color:                       $input-btn-focus-color-alt;
+$input-btn-focus-blur:                        $input-btn-focus-blur-alt;
 $input-btn-focus-box-shadow:                  $input-btn-focus-box-shadow-alt;
 
 // --- Buttons ---
@@ -390,6 +391,13 @@ $btn-close-focus-opacity:                     $btn-close-focus-opacity-alt;
 $btn-close-disabled-opacity:                  $btn-close-disabled-opacity-alt;
 $btn-close-white-filter:                      $btn-close-white-filter-alt;
 
+// --- Offcanvas ---
+$offcanvas-border-color:                      $offcanvas-border-color-alt;
+$offcanvas-bg-color:                          $offcanvas-bg-color-alt;
+$offcanvas-color:                             $offcanvas-color-alt;
+$offcanvas-body-backdrop-color:               $offcanvas-body-backdrop-color-alt;
+$offcanvas-box-shadow:                        $offcanvas-box-shadow-alt;
+
 // --- Code ---
 $code-color:                                  $code-color-alt;
 $kbd-color:                                   $kbd-color-alt;
@@ -399,4 +407,4 @@ $pre-color:                                   $pre-color-alt;
 // !! Don't remove the next 2 lines
 // fusv-enable
 // stylelint-enable
-// Generated: Fri Jan 22 2021 00:03:23 GMT+1100 (Australian Eastern Daylight Time)
+// Generated: Sat Mar 27 2021 08:10:13 GMT+1100 (Australian Eastern Daylight Time)
