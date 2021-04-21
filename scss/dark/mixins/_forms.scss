@@ -36,7 +36,15 @@
       border-color: $color;
 
       @if $enable-validation-icons {
-        background-image: escape-svg($form-select-indicator-alt), escape-svg($icon);
+        &:not([multiple]):not([size]),
+        &:not([multiple])[size="1"] {
+          background-image: escape-svg($form-select-indicator-alt), escape-svg($icon);
+        }
+
+        &[multiple],
+        &[size]:not([size="1"]) {
+          background-image: escape-svg($icon);
+        }
       }
 
       &:focus {

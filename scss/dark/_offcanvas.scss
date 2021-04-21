@@ -13,10 +13,10 @@
   border-left: $offcanvas-border-width solid $offcanvas-border-color-alt;
 }
 
-.offcanvas-bottom {
-  border-top: $offcanvas-border-width solid $offcanvas-border-color-alt;
+.offcanvas-top {
+  border-bottom: $offcanvas-border-width solid $offcanvas-border-color-alt;
 }
 
-.offcanvas-backdrop::before {
-  background-color: $offcanvas-body-backdrop-color-alt;
+.offcanvas-bottom {
+  border-top: $offcanvas-border-width solid $offcanvas-border-color-alt;
 }

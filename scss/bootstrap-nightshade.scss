@@ -64,7 +64,7 @@
  * ---------- Dark Mode ------------------------------------------------------
  */
 
-@include prefers-color-scheme("html.dark") {
+@include color-scheme-alt("html.dark") {
 
   :root { color-scheme: dark; }
 

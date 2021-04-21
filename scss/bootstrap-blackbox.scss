@@ -65,7 +65,7 @@
  * ---------- Dark Mode ------------------------------------------------------
  */
 
-@include prefers-color-scheme("[data-bs-color-scheme=\"dark\"]") {
+@include color-scheme-alt("[data-bs-color-scheme=\"dark\"]") {
 
   :root { color-scheme: dark; }
 

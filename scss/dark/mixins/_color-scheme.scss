@@ -1,5 +1,5 @@
 // scss-docs-start mixin-color-scheme
-@mixin prefers-color-scheme($scheme: light) {
+@mixin color-scheme-alt($scheme: light) {
   @if $scheme == dark {
     @media (prefers-color-scheme: dark) {
       @content;

@@ -69,7 +69,7 @@ $default-color-scheme: dark;
  * ---------- Dark Mode ------------------------------------------------------
  */
 
-@include prefers-color-scheme(alternative-color-scheme($default-color-scheme)) {
+@include color-scheme-alt(alternative-color-scheme($default-color-scheme)) {
 
   // Layout & components
   @import "dark/root";

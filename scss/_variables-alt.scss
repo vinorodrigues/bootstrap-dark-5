@@ -252,7 +252,7 @@ $form-check-label-color-alt:                  null !default;
 $form-check-input-active-filter-alt:          brightness(90%) !default;  // TODO: test
 
 $form-check-input-bg-alt:                     $input-bg-alt !default;
-$form-check-input-border-alt:                 1px solid rgba(255, 255, 255, .25) !default;
+$form-check-input-border-alt:                 1px solid rgba($white, .25) !default;
 $form-check-input-focus-border-alt:           $input-focus-border-color-alt !default;
 $form-check-input-focus-box-shadow-alt:       $input-btn-focus-box-shadow-alt !default;
 
@@ -341,8 +341,8 @@ $form-validation-states-alt: (
 // Navs
 // ______________________________________
 
-$nav-link-color-alt:                    null !default;
-$nav-link-hover-color-alt:              null !default;
+$nav-link-color-alt:                    $link-color-alt !default;
+$nav-link-hover-color-alt:              $link-hover-color-alt !default;
 $nav-link-disabled-color-alt:           $gray-400-alt !default;
 
 $nav-tabs-border-color-alt:             $gray-700-alt !default;
@@ -643,7 +643,6 @@ $btn-close-white-filter-alt:     invert(1) grayscale(100%) brightness(200%) !def
 $offcanvas-border-color-alt:            $modal-content-border-color-alt !default;
 $offcanvas-bg-color-alt:                $modal-content-bg-alt !default;
 $offcanvas-color-alt:                   $modal-content-color-alt !default;
-$offcanvas-body-backdrop-color-alt:     rgba($modal-backdrop-bg-alt, $modal-backdrop-opacity-alt) !default;
 $offcanvas-box-shadow-alt:              $modal-content-box-shadow-xs-alt !default;
 
 
