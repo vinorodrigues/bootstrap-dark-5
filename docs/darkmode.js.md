@@ -255,7 +255,7 @@ Clears the persistance state of the module and resets the document to the defaul
 
 Calls [#eraseValue][38] to erase any saved value, and then
 calls [#getPreferedColorScheme][39] to retrieve the `prefers-color-scheme` media query,
-passing its value to {@link #setDarkMode} to reset the users preference.
+passing its value to [#setDarkMode][36] to reset the users preference.
 
 #### Examples
 
@@ -275,11 +275,11 @@ Returns **void** Nothing, no error handling is performed.
 
 ### VALUE_LIGHT
 
-***const*** -- String used to identify light mode *(do not change)*, @see https://www.w3.org/TR/mediaqueries-5/#prefers-color-scheme
+***const*** -- String used to identify light mode *(do not change)*, @see [https://www.w3.org/TR/mediaqueries-5/#prefers-color-scheme][40]
 
 ### VALUE_DARK
 
-***const*** -- String used to identify dark mode *(do not change)*, @see https://www.w3.org/TR/mediaqueries-5/#prefers-color-scheme
+***const*** -- String used to identify dark mode *(do not change)*, @see [https://www.w3.org/TR/mediaqueries-5/#prefers-color-scheme][40]
 
 ### CLASS_NAME_LIGHT
 
@@ -313,7 +313,8 @@ Does all the DarkMode initialization, including:
 *   Loading any prior stored preference (GDPR consent is ***not*** assumed)
 *   else, honoring any `<HTML>` tag `class="dark|light"` that Server-Side may set
 *   else, honoring the browser / OS `prefers-color-scheme` preference
-    and setting the derived mode by calling [#setDarkMode][36]
+
+and setting the derived mode by calling [#setDarkMode][36]
 
 Followed by setting up the media query on change event
 
@@ -402,3 +403,5 @@ Returns **void**
 [38]: #eraseValue
 
 [39]: #getPreferedColorScheme
+
+[40]: https://www.w3.org/TR/mediaqueries-5/#prefers-color-scheme
