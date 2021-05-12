@@ -20,8 +20,11 @@
 @import "dark/utilities";
 @import "dark/patch";  // missing from BS, unsupported patch/hack
 
-// Layout & components
+// stylelint-disable no-invalid-position-at-import-rule
+
 :root { color-scheme: dark; }
+
+// Layout & components
 @import "dark/root";
 @import "dark/reboot";
 @import "dark/type";

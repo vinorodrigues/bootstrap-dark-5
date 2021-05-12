@@ -65,6 +65,8 @@
 
 @include color-scheme-alt(alternative-color-scheme($default-color-scheme)) {
 
+  // stylelint-disable no-invalid-position-at-import-rule
+
   // Layout & components
   @import "dark/root";
   @import "dark/reboot";
