@@ -11063,7 +11063,10 @@ a > [data-bs-color-scheme=dark] code {
 [data-bs-color-scheme=dark] .form-control::placeholder {
   color: #5a5a5a;
 }
-[data-bs-color-scheme=dark] .form-control:disabled, [data-bs-color-scheme=dark] .form-control:readonly {
+[data-bs-color-scheme=dark] .form-control:-moz-read-only {
+  background-color: #222;
+}
+[data-bs-color-scheme=dark] .form-control:disabled, [data-bs-color-scheme=dark] .form-control:read-only {
   background-color: #222;
 }
 [data-bs-color-scheme=dark] .form-control::file-selector-button {
@@ -11071,7 +11074,10 @@ a > [data-bs-color-scheme=dark] code {
   background-color: #3b3b3b;
   border-color: inherit;
 }
-[data-bs-color-scheme=dark] .form-control:hover:not(:disabled):not(:readonly)::file-selector-button {
+[data-bs-color-scheme=dark] .form-control:hover:not(:disabled):not(:-moz-read-only)::file-selector-button {
+  background-color: #383838;
+}
+[data-bs-color-scheme=dark] .form-control:hover:not(:disabled):not(:read-only)::file-selector-button {
   background-color: #383838;
 }
 [data-bs-color-scheme=dark] .form-control::-webkit-file-upload-button {
@@ -11079,7 +11085,7 @@ a > [data-bs-color-scheme=dark] code {
   background-color: #3b3b3b;
   border-color: inherit;
 }
-[data-bs-color-scheme=dark] .form-control:hover:not(:disabled):not(:readonly)::-webkit-file-upload-button {
+[data-bs-color-scheme=dark] .form-control:hover:not(:disabled):not(:read-only)::-webkit-file-upload-button {
   background-color: #383838;
 }
 [data-bs-color-scheme=dark] .form-control-plaintext {

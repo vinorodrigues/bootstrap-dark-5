@@ -11062,7 +11062,10 @@ html.dark .form-control:-ms-input-placeholder {
 html.dark .form-control::placeholder {
   color: #5a5a5a;
 }
-html.dark .form-control:disabled, html.dark .form-control:readonly {
+html.dark .form-control:-moz-read-only {
+  background-color: #222;
+}
+html.dark .form-control:disabled, html.dark .form-control:read-only {
   background-color: #222;
 }
 html.dark .form-control::file-selector-button {
@@ -11070,7 +11073,10 @@ html.dark .form-control::file-selector-button {
   background-color: #3b3b3b;
   border-color: inherit;
 }
-html.dark .form-control:hover:not(:disabled):not(:readonly)::file-selector-button {
+html.dark .form-control:hover:not(:disabled):not(:-moz-read-only)::file-selector-button {
+  background-color: #383838;
+}
+html.dark .form-control:hover:not(:disabled):not(:read-only)::file-selector-button {
   background-color: #383838;
 }
 html.dark .form-control::-webkit-file-upload-button {
@@ -11078,7 +11084,7 @@ html.dark .form-control::-webkit-file-upload-button {
   background-color: #3b3b3b;
   border-color: inherit;
 }
-html.dark .form-control:hover:not(:disabled):not(:readonly)::-webkit-file-upload-button {
+html.dark .form-control:hover:not(:disabled):not(:read-only)::-webkit-file-upload-button {
   background-color: #383838;
 }
 html.dark .form-control-plaintext {

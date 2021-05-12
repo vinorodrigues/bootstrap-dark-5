@@ -11082,7 +11082,10 @@ textarea.form-control-lg {
   .form-control::placeholder {
     color: #5a5a5a;
   }
-  .form-control:disabled, .form-control:readonly {
+  .form-control:-moz-read-only {
+    background-color: #222;
+  }
+  .form-control:disabled, .form-control:read-only {
     background-color: #222;
   }
   .form-control::file-selector-button {
@@ -11090,7 +11093,10 @@ textarea.form-control-lg {
     background-color: #3b3b3b;
     border-color: inherit;
   }
-  .form-control:hover:not(:disabled):not(:readonly)::file-selector-button {
+  .form-control:hover:not(:disabled):not(:-moz-read-only)::file-selector-button {
+    background-color: #383838;
+  }
+  .form-control:hover:not(:disabled):not(:read-only)::file-selector-button {
     background-color: #383838;
   }
   .form-control::-webkit-file-upload-button {
@@ -11098,7 +11104,7 @@ textarea.form-control-lg {
     background-color: #3b3b3b;
     border-color: inherit;
   }
-  .form-control:hover:not(:disabled):not(:readonly)::-webkit-file-upload-button {
+  .form-control:hover:not(:disabled):not(:read-only)::-webkit-file-upload-button {
     background-color: #383838;
   }
 
