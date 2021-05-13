@@ -99,25 +99,25 @@ You can access the theme CSS file from the GitHub release:
 
 * **`bootstrap-dark`** - the @media `perfers-color-scheme` variant
   * Production / minified variant:
-    * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.0/dist/css/bootstrap-dark.min.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.0/dist/css/bootstrap-dark.min.css)
+    * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.1/dist/css/bootstrap-dark.min.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.1/dist/css/bootstrap-dark.min.css)
   * Development / Debug variant:
-    * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.0/dist/css/bootstrap-dark.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.0/dist/css/bootstrap-dark.css)
+    * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.1/dist/css/bootstrap-dark.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.1/dist/css/bootstrap-dark.css)
   * Also, read the [Quick Start Guide](docs/bootstrap-dark.md).
 
 * **`bootstrap-nightshade`** - the `html.dark` css class + JS library variant
   * Production / minified variants:
-    * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.0/dist/css/bootstrap-nightshade.min.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.0/dist/css/bootstrap-nightshade.min.css)
-    * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.0/dist/js/darkmode.min.js`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.0/dist/js/darkmode.min.js)
+    * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.1/dist/css/bootstrap-nightshade.min.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.1/dist/css/bootstrap-nightshade.min.css)
+    * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.1/dist/js/darkmode.min.js`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.1/dist/js/darkmode.min.js)
   * Development / Debug variants:
-    * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.0/dist/css/bootstrap-nightshade.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.0/dist/css/bootstrap-nightshade.css)
-    * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.0/dist/js/darkmode.js`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.0/dist/js/darkmode.js)
+    * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.1/dist/css/bootstrap-nightshade.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.1/dist/css/bootstrap-nightshade.css)
+    * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.1/dist/js/darkmode.js`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.1/dist/js/darkmode.js)
   * Also, read the [Quick Start Guide](docs/bootstrap-nightshade.md) and the [`darkmode.js` Reference](docs/darkmode.js.md).
 
 * **`bootstrap-night`** - that dark theme only variant
   * Production / minified variant:
-    * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.0/dist/css/bootstrap-night.min.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.0/dist/css.bootstrap-night.min.css)
+    * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.1/dist/css/bootstrap-night.min.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.1/dist/css.bootstrap-night.min.css)
   * Development / Debug variant:
-    * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.0/dist/css/bootstrap-night.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.0/dist/css/bootstrap-night.css)
+    * [`https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.1/dist/css/bootstrap-night.css`](https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.1/dist/css/bootstrap-night.css)
   * Also, read the [Quick Start Guide](docs/bootstrap-night.md).
 
 * Source etc. are [here](https://cdn.jsdelivr.net/gh/vinorodrigues/bootstrap-dark-5/), but I recommend using [GitHub](https://github.com/vinorodrigues/bootstrap-dark-5).
