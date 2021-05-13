@@ -5,7 +5,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  *
- * Bootstrap-Dark v1.0.0 (https://vinorodrigues.github.io/bootstrap-dark-5/)
+ * Bootstrap-Dark v1.0.1 (https://vinorodrigues.github.io/bootstrap-dark-5/)
  * Copyright 2020-2021 Vino Rodrigues
  * This version is a dual color theme, with the default light mode and the dark
  * elements optioned in by a `prefers-color-scheme: dark` media query
@@ -1931,6 +1931,7 @@ progress {
 }
 .table {
   --bs-table-bg: transparent;
+  --bs-table-accent-bg: transparent;
   --bs-table-striped-color: #212529;
   --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
   --bs-table-active-color: #212529;
@@ -2179,10 +2180,7 @@ progress {
 .form-control[type=file] {
   overflow: hidden;
 }
-.form-control[type=file]:not(:disabled):not(:-moz-read-only) {
-  cursor: pointer;
-}
-.form-control[type=file]:not(:disabled):not(:read-only) {
+.form-control[type=file]:not(:disabled):not([readonly]) {
   cursor: pointer;
 }
 .form-control:focus {
@@ -2207,11 +2205,7 @@ progress {
   color: #6c757d;
   opacity: 1;
 }
-.form-control:-moz-read-only {
-  background-color: #e9ecef;
-  opacity: 1;
-}
-.form-control:disabled, .form-control:read-only {
+.form-control:disabled, .form-control[readonly] {
   background-color: #e9ecef;
   opacity: 1;
 }
@@ -2235,10 +2229,7 @@ progress {
     transition: none;
   }
 }
-.form-control:hover:not(:disabled):not(:-moz-read-only)::file-selector-button {
-  background-color: #dde0e3;
-}
-.form-control:hover:not(:disabled):not(:read-only)::file-selector-button {
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
   background-color: #dde0e3;
 }
 .form-control::-webkit-file-upload-button {
@@ -2263,7 +2254,7 @@ progress {
     transition: none;
   }
 }
-.form-control:hover:not(:disabled):not(:read-only)::-webkit-file-upload-button {
+.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
   background-color: #dde0e3;
 }
 
@@ -2336,10 +2327,7 @@ textarea.form-control-lg {
   height: auto;
   padding: 0.375rem;
 }
-.form-control-color:not(:disabled):not(:-moz-read-only) {
-  cursor: pointer;
-}
-.form-control-color:not(:disabled):not(:read-only) {
+.form-control-color:not(:disabled):not([readonly]) {
   cursor: pointer;
 }
 .form-control-color::-moz-color-swatch {
@@ -2829,6 +2817,11 @@ textarea.form-control-lg {
 .was-validated .input-group .form-control:valid, .input-group .form-control.is-valid,
 .was-validated .input-group .form-select:valid,
 .input-group .form-select.is-valid {
+  z-index: 1;
+}
+.was-validated .input-group .form-control:valid:focus, .input-group .form-control.is-valid:focus,
+.was-validated .input-group .form-select:valid:focus,
+.input-group .form-select.is-valid:focus {
   z-index: 3;
 }
 
@@ -2913,6 +2906,11 @@ textarea.form-control-lg {
 .was-validated .input-group .form-control:invalid, .input-group .form-control.is-invalid,
 .was-validated .input-group .form-select:invalid,
 .input-group .form-select.is-invalid {
+  z-index: 2;
+}
+.was-validated .input-group .form-control:invalid:focus, .input-group .form-control.is-invalid:focus,
+.was-validated .input-group .form-select:invalid:focus,
+.input-group .form-select.is-invalid:focus {
   z-index: 3;
 }
 
@@ -5230,14 +5228,6 @@ textarea.form-control-lg {
   word-wrap: break-word;
 }
 
-.modal-open {
-  overflow: hidden;
-}
-.modal-open .modal {
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
 .modal {
   position: fixed;
   top: 0;
@@ -5246,7 +5236,8 @@ textarea.form-control-lg {
   display: none;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   outline: 0;
 }
 
@@ -10952,6 +10943,7 @@ textarea.form-control-lg {
 
   .table {
     --bs-table-bg: transparent;
+    --bs-table-accent-bg: transparent;
     --bs-table-striped-color: #e1e1e1;
     --bs-table-striped-bg: rgba(17, 17, 17, 0.05);
     --bs-table-active-color: #e1e1e1;
@@ -11082,10 +11074,7 @@ textarea.form-control-lg {
   .form-control::placeholder {
     color: #5a5a5a;
   }
-  .form-control:-moz-read-only {
-    background-color: #222;
-  }
-  .form-control:disabled, .form-control:read-only {
+  .form-control:disabled, .form-control[readonly] {
     background-color: #222;
   }
   .form-control::file-selector-button {
@@ -11093,10 +11082,7 @@ textarea.form-control-lg {
     background-color: #3b3b3b;
     border-color: inherit;
   }
-  .form-control:hover:not(:disabled):not(:-moz-read-only)::file-selector-button {
-    background-color: #383838;
-  }
-  .form-control:hover:not(:disabled):not(:read-only)::file-selector-button {
+  .form-control:hover:not(:disabled):not([readonly])::file-selector-button {
     background-color: #383838;
   }
   .form-control::-webkit-file-upload-button {
@@ -11104,7 +11090,7 @@ textarea.form-control-lg {
     background-color: #3b3b3b;
     border-color: inherit;
   }
-  .form-control:hover:not(:disabled):not(:read-only)::-webkit-file-upload-button {
+  .form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
     background-color: #383838;
   }
 
