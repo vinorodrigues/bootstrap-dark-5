@@ -12016,10 +12016,6 @@ textarea.form-control-lg {
     border-bottom: 0;
   }
 
-  .breadcrumb {
-    background-color: #3b3b3b;
-  }
-
   .breadcrumb-item + .breadcrumb-item {
     padding-left: 0.5rem;
   }

@@ -11939,9 +11939,6 @@ html.dark .accordion-flush .accordion-item:first-child {
 html.dark .accordion-flush .accordion-item:last-child {
   border-bottom: 0;
 }
-html.dark .breadcrumb {
-  background-color: #3b3b3b;
-}
 html.dark .breadcrumb-item + .breadcrumb-item {
   padding-left: 0.5rem;
 }

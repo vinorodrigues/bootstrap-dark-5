@@ -11940,9 +11940,6 @@ a > [data-bs-color-scheme=dark] code {
 [data-bs-color-scheme=dark] .accordion-flush .accordion-item:last-child {
   border-bottom: 0;
 }
-[data-bs-color-scheme=dark] .breadcrumb {
-  background-color: #3b3b3b;
-}
 [data-bs-color-scheme=dark] .breadcrumb-item + .breadcrumb-item {
   padding-left: 0.5rem;
 }
