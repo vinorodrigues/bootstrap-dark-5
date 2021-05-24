@@ -1,5 +1,5 @@
 /**
- * *boostrap-dark-5* `darkmode.js` -- the JavaScript module.
+ * *bootstrap-dark-5* `darkmode.js` -- the JavaScript module.
  *
  * ***class*** **DarkMode**
  *
