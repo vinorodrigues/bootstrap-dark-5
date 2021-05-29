@@ -83,6 +83,7 @@
 
   "table-color",
   "table-bg",
+  "table-accent-bg",
   "table-striped-color",
   "table-striped-bg-factor",
   "table-striped-bg",
