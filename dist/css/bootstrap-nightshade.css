@@ -12306,7 +12306,7 @@ html.dark .bs-popover-auto[data-popper-placement^=left] > .popover-arrow::after 
 }
 html.dark .popover-header {
   background-color: #1f1f1f;
-  border-bottom: 1px solid #1c1c1c;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 }
 html.dark .popover-body {
   color: #e1e1e1;

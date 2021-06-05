@@ -12307,7 +12307,7 @@ a > [data-bs-color-scheme=dark] code {
 }
 [data-bs-color-scheme=dark] .popover-header {
   background-color: #1f1f1f;
-  border-bottom: 1px solid #1c1c1c;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 }
 [data-bs-color-scheme=dark] .popover-body {
   color: #e1e1e1;
