@@ -161,15 +161,15 @@ $table-accent-bg-alt:             transparent !default;
 
 $table-striped-color-alt:         $table-color-alt !default;
 $table-striped-bg-factor-alt:     .05 !default;
-$table-striped-bg-alt:            rgba($black-alt, $table-striped-bg-factor-alt) !default;
+$table-striped-bg-alt:            rgba($white-alt, $table-striped-bg-factor-alt) !default;
 
 $table-active-color-alt:          $table-color-alt !default;
 $table-active-bg-factor-alt:      .1 !default;
-$table-active-bg-alt:             rgba($black-alt, $table-active-bg-factor-alt) !default;
+$table-active-bg-alt:             rgba($white-alt, $table-active-bg-factor-alt) !default;
 
 $table-hover-color-alt:           $table-color-alt !default;
 $table-hover-bg-factor-alt:       .075 !default;
-$table-hover-bg-alt:              rgba($black-alt, $table-hover-bg-factor-alt) !default;
+$table-hover-bg-alt:              rgba($white-alt, $table-hover-bg-factor-alt) !default;
 
 $table-border-factor-alt:         .1 !default;
 $table-border-color-alt:          $border-color-alt !default;
