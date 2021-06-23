@@ -16,7 +16,7 @@ A basic HTML file should look like this:
     <!-- Bootstrap CSS (as per normal) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Add the Bootstrap-Dark Variant CSS (the media attribute is for dark auto-switching) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.1/dist/css/bootstrap.min.css" rel="stylesheet" media="(prefers-color-scheme: dark)">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.2/dist/css/bootstrap.min.css" rel="stylesheet" media="(prefers-color-scheme: dark)">
 
     <title>Hello, world!</title>
   </head>

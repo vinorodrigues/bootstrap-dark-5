@@ -16,7 +16,7 @@ A basic HTML file should look like this:
 
     <!-- Replace the Bootstrap CSS with the
          Bootstrap-Dark Variant CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.1/dist/css/bootstrap-unlit.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.2/dist/css/bootstrap-unlit.min.css" rel="stylesheet">
 
     <title>Hello, world!</title>
   </head>
