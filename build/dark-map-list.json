@@ -488,6 +488,8 @@
   "offcanvas-bg-color",
   "offcanvas-color",
   "offcanvas-box-shadow",
+  "offcanvas-backdrop-bg",
+  "offcanvas-backdrop-opacity",
 
   "// --- Code ---",
 

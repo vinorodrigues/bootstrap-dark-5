@@ -14,6 +14,7 @@
 @import "functions";
 @import "variables";  // defaults are here
 @import "variables-alt";  // dark color set is here
+@import "dark/vars-interim";  // pre-release keep-up variables
 @import "dark/variables-map-core-to-temp";  // map the core colors to `-temp` placeholders
 @import "dark/variables-map-alt-to-core";  // map the `-alt`'s back to core colors
 @import "dark/variables-map-temp-to-alt";  // map the `-temp`'s back to the `-alt`'s, in effect swapping them
@@ -71,7 +72,7 @@ $default-color-scheme: dark;
 
 @include color-scheme-alt(alternative-color-scheme($default-color-scheme)) {
 
-  // stylelint-disable no-invalid-position-at-import-rule
+  // xxx-stylelint-disable no-invalid-position-at-import-rule
 
   // Layout & components
   @import "dark/root";
