@@ -31,12 +31,12 @@ dist/css/bootstrap-night.min.css
 #dist/css/bootstrap-nightshade.css.map
 dist/css/bootstrap-nightshade.min.css
 
-dist/css/bootstrap-nightfall.css
-dist/css/bootstrap-nightfall.css.map
+#dist/css/bootstrap-nightfall.css
+#dist/css/bootstrap-nightfall.css.map
 dist/css/bootstrap-nightfall.min.css
 
-dist/css/bootstrap-unlit.css
-dist/css/bootstrap-unlit.css.map
+#dist/css/bootstrap-unlit.css
+#dist/css/bootstrap-unlit.css.map
 dist/css/bootstrap-unlit.min.css
 
 #dist/css/bootstrap-blackbox.css
