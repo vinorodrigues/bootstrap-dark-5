@@ -7,14 +7,23 @@
 // @import "variables";
 
 
-// (1)
+// (1) post-v5.0.2
 // added by Mark Otto, commit: 45d26de72, https://github.com/twbs/bootstrap/commit/45d26de72817b295c5f94c8426354fd5b7d0a1f9
 $offcanvas-backdrop-bg: false !default;
-$offcanvas-backdrop-opacity: false !default;
-
 @if $offcanvas-backdrop-bg == false {
   $offcanvas-backdrop-bg: $modal-backdrop-bg;
 }
+
+$offcanvas-backdrop-opacity: false !default;
+
 @if $offcanvas-backdrop-opacity == false {
   $offcanvas-backdrop-opacity: $modal-backdrop-opacity;
+}
+
+
+// (2) post-v5.0.2
+// added by Mark Ott, commit: 0fc117cec, https://github.com/twbs/bootstrap/commit/0fc117cec5962a697c7a9ab22f40fbad21a7519e
+$card-box-shadow: false !default;
+@if $card-box-shadow == false {
+  $card-box-shadow: null;
 }
