@@ -236,10 +236,8 @@ caption {
 .form-control:disabled, .form-control[readonly] {
   background-color: #222;
 }
-.form-control::file-selector-button {
-  color: #b1b1b1;
-  background-color: #3b3b3b;
-  border-color: inherit;
+.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+  background-color: #383838;
 }
 .form-control:hover:not(:disabled):not([readonly])::file-selector-button {
   background-color: #383838;
