@@ -19,6 +19,10 @@ A basic HTML file should look like this:
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.2/dist/css/bootstrap-dark.min.css" rel="stylesheet">
 
     <title>Hello, world!</title>
+
+    <!-- Meta Theme Color is also supported on Safari and Chrome -->
+    <meta name="theme-color" content="#111111" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#eeeeee" media="(prefers-color-scheme: dark)">
   </head>
   <body>
     <!-- ////////////// -->
