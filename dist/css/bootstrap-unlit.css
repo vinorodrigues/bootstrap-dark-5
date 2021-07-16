@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Bootstrap v5.0.0 (https://getbootstrap.com/)
+ * Bootstrap v5.0.2 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -11301,14 +11301,23 @@ textarea.form-control-lg {
     background-color: #adb5bd;
   }
 
+  .form-floating > .form-control::-moz-placeholder {
+    color: transparent;
+  }
+
+  .form-floating > .form-control:-ms-input-placeholder {
+    color: transparent;
+  }
+
+  .form-floating > .form-control::placeholder {
+    color: transparent;
+  }
   .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
     opacity: 0.65;
   }
-
   .form-floating > .form-control:not(:-ms-input-placeholder) ~ label {
     opacity: 0.65;
   }
-
   .form-floating > .form-control:focus ~ label,
 .form-floating > .form-control:not(:placeholder-shown) ~ label,
 .form-floating > .form-select ~ label {
