@@ -12527,6 +12527,10 @@ a > [data-bs-color-scheme=dark] code {
 [data-bs-color-scheme=dark] .link-dark:hover, [data-bs-color-scheme=dark] .link-dark:focus {
   color: #2f2f2f;
 }
+[data-bs-color-scheme=dark] .vr {
+  background-color: currentColor;
+  opacity: 0.1;
+}
 [data-bs-color-scheme=dark] .shadow {
   box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.15) !important;
 }

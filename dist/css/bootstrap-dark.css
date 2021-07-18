@@ -12670,6 +12670,11 @@ textarea.form-control-lg {
     color: #2f2f2f;
   }
 
+  .vr {
+    background-color: currentColor;
+    opacity: 0.1;
+  }
+
   .shadow {
     box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.15) !important;
   }

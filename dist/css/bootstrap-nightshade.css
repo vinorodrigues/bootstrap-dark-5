@@ -12526,6 +12526,10 @@ html.dark .link-dark {
 html.dark .link-dark:hover, html.dark .link-dark:focus {
   color: #2f2f2f;
 }
+html.dark .vr {
+  background-color: currentColor;
+  opacity: 0.1;
+}
 html.dark .shadow {
   box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.15) !important;
 }
