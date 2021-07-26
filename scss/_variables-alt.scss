@@ -686,7 +686,7 @@ $accordion-button-active-color-alt:           tint-color($primary-alt, 40%) !def
 $accordion-button-focus-border-color-alt:     $input-focus-border-color-alt !default;
 $accordion-button-focus-box-shadow-alt:       $btn-focus-box-shadow-alt !default;
 
-$accordion-icon-color-alt:                    $accordion-color-alt !default;
+$accordion-icon-color-alt:                    $accordion-button-color-alt !default;
 $accordion-icon-active-color-alt:             $accordion-button-active-color-alt !default;
 
 $accordion-button-icon-alt:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color-alt}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;

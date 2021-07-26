@@ -1055,6 +1055,35 @@ caption {
   border: 1px solid transparent;
 }
 
+@media (min-width: 576px) {
+  .navbar-expand-sm .offcanvas {
+    background-color: transparent;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-expand-md .offcanvas {
+    background-color: transparent;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-expand-lg .offcanvas {
+    background-color: transparent;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar-expand-xl .offcanvas {
+    background-color: transparent;
+  }
+}
+@media (min-width: 1400px) {
+  .navbar-expand-xxl .offcanvas {
+    background-color: transparent;
+  }
+}
+.navbar-expand .offcanvas {
+  background-color: transparent;
+}
+
 .navbar-light .navbar-brand {
   color: rgba(250, 250, 250, 0.9);
 }

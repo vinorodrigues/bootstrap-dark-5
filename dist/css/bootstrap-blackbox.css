@@ -11930,6 +11930,34 @@ a > [data-bs-color-scheme=dark] code {
   background-color: transparent;
   border: 1px solid transparent;
 }
+@media (min-width: 576px) {
+  [data-bs-color-scheme=dark] .navbar-expand-sm .offcanvas {
+    background-color: transparent;
+  }
+}
+@media (min-width: 768px) {
+  [data-bs-color-scheme=dark] .navbar-expand-md .offcanvas {
+    background-color: transparent;
+  }
+}
+@media (min-width: 992px) {
+  [data-bs-color-scheme=dark] .navbar-expand-lg .offcanvas {
+    background-color: transparent;
+  }
+}
+@media (min-width: 1200px) {
+  [data-bs-color-scheme=dark] .navbar-expand-xl .offcanvas {
+    background-color: transparent;
+  }
+}
+@media (min-width: 1400px) {
+  [data-bs-color-scheme=dark] .navbar-expand-xxl .offcanvas {
+    background-color: transparent;
+  }
+}
+[data-bs-color-scheme=dark] .navbar-expand .offcanvas {
+  background-color: transparent;
+}
 [data-bs-color-scheme=dark] .navbar-light .navbar-brand {
   color: rgba(250, 250, 250, 0.9);
 }
