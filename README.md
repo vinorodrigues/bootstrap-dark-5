@@ -79,6 +79,16 @@ If you're a theme builder or want to use its principles in your own project you'
 npm i -g  autoprefixer  documentation browser-sync  clean-css-cli  cross-env  eslint  eslint-config-xo  eslint-plugin-import  eslint-plugin-unicorn  find-unused-sass-variables  imagemin-cli  nodemon  npm-run-all  postcss-cli  rtlcss  sass  stylelint  stylelint-config-twbs-bootstrap  svgo  terser typescript
 ```
 
+#### Note 1:
+
+This code is just a rehash of Bootstrap 5 core code to add "dark mode" functionality and is declared as a "Proof of Concept" *(PoC)* - that means it's not intended as a production source, but merely an exercise to prove that dark-mode is attainable via various methods, i.e. it is an educative piece.  It also means that it's author *(Vino Rodrigues)* is not compelled to support it.
+
+#### Note 2:
+
+This project will ***not*** compile with Node-Sass.  Refer to the original Bootstrap 5 docs, especially here (https://getbootstrap.com/docs/5.0/getting-started/build-tools/#sass), and you'll note that they have deprecated the use of Node-Sass in favour of Dart-Sass.
+
+They in turn cite this (https://sass-lang.com/blog/libsass-is-deprecated) article wherein the Sass curators state they will no longer support LibSass, that Node-Sass is dependant on.
+
 
 ### NPM
 
