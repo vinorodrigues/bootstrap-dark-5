@@ -40,6 +40,7 @@ $danger-temp-dnu:                                      $danger;
 $light-temp-dnu:                                       $light;
 $dark-temp-dnu:                                        $dark;
 $theme-colors-temp-dnu:                                $theme-colors;
+$theme-colors-rgb-temp-dnu:                            $theme-colors-rgb;
 $min-contrast-ratio-temp-dnu:                          $min-contrast-ratio;
 $color-contrast-dark-temp-dnu:                         $color-contrast-dark;
 $color-contrast-light-temp-dnu:                        $color-contrast-light;
@@ -50,6 +51,11 @@ $gradient-temp-dnu:                                    $gradient;
 // --- Body ---
 $body-bg-temp-dnu:                                     $body-bg;
 $body-color-temp-dnu:                                  $body-color;
+
+// --- Utilities maps ---
+$utilities-colors-temp-dnu:                            $utilities-colors;
+$utilities-text-colors-temp-dnu:                       $utilities-text-colors;
+$utilities-bg-colors-temp-dnu:                         $utilities-bg-colors;
 
 // --- Links ---
 $link-color-temp-dnu:                                  $link-color;
@@ -265,6 +271,10 @@ $pagination-disabled-color-temp-dnu:                   $pagination-disabled-colo
 $pagination-disabled-bg-temp-dnu:                      $pagination-disabled-bg;
 $pagination-disabled-border-color-temp-dnu:            $pagination-disabled-border-color;
 
+// --- Placeholders ---
+$placeholder-opacity-max-temp-dnu:                     $placeholder-opacity-max;
+$placeholder-opacity-min-temp-dnu:                     $placeholder-opacity-min;
+
 // --- Cards ---
 $card-border-color-temp-dnu:                           $card-border-color;
 $card-cap-bg-temp-dnu:                                 $card-cap-bg;
@@ -410,4 +420,4 @@ $pre-color-temp-dnu:                                   $pre-color;
 // !! Don't remove the next 2 lines
 // fusv-enable
 // stylelint-enable
-// Generated: Thu Jul 08 2021 20:04:22 GMT+1000 (Australian Eastern Standard Time)
+// Generated: Wed Aug 04 2021 20:01:12 GMT+1000 (Australian Eastern Standard Time)

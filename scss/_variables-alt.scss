@@ -87,6 +87,8 @@ $theme-colors-alt: (
   "dark":       $dark-alt
 ) !default;
 
+$theme-colors-rgb-alt: map-loop($theme-colors-alt, to-rgb, "$value") !default;
+
 // The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
 // See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
 $min-contrast-ratio-alt:   2.5 !default;
@@ -95,105 +97,105 @@ $color-contrast-dark-alt:      $black-alt !default;
 $color-contrast-light-alt:     $white-alt !default;
 
 // fusv-disable
-$blue-100-alt: shade-color($blue-alt, 80%) !default;
-$blue-200-alt: shade-color($blue-alt, 60%) !default;
-$blue-300-alt: shade-color($blue-alt, 40%) !default;
-$blue-400-alt: shade-color($blue-alt, 20%) !default;
+$blue-100-alt: tint-color($blue-alt, 80%) !default;
+$blue-200-alt: tint-color($blue-alt, 60%) !default;
+$blue-300-alt: tint-color($blue-alt, 40%) !default;
+$blue-400-alt: tint-color($blue-alt, 20%) !default;
 $blue-500-alt: $blue-alt !default;
-$blue-600-alt: tint-color($blue-alt, 20%) !default;
-$blue-700-alt: tint-color($blue-alt, 40%) !default;
-$blue-800-alt: tint-color($blue-alt, 60%) !default;
-$blue-900-alt: tint-color($blue-alt, 80%) !default;
+$blue-600-alt: shade-color($blue-alt, 20%) !default;
+$blue-700-alt: shade-color($blue-alt, 40%) !default;
+$blue-800-alt: shade-color($blue-alt, 60%) !default;
+$blue-900-alt: shade-color($blue-alt, 80%) !default;
 
-$indigo-100-alt: shade-color($indigo-alt, 80%) !default;
-$indigo-200-alt: shade-color($indigo-alt, 60%) !default;
-$indigo-300-alt: shade-color($indigo-alt, 40%) !default;
-$indigo-400-alt: shade-color($indigo-alt, 20%) !default;
+$indigo-100-alt: tint-color($indigo-alt, 80%) !default;
+$indigo-200-alt: tint-color($indigo-alt, 60%) !default;
+$indigo-300-alt: tint-color($indigo-alt, 40%) !default;
+$indigo-400-alt: tint-color($indigo-alt, 20%) !default;
 $indigo-500-alt: $indigo-alt !default;
-$indigo-600-alt: tint-color($indigo-alt, 20%) !default;
-$indigo-700-alt: tint-color($indigo-alt, 40%) !default;
-$indigo-800-alt: tint-color($indigo-alt, 60%) !default;
-$indigo-900-alt: tint-color($indigo-alt, 80%) !default;
+$indigo-600-alt: shade-color($indigo-alt, 20%) !default;
+$indigo-700-alt: shade-color($indigo-alt, 40%) !default;
+$indigo-800-alt: shade-color($indigo-alt, 60%) !default;
+$indigo-900-alt: shade-color($indigo-alt, 80%) !default;
 
-$purple-100-alt: shade-color($purple-alt, 80%) !default;
-$purple-200-alt: shade-color($purple-alt, 60%) !default;
-$purple-300-alt: shade-color($purple-alt, 40%) !default;
-$purple-400-alt: shade-color($purple-alt, 20%) !default;
+$purple-100-alt: tint-color($purple-alt, 80%) !default;
+$purple-200-alt: tint-color($purple-alt, 60%) !default;
+$purple-300-alt: tint-color($purple-alt, 40%) !default;
+$purple-400-alt: tint-color($purple-alt, 20%) !default;
 $purple-500-alt: $purple-alt !default;
-$purple-600-alt: tint-color($purple-alt, 20%) !default;
-$purple-700-alt: tint-color($purple-alt, 40%) !default;
-$purple-800-alt: tint-color($purple-alt, 60%) !default;
-$purple-900-alt: tint-color($purple-alt, 80%) !default;
+$purple-600-alt: shade-color($purple-alt, 20%) !default;
+$purple-700-alt: shade-color($purple-alt, 40%) !default;
+$purple-800-alt: shade-color($purple-alt, 60%) !default;
+$purple-900-alt: shade-color($purple-alt, 80%) !default;
 
-$pink-100-alt: shade-color($pink-alt, 80%) !default;
-$pink-200-alt: shade-color($pink-alt, 60%) !default;
-$pink-300-alt: shade-color($pink-alt, 40%) !default;
-$pink-400-alt: shade-color($pink-alt, 20%) !default;
+$pink-100-alt: tint-color($pink-alt, 80%) !default;
+$pink-200-alt: tint-color($pink-alt, 60%) !default;
+$pink-300-alt: tint-color($pink-alt, 40%) !default;
+$pink-400-alt: tint-color($pink-alt, 20%) !default;
 $pink-500-alt: $pink-alt !default;
-$pink-600-alt: tint-color($pink-alt, 20%) !default;
-$pink-700-alt: tint-color($pink-alt, 40%) !default;
-$pink-800-alt: tint-color($pink-alt, 60%) !default;
-$pink-900-alt: tint-color($pink-alt, 80%) !default;
+$pink-600-alt: shade-color($pink-alt, 20%) !default;
+$pink-700-alt: shade-color($pink-alt, 40%) !default;
+$pink-800-alt: shade-color($pink-alt, 60%) !default;
+$pink-900-alt: shade-color($pink-alt, 80%) !default;
 
-$red-100-alt: shade-color($red-alt, 80%) !default;
-$red-200-alt: shade-color($red-alt, 60%) !default;
-$red-300-alt: shade-color($red-alt, 40%) !default;
-$red-400-alt: shade-color($red-alt, 20%) !default;
+$red-100-alt: tint-color($red-alt, 80%) !default;
+$red-200-alt: tint-color($red-alt, 60%) !default;
+$red-300-alt: tint-color($red-alt, 40%) !default;
+$red-400-alt: tint-color($red-alt, 20%) !default;
 $red-500-alt: $red-alt !default;
-$red-600-alt: tint-color($red-alt, 20%) !default;
-$red-700-alt: tint-color($red-alt, 40%) !default;
-$red-800-alt: tint-color($red-alt, 60%) !default;
-$red-900-alt: tint-color($red-alt, 80%) !default;
+$red-600-alt: shade-color($red-alt, 20%) !default;
+$red-700-alt: shade-color($red-alt, 40%) !default;
+$red-800-alt: shade-color($red-alt, 60%) !default;
+$red-900-alt: shade-color($red-alt, 80%) !default;
 
-$orange-100-alt: shade-color($orange-alt, 80%) !default;
-$orange-200-alt: shade-color($orange-alt, 60%) !default;
-$orange-300-alt: shade-color($orange-alt, 40%) !default;
-$orange-400-alt: shade-color($orange-alt, 20%) !default;
+$orange-100-alt: tint-color($orange-alt, 80%) !default;
+$orange-200-alt: tint-color($orange-alt, 60%) !default;
+$orange-300-alt: tint-color($orange-alt, 40%) !default;
+$orange-400-alt: tint-color($orange-alt, 20%) !default;
 $orange-500-alt: $orange-alt !default;
-$orange-600-alt: tint-color($orange-alt, 20%) !default;
-$orange-700-alt: tint-color($orange-alt, 40%) !default;
-$orange-800-alt: tint-color($orange-alt, 60%) !default;
-$orange-900-alt: tint-color($orange-alt, 80%) !default;
+$orange-600-alt: shade-color($orange-alt, 20%) !default;
+$orange-700-alt: shade-color($orange-alt, 40%) !default;
+$orange-800-alt: shade-color($orange-alt, 60%) !default;
+$orange-900-alt: shade-color($orange-alt, 80%) !default;
 
-$yellow-100-alt: shade-color($yellow-alt, 80%) !default;
-$yellow-200-alt: shade-color($yellow-alt, 60%) !default;
-$yellow-300-alt: shade-color($yellow-alt, 40%) !default;
-$yellow-400-alt: shade-color($yellow-alt, 20%) !default;
+$yellow-100-alt: tint-color($yellow-alt, 80%) !default;
+$yellow-200-alt: tint-color($yellow-alt, 60%) !default;
+$yellow-300-alt: tint-color($yellow-alt, 40%) !default;
+$yellow-400-alt: tint-color($yellow-alt, 20%) !default;
 $yellow-500-alt: $yellow-alt !default;
-$yellow-600-alt: tint-color($yellow-alt, 20%) !default;
-$yellow-700-alt: tint-color($yellow-alt, 40%) !default;
-$yellow-800-alt: tint-color($yellow-alt, 60%) !default;
-$yellow-900-alt: tint-color($yellow-alt, 80%) !default;
+$yellow-600-alt: shade-color($yellow-alt, 20%) !default;
+$yellow-700-alt: shade-color($yellow-alt, 40%) !default;
+$yellow-800-alt: shade-color($yellow-alt, 60%) !default;
+$yellow-900-alt: shade-color($yellow-alt, 80%) !default;
 
-$green-100-alt: shade-color($green-alt, 80%) !default;
-$green-200-alt: shade-color($green-alt, 60%) !default;
-$green-300-alt: shade-color($green-alt, 40%) !default;
-$green-400-alt: shade-color($green-alt, 20%) !default;
+$green-100-alt: tint-color($green-alt, 80%) !default;
+$green-200-alt: tint-color($green-alt, 60%) !default;
+$green-300-alt: tint-color($green-alt, 40%) !default;
+$green-400-alt: tint-color($green-alt, 20%) !default;
 $green-500-alt: $green-alt !default;
-$green-600-alt: tint-color($green-alt, 20%) !default;
-$green-700-alt: tint-color($green-alt, 40%) !default;
-$green-800-alt: tint-color($green-alt, 60%) !default;
-$green-900-alt: tint-color($green-alt, 80%) !default;
+$green-600-alt: shade-color($green-alt, 20%) !default;
+$green-700-alt: shade-color($green-alt, 40%) !default;
+$green-800-alt: shade-color($green-alt, 60%) !default;
+$green-900-alt: shade-color($green-alt, 80%) !default;
 
-$teal-100-alt: shade-color($teal-alt, 80%) !default;
-$teal-200-alt: shade-color($teal-alt, 60%) !default;
-$teal-300-alt: shade-color($teal-alt, 40%) !default;
-$teal-400-alt: shade-color($teal-alt, 20%) !default;
+$teal-100-alt: tint-color($teal-alt, 80%) !default;
+$teal-200-alt: tint-color($teal-alt, 60%) !default;
+$teal-300-alt: tint-color($teal-alt, 40%) !default;
+$teal-400-alt: tint-color($teal-alt, 20%) !default;
 $teal-500-alt: $teal-alt !default;
-$teal-600-alt: tint-color($teal-alt, 20%) !default;
-$teal-700-alt: tint-color($teal-alt, 40%) !default;
-$teal-800-alt: tint-color($teal-alt, 60%) !default;
-$teal-900-alt: tint-color($teal-alt, 80%) !default;
+$teal-600-alt: shade-color($teal-alt, 20%) !default;
+$teal-700-alt: shade-color($teal-alt, 40%) !default;
+$teal-800-alt: shade-color($teal-alt, 60%) !default;
+$teal-900-alt: shade-color($teal-alt, 80%) !default;
 
-$cyan-100-alt: shade-color($cyan-alt, 80%) !default;
-$cyan-200-alt: shade-color($cyan-alt, 60%) !default;
-$cyan-300-alt: shade-color($cyan-alt, 40%) !default;
-$cyan-400-alt: shade-color($cyan-alt, 20%) !default;
+$cyan-100-alt: tint-color($cyan-alt, 80%) !default;
+$cyan-200-alt: tint-color($cyan-alt, 60%) !default;
+$cyan-300-alt: tint-color($cyan-alt, 40%) !default;
+$cyan-400-alt: tint-color($cyan-alt, 20%) !default;
 $cyan-500-alt: $cyan-alt !default;
-$cyan-600-alt: tint-color($cyan-alt, 20%) !default;
-$cyan-700-alt: tint-color($cyan-alt, 40%) !default;
-$cyan-800-alt: tint-color($cyan-alt, 60%) !default;
-$cyan-900-alt: tint-color($cyan-alt, 80%) !default;
+$cyan-600-alt: shade-color($cyan-alt, 20%) !default;
+$cyan-700-alt: shade-color($cyan-alt, 40%) !default;
+$cyan-800-alt: shade-color($cyan-alt, 60%) !default;
+$cyan-900-alt: shade-color($cyan-alt, 80%) !default;
 
 $blues-alt: (
   "blue-100": $blue-100-alt,
@@ -244,15 +246,15 @@ $pinks-alt: (
 ) !default;
 
 $reds-alt: (
-  "red-100": $red-100,
-  "red-200": $red-200,
-  "red-300": $red-300,
-  "red-400": $red-400,
-  "red-500": $red-500,
-  "red-600": $red-600,
-  "red-700": $red-700,
-  "red-800": $red-800,
-  "red-900": $red-900
+  "red-100": $red-100-alt,
+  "red-200": $red-200-alt,
+  "red-300": $red-300-alt,
+  "red-400": $red-400-alt,
+  "red-500": $red-500-alt,
+  "red-600": $red-600-alt,
+  "red-700": $red-700-alt,
+  "red-800": $red-800-alt,
+  "red-900": $red-900-alt
 ) !default;
 
 $oranges-alt: (
@@ -329,6 +331,22 @@ $gradient-alt: linear-gradient(180deg, rgba($black-alt, .15), rgba($black-alt, 0
 
 $body-bg-alt:                   $gray-900-alt !default;  // $white !default;
 $body-color-alt:                $gray-100-alt !default;  // $gray-900 !default;
+
+// Utilities maps
+// ______________________________________
+
+$utilities-colors-alt: map-merge(
+  $theme-colors-rgb-alt,
+  (
+    "black": to-rgb($black-alt),
+    "white": to-rgb($white-alt),
+    "body":  to-rgb($body-color-alt)
+  )
+) !default;
+
+$utilities-text-colors-alt: map-loop($utilities-colors-alt, rgba-css-var, "$key", "text") !default;
+
+$utilities-bg-colors-alt: map-loop($utilities-colors-alt, rgba-css-var, "$key", "bg") !default;
 
 
 // Links
@@ -453,7 +471,7 @@ $form-text-color-alt:                       $text-muted-alt !default;
 
 $form-label-color-alt:                      null !default;
 
-$input-bg-alt:                              $gray-800-alt !default;
+$input-bg-alt:                              $body-bg-alt !default;
 $input-disabled-bg-alt:                     $gray-900-alt !default;
 $input-disabled-border-color-alt:           null !default;
 
@@ -658,6 +676,13 @@ $pagination-active-border-color-alt:    $pagination-active-bg-alt !default;
 $pagination-disabled-color-alt:         mix($gray-600-alt, $gray-700-alt, 50%) !default;
 $pagination-disabled-bg-alt:            $gray-900-alt !default;
 $pagination-disabled-border-color-alt:  $gray-700-alt !default;
+
+
+// Placeholders
+// ______________________________________
+
+$placeholder-opacity-max-alt:  .5 !default;
+$placeholder-opacity-min-alt:  .2 !default;
 
 
 // Cards

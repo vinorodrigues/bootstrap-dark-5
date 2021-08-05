@@ -40,6 +40,7 @@ $danger-alt:                                      $danger-temp-dnu;
 $light-alt:                                       $light-temp-dnu;
 $dark-alt:                                        $dark-temp-dnu;
 $theme-colors-alt:                                $theme-colors-temp-dnu;
+$theme-colors-rgb-alt:                            $theme-colors-rgb-temp-dnu;
 $min-contrast-ratio-alt:                          $min-contrast-ratio-temp-dnu;
 $color-contrast-dark-alt:                         $color-contrast-dark-temp-dnu;
 $color-contrast-light-alt:                        $color-contrast-light-temp-dnu;
@@ -50,6 +51,11 @@ $gradient-alt:                                    $gradient-temp-dnu;
 // --- Body ---
 $body-bg-alt:                                     $body-bg-temp-dnu;
 $body-color-alt:                                  $body-color-temp-dnu;
+
+// --- Utilities maps ---
+$utilities-colors-alt:                            $utilities-colors-temp-dnu;
+$utilities-text-colors-alt:                       $utilities-text-colors-temp-dnu;
+$utilities-bg-colors-alt:                         $utilities-bg-colors-temp-dnu;
 
 // --- Links ---
 $link-color-alt:                                  $link-color-temp-dnu;
@@ -265,6 +271,10 @@ $pagination-disabled-color-alt:                   $pagination-disabled-color-tem
 $pagination-disabled-bg-alt:                      $pagination-disabled-bg-temp-dnu;
 $pagination-disabled-border-color-alt:            $pagination-disabled-border-color-temp-dnu;
 
+// --- Placeholders ---
+$placeholder-opacity-max-alt:                     $placeholder-opacity-max-temp-dnu;
+$placeholder-opacity-min-alt:                     $placeholder-opacity-min-temp-dnu;
+
 // --- Cards ---
 $card-border-color-alt:                           $card-border-color-temp-dnu;
 $card-cap-bg-alt:                                 $card-cap-bg-temp-dnu;
@@ -410,4 +420,4 @@ $pre-color-alt:                                   $pre-color-temp-dnu;
 // !! Don't remove the next 2 lines
 // fusv-enable
 // stylelint-enable
-// Generated: Thu Jul 08 2021 20:04:22 GMT+1000 (Australian Eastern Standard Time)
+// Generated: Wed Aug 04 2021 20:01:12 GMT+1000 (Australian Eastern Standard Time)

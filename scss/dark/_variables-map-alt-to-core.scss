@@ -40,6 +40,7 @@ $danger:                                      $danger-alt;
 $light:                                       $light-alt;
 $dark:                                        $dark-alt;
 $theme-colors:                                $theme-colors-alt;
+$theme-colors-rgb:                            $theme-colors-rgb-alt;
 $min-contrast-ratio:                          $min-contrast-ratio-alt;
 $color-contrast-dark:                         $color-contrast-dark-alt;
 $color-contrast-light:                        $color-contrast-light-alt;
@@ -50,6 +51,11 @@ $gradient:                                    $gradient-alt;
 // --- Body ---
 $body-bg:                                     $body-bg-alt;
 $body-color:                                  $body-color-alt;
+
+// --- Utilities maps ---
+$utilities-colors:                            $utilities-colors-alt;
+$utilities-text-colors:                       $utilities-text-colors-alt;
+$utilities-bg-colors:                         $utilities-bg-colors-alt;
 
 // --- Links ---
 $link-color:                                  $link-color-alt;
@@ -265,6 +271,10 @@ $pagination-disabled-color:                   $pagination-disabled-color-alt;
 $pagination-disabled-bg:                      $pagination-disabled-bg-alt;
 $pagination-disabled-border-color:            $pagination-disabled-border-color-alt;
 
+// --- Placeholders ---
+$placeholder-opacity-max:                     $placeholder-opacity-max-alt;
+$placeholder-opacity-min:                     $placeholder-opacity-min-alt;
+
 // --- Cards ---
 $card-border-color:                           $card-border-color-alt;
 $card-cap-bg:                                 $card-cap-bg-alt;
@@ -410,4 +420,4 @@ $pre-color:                                   $pre-color-alt;
 // !! Don't remove the next 2 lines
 // fusv-enable
 // stylelint-enable
-// Generated: Thu Jul 08 2021 20:04:22 GMT+1000 (Australian Eastern Standard Time)
+// Generated: Wed Aug 04 2021 20:01:12 GMT+1000 (Australian Eastern Standard Time)
