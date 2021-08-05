@@ -16,7 +16,7 @@ A basic HTML file should look like this:
 
     <!-- Replace the Bootstrap CSS with the
          Bootstrap-Dark Variant CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.2/dist/css/bootstrap-blackbox.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.0/dist/css/bootstrap-blackbox.min.css" rel="stylesheet">
 
     <title>Hello, world!</title>
   </head>
@@ -31,7 +31,7 @@ A basic HTML file should look like this:
     <!-- Required DarkMode JavaScript
          Also requires the `data-bs-color-scheme` attribute in either the HTML
          or the BODY tag -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.0.2/dist/js/darkmode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.0/dist/js/darkmode.min.js"></script>
   </body>
 </html>
 ```
