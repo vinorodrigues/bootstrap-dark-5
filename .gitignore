@@ -42,3 +42,7 @@ dist/css/bootstrap-unlit.min.css
 #dist/css/bootstrap-blackbox.css
 #dist/css/bootstrap-blackbox.css.map
 dist/css/bootstrap-blackbox.min.css
+
+#dist/css/bootstrap-colors.css
+#dist/css/bootstrap-colors.css.map
+dist/css/bootstrap-colors.min.css

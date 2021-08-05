@@ -23,6 +23,7 @@
     "css-minify-dark": "cleancss -O1 --format breakWith=lf --output dist/css/bootstrap-dark.min.css dist/css/bootstrap-dark.css",
     "css-minify-unlit": "cleancss -O1 --format breakWith=lf --output dist/css/bootstrap-unlit.min.css dist/css/bootstrap-unlit.css",
     "css-minify-blackbox": "cleancss -O1 --format breakWith=lf --output dist/css/bootstrap-blackbox.min.css dist/css/bootstrap-blackbox.css",
+    "css-minify-colors": "cleancss -O1 --format breakWith=lf --output dist/css/bootstrap-colors.min.css dist/css/bootstrap-colors.css",
     "css-version": "replace-in-file --configFile=build/replace-in-file.config.js",
     "css-lint": "npm-run-all --continue-on-error --parallel css-lint-*",
     "css-lint-stylelint": "stylelint \"**/*.scss\" --cache --cache-location .cache/.stylelintcache --rd",
