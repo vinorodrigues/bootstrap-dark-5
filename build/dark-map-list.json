@@ -39,6 +39,7 @@
   "dark",
 
   "theme-colors",
+  "theme-colors-rgb",
 
   "min-contrast-ratio",
   "color-contrast-dark",
@@ -52,6 +53,11 @@
 
   "body-bg",
   "body-color",
+
+  "// --- Utilities maps ---",
+  "utilities-colors",
+  "utilities-text-colors",
+  "utilities-bg-colors",
 
   "// --- Links ---",
 
@@ -318,6 +324,10 @@
   "pagination-disabled-color",
   "pagination-disabled-bg",
   "pagination-disabled-border-color",
+
+  "// --- Placeholders ---",
+  "placeholder-opacity-max",
+  "placeholder-opacity-min",
 
   "// --- Cards ---",
 
