@@ -18,7 +18,8 @@
 
   --#{$variable-prefix}white-rgb: #{to-rgb($white-alt)};
   --#{$variable-prefix}black-rgb: #{to-rgb($black-alt)};
-  --#{$variable-prefix}body-rgb: #{to-rgb($body-color-alt)};
+  --#{$variable-prefix}body-color-rgb: #{to-rgb($body-color-alt)};
+  --#{$variable-prefix}body-bg-rgb: #{to-rgb($body-bg-alt)};
 
   // root and body
 

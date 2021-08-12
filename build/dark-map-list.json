@@ -56,7 +56,9 @@
 
   "// --- Utilities maps ---",
   "utilities-colors",
+  "utilities-text",
   "utilities-text-colors",
+  "utilities-bg",
   "utilities-bg-colors",
 
   "// --- Links ---",
