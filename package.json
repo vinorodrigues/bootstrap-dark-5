@@ -5,7 +5,7 @@
   "main": "",
   "scripts": {
     "start": "npm-run-all --parallel serve watch",
-    "test": "npm-run-all lint dist",
+    "test": "npm-run-all lint",
     "lint": "npm-run-all --parallel css-lint js-lint",
     "dist": "npm-run-all --parallel css js docs",
     "build": "echo \"Deprecated: Use `npm run dist`\" && npm-run-all dist",
@@ -86,8 +86,8 @@
     "prefers-color-scheme"
   ],
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.29.0",
-    "@typescript-eslint/parser": "^4.29.0",
+    "@typescript-eslint/eslint-plugin": "^4.29.2",
+    "@typescript-eslint/parser": "^4.29.2",
     "autoprefixer": "^10.3.1",
     "browser-sync": "^2.27.5",
     "clean-css-cli": "^5.3.3",
@@ -95,7 +95,7 @@
     "documentation": "^13.2.5",
     "eslint": "^7.32.0",
     "eslint-config-xo": "^0.38.0",
-    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-import": "^2.24.1",
     "eslint-plugin-unicorn": "^35.0.0",
     "find-unused-sass-variables": "^3.1.0",
     "nodemon": "^2.0.12",
@@ -105,7 +105,7 @@
     "replace-in-file": "^6.2.0",
     "rimraf": "^3.0.2",
     "run-script-os": "^1.1.6",
-    "sass": "^1.37.5",
+    "sass": "^1.38.0",
     "stylelint": "^13.13.1",
     "stylelint-config-twbs-bootstrap": "^2.2.3",
     "terser": "^5.7.1",
