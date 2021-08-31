@@ -198,9 +198,10 @@ html.dark .bd-aside .btn:focus,
     content: "";
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) calc(100% - 3rem), rgba(255, 255, 255, .01));
   }
+
   .color-scheme-dark .bd-cheatsheet section > h2::before,
-  html.dark .bd-cheatsheet section > h2::before,
-  [data-bs-color-scheme="dark"] .bd-cheatsheet section > h2::before {
+  [data-bs-color-scheme="dark"] .bd-cheatsheet section > h2::before,
+  html.dark .bd-cheatsheet section > h2::before {
     background-image: linear-gradient(to bottom, rgba(34, 34, 34, 1) calc(100% - 3rem), rgba(34, 34, 34, .01));
   }
 
