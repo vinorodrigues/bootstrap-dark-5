@@ -11328,7 +11328,8 @@ textarea.form-control-lg {
     --bs-dark-rgb: 33, 37, 41;
     --bs-white-rgb: 255, 255, 255;
     --bs-black-rgb: 0, 0, 0;
-    --bs-body-rgb: 33, 37, 41;
+    --bs-body-color-rgb: 33, 37, 41;
+    --bs-body-bg-rgb: 255, 255, 255;
     --bs-body-color: #212529;
     --bs-body-bg: #fff;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -11530,6 +11531,16 @@ textarea.form-control-lg {
   }
   .form-control:disabled, .form-control[readonly] {
     background-color: #e9ecef;
+  }
+  .form-control::-webkit-file-upload-button {
+    color: #212529;
+    background-color: #e9ecef;
+    border-color: inherit;
+  }
+  .form-control::file-selector-button {
+    color: #212529;
+    background-color: #e9ecef;
+    border-color: inherit;
   }
   .form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
     background-color: #dde0e3;

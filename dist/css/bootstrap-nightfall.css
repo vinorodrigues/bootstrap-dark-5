@@ -55,7 +55,8 @@
   --bs-dark-rgb: 59, 59, 59;
   --bs-white-rgb: 250, 250, 250;
   --bs-black-rgb: 17, 17, 17;
-  --bs-body-rgb: 225, 225, 225;
+  --bs-body-color-rgb: 225, 225, 225;
+  --bs-body-bg-rgb: 34, 34, 34;
   --bs-body-color: #e1e1e1;
   --bs-body-bg: #222;
   --bs-gradient: linear-gradient(180deg, rgba(17, 17, 17, 0.15), rgba(17, 17, 17, 0));
@@ -260,6 +261,16 @@ caption {
 }
 .form-control:disabled, .form-control[readonly] {
   background-color: #222;
+}
+.form-control::-webkit-file-upload-button {
+  color: #b1b1b1;
+  background-color: #3b3b3b;
+  border-color: inherit;
+}
+.form-control::file-selector-button {
+  color: #b1b1b1;
+  background-color: #3b3b3b;
+  border-color: inherit;
 }
 .form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
   background-color: #383838;
