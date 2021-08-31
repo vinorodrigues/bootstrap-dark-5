@@ -638,7 +638,7 @@ $dropdown-divider-bg-alt:               $dropdown-border-color-alt !default;
 $dropdown-box-shadow-alt:               $box-shadow-alt !default;
 
 $dropdown-link-color-alt:               $gray-100 !default;
-$dropdown-link-hover-color-alt:         shade-color($gray-100, 10%) !default;
+$dropdown-link-hover-color-alt:         shade-color($dropdown-link-color-alt, 10%) !default;
 $dropdown-link-hover-bg-alt:            $gray-800 !default;
 
 $dropdown-link-active-color-alt:        $component-active-color-alt !default;
