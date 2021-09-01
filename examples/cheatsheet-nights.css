@@ -69,7 +69,7 @@ body {
 .color-scheme-dark .bd-aside a,
 [data-bs-color-scheme="dark"] .bd-aside a
 html.dark .bd-aside a {
-    color: rgba(255, 255, 255, .65);
+  color: rgba(255, 255, 255, .65);
 }
 
 .color-scheme-dark .bd-aside a:hover,
@@ -78,7 +78,7 @@ html.dark .bd-aside a:hover,
 html.dark .bd-aside a:focus,
 [data-bs-color-scheme="dark"] .bd-aside a:hover,
 [data-bs-color-scheme="dark"] .bd-aside a:focus {
-    color: rgba(255, 255, 255, .85);
+  color: rgba(255, 255, 255, .85);
   background-color: rgba(140, 179, 82, .1);
 }
 

@@ -9,9 +9,20 @@
 
 // Body
 
-body {
-  color: var(--#{$variable-prefix}body-color-alt);
-  background-color: var(--#{$variable-prefix}body-bg-alt); // 2
+$define-legacy-body-colors: false !default;
+@if $define-legacy-body-colors {
+  @debug ">>> $define-legacy-body-color = true";
+  body {
+    color: $body-color-alt;
+    background-color: $body-bg-alt; // 2
+  }
+// }
+// @else {
+//   @debug ">>> $define-legacy-body-color = false";
+  // body {
+  //   color: var(--#{$variable-prefix}body-color);
+  //   background-color: var(--#{$variable-prefix}body-bg); // 2
+  // }
 }
 
 

@@ -11335,11 +11335,6 @@ textarea.form-control-lg {
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   }
 
-  body {
-    color: var(--bs-body-color-alt);
-    background-color: var(--bs-body-bg-alt);
-  }
-
   hr {
     color: inherit;
     opacity: 0.25;

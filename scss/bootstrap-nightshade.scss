@@ -21,7 +21,9 @@
 @import "dark/utilities";
 @import "dark/patch";  // missing from BS, unsupported patch/hack
 
-:root { color-scheme: light; }
+$define-legacy-body-colors: true;  // !!!! fix for issue #31
+
+// :root { color-scheme: light; }  // !!!! fix for issue #31, do not set
 
 // Layout & components
 @import "root";
@@ -68,10 +70,10 @@
 
 @include color-scheme-alt("html.dark") {
 
-  :root { color-scheme: dark; }
+  // :root { color-scheme: dark; }  // !!!! fix for issue #31, do not set
 
   // Layout & components
-  @import "dark/root";
+  // @import "dark/root";  // !!!! fix for issue #31, do not use `dark/root`
   @import "dark/reboot";
   @import "dark/type";
   @import "dark/images";
