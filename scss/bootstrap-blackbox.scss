@@ -22,9 +22,9 @@
 @import "dark/utilities";
 @import "dark/patch";  // missing from BS, unsupported patch/hack
 
-$define-legacy-body-colors: true;  // !!!! fix for issue #31
+$define-legacy-body-colors: true;  // !!!! fix for issue #33
 
-// :root { color-scheme: light; }  // !!!! fix for issue #31, do not set
+// :root { color-scheme: light; }  // !!!! fix for issue #33, do not set
 
 // Layout & components
 @import "root";
@@ -71,10 +71,10 @@ $define-legacy-body-colors: true;  // !!!! fix for issue #31
 
 @include color-scheme-alt("[data-bs-color-scheme=\"dark\"]") {
 
-  // :root { color-scheme: dark; }  // !!!! fix for issue #31, do not set
+  // :root { color-scheme: dark; }  // !!!! fix for issue #33, do not set
 
   // Layout & components
-  // @import "dark/root";  // !!!! fix for issue #31, do not use `dark/root`
+  // @import "dark/root";  // !!!! fix for issue #33, do not use `dark/root`
   @import "dark/reboot";
   @import "dark/type";
   @import "dark/images";
