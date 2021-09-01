@@ -16,7 +16,7 @@
 @import "variables";  // defaults are here
 @import "variables-alt";  // dark color set is here
 @import "mixins";
-@import "dark/mixins";
+@import "dark/mixins-2";  // !!!! fix for issue #32
 @import "utilities";
 @import "dark/utilities";
 @import "dark/patch";  // missing from BS, unsupported patch/hack
@@ -77,7 +77,7 @@
   @import "dark/images";
   @import "dark/tables";
   @import "dark/forms";
-  @import "dark/buttons";
+  @import "dark/buttons-2";  // !!!! fix for issue #32
   @import "dark/dropdown";
   @import "dark/button-group";
   @import "dark/nav";
