@@ -7,6 +7,61 @@
 > If you're after the same work for [Bootstrap 4](https://getbootstrap.com/docs/4.5/) please visit the [vinorodrigues/bootstrap-dark](https://github.com/vinorodrigues/bootstrap-dark) repo.
 
 
+----------
+
+## A word about Bootstrap 5.1
+
+The release of Bootstrap 5.1 brought on a significant change in the color handling of bootstrap.  Mark Otto committed a few changes to core, namely:
+
+* [4d7911a27](https://github.com/twbs/bootstrap/commit/4d7911a27bf9591c1f4dee53fe0b1f053646d0fd), and
+* [e72916e5b](https://github.com/twbs/bootstrap/commit/e72916e5b741b07b94b12b3707129e868811bdbb)
+
+These fundamentally changed how color is applied to components.
+
+Also, because he's decided to utilize `:root` CSS variables it breaks the way this Proof Of Concept shows evidence of the JavaScript led solution of the `-nightshade` and `-blackbox` variants.
+
+One cannot have:
+
+```css
+html.dark :root {
+  --bs-some-css-var: “some css value”;
+}
+```
+
+As nesting on `:root` does not work.
+
+There are two approaches to fixing this *(given the original/core Bootstrap as unmovable)*:
+1. Create SCSS that works around the issue by reverting *(only for color)* to the pre-5.1 non-css-var's, even for core rendering.
+2. Create a JS library to handle this.  [StackOverflow]( https://stackoverflow.com/questions/37801882/how-to-change-css-root-color-variables-in-javascript) has a possible way to do this.
+
+But, I'm not willing to put the effort into this, and thereby deviating from the core philosophy, all to attempt to align to an ever changing goal.
+
+The other variants *(even my beloved `-dark` variant)* are also somewhat broken in that the CSS has many color definitions that are duplicated / redundant ... but this too is difficult to code out as the adoption of color CSS variables is not applied to all colors.
+
+For example, from current 5.1 core:
+```css
+.text-body {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-body-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-muted {
+  --bs-text-opacity: 1;
+  color: #6c757d !important;
+}
+```
+
+Some colors are var'ed and other are not... and those that are not also have opacity vars that are not even used.
+
+The code required to "refactor" this is also too time consuming to sacrifice for no gain.  If the'd had adopted an all or nothing approach to CSS vars then it would have been much easier – but alas, the thinking on color handling in core has yet to show any level of workable maturity.
+
+> ***As such, I'm taking a hiatus on this project.***
+
+*(If you're willing to contribute, send me your PR's and if you have more than incidental fixes to contribute, I'll add you as a direct contributor.)*
+
+
+----------
+
 ## About
 
 This code will make little sense if you don't read
@@ -29,6 +84,7 @@ The code compiles the four methods *(and variants - **six in total**)* of the or
 
   * **`bootstrap-nightfall`**: This is simply the "color only" CSS of all the  components of Bootstrap core, but dark, and is intended to be used as an add-on.  It can also, with a simple media query, drive automatic dark mode switching.
 
+<s>
 ### Method 3
 
 <small>*([link to original](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-3))*</small>
@@ -36,6 +92,7 @@ The code compiles the four methods *(and variants - **six in total**)* of the or
   * **`bootstrap-nightshade`**: This is a modification of the Bootstrap core and adds dark color CSS for all the components, but dark, nested in a `html.dark` class wrapper.  By itself it cannot offer dark mode switching, but add the included `darkmode.js` library and you have an interactive dark mode switching variant of Bootstrap with built in ***"toggle"*** button support.
 
   * **`bootstrap-blackbox`**: ![New](https://img.shields.io/badge/NEW-red) This variant is essentially the same as the "nightshade" variant, but instead of using a HTML tag class, it uses a HTML tag data attribute; `data-bs-color-scheme`.  The same `darkmode.js` library drives this one, all you need to do is add the data attribute to your HTML tag.
+</s>
 
 ### Method 4
 
@@ -47,11 +104,11 @@ The code compiles the four methods *(and variants - **six in total**)* of the or
 
 ## Get started
 
-| **1.** `bootstrap-night` | **2.** `bootstrap-nightfall` | **3.** `bootstrap-nightshade` | **3b.** `bootstrap-blackbox` | **4.** `bootstrap-dark` | **4b.** `bootstrap-unlit` |
+| **1.** `bootstrap-night` | **2.** `bootstrap-nightfall` | <s>**3.** `bootstrap-nightshade`</s> | <s>**3b.** `bootstrap-blackbox`</s> | **4.** `bootstrap-dark` | **4b.** `bootstrap-unlit` |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| [Quick Start Guide](docs/bootstrap-night.md) | [Quick Start Guide](docs/bootstrap-nightfall.md) | [Quick Start Guide](docs/bootstrap-nightshade.md) | [Quick Start Guide](docs/bootstrap-blackbox.md) | [Quick Start Guide](docs/bootstrap-dark.md) | [Quick Start Guide](docs/bootstrap-unlit.md) |
-| | | [`darkmode.js` Reference](docs/darkmode.js.md) | [`darkmode.js` Reference](docs/darkmode.js.md) | | |
-| [See Example](https://vinorodrigues.github.io/bootstrap-dark-5/examples/cheatsheet-night.html) | | [See Example](https://vinorodrigues.github.io/bootstrap-dark-5/examples/cheatsheet-nightshade.html) | | [See Example](https://vinorodrigues.github.io/bootstrap-dark-5/examples/cheatsheet-dark.html) | |
+| [Quick Start Guide](docs/bootstrap-night.md) | [Quick Start Guide](docs/bootstrap-nightfall.md) | <s>[Quick Start Guide](docs/bootstrap-nightshade.md)</s> | <s>[Quick Start Guide](docs/bootstrap-blackbox.md)</s> | [Quick Start Guide](docs/bootstrap-dark.md) | [Quick Start Guide](docs/bootstrap-unlit.md) |
+| | | <s>[`darkmode.js` Reference](docs/darkmode.js.md)</s> | <s>[`darkmode.js` Reference](docs/darkmode.js.md)</s> | | |
+| [See Example](https://vinorodrigues.github.io/bootstrap-dark-5/examples/cheatsheet-night.html) | | <s>[See Example](https://vinorodrigues.github.io/bootstrap-dark-5/examples/cheatsheet-nightshade.html)</s> | | [See Example](https://vinorodrigues.github.io/bootstrap-dark-5/examples/cheatsheet-dark.html) | |
 
 ## The Proof Is in the Pudding
 
