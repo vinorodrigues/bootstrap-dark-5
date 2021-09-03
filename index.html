@@ -35,6 +35,29 @@
     <div class="row row-cols-1">
       <div class="col">
 
+        <div class="border border-3 p-2 border-info rounded-3 bg-info bg-opacity-25">
+          <h4>A note about Bootstrap 5.1</h4>
+
+          <p>
+            Bootstrap 5.1 introduced a color palette in SCSS only.  I've tried to make it work with <b>dark mode</b>, but not really happy with the outcome.
+            Have a look at <a href="examples/colors.html">the example</a> (uses the <code>bootstrap-dark</code> variant method to create a <code>bootstrap-colors.css</code> add on).
+          </p>
+
+          <p>
+            Furthermore, <code>-nightshade</code> and <code>-blackbox</code> variants no longer work.
+            And the <code>-dark</code> variant has some redundancies that ideally should be refactored.
+            <i>(See note in the <a href="https://github.com/vinorodrigues/bootstrap-dark-5/blob/main/README.md">readme.md</a>.)</i>
+          </p>
+
+          <p>
+            <blockquote><b class="text-danger">As such I will no longer actively contribute to this project.</b></blockquote>
+          </p>
+
+          <p><i class="small">And now, back to the original content ...</i></p>
+        </div>
+
+        <p>&nbsp;</p>
+
         <h2>The Dark Mode Conundrum</h2>
 
         <p>Dark mode is not easy ... I discussed <i>(and proove)</i> this concept at length back in May 2020 in my quasi-white-paper
@@ -130,7 +153,7 @@
 
     <br class="mt-3 mb-3">
 
-    <p>There are a few additional techniques that can be used, but these would use the same patterns as above, but with slight variations.  For example:</p>
+    <p><s>There are a few additional techniques that can be used, but these would use the same patterns as above, but with slight variations.  For example:</s></p>
     <ul>
       <!--
       <li class="my-3">
@@ -140,23 +163,16 @@
         <a href="examples/cheatsheet-unlit.html" class="btn btn-sm btn-primary">See Example</a>
       </li>
       -->
-      <li class="my-3">
-        <p class="h4">bootstrap-blackbox <small class="text-danger"><img src="https://img.shields.io/badge/NEW-red" alt="New!"></small></p>
-        <p>The <code>bootstrap-nightshade</code> example shows how one can use a whole-document class to drive the theme,
+      <li class="my-3 opacity-50">
+        <p class="h4"><s></s>bootstrap-blackbox <img src="https://img.shields.io/badge/NEW-red" alt="New!"></s></p>
+        <p><s>The <code>bootstrap-nightshade</code> example shows how one can use a whole-document class to drive the theme,
           and using the <code>darkmde.js</code> library can further enhance the experience by providing an interactive selection
-          whilst still hounoring the <tt>prefers-color-scheme</tt> media query.</p>
-        <p>But using classes comes with its own conundrum.  If the choice is to use data attribues,
-          then the <code><b>bootstrap-blackbox.css</b></code> file can be used.</p>
-        <a href="examples/cheatsheet-blackbox.html" class="btn btn-sm btn-danger">See Example</a>
+          whilst still hounoring the <tt>prefers-color-scheme</tt> media query.</s></p>
+        <p><s>But using classes comes with its own conundrum.  If the choice is to use data attribues,
+          then the <code><b>bootstrap-blackbox.css</b></code> file can be used.</s></p>
+        <a href="examples/cheatsheet-blackbox.html" class="btn btn-sm btn-danger"><s>See Example</s></a>
       </li>
     </ul>
-
-    <br>&nbsp;<br>
-
-    <p>
-      Bootstrap 5.1 introduced a color palette in SCSS only.  I've tried to make it work with darkmode, but not really happy with the outcome.
-      Have a look at <a href="examples/colors.html">the example</a> (uses the <code>bootstrap-dark</code> variant method to create a <code>bootstrap-colors.css</code> add on).
-    </p>
 
     <hr>
 

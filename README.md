@@ -13,8 +13,8 @@
 
 The release of Bootstrap 5.1 brought on a significant change in the color handling of bootstrap.  Mark Otto committed a few changes to core, namely:
 
-* [4d7911a27](https://github.com/twbs/bootstrap/commit/4d7911a27bf9591c1f4dee53fe0b1f053646d0fd), and
-* [e72916e5b](https://github.com/twbs/bootstrap/commit/e72916e5b741b07b94b12b3707129e868811bdbb)
+* [`4d7911a27`](https://github.com/twbs/bootstrap/commit/4d7911a27bf9591c1f4dee53fe0b1f053646d0fd), and
+* [`e72916e5b`](https://github.com/twbs/bootstrap/commit/e72916e5b741b07b94b12b3707129e868811bdbb)
 
 These fundamentally changed how color is applied to components.
 
@@ -36,7 +36,7 @@ There are two approaches to fixing this *(given the original/core Bootstrap as u
 
 But, I'm not willing to put the effort into this, and thereby deviating from the core philosophy, all to attempt to align to an ever changing goal.
 
-The other variants *(even my beloved `-dark` variant)* are also somewhat broken in that the CSS has many color definitions that are duplicated / redundant ... but this too is difficult to code out as the adoption of color CSS variables is not applied to all colors.
+The other variants *(even my beloved `-dark` variant)* is also somewhat broken in that the CSS has many color definitions that are duplicated / redundant ... but this too is difficult to code out as the adoption of color CSS variables is not applied to all colors.
 
 For example, from current 5.1 core:
 ```css
@@ -51,14 +51,15 @@ For example, from current 5.1 core:
 }
 ```
 
-Some colors are var'ed and other are not... and those that are not also have opacity vars that are not even used.
+Some colors are var'ed and others are not... and those that are not also have opacity vars that aren't even used.
 
-The code required to "refactor" this is also too time consuming to sacrifice for no gain.  If the'd had adopted an all or nothing approach to CSS vars then it would have been much easier – but alas, the thinking on color handling in core has yet to show any level of workable maturity.
+The code required to "refactor" this is also too time consuming to sacrifice for no gain.  If the authors had adopted an all or nothing approach to CSS vars then it would have been much easier (at least for `-dark`) – but alas, the thinking on color handling in core has yet to show any level of workable maturity.
 
 > ***As such, I'm taking a hiatus on this project.***
 
 *(If you're willing to contribute, send me your PR's and if you have more than incidental fixes to contribute, I'll add you as a direct contributor.)*
 
+<small>*And now back to the original content ...*</small>
 
 ----------
 
