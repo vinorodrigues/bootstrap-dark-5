@@ -29,7 +29,6 @@ The code compiles the four methods *(and variants - **six in total**)* of the or
 
   * **`bootstrap-nightfall`**: This is simply the "color only" CSS of all the  components of Bootstrap core, but dark, and is intended to be used as an add-on.  It can also, with a simple media query, drive automatic dark mode switching.
 
-<s>
 ### Method 3
 
 <small>*([link to original](https://github.com/vinorodrigues/bootstrap-dark/blob/master/README.md#method-3))*</small>
@@ -37,7 +36,6 @@ The code compiles the four methods *(and variants - **six in total**)* of the or
   * **`bootstrap-nightshade`**: This is a modification of the Bootstrap core and adds dark color CSS for all the components, but dark, nested in a `html.dark` class wrapper.  By itself it cannot offer dark mode switching, but add the included `darkmode.js` library and you have an interactive dark mode switching variant of Bootstrap with built in ***"toggle"*** button support.
 
   * **`bootstrap-blackbox`**: ![New](https://img.shields.io/badge/NEW-red) This variant is essentially the same as the "nightshade" variant, but instead of using a HTML tag class, it uses a HTML tag data attribute; `data-bs-color-scheme`.  The same `darkmode.js` library drives this one, all you need to do is add the data attribute to your HTML tag.
-</s>
 
 ### Method 4
 
@@ -49,11 +47,11 @@ The code compiles the four methods *(and variants - **six in total**)* of the or
 
 ## Get started
 
-| **1.** `bootstrap-night` | **2.** `bootstrap-nightfall` | <s>**3.** `bootstrap-nightshade`</s> | <s>**3b.** `bootstrap-blackbox`</s> | **4.** `bootstrap-dark` | **4b.** `bootstrap-unlit` |
+| **1.** `bootstrap-night` | **2.** `bootstrap-nightfall` | **3.** `bootstrap-nightshade` | **3b.** `bootstrap-blackbox` | **4.** `bootstrap-dark` | **4b.** `bootstrap-unlit` |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| [Quick Start Guide](docs/bootstrap-night.md) | [Quick Start Guide](docs/bootstrap-nightfall.md) | <s>[Quick Start Guide](docs/bootstrap-nightshade.md)</s> | <s>[Quick Start Guide](docs/bootstrap-blackbox.md)</s> | [Quick Start Guide](docs/bootstrap-dark.md) | [Quick Start Guide](docs/bootstrap-unlit.md) |
-| | | <s>[`darkmode.js` Reference](docs/darkmode.js.md)</s> | <s>[`darkmode.js` Reference](docs/darkmode.js.md)</s> | | |
-| [See Example](https://vinorodrigues.github.io/bootstrap-dark-5/examples/cheatsheet-night.html) | | <s>[See Example](https://vinorodrigues.github.io/bootstrap-dark-5/examples/cheatsheet-nightshade.html)</s> | | [See Example](https://vinorodrigues.github.io/bootstrap-dark-5/examples/cheatsheet-dark.html) | |
+| [Quick Start Guide](docs/bootstrap-night.md) | [Quick Start Guide](docs/bootstrap-nightfall.md) | [Quick Start Guide](docs/bootstrap-nightshade.md) | [Quick Start Guide](docs/bootstrap-blackbox.md) | [Quick Start Guide](docs/bootstrap-dark.md) | [Quick Start Guide](docs/bootstrap-unlit.md) |
+| | | [`darkmode.js` Reference](docs/darkmode.js.md) | [`darkmode.js` Reference](docs/darkmode.js.md) | | |
+| [See Example](https://vinorodrigues.github.io/bootstrap-dark-5/examples/cheatsheet-night.html) | | [See Example](https://vinorodrigues.github.io/bootstrap-dark-5/examples/cheatsheet-nightshade.html) | | [See Example](https://vinorodrigues.github.io/bootstrap-dark-5/examples/cheatsheet-dark.html) | |
 
 ## The Proof is in the Pudding
 
