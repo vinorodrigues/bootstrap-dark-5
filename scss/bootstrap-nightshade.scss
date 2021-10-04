@@ -11,8 +11,11 @@
  * Why `<html>`? See https://css-tricks.com/html-vs-body-in-css/#quirky-background-color
  */
 
+$define-colors-hack: true;  // !!!! fix for issue #33 and #35
+
 // Configuration
 @import "functions";
+@import "dark/functions";
 @import "variables";  // defaults are here
 @import "variables-alt";  // dark color set is here
 @import "mixins";
@@ -21,13 +24,12 @@
 @import "dark/utilities";
 @import "dark/patch";  // missing from BS, unsupported patch/hack
 
-$define-legacy-body-colors: true;  // !!!! fix for issue #33
-
 // :root { color-scheme: light; }  // !!!! fix for issue #33, do not set
 
 // Layout & components
 @import "root";
 @import "reboot";
+@import "dark/root-alts";  // !!!! fix for issue #35
 @import "type";
 @import "images";
 @import "containers";

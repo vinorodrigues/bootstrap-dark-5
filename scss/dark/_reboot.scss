@@ -1,6 +1,5 @@
 // xxxstylelint-disable declaration-no-important, selector-no-qualifying-type, property-no-vendor-prefix
 
-
 // Reboot
 //
 // Normalization of HTML elements, manually forked from Normalize.css ... (see core `_reboot.scss` file)
@@ -9,22 +8,14 @@
 
 // Body
 
-$define-legacy-body-colors: false !default;
-@if $define-legacy-body-colors {
-  @debug ">>> $define-legacy-body-color = true";
+$define-colors-hack: false !default;
+@if $define-colors-hack {
+  @debug ">>> $define-colors-hack = true";
   body {
-    color: $body-color-alt;
-    background-color: $body-bg-alt; // 2
+    color: var(--#{$variable-prefix}body-color-alt);
+    background-color: var(--#{$variable-prefix}body-bg-alt); // 2
   }
-// }
-// @else {
-//   @debug ">>> $define-legacy-body-color = false";
-  // body {
-  //   color: var(--#{$variable-prefix}body-color);
-  //   background-color: var(--#{$variable-prefix}body-bg); // 2
-  // }
 }
-
 
 // Content grouping
 

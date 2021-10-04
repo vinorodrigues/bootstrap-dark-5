@@ -12,9 +12,10 @@
 
 // Configuration
 @import "functions";
+@import "dark/functions";
 @import "variables";  // defaults are here
 @import "variables-alt";  // dark color set is here
-@import "dark/patch_unlit_post_5_1_0";  // temporary development patch to map new vars to existing codebase
+// @import "dark/patch_unlit_post_5_1_1";  // temporary development patch to map new vars to existing codebase
 @import "dark/variables-map-core-to-temp";  // map the core colors to `-temp` placeholders
 @import "dark/variables-map-alt-to-core";  // map the `-alt`'s back to core colors
 @import "dark/variables-map-temp-to-alt";  // map the `-temp`'s back to the `-alt`'s, in effect swapping them
