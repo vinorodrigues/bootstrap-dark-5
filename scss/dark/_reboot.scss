@@ -10,7 +10,7 @@
 
 $define-colors-hack: false !default;
 @if $define-colors-hack {
-  @debug ">>> $define-colors-hack = true";
+  // @debug ">>> $define-colors-hack = true";
   body {
     color: var(--#{$variable-prefix}body-color-alt);
     background-color: var(--#{$variable-prefix}body-bg-alt); // 2
