@@ -35,29 +35,6 @@
     <div class="row row-cols-1">
       <div class="col">
 
-        <div class="border border-3 p-2 border-info rounded-3 bg-info bg-opacity-25">
-          <h4>A note about Bootstrap 5.1</h4>
-
-          <p>
-            Bootstrap 5.1 introduced a color palette in SCSS only.  I've tried to make it work with <b>dark mode</b>, but not really happy with the outcome.
-            Have a look at <a href="examples/colors.html">the example</a> (uses the <code>bootstrap-dark</code> variant method to create a <code>bootstrap-colors.css</code> add on).
-          </p>
-
-          <p>
-            Furthermore, <code>-nightshade</code> and <code>-blackbox</code> variants no longer work.
-            And the <code>-dark</code> variant has some redundancies that ideally should be refactored.
-            <i>(See note in the <a href="https://github.com/vinorodrigues/bootstrap-dark-5/blob/main/README.md">readme.md</a>.)</i>
-          </p>
-
-          <p>
-            <blockquote><b class="text-danger">As such I will no longer actively contribute to this project.</b></blockquote>
-          </p>
-
-          <p><i class="small">And now, back to the original content ...</i></p>
-        </div>
-
-        <p>&nbsp;</p>
-
         <h2>The Dark Mode Conundrum</h2>
 
         <p>Dark mode is not easy ... I discussed <i>(and proove)</i> this concept at length back in May 2020 in my quasi-white-paper
@@ -124,7 +101,7 @@
         </div>
       </div>
       <div class="col">
-        <div class="card mb-4 shadow-sm border-danger h-100 opacity-50">
+        <div class="card mb-4 shadow-sm border-danger h-100">
           <div class="card-header">
             <h4 class="my-0 fw-normal"></s>bootstrap-nightshade</h4>
           </div>
@@ -155,7 +132,7 @@
 
     <p>There are a few additional techniques that can be used, but these would use the same patterns as above, but with slight variations.  For example:</p>
     <ul>
-      <li class="my-3" hidden>
+      <li class="my-3">
         <p class="h4">bootstrap-unlit</p>
         <p>The default <code>bootstrap-dark.css</code> file is set that light if default/author preference, and dark is the optional.</p>
         <p>The <code><b>bootstrap-unlit.css</b></code> file gives one the same outcome, but with dark as the default/author preference.</p>
