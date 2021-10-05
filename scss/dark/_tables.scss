@@ -24,9 +24,14 @@
   // }
 
   // Highlight border color between thead, tbody and tfoot.
-  > :not(:last-child) > :last-child > * {
-    border-bottom-color: $table-group-separator-color-alt;
+  // > :not(:last-child) > :last-child > * {
+  //   border-bottom-color: $table-group-separator-color-alt;
+  // }
+  // post 5.1.1 commit [2a925d6fd](https://github.com/twbs/bootstrap/commit/2a925d6fd800d89b072d9f035a069d84e735941b)
+  > :not(:first-child) {
+    border-top: (2 * $table-border-width) solid $table-group-separator-color-alt;
   }
+
 }
 
 
@@ -34,7 +39,7 @@
 
 // DONT NEED TO DARK, CSS VARS TAKES CARE OF THIS.
 // .table-striped {
-//   > tbody > tr:nth-of-type(#{$table-striped-order}) {
+//   > tbody > tr:nth-of-type(#{$table-striped-order}) > * {
 //     --#{$variable-prefix}table-accent-bg: var(--#{$variable-prefix}table-striped-bg);
 //     color: var(--#{$variable-prefix}table-striped-color);
 //   }
@@ -52,7 +57,7 @@
 
 // DONT NEED TO DARK, CSS VARS TAKES CARE OF THIS.
 // .table-hover {
-//   > tbody > tr:hover {
+//   > tbody > tr:hover > * {
 //     --#{$variable-prefix}table-accent-bg: var(--#{$variable-prefix}table-hover-bg);
 //     color: var(--#{$variable-prefix}table-hover-color);
 //   }

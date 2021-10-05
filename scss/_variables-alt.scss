@@ -520,7 +520,7 @@ $form-check-input-disabled-opacity-alt:        .5 !default;
 $form-check-label-disabled-opacity-alt:        $form-check-input-disabled-opacity-alt !default;
 $form-check-btn-check-disabled-opacity-alt:    $btn-disabled-opacity-alt !default;
 
-$form-switch-color-alt:               rgba(255, 255, 255, .25) !default;
+$form-switch-color-alt:               rgba($white-alt, .25) !default;  // post 5.1.1 commit [4fffcf723](https://github.com/twbs/bootstrap/commit/4fffcf7232ddb79a2e93cc497cf3f926d947b68f)
 $form-switch-bg-image-alt:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-color-alt}'/></svg>") !default;
 
 $form-switch-focus-color-alt:         $input-focus-border-color-alt !default;
@@ -761,12 +761,12 @@ $popover-arrow-outer-color-alt:         fade-in($popover-border-color-alt, .05) 
 
 $toast-color-alt:                       null !default;
 $toast-background-color-alt:            rgba($black-alt, .85) !default;
-$toast-border-color-alt:                rgba(255, 255, 255, .1) !default;
+$toast-border-color-alt:                rgba($white-alt, .1) !default;  // post 5.1.1 commit [4fffcf723](https://github.com/twbs/bootstrap/commit/4fffcf7232ddb79a2e93cc497cf3f926d947b68f)
 $toast-box-shadow-alt:                  $box-shadow-alt !default;
 
 $toast-header-color-alt:                $gray-400-alt !default;
 $toast-header-background-color-alt:     rgba($black-alt, .85) !default;
-$toast-header-border-color-alt:         rgba(255, 255, 255, .05) !default;
+$toast-header-border-color-alt:         rgba($white-alt, .05) !default;  // post 5.1.1 commit [4fffcf723](https://github.com/twbs/bootstrap/commit/4fffcf7232ddb79a2e93cc497cf3f926d947b68f)
 
 
 // Badges
