@@ -20,7 +20,7 @@ A basic HTML file should look like this:
 
     <title>Hello, world!</title>
 
-    <!-- Meta Theme Color is also supported on Safari and Chrome -->
+    <!-- Optional Meta Theme Color is also supported on Safari and Chrome -->
     <meta name="theme-color" content="#111111" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#eeeeee" media="(prefers-color-scheme: dark)">
   </head>
