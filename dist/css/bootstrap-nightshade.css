@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /*!
- * Bootstrap v5.1.1 (https://getbootstrap.com/)
+ * Bootstrap v5.1.2 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  *
- * Bootstrap-Nightshade v1.1.1 (https://vinorodrigues.github.io/bootstrap-dark-5/)
+ * Bootstrap-Nightshade v1.1.2 (https://vinorodrigues.github.io/bootstrap-dark-5/)
  * Copyright 2020-2021 Vino Rodrigues
  * This version is a dual color theme, with the default light mode and the dark
  * elements optioned in by a `.dark` class in `<html>` tag.
@@ -721,9 +721,9 @@ progress {
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(var(--bs-gutter-y) * -1);
-  margin-right: calc(var(--bs-gutter-x) * -0.5);
-  margin-left: calc(var(--bs-gutter-x) * -0.5);
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
 .row > * {
   flex-shrink: 0;
@@ -2034,8 +2034,8 @@ progress {
 .table > thead {
   vertical-align: bottom;
 }
-.table > :not(:last-child) > :last-child > * {
-  border-bottom-color: currentColor;
+.table > :not(:first-child) {
+  border-top: 2px solid currentColor;
 }
 
 .caption-top {
@@ -2056,8 +2056,11 @@ progress {
 .table-borderless > :not(caption) > * > * {
   border-bottom-width: 0;
 }
+.table-borderless > :not(:first-child) {
+  border-top-width: 0;
+}
 
-.table-striped > tbody > tr:nth-of-type(odd) {
+.table-striped > tbody > tr:nth-of-type(odd) > * {
   --bs-table-accent-bg: var(--bs-table-striped-bg);
   color: var(--bs-table-striped-color);
 }
@@ -2067,7 +2070,7 @@ progress {
   color: var(--bs-table-active-color);
 }
 
-.table-hover > tbody > tr:hover {
+.table-hover > tbody > tr:hover > * {
   --bs-table-accent-bg: var(--bs-table-hover-bg);
   color: var(--bs-table-hover-color);
 }
@@ -2500,6 +2503,7 @@ textarea.form-control-lg {
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
   font-size: 0.875rem;
+  border-radius: 0.2rem;
 }
 
 .form-select-lg {
@@ -2507,6 +2511,7 @@ textarea.form-control-lg {
   padding-bottom: 0.5rem;
   padding-left: 1rem;
   font-size: 1.25rem;
+  border-radius: 0.3rem;
 }
 
 .form-check {
@@ -3039,6 +3044,7 @@ textarea.form-control-lg {
 
 .btn {
   display: inline-block;
+  align-self: center;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
@@ -11345,6 +11351,7 @@ html.dark body {
 }
 html.dark hr {
   color: #fafafa;
+  background-color: currentColor;
   opacity: 0.1;
 }
 html.dark mark, html.dark .mark {
@@ -11400,8 +11407,8 @@ html.dark .table {
   color: #e1e1e1;
   border-color: #515151;
 }
-html.dark .table > :not(:last-child) > :last-child > * {
-  border-bottom-color: currentColor;
+html.dark .table > :not(:first-child) {
+  border-top: 2px solid currentColor;
 }
 html.dark .table-primary {
   --bs-table-bg: #1c2d40;
@@ -11599,7 +11606,7 @@ html.dark .form-check-input[disabled] ~ .form-check-label, html.dark .form-check
   opacity: 0.5;
 }
 html.dark .form-switch .form-check-input {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%28255, 255, 255, 0.25%29'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%28250, 250, 250, 0.25%29'/%3e%3c/svg%3e");
 }
 html.dark .form-switch .form-check-input:focus {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%239badbf'/%3e%3c/svg%3e");
@@ -12862,13 +12869,13 @@ html.dark .btn-close-white {
 }
 html.dark .toast {
   background-color: rgba(17, 17, 17, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(250, 250, 250, 0.1);
   box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.15);
 }
 html.dark .toast-header {
   color: #9e9e9e;
   background-color: rgba(17, 17, 17, 0.85);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(250, 250, 250, 0.05);
 }
 html.dark .modal-content {
   background-color: #2f2f2f;

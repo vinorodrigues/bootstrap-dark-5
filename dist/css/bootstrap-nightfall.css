@@ -1,10 +1,10 @@
 /*!
- * Bootstrap v5.1.1 (https://getbootstrap.com/)
+ * Bootstrap v5.1.2 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  *
- * Bootstrap-Nightfall v1.1.1 (https://vinorodrigues.github.io/bootstrap-dark-5/)
+ * Bootstrap-Nightfall v1.1.2 (https://vinorodrigues.github.io/bootstrap-dark-5/)
  * Copyright 2020-2021 Vino Rodrigues
  * This version is an extraction with only the dark elements, or deltas, of the
  * dark theme.  Used as a bootstrap plugin.
@@ -64,6 +64,7 @@
 
 hr {
   color: #fafafa;
+  background-color: currentColor;
   opacity: 0.1;
 }
 
@@ -130,8 +131,8 @@ caption {
   color: #e1e1e1;
   border-color: #515151;
 }
-.table > :not(:last-child) > :last-child > * {
-  border-bottom-color: currentColor;
+.table > :not(:first-child) {
+  border-top: 2px solid currentColor;
 }
 
 .table-primary {
@@ -343,7 +344,7 @@ caption {
 }
 
 .form-switch .form-check-input {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%28255, 255, 255, 0.25%29'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%28250, 250, 250, 0.25%29'/%3e%3c/svg%3e");
 }
 .form-switch .form-check-input:focus {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%239badbf'/%3e%3c/svg%3e");
@@ -1506,14 +1507,14 @@ caption {
 
 .toast {
   background-color: rgba(17, 17, 17, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(250, 250, 250, 0.1);
   box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.15);
 }
 
 .toast-header {
   color: #9e9e9e;
   background-color: rgba(17, 17, 17, 0.85);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(250, 250, 250, 0.05);
 }
 
 .modal-content {
