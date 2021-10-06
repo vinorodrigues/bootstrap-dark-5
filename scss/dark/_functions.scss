@@ -1,13 +1,13 @@
 
-$define-colors-hack: false !default;
+$enable-colors-hack: false !default;
 
 @function rgba-css-var-alt($identifier, $target) {
-  @if $define-colors-hack {
-    // @debug ">>> $define-colors-hack = true";
+  @if $enable-colors-hack {
+    // @debug ">>> $enable-colors-hack = true";
     @return rgba(var(--#{$variable-prefix}#{$identifier}-rgb-alt), var(--#{$variable-prefix}#{$target}-opacity));
   }
   @else {
-    // @debug ">>> $define-colors-hack = false";
+    // @debug ">>> $enable-colors-hack = false";
     // @return rgba(var(--#{$variable-prefix}#{$identifier}-rgb), var(--#{$variable-prefix}#{$target}-opacity));
     @return null;  // uses vars, so no need to re-declare
   }

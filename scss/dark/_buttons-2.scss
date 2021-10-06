@@ -26,13 +26,6 @@
     }
     $a2: nth($in, -1);  // last one
   }
-  // @debug "$in = #{$in}";
-  // @debug "$a1 = #{$a1}";
-  // @debug "$a2 = #{$a2}";
-
-  // .yyy {
-  //   content: "---------- YYYYYYYYYY ---------- DEBUG REMOVE THIS";
-  // }
 
   @at-root #{$a1} .btn-check:focus + #{$a2},
   #{$a1} #{$a2}:focus {
@@ -56,10 +49,6 @@
     opacity: $btn-disabled-opacity-alt;
     @include box-shadow(none);
   }
-
-  // .zzz {
-  //   content: "---------- ZZZZZZZZZZ ---------- DEBUG REMOVE THIS";
-  // }
 }
 
 

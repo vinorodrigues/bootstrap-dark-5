@@ -8,9 +8,10 @@
 
 // Body
 
-$define-colors-hack: false !default;
-@if $define-colors-hack {
-  // @debug ">>> $define-colors-hack = true";
+$enable-colors-hack: false !default;
+
+@if $enable-colors-hack {
+  // @debug ">>> $enable-colors-hack = true";
   body {
     color: var(--#{$variable-prefix}body-color-alt);
     background-color: var(--#{$variable-prefix}body-bg-alt); // 2
@@ -21,7 +22,7 @@ $define-colors-hack: false !default;
 
 hr {
   color: $hr-color-alt; // 1
-  // background-color: currentColor;
+  background-color: $hr-bg-color-alt;
   opacity: $hr-opacity-alt;
 }
 

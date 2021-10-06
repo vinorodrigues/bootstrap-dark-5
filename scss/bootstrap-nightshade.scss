@@ -11,7 +11,7 @@
  * Why `<html>`? See https://css-tricks.com/html-vs-body-in-css/#quirky-background-color
  */
 
-$define-colors-hack: true;  // !!!! fix for issue #33 and #35
+$enable-colors-hack: true;  // stylelint-disable-line scss/dollar-variable-default
 
 // Configuration
 @import "functions";

@@ -15,7 +15,7 @@ A basic HTML file should look like this:
 
     <!-- Replace the Bootstrap CSS with the
          Bootstrap-Dark Variant CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.1/dist/css/bootstrap-night.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.2/dist/css/bootstrap-night.min.css" rel="stylesheet">
 
     <title>Hello, world!</title>
   </head>
@@ -30,7 +30,7 @@ A basic HTML file should look like this:
 </html>
 ```
 
-Refer to the [Bootstrap 5 Docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/#starter-template) for more help.
+Refer to the [Bootstrap 5 Docs](https://getbootstrap.com/docs/5.1/getting-started/introduction/#starter-template) for more help.
 
 ***
 
@@ -64,10 +64,10 @@ This HTML file could look like this:
     </script>
     <!-- Load the alternate CSS first ...
          in this case the Bootstrap-Dark Variant CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.1/dist/css/bootstrap-night.min.css" rel="stylesheet" media="(prefers-color-scheme: dark)">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.2/dist/css/bootstrap-night.min.css" rel="stylesheet" media="(prefers-color-scheme: dark)">
     <!-- and then the primary CSS last ...
          in this case the (original) Bootstrap Variant CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.1/dist/css/bootstrap.min.css" rel="stylesheet" media="(prefers-color-scheme: light)">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.2/dist/css/bootstrap.min.css" rel="stylesheet" media="(prefers-color-scheme: light)">
 
     <title>Hello, world!</title>
   </head>

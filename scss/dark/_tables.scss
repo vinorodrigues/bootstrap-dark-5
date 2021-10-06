@@ -24,14 +24,9 @@
   // }
 
   // Highlight border color between thead, tbody and tfoot.
-  // > :not(:last-child) > :last-child > * {
-  //   border-bottom-color: $table-group-separator-color-alt;
-  // }
-  // post 5.1.1 commit [2a925d6fd](https://github.com/twbs/bootstrap/commit/2a925d6fd800d89b072d9f035a069d84e735941b)
   > :not(:first-child) {
     border-top: (2 * $table-border-width) solid $table-group-separator-color-alt;
   }
-
 }
 
 

@@ -14,9 +14,10 @@ A basic HTML file should look like this:
          and the page author prefers / default is light. -->
     <meta name="color-scheme" content="light dark">
 
-    <!-- Include both Bootstrap CSS and the Bootstrap-Dark-plugin variant CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.1/dist/css/bootstrap-dark-plugin.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS (as per normal) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- And add the Bootstrap-Dark-plugin Variant CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.2/dist/css/bootstrap-dark-plugin.min.css" rel="stylesheet">
 
     <title>Hello, world!</title>
 
@@ -37,4 +38,4 @@ A basic HTML file should look like this:
 
 That's all.  The page will automatically transition to Dark Mode when the users sets their OS *(or Firefox theme)* to Dark Mode.
 
-Refer to the [Bootstrap 5 Docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/#starter-template) for more help.
+Refer to the [Bootstrap 5 Docs](https://getbootstrap.com/docs/5.1/getting-started/introduction/#starter-template) for more help.
