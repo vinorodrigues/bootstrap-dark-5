@@ -15,9 +15,9 @@ A basic HTML file should look like this:
     <meta name="color-scheme" content="light dark">
 
     <!-- Bootstrap CSS (as per normal) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- And add the Bootstrap-Dark-plugin Variant CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.2/dist/css/bootstrap-dark-plugin.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.3/dist/css/bootstrap-dark-plugin.min.css" rel="stylesheet">
 
     <title>Hello, world!</title>
 
