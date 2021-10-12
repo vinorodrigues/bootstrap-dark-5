@@ -43,7 +43,7 @@ class DarkMode {
   static readonly DATA_KEY = "bs.prefers-color-scheme"
 
   //** ***const*** -- Data selector, when present in HTML will populate with `dark` or `light` as appropriate */
-  static readonly DATA_SELECTOR = "bs-color-scheme";
+  static readonly DATA_SELECTOR = "bs-color-scheme"
 
   /** ***const*** -- String used to identify light mode *(do not change)*, @see https://www.w3.org/TR/mediaqueries-5/#prefers-color-scheme */
   static readonly VALUE_LIGHT = "light"
@@ -119,7 +119,7 @@ class DarkMode {
   }
 
   /** Expiry time in days when saving and GDPR consent is give */
-  cookieExpiry = 365;
+  cookieExpiry = 365
 
   /**
    * Saves the instance of the documentRoot (i.e. `<html>` tag) when the object is created.
