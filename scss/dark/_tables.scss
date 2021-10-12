@@ -3,7 +3,9 @@
 //
 
 .table {
+  --#{$variable-prefix}table-color: #{$table-color-alt};
   --#{$variable-prefix}table-bg: #{$table-bg-alt};
+  --#{$variable-prefix}table-border-color: #{$table-border-color-alt};
   --#{$variable-prefix}table-accent-bg: #{$table-accent-bg-alt};
   --#{$variable-prefix}table-striped-color: #{$table-striped-color-alt};
   --#{$variable-prefix}table-striped-bg: #{$table-striped-bg-alt};
@@ -12,8 +14,8 @@
   --#{$variable-prefix}table-hover-color: #{$table-hover-color-alt};
   --#{$variable-prefix}table-hover-bg: #{$table-hover-bg-alt};
 
-  color: $table-color-alt;
-  border-color: $table-border-color-alt;
+  // color: var(--#{$variable-prefix}table-color);  // color: $table-color-alt;
+  // border-color: var(--#{$variable-prefix}table-border-color);  // border-color: $table-border-color-alt;
 
   // DONT NEED TO DARK, CSS VARS TAKES CARE OF THIS.
   // Target th & td
