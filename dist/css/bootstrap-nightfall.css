@@ -120,7 +120,9 @@ caption {
 }
 
 .table {
+  --bs-table-color: #e1e1e1;
   --bs-table-bg: transparent;
+  --bs-table-border-color: #515151;
   --bs-table-accent-bg: transparent;
   --bs-table-striped-color: #e1e1e1;
   --bs-table-striped-bg: rgba(250, 250, 250, 0.05);
@@ -128,107 +130,121 @@ caption {
   --bs-table-active-bg: rgba(250, 250, 250, 0.1);
   --bs-table-hover-color: #e1e1e1;
   --bs-table-hover-bg: rgba(250, 250, 250, 0.075);
-  color: #e1e1e1;
-  border-color: #515151;
 }
 .table > :not(:first-child) {
   border-top: 2px solid currentColor;
 }
 
 .table-primary {
+  --bs-table-color: #fff;
   --bs-table-bg: #1c2d40;
+  --bs-table-border-color: #334253;
   --bs-table-striped-bg: #27384a;
   --bs-table-striped-color: #fff;
   --bs-table-active-bg: #334253;
   --bs-table-active-color: #fff;
   --bs-table-hover-bg: #2d3d4e;
   --bs-table-hover-color: #fff;
-  color: #fff;
-  border-color: #334253;
+  color: var(--bs-table-color);
+  border-color: var(--bs-table-border-color);
 }
 
 .table-secondary {
+  --bs-table-color: #fff;
   --bs-table-bg: #313131;
+  --bs-table-border-color: #464646;
   --bs-table-striped-bg: #3b3b3b;
   --bs-table-striped-color: #fff;
   --bs-table-active-bg: #464646;
   --bs-table-active-color: #fff;
   --bs-table-hover-bg: #404040;
   --bs-table-hover-color: #fff;
-  color: #fff;
-  border-color: #464646;
+  color: var(--bs-table-color);
+  border-color: var(--bs-table-border-color);
 }
 
 .table-success {
+  --bs-table-color: #fff;
   --bs-table-bg: #005e46;
+  --bs-table-border-color: #1a6e59;
   --bs-table-striped-bg: #0d664f;
   --bs-table-striped-color: #fff;
   --bs-table-active-bg: #1a6e59;
   --bs-table-active-color: #fff;
   --bs-table-hover-bg: #136a54;
   --bs-table-hover-color: #fff;
-  color: #fff;
-  border-color: #1a6e59;
+  color: var(--bs-table-color);
+  border-color: var(--bs-table-border-color);
 }
 
 .table-info {
+  --bs-table-color: #fff;
   --bs-table-bg: #0c515c;
+  --bs-table-border-color: #24626c;
   --bs-table-striped-bg: #185a64;
   --bs-table-striped-color: #fff;
   --bs-table-active-bg: #24626c;
   --bs-table-active-color: #fff;
   --bs-table-hover-bg: #1e5e68;
   --bs-table-hover-color: #fff;
-  color: #fff;
-  border-color: #24626c;
+  color: var(--bs-table-color);
+  border-color: var(--bs-table-border-color);
 }
 
 .table-warning {
+  --bs-table-color: #fff;
   --bs-table-bg: #7a4e09;
+  --bs-table-border-color: #876022;
   --bs-table-striped-bg: #815715;
   --bs-table-striped-color: #fff;
   --bs-table-active-bg: #876022;
   --bs-table-active-color: #fff;
   --bs-table-hover-bg: #845b1b;
   --bs-table-hover-color: #fff;
-  color: #fff;
-  border-color: #876022;
+  color: var(--bs-table-color);
+  border-color: var(--bs-table-border-color);
 }
 
 .table-danger {
+  --bs-table-color: #fff;
   --bs-table-bg: #74261e;
+  --bs-table-border-color: #823c35;
   --bs-table-striped-bg: #7b3129;
   --bs-table-striped-color: #fff;
   --bs-table-active-bg: #823c35;
   --bs-table-active-color: #fff;
   --bs-table-hover-bg: #7e362f;
   --bs-table-hover-color: #fff;
-  color: #fff;
-  border-color: #823c35;
+  color: var(--bs-table-color);
+  border-color: var(--bs-table-border-color);
 }
 
 .table-light {
+  --bs-table-color: #000;
   --bs-table-bg: #9e9e9e;
+  --bs-table-border-color: #8e8e8e;
   --bs-table-striped-bg: #969696;
   --bs-table-striped-color: #000;
   --bs-table-active-bg: #8e8e8e;
   --bs-table-active-color: #000;
   --bs-table-hover-bg: #929292;
   --bs-table-hover-color: #000;
-  color: #000;
-  border-color: #8e8e8e;
+  color: var(--bs-table-color);
+  border-color: var(--bs-table-border-color);
 }
 
 .table-dark {
+  --bs-table-color: #fff;
   --bs-table-bg: #3b3b3b;
+  --bs-table-border-color: #4f4f4f;
   --bs-table-striped-bg: #454545;
   --bs-table-striped-color: #fff;
   --bs-table-active-bg: #4f4f4f;
   --bs-table-active-color: #fff;
   --bs-table-hover-bg: #4a4a4a;
   --bs-table-hover-color: #fff;
-  color: #fff;
-  border-color: #4f4f4f;
+  color: var(--bs-table-color);
+  border-color: var(--bs-table-border-color);
 }
 
 .form-text {
@@ -247,9 +263,6 @@ caption {
   box-shadow: 0 0 0 0.25rem rgba(55, 90, 127, 0.25);
 }
 .form-control::-moz-placeholder {
-  color: #5a5a5a;
-}
-.form-control:-ms-input-placeholder {
   color: #5a5a5a;
 }
 .form-control::placeholder {
@@ -397,17 +410,10 @@ caption {
   color: transparent;
 }
 
-.form-floating > .form-control:-ms-input-placeholder {
-  color: transparent;
-}
-
 .form-floating > .form-control::placeholder {
   color: transparent;
 }
 .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
-  opacity: 0.65;
-}
-.form-floating > .form-control:not(:-ms-input-placeholder) ~ label {
   opacity: 0.65;
 }
 .form-floating > .form-control:focus ~ label,
