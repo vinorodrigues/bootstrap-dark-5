@@ -9,6 +9,9 @@
  * This version is a fully fledged dark theme
  */
 
+// stylelint-disable-next-line scss/dollar-variable-default
+$enable-color-func-revert: true;
+
 // Configuration
 @import "functions";
 @import "dark/functions";
