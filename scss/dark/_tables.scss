@@ -14,8 +14,8 @@
   --#{$variable-prefix}table-hover-color: #{$table-hover-color-alt};
   --#{$variable-prefix}table-hover-bg: #{$table-hover-bg-alt};
 
-  // color: var(--#{$variable-prefix}table-color);  // color: $table-color-alt;
-  // border-color: var(--#{$variable-prefix}table-border-color);  // border-color: $table-border-color-alt;
+  color: $table-color-alt;  // color: var(--#{$variable-prefix}table-color);  // TODO: RE-REGRESS AFTER 5.3.1!!
+  border-color: $table-border-color-alt;  // border-color: var(--#{$variable-prefix}table-border-color);  // TODO: RE-REGRESS AFTER 5.3.1!!
 
   // DONT NEED TO DARK, CSS VARS TAKES CARE OF THIS.
   // Target th & td

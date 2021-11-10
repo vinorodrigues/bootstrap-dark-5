@@ -16,7 +16,7 @@
     --#{$variable-prefix}table-hover-bg: #{$hover-bg};
     --#{$variable-prefix}table-hover-color: #{color-contrast($hover-bg)};
 
-    color: var(--#{$variable-prefix}table-color);  // color: $color;
-    border-color: var(--#{$variable-prefix}table-border-color);  // border-color: mix($color, $background, percentage($table-border-factor-alt));
+    color: $color;  // color: var(--#{$variable-prefix}table-color);  // TODO: RE-REGRESS AFTER 5.3.1!!
+    border-color: mix($color, $background, percentage($table-border-factor-alt));  // border-color: var(--#{$variable-prefix}table-border-color);  // TODO: RE-REGRESS AFTER 5.3.1!!
   }
 }

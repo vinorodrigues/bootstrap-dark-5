@@ -11397,6 +11397,8 @@ textarea.form-control-lg {
     --bs-table-active-bg: rgba(250, 250, 250, 0.1);
     --bs-table-hover-color: #e1e1e1;
     --bs-table-hover-bg: rgba(250, 250, 250, 0.075);
+    color: #e1e1e1;
+    border-color: #515151;
   }
   .table > :not(:first-child) {
     border-top: 2px solid currentColor;
@@ -11412,8 +11414,8 @@ textarea.form-control-lg {
     --bs-table-active-color: #fff;
     --bs-table-hover-bg: #2d3d4e;
     --bs-table-hover-color: #fff;
-    color: var(--bs-table-color);
-    border-color: var(--bs-table-border-color);
+    color: #fff;
+    border-color: #334253;
   }
 
   .table-secondary {
@@ -11426,8 +11428,8 @@ textarea.form-control-lg {
     --bs-table-active-color: #fff;
     --bs-table-hover-bg: #404040;
     --bs-table-hover-color: #fff;
-    color: var(--bs-table-color);
-    border-color: var(--bs-table-border-color);
+    color: #fff;
+    border-color: #464646;
   }
 
   .table-success {
@@ -11440,8 +11442,8 @@ textarea.form-control-lg {
     --bs-table-active-color: #fff;
     --bs-table-hover-bg: #136a54;
     --bs-table-hover-color: #fff;
-    color: var(--bs-table-color);
-    border-color: var(--bs-table-border-color);
+    color: #fff;
+    border-color: #1a6e59;
   }
 
   .table-info {
@@ -11454,8 +11456,8 @@ textarea.form-control-lg {
     --bs-table-active-color: #fff;
     --bs-table-hover-bg: #1e5e68;
     --bs-table-hover-color: #fff;
-    color: var(--bs-table-color);
-    border-color: var(--bs-table-border-color);
+    color: #fff;
+    border-color: #24626c;
   }
 
   .table-warning {
@@ -11468,8 +11470,8 @@ textarea.form-control-lg {
     --bs-table-active-color: #fff;
     --bs-table-hover-bg: #845b1b;
     --bs-table-hover-color: #fff;
-    color: var(--bs-table-color);
-    border-color: var(--bs-table-border-color);
+    color: #fff;
+    border-color: #876022;
   }
 
   .table-danger {
@@ -11482,8 +11484,8 @@ textarea.form-control-lg {
     --bs-table-active-color: #fff;
     --bs-table-hover-bg: #7e362f;
     --bs-table-hover-color: #fff;
-    color: var(--bs-table-color);
-    border-color: var(--bs-table-border-color);
+    color: #fff;
+    border-color: #823c35;
   }
 
   .table-light {
@@ -11496,8 +11498,8 @@ textarea.form-control-lg {
     --bs-table-active-color: #000;
     --bs-table-hover-bg: #929292;
     --bs-table-hover-color: #000;
-    color: var(--bs-table-color);
-    border-color: var(--bs-table-border-color);
+    color: #000;
+    border-color: #8e8e8e;
   }
 
   .table-dark {
@@ -11510,8 +11512,8 @@ textarea.form-control-lg {
     --bs-table-active-color: #fff;
     --bs-table-hover-bg: #4a4a4a;
     --bs-table-hover-color: #fff;
-    color: var(--bs-table-color);
-    border-color: var(--bs-table-border-color);
+    color: #fff;
+    border-color: #4f4f4f;
   }
 
   .form-text {
