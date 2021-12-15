@@ -509,7 +509,7 @@ $form-check-input-focus-box-shadow-alt:       $input-btn-focus-box-shadow-alt !d
 $form-check-input-checked-color-alt:          $component-active-color-alt !default;
 $form-check-input-checked-bg-color-alt:       $component-active-bg-alt !default;
 $form-check-input-checked-border-color-alt:   $form-check-input-checked-bg-color-alt !default;
-$form-check-input-checked-bg-image-alt:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color-alt}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>") !default;
+$form-check-input-checked-bg-image-alt:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color-alt}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/></svg>") !default;
 $form-check-radio-checked-bg-image-alt:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color-alt}'/></svg>") !default;
 
 $form-check-input-indeterminate-color-alt:          $component-active-color-alt !default;
@@ -540,7 +540,7 @@ $form-select-bg-alt:                    $input-bg-alt !default;
 $form-select-disabled-bg-alt:           $gray-800-alt !default;
 $form-select-disabled-border-color-alt: $input-disabled-border-color-alt !default;
 $form-select-indicator-color-alt:       $gray-200-alt !default;
-$form-select-indicator-alt:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color-alt}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>") !default;
+$form-select-indicator-alt:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color-alt}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>") !default;
 
 $form-select-border-color-alt:        $input-border-color-alt !default;
 $form-select-box-shadow-alt:          $box-shadow-inset-alt !default;
@@ -572,7 +572,7 @@ $form-feedback-valid-color-alt:         $success-alt !default;
 $form-feedback-invalid-color-alt:       $danger-alt !default;
 
 $form-feedback-icon-valid-color-alt:    $form-feedback-valid-color-alt !default;
-$form-feedback-icon-valid-alt:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color-alt}' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>") !default;
+$form-feedback-icon-valid-alt:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color-alt}' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>") !default;
 $form-feedback-icon-invalid-color-alt:  $form-feedback-invalid-color-alt !default;
 $form-feedback-icon-invalid-alt:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='#{$form-feedback-icon-invalid-color-alt}'><circle cx='6' cy='6' r='4.5'/><path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/><circle cx='6' cy='8.2' r='.6' fill='#{$form-feedback-icon-invalid-color}' stroke='none'/></svg>") !default;
 
@@ -886,7 +886,7 @@ $carousel-dark-control-icon-filter-alt:  invert(1) grayscale(100) !default;
 // ______________________________________
 
 $btn-close-color-alt:            $white-alt !default;
-$btn-close-bg-alt:               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color-alt}'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>") !default;
+$btn-close-bg-alt:               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color-alt}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>") !default;
 $btn-close-focus-shadow-alt:     $input-btn-focus-box-shadow-alt !default;
 $btn-close-opacity-alt:          .5 !default;
 $btn-close-hover-opacity-alt:    .75 !default;
