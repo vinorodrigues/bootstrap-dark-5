@@ -1,12 +1,12 @@
 'use strict'
 
-module.exports = ctx => {
+module.exports = context => {
   return {
     plugins: {
       autoprefixer: {
         cascade: false
       },
-      rtlcss: ctx.env === 'RTL' ? {} : false
+      rtlcss: context.env === 'RTL'
     }
   }
 }
