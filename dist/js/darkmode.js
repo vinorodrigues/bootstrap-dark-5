@@ -1,6 +1,6 @@
 /*!
  * Bootstrap-Dark-5 v1.1.3 (https://vinorodrigues.github.io/bootstrap-dark-5/)
- * Copyright 2021 Vino Rodrigues
+ * Copyright 2021-2022 Vino Rodrigues
  * Licensed under MIT (https://github.com/vinorodrigues/bootstrap-dark-5/blob/main/LICENSE.md)
  */
 

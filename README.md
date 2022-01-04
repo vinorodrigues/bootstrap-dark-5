@@ -155,4 +155,4 @@ If you have [useful feedback](https://alearningaday.blog/2020/08/04/useful-feedb
 
 ---
 
-<p align="center" style="display:block;font-size:75%;text-align:center">&copy; 2021</p>
+<p align="center" style="display:block;font-size:75%;text-align:center">&copy; 2022</p>
