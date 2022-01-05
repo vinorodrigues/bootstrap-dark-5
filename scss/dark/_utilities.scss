@@ -66,6 +66,9 @@ $utilities-alt: map-merge(
     "color": (
       property: color,
       class: text,
+      local-vars: (
+        "text-opacity": 1
+      ),
       values: map-merge(
         $utilities-text-colors-alt,
         (
@@ -78,6 +81,9 @@ $utilities-alt: map-merge(
     "background-color": (
       property: background-color,
       class: bg,
+      local-vars: (
+        "bg-opacity": 1
+      ),
       values: map-merge(
         $utilities-bg-colors-alt,
         (
