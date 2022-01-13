@@ -16,13 +16,13 @@
 @import "variables";  // defaults are here
 @import "variables-alt";  // dark color set is here
 @import "dark/variables-patch-for-unlit";  // temporary development patch to map new vars to existing codebase
-@import "dark/variables-map-core-to-temp";  // map the core colors to `-temp` placeholders
-@import "dark/variables-map-alt-to-core";  // map the `-alt`'s back to core colors
-@import "dark/variables-map-temp-to-alt";  // map the `-temp`'s back to the `-alt`'s, in effect swapping them
 @import "mixins";
 @import "dark/mixins";
 @import "utilities";
 @import "dark/utilities";
+@import "dark/variables-map-core-to-temp";  // map the core colors to `-temp` placeholders
+@import "dark/variables-map-alt-to-core";  // map the `-alt`'s back to core colors
+@import "dark/variables-map-temp-to-alt";  // map the `-temp`'s back to the `-alt`'s, in effect swapping them
 @import "dark/patch";  // missing from BS, unsupported patch/hack
 
 // stylelint-disable-next-line scss/dollar-variable-default

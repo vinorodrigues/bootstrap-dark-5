@@ -364,7 +364,7 @@ $utilities-bg-colors-alt: map-loop($utilities-bg-alt, rgba-css-var-alt, "$key", 
 
 $link-shade-percentage-alt:                   20% !default;  // not used
 $link-color-alt:                              shift-color($primary-alt, -$link-shade-percentage-alt) !default;
-$link-hover-color-alt:                        shift-color($primary-alt, -$link-shade-percentage-alt * 0.5) !default;  // math.div(2)
+$link-hover-color-alt:                        shift-color($primary-alt, -$link-shade-percentage-alt * .5) !default;  // math.div(2)
 
 
 // Components
