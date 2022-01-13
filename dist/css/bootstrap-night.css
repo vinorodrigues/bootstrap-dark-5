@@ -6737,15 +6737,15 @@ textarea.form-control-lg {
 }
 
 .shadow {
-  box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.15) !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
 .shadow-sm {
-  box-shadow: 0 0.125rem 0.25rem rgba(17, 17, 17, 0.075) !important;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 }
 
 .shadow-lg {
-  box-shadow: 0 1rem 3rem rgba(17, 17, 17, 0.175) !important;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 }
 
 .shadow-none {
@@ -6834,7 +6834,7 @@ textarea.form-control-lg {
 }
 
 .border {
-  border: 1px solid #515151 !important;
+  border: 1px solid #dee2e6 !important;
 }
 
 .border-0 {
@@ -6842,7 +6842,7 @@ textarea.form-control-lg {
 }
 
 .border-top {
-  border-top: 1px solid #515151 !important;
+  border-top: 1px solid #dee2e6 !important;
 }
 
 .border-top-0 {
@@ -6850,7 +6850,7 @@ textarea.form-control-lg {
 }
 
 .border-end {
-  border-right: 1px solid #515151 !important;
+  border-right: 1px solid #dee2e6 !important;
 }
 
 .border-end-0 {
@@ -6858,7 +6858,7 @@ textarea.form-control-lg {
 }
 
 .border-bottom {
-  border-bottom: 1px solid #515151 !important;
+  border-bottom: 1px solid #dee2e6 !important;
 }
 
 .border-bottom-0 {
@@ -6866,7 +6866,7 @@ textarea.form-control-lg {
 }
 
 .border-start {
-  border-left: 1px solid #515151 !important;
+  border-left: 1px solid #dee2e6 !important;
 }
 
 .border-start-0 {
@@ -6874,39 +6874,39 @@ textarea.form-control-lg {
 }
 
 .border-primary {
-  border-color: #375a7f !important;
+  border-color: #0d6efd !important;
 }
 
 .border-secondary {
-  border-color: #626262 !important;
+  border-color: #6c757d !important;
 }
 
 .border-success {
-  border-color: #00bc8c !important;
+  border-color: #198754 !important;
 }
 
 .border-info {
-  border-color: #17a2b8 !important;
+  border-color: #0dcaf0 !important;
 }
 
 .border-warning {
-  border-color: #f39c12 !important;
+  border-color: #ffc107 !important;
 }
 
 .border-danger {
-  border-color: #e74c3c !important;
+  border-color: #dc3545 !important;
 }
 
 .border-light {
-  border-color: #9e9e9e !important;
+  border-color: #f8f9fa !important;
 }
 
 .border-dark {
-  border-color: #3b3b3b !important;
+  border-color: #212529 !important;
 }
 
 .border-white {
-  border-color: #fafafa !important;
+  border-color: #fff !important;
 }
 
 .border-black {
@@ -7763,17 +7763,17 @@ textarea.form-control-lg {
 
 .text-muted {
   --bs-text-opacity: 1;
-  color: #9e9e9e !important;
+  color: #6c757d !important;
 }
 
 .text-black-50 {
   --bs-text-opacity: 1;
-  color: rgba(17, 17, 17, 0.5) !important;
+  color: rgba(0, 0, 0, 0.5) !important;
 }
 
 .text-white-50 {
   --bs-text-opacity: 1;
-  color: rgba(250, 250, 250, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
 }
 
 .text-reset {
