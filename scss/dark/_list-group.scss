@@ -1,21 +1,3 @@
-// Interactive list items
-
-.list-group-item-action {
-  color: $list-group-action-color-alt;
-
-  // Hover state
-  &:hover,
-  &:focus {
-    color: $list-group-action-hover-color-alt;
-    background-color: $list-group-hover-bg-alt;
-  }
-
-  &:active {
-    color: $list-group-action-active-color-alt;
-    background-color: $list-group-action-active-bg-alt;
-  }
-}
-
 // Individual list items
 
 .list-group-item {
