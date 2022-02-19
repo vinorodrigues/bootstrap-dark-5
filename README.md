@@ -6,6 +6,14 @@
 
 > If you're after the same work for [Bootstrap 4](https://getbootstrap.com/docs/4.5/) please visit the [vinorodrigues/bootstrap-dark](https://github.com/vinorodrigues/bootstrap-dark) repo.
 
+-----------
+
+> ![Note](https://img.shields.io/badge/NOTE-blue) **A note on current state (Feb 2022):** Development efforts back at Bootstrap 5's core repository are currenly geared at converting all color to CSS Variables.  Obviously this greatly modifies the methodologies used in this POC and would in essance require a major re-write of the code.  The addition of CSS variables also brings in some aditional comlexity in some of the variants *(this project shows 6 methods of attaining dark mode with Bootstrap 5)* - specifically the `-nightshade` and `-backbox` variants have major issues in accomodating for CSS variables. *(Not impossible, but complex nevertheless.)*
+>
+> As such - I will not be updating this project *(thus it remains tied to the v5.1.3 release)* until such time as it becomes clear in what direction Mark Otto et.al. are grearing thier project towards.  The intent is clear - with CSS variables *(for the color elements)* - theaming is much simpler.  Dark Mode, in essance a dual theme driven by browser/OS preference, remains to be seen.
+
+-----------
+
 
 ## About
 
