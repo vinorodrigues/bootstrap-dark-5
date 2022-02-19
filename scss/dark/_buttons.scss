@@ -17,7 +17,8 @@
   .btn-check:checked + &,
   .btn-check:active + &,
   &:active,
-  &.active {
+  &.active,
+  &.show {
     @include box-shadow($btn-active-box-shadow-alt);
 
     &:focus {
