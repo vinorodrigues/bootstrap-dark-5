@@ -22,7 +22,7 @@ $enable-colors-hack: false !default;
 
 hr {
   color: $hr-color-alt; // 1
-  background-color: $hr-bg-color-alt;
+  border-top: $hr-border-width solid $hr-border-color-alt;
   opacity: $hr-opacity-alt;
 }
 
