@@ -394,7 +394,7 @@ $text-muted-alt:                  $gray-400-alt !default;
 $blockquote-footer-color-alt:     $gray-600-alt !default;
 
 $hr-color-alt:                    null !default;  // Deprecated in v5.2.0
-$hr-bg-color-alt:                 currentColor !default;
+$hr-bg-color-alt:                 currentcolor !default;
 $hr-border-color-alt:             null !default;  // Allows for inherited colors
 $hr-opacity-alt:                  .25 !default;
 
@@ -424,7 +424,7 @@ $table-hover-bg-alt:              rgba($white-alt, $table-hover-bg-factor-alt) !
 $table-border-factor-alt:         .1 !default;
 $table-border-color-alt:          $border-color-alt !default;
 
-$table-group-separator-color-alt: currentColor !default;
+$table-group-separator-color-alt: currentcolor !default;
 
 $table-caption-color-alt:         $text-muted-alt !default;
 
