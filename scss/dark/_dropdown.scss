@@ -9,6 +9,7 @@
 // Dividers (basically an `<hr>`) within the dropdown
 .dropdown-divider {
   border-top: 1px solid $dropdown-divider-bg-alt;
+  opacity: 1;
 }
 
 // Links, buttons, and more within the dropdown menu
