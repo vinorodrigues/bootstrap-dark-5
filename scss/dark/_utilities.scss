@@ -13,84 +13,46 @@ $utilities-alt: map-merge(
         lg: $box-shadow-lg-alt,
       )
     ),
-    "border": (
-      property: border,
-      values: (
-        null: $border-width solid $border-color-alt,
-      )
-    ),
-    "border-top": (
-      property: border-top,
-      values: (
-        null: $border-width solid $border-color-alt,
-      )
-    ),
-    "border-end": (
-      property: border-right,
-      class: border-end,
-      values: (
-        null: $border-width solid $border-color-alt,
-      )
-    ),
-    "border-bottom": (
-      property: border-bottom,
-      values: (
-        null: $border-width solid $border-color-alt,
-      )
-    ),
-    "border-start": (
-      property: border-left,
-      class: border-start,
-      values: (
-        null: $border-width solid $border-color-alt,
-      )
-    ),
-    "border-color": (
-      property: border-color,
-      class: border,
-      values: map-merge(
-        $theme-colors-alt,
-        (
-          "white": $white-alt,
-          "black": $black-alt
-        )
-      )
-    ),
-    // Text
-    // DON'T NEED TO DARK, CSS VARS TAKES CARE OF THIS.
+
+    // *** Don't need this, covered by CSS vars ***
+    // "border-color": (
+    //   property: border-color,
+    //   class: border,
+    //   local-vars: (
+    //     "border-opacity": 1
+    //   ),
+    //   values: $utilities-border-colors-alt
+    // ),
+
+    // *** Don't need this, covered by CSS vars ***
     // "gradient": (
     //   property: background-image,
     //   class: bg,
     //   values: (gradient: var(--#{$variable-prefix}gradient))
     // )
+
     "color": (
       property: color,
       class: text,
-      local-vars: (
-        "text-opacity": 1
-      ),
-      values: map-merge(
-        $utilities-text-colors-alt,
-        (
-          "muted": $text-muted-alt,
-          "white-50": rgba($white-alt, .5),
-          "black-50": rgba($black-alt, .5)
-        )
+      // local-vars: (
+      //   "text-opacity": 1
+      // ),
+      values: (
+        // "muted": $text-muted-alt,  // *** already a CSS var
+        "white-50": rgba($white-alt, .5),
+        "black-50": rgba($black-alt, .5)
       )
     ),
-    "background-color": (
-      property: background-color,
-      class: bg,
-      local-vars: (
-        "bg-opacity": 1
-      ),
-      values: map-merge(
-        $utilities-bg-colors-alt,
-        (
-          "black": $black-alt
-        )
-      )
-    )
+
+    // *** Don't need this, covered by CSS vars ***
+    // "background-color": (
+    //   property: background-color,
+    //   class: bg,
+    //   local-vars: (
+    //     "bg-opacity": 1
+    //   ),
+    //   values: $utilities-bg-colors-alt
+    // )
   ),
   $utilities-alt
 );

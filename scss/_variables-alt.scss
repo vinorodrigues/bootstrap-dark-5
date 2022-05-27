@@ -1,4 +1,7 @@
 // Alternate Variables (for use in Dark Mode variant)
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
 // Color system
 // ______________________________________
@@ -318,6 +321,7 @@ $cyans-alt: (
 ) !default;
 // fusv-enable
 
+
 // Gradient
 // ______________________________________
 // The gradient which is added to components if `$enable-gradients` is `true`
@@ -329,33 +333,8 @@ $gradient-alt: linear-gradient(180deg, rgba($black-alt, .15), rgba($black-alt, 0
 // ______________________________________
 // Settings for the `<body>` element.
 
-$body-bg-alt:                   $gray-900-alt !default;  // $white !default;
-$body-color-alt:                $gray-100-alt !default;  // $gray-900 !default;
-
-// Utilities maps
-// ______________________________________
-
-$utilities-colors-alt: $theme-colors-rgb-alt !default;
-
-$utilities-text-alt: map-merge(
-  $utilities-colors-alt,
-  (
-    "black": to-rgb($black-alt),
-    "white": to-rgb($white-alt),
-    "body": to-rgb($body-color-alt)
-  )
-) !default;
-$utilities-text-colors-alt: map-loop($utilities-text-alt, rgba-css-var-alt, "$key", "text") !default;  // hack for issue #35
-
-$utilities-bg-alt: map-merge(
-  $utilities-colors-alt,
-  (
-    "black": to-rgb($black-alt),
-    "white": to-rgb($white-alt),
-    "body": to-rgb($body-bg-alt)
-  )
-) !default;
-$utilities-bg-colors-alt: map-loop($utilities-bg-alt, rgba-css-var-alt, "$key", "bg") !default;  // hack for issue #35
+$body-bg-alt:                   $gray-900-alt !default;
+$body-color-alt:                $gray-100-alt !default;
 
 
 // Links
@@ -371,7 +350,8 @@ $link-hover-color-alt:                        shift-color($primary-alt, -$link-s
 // ______________________________________
 // Define common padding and border radius sizes and more.
 
-$border-color-alt:                rgba($white, .15) !default;
+$border-color-alt:                rgba($gray-700, .15) !default;
+$border-color-translucent-alt:    rgba($white, .175) !default;
 
 $box-shadow-alt:                  0 .5rem 1rem rgba($black-alt, .15) !default;
 $box-shadow-sm-alt:               0 .125rem .25rem rgba($black-alt, .075) !default;
@@ -389,13 +369,14 @@ $component-active-bg-alt:         $primary-alt !default;
 
 $headings-color-alt:              null !default;
 
-$text-muted-alt:                  $gray-400-alt !default;
+// $text-muted-alt:                  $gray-400-alt !default;  // ***DELETE***
+$text-muted-alt:                  rgba(var(--#{$prefix}body-color-rgb), .75) !default;
 
 $blockquote-footer-color-alt:     $gray-600-alt !default;
 
-$hr-color-alt:                    null !default;  // Deprecated in v5.2.0
-$hr-bg-color-alt:                 currentcolor !default;
-$hr-border-color-alt:             null !default;  // Allows for inherited colors
+// $hr-color-alt:                    null !default;  // Deprecated in v5.2.0
+// $hr-bg-color-alt:                 currentcolor !default;
+// $hr-border-color-alt:             null !default;  // Allows for inherited colors
 $hr-opacity-alt:                  .25 !default;
 
 $mark-bg-alt:                     rgba($yellow-alt, .5) !default;
@@ -475,8 +456,8 @@ $btn-active-border-shade-amount-alt:  25% !default;
 $btn-active-border-tint-amount-alt:   10% !default;
 
 
-// Forms
-// ______________________________________
+// // Forms
+// // ______________________________________
 
 $form-text-color-alt:                       $text-muted-alt !default;
 
@@ -736,7 +717,7 @@ $tooltip-color-alt:                     $black-alt !default;
 $tooltip-bg-alt:                        $white-alt !default;
 $tooltip-opacity-alt:                   .9 !default;
 
-$tooltip-arrow-color-alt:               $tooltip-bg-alt !default;
+// $tooltip-arrow-color-alt:               $tooltip-bg-alt !default;
 
 $form-feedback-tooltip-opacity-alt:       $tooltip-opacity-alt !default;
 
@@ -753,9 +734,9 @@ $popover-header-color-alt:              $headings-color-alt !default;
 
 $popover-body-color-alt:                $body-color-alt !default;
 
-$popover-arrow-color-alt:               $popover-bg-alt !default;
+// $popover-arrow-color-alt:               $popover-bg-alt !default;
 
-$popover-arrow-outer-color-alt:         fade-in($popover-border-color-alt, .05) !default;
+// $popover-arrow-outer-color-alt:         fade-in($popover-border-color-alt, .05) !default;
 
 
 // Toasts
@@ -789,6 +770,7 @@ $modal-content-box-shadow-sm-up-alt:    $box-shadow-alt !default;
 $modal-backdrop-bg-alt:                 $black-alt !default;
 $modal-backdrop-opacity-alt:            .85 !default;
 $modal-header-border-color-alt:         $border-color-alt !default;
+$modal-footer-bg-alt:                   null !default;
 $modal-footer-border-color-alt:         $modal-header-border-color-alt !default;
 
 
@@ -877,10 +859,10 @@ $carousel-dark-caption-color-alt:        $white-alt !default;
 $carousel-dark-control-icon-filter-alt:  invert(1) grayscale(100) !default;
 
 
-// Spinners
-// ______________________________________
+// // Spinners
+// // ______________________________________
 
-// ...nada
+// // ...nada
 
 
 // Close

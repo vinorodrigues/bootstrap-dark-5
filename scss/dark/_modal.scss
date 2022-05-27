@@ -1,31 +1,16 @@
-// Actual modal
-.modal-content {
-  color: $modal-content-color-alt;
-  background-color: $modal-content-bg-alt;
-  border: $modal-content-border-width solid $modal-content-border-color-alt;
-  @include box-shadow($modal-content-box-shadow-xs-alt);
+// Container that the modal scrolls within
+.modal {
+  --#{$prefix}modal-color: #{$modal-content-color-alt};
+  --#{$prefix}modal-bg: #{$modal-content-bg-alt};
+  --#{$prefix}modal-border-color: #{$modal-content-border-color-alt};
+  --#{$prefix}modal-box-shadow: #{$modal-content-box-shadow-xs-alt};
+  --#{$prefix}modal-header-border-color: #{$modal-header-border-color-alt};
+  --#{$prefix}modal-footer-bg: #{$modal-footer-bg-alt};
+  --#{$prefix}modal-footer-border-color: #{$modal-footer-border-color-alt};
 }
 
 // Modal background
 .modal-backdrop {
-  @include overlay-backdrop-alt($modal-backdrop-bg-alt, $modal-backdrop-opacity-alt);
-}
-
-// Modal header
-// Top section of the modal w/ title and dismiss
-.modal-header {
-  border-bottom: $modal-header-border-width solid $modal-header-border-color-alt;
-}
-
-// Footer (for actions)
-.modal-footer {
-  border-top: $modal-footer-border-width solid $modal-footer-border-color-alt;
-}
-
-// Scale up the modal
-@include media-breakpoint-up(sm) {
-  // Automatically set modal's width for larger viewports
-  .modal-content {
-    @include box-shadow($modal-content-box-shadow-sm-up-alt);
-  }
+  --#{$prefix}backdrop-bg: #{$modal-backdrop-bg-alt};
+  --#{$prefix}backdrop-opacity: #{$modal-backdrop-opacity-alt};
 }

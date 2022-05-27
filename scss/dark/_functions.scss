@@ -21,18 +21,18 @@ $enable-colors-hack: false !default;
 $enable-color-func-revert: false !default;
 
 @function rgba-css-var-alt($identifier, $target) {
-  @if $enable-colors-hack {
+  // @if $enable-colors-hack {
 
-    @return rgba(var(--#{$variable-prefix}#{$identifier}-rgb-alt), var(--#{$variable-prefix}#{$target}-opacity));
+  //   @return rgba(var(--#{$variable-prefix}#{$identifier}-rgb-alt), var(--#{$variable-prefix}#{$target}-opacity));
 
-  } @else if $enable-color-func-revert {
+  // } @else if $enable-color-func-revert {
 
-    @return rgba-css-var($identifier, $target);  // call core's function
+  //   @return rgba-css-var($identifier, $target);  // call core's function
 
-  } @else {
+  // } @else {
 
     // @return rgba(var(--#{$variable-prefix}#{$identifier}-rgb), var(--#{$variable-prefix}#{$target}-opacity));
     @return null;  // uses vars, so no need to re-declare
 
-  }
+  // }
 }

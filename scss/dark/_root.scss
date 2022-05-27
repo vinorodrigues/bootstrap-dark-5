@@ -1,32 +1,45 @@
+// stylelint-disable custom-property-empty-line-before
+
 :root {
   // Custom variable values only support SassScript inside `#{}`.
   @each $color, $value in $colors-alt {
-    --#{$variable-prefix}#{$color}: #{$value};
+    --#{$prefix}#{$color}: #{$value};
   }
 
   @each $color, $value in $grays-alt {
-    --#{$variable-prefix}gray-#{$color}: #{$value};
+    --#{$prefix}gray-#{$color}: #{$value};
   }
 
   @each $color, $value in $theme-colors-alt {
-    --#{$variable-prefix}#{$color}: #{$value};
+    --#{$prefix}#{$color}: #{$value};
   }
 
   @each $color, $value in $theme-colors-rgb-alt {
-    --#{$variable-prefix}#{$color}-rgb: #{$value};
+    --#{$prefix}#{$color}-rgb: #{$value};
   }
 
-  --#{$variable-prefix}white-rgb: #{to-rgb($white-alt)};
-  --#{$variable-prefix}black-rgb: #{to-rgb($black-alt)};
-  --#{$variable-prefix}body-color-rgb: #{to-rgb($body-color-alt)};
-  --#{$variable-prefix}body-bg-rgb: #{to-rgb($body-bg-alt)};
+  --#{$prefix}white-rgb: #{to-rgb($white-alt)};
+  --#{$prefix}black-rgb: #{to-rgb($black-alt)};
+  --#{$prefix}body-color-rgb: #{to-rgb($body-color-alt)};
+  --#{$prefix}body-bg-rgb: #{to-rgb($body-bg-alt)};
 
-  // root and body
+  // Root and body
 
-  --#{$variable-prefix}body-color: #{$body-color-alt};
-  --#{$variable-prefix}body-bg: #{$body-bg-alt};
+  --#{$prefix}body-color: #{$body-color-alt};
+  --#{$prefix}body-bg: #{$body-bg-alt};
 
-  // ?
+  // Fonts
 
-  --#{$variable-prefix}gradient: #{$gradient-alt};
+  --#{$prefix}gradient: #{$gradient-alt};
+
+  --#{$prefix}border-color: #{$border-color-alt};
+  --#{$prefix}border-color-translucent: #{$border-color-translucent-alt};
+
+  --#{$prefix}heading-color: #{$headings-color-alt};
+  --#{$prefix}link-color: #{$link-color-alt};
+  --#{$prefix}link-hover-color: #{$link-hover-color-alt};
+
+  --#{$prefix}code-color: #{$code-color-alt};
+
+  --#{$prefix}highlight-bg: #{$mark-bg-alt};
 }

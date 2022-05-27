@@ -2,7 +2,8 @@
 
 const pkg = require('../package.json');
 const bsd_ver = pkg.version;
-const bs_ver = pkg.dependencies.bootstrap.replace(/[^\d.-]/g, '');
+// const bs_ver = pkg.dependencies.bootstrap.replace(/[^\d.-]/g, '');
+const bs_ver = pkg.dependencies.bootstrap.replace(/[^\d.\-beta]/g, '');
 
 module.exports = {
   files: 'dist/css/*.css',

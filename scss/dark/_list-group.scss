@@ -1,35 +1,19 @@
-// Individual list items
+// Base class
 
-.list-group-item {
-  color: $list-group-color-alt;
-  background-color: $list-group-bg-alt;
-  border: $list-group-border-width solid $list-group-border-color-alt;
-
-  &.disabled,
-  &:disabled {
-    color: $list-group-disabled-color-alt;
-    background-color: $list-group-disabled-bg-alt;
-  }
-
-  // Include both here for `<a>`s and `<button>`s
-  &.active {
-    color: $list-group-active-color-alt;
-    background-color: $list-group-active-bg-alt;
-    border-color: $list-group-active-border-color-alt;
-  }
-}
-
-// Flush list items
-
-.list-group-flush {
-
-  > .list-group-item {
-    border-width: 0 0 $list-group-border-width;  // needed for nightshade variants
-
-    &:last-child {
-      border-bottom-width: 0;
-    }
-  }
+.list-group {
+  --#{$prefix}list-group-color: #{$list-group-color-alt};
+  --#{$prefix}list-group-bg: #{$list-group-bg-alt};
+  --#{$prefix}list-group-border-color: #{$list-group-border-color-alt};
+  --#{$prefix}list-group-action-color: #{$list-group-action-color-alt};
+  --#{$prefix}list-group-action-hover-color: #{$list-group-action-hover-color-alt};
+  --#{$prefix}list-group-action-hover-bg: #{$list-group-hover-bg-alt};
+  --#{$prefix}list-group-action-active-color: #{$list-group-action-active-color-alt};
+  --#{$prefix}list-group-action-active-bg: #{$list-group-action-active-bg-alt};
+  --#{$prefix}list-group-disabled-color: #{$list-group-disabled-color-alt};
+  --#{$prefix}list-group-disabled-bg: #{$list-group-disabled-bg-alt};
+  --#{$prefix}list-group-active-color: #{$list-group-active-color-alt};
+  --#{$prefix}list-group-active-bg: #{$list-group-active-bg-alt};
+  --#{$prefix}list-group-active-border-color: #{$list-group-active-border-color-alt};
 }
 
 // List group contextual variants

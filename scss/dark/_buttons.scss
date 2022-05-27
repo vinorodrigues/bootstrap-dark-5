@@ -1,41 +1,19 @@
+//
 // Base styles
+//
 
 .btn {
-  color: $body-color-alt;
-  background-color: transparent;
-  border: $btn-border-width solid transparent;
+  --#{$prefix}btn-color: #{$body-color-alt};
+  --#{$prefix}btn-bg: transparent;
+  --#{$prefix}btn-border-color: transparent;
+  --#{$prefix}btn-box-shadow: #{$btn-box-shadow-alt};
 
-  &:hover {
-    color: $body-color-alt;
-  }
-
-  .btn-check:focus + &,
-  &:focus {
-    box-shadow: $btn-focus-box-shadow-alt;
-  }
-
-  .btn-check:checked + &,
-  .btn-check:active + &,
-  &:active,
-  &.active,
-  &.show {
-    @include box-shadow($btn-active-box-shadow-alt);
-
-    &:focus {
-      @include box-shadow($btn-focus-box-shadow-alt, $btn-active-box-shadow-alt);
-    }
-  }
-
-  &:disabled,
-  &.disabled,
-  fieldset:disabled & {
-    opacity: $btn-disabled-opacity-alt;
-    @include box-shadow(none);
-  }
+  --#{$prefix}btn-focus-box-shadow: 0 0 0 #{$btn-focus-width} rgba(var(--#{$prefix}btn-focus-shadow-rgb-alt), .5);
 }
 
-
+//
 // Alternate buttons
+//
 
 @each $color, $value in $theme-colors-alt {
   .btn-#{$color} {
@@ -49,18 +27,19 @@
   }
 }
 
+//
 // Link buttons
+//
 
 // Make a button look and behave like a link
 .btn-link {
-  color: $btn-link-color-alt;
-
-  &:hover {
-    color: $btn-link-hover-color-alt;
-  }
-
-  &:disabled,
-  &.disabled {
-    color: $btn-link-disabled-color-alt;
-  }
+  --#{$prefix}btn-color: #{$btn-link-color-alt};
+  --#{$prefix}btn-bg: transparent;
+  --#{$prefix}btn-border-color: transparent;
+  --#{$prefix}btn-hover-color: #{$btn-link-hover-color-alt};
+  --#{$prefix}btn-hover-border-color: transparent;
+  --#{$prefix}btn-active-border-color: transparent;
+  --#{$prefix}btn-disabled-color: #{$btn-link-disabled-color-alt};
+  --#{$prefix}btn-disabled-border-color: transparent;
+  --#{$prefix}btn-box-shadow: none;
 }

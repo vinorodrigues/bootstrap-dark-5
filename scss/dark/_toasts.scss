@@ -1,17 +1,9 @@
 .toast {
-  color: $toast-color-alt;
-  background-color: $toast-background-color-alt;
-  border: $toast-border-width solid $toast-border-color-alt;
-  box-shadow: $toast-box-shadow-alt;
-
-  //// DO I NEED THIS?
-  // &.showing {
-  //   opacity: 0;
-  // }
-}
-
-.toast-header {
-  color: $toast-header-color-alt;
-  background-color: $toast-header-background-color-alt;
-  border-bottom: $toast-border-width solid $toast-header-border-color-alt;
+  --#{$prefix}toast-color: #{$toast-color-alt};
+  --#{$prefix}toast-bg: #{$toast-background-color-alt};
+  --#{$prefix}toast-border-color: #{$toast-border-color-alt};
+  --#{$prefix}toast-box-shadow: #{$toast-box-shadow-alt};
+  --#{$prefix}toast-header-color: #{$toast-header-color-alt};
+  --#{$prefix}toast-header-bg: #{$toast-header-background-color-alt};
+  --#{$prefix}toast-header-border-color: #{$toast-header-border-color-alt};
 }

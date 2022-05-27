@@ -1,9 +1,13 @@
+//
 // Base styles
+//
 
-// NOT NEEDED
-// .alert {
-//   border: $alert-border-width solid transparent;
-// }
+.alert {
+  --#{$prefix}alert-bg: transparent;
+  --#{$prefix}alert-color: inherit;
+  --#{$prefix}alert-border-color: transparent;
+  --#{$prefix}alert-border: #{$alert-border-width} solid var(--#{$prefix}alert-border-color-alt);
+}
 
 // Headings for larger alerts
 .alert-heading {
