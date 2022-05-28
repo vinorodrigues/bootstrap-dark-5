@@ -7,13 +7,13 @@
 
 -----------------------------------------------------------------------------
 
-> ### ![NOTE:](https://img.shields.io/badge/NOTE%3A-069)  &nbsp; A note on current state (Feb 2022):
+> ### ![NOTE:](https://img.shields.io/badge/NOTE%3A-069)  &nbsp; A note on current state *(Bootstrap 5.2 Betas)*:
 >
-> Development efforts back at Bootstrap 5's core repository are currently geared at converting all color to CSS Variables.  Obviously this greatly modifies the methodologies used in this POC and would in essence require a major re-write of the code.  The addition of CSS variables also brings in some additional complexity in some of the variants *(this project shows 6 methods of attaining dark mode with Bootstrap 5)* - specifically the `-nightshade` and `-backbox` variants have major issues in accomodating for CSS variables. *(Not impossible, but complex nevertheless.)*
+> Development efforts back at Bootstrap 5's core repository are currently geared at converting all color to CSS Variables.  Obviously this greatly modifies the methodologies used in this POC and would in essence require a major re-write of the code.  The addition of CSS variables also brings in some additional complexity in some of the variants *(this project shows 6 methods of attaining dark mode with Bootstrap 5)* - specifically the `-nightshade` and `-backbox` variants have major issues in accommodating for CSS variables. *(Not impossible, but complex nevertheless.)*
 >
-> As such - I will not be updating this project *(thus it remains tied to the v5.1.3 release)* until such time as it becomes clear in what direction Mark Otto et.al. are gearing their project towards.  The intent is clear - with CSS variables *(for the color elements)* - theming is much simpler.  Dark Mode capability, in essence a dual theme driven by browser/OS preference, remains to be seen.
->  
-> In the meantime, any CSS Variable conversion pulls to the core repo will be documented as a "to do" via the [issues page](https://github.com/vinorodrigues/bootstrap-dark-5/issues) of this project.
+> As such - I will not be updating this project's `main` branch *(thus it remains tied to the v5.1.3 release)* until such time as it becomes clear in what direction Mark Otto et.al. are gearing their project towards.  The intent is clear - with CSS variables *(for the color elements)* - theming is much simpler.  Dark Mode capability, in essence a dual theme driven by browser/OS preference, remains to be seen.
+>
+> &#9888; In the meantime, any work aligning to BS curent core repo *(a.k.a. **5.2 Beta**)* will moved over to the [`dev/v1.2.0`](https://github.com/vinorodrigues/bootstrap-dark-5/tree/dev/v1.2.0) branch of this project.
 
 -----------------------------------------------------------------------------
 
