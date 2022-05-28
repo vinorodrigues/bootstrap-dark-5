@@ -549,4 +549,49 @@ progress {
   display: none !important;
 }
 
+@media (prefers-color-scheme: dark) {
+  body::-moz-selection {
+    color: #cfcfcf;
+    background: rgba(23, 162, 184, 0.5);
+  }
+  body::selection {
+    color: #cfcfcf;
+    background: rgba(23, 162, 184, 0.5);
+  }
+
+  /* stylelint-disable selector-no-qualifying-type */
+  input[type=date]::-webkit-calendar-picker-indicator,
+input[type=datetime-local]::-webkit-calendar-picker-indicator,
+input[type=month]::-webkit-calendar-picker-indicator,
+input[type=time]::-webkit-calendar-picker-indicator,
+input[type=week]::-webkit-calendar-picker-indicator {
+    opacity: 0.6;
+  }
+  input[type=date]::-webkit-calendar-picker-indicator:hover,
+input[type=datetime-local]::-webkit-calendar-picker-indicator:hover,
+input[type=month]::-webkit-calendar-picker-indicator:hover,
+input[type=time]::-webkit-calendar-picker-indicator:hover,
+input[type=week]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+  }
+
+  /* stylelint-enable */
+  hr {
+    opacity: 0.25;
+  }
+
+  pre {
+    color: #e1e1e1;
+  }
+
+  kbd {
+    color: #e1e1e1;
+    background-color: #3b3b3b;
+  }
+
+  caption {
+    color: rgba(225, 225, 225, 0.75);
+  }
+}
+
 /*# sourceMappingURL=bootstrap-reboot-dark.css.map */
