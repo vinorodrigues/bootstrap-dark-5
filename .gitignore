@@ -1,6 +1,6 @@
 node_modules
 .cache
-~*
+__*
 _/*
 !scss/**/_*
 #package-lock.json
