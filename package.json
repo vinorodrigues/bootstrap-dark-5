@@ -16,6 +16,7 @@
     "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css --load-path=node_modules/bootstrap/scss scss/:dist/css/",
     "css-prefix": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.rtl*.css\" \"!dist/css/*.min.css\"",
     "css-minify": "npm-run-all --parallel css-minify-*",
+    "css-minify-reboot": "cleancss -O1 --format breakWith=lf --output dist/css/bootstrap-reboot-dark.min.css dist/css/bootstrap-reboot-dark.css",
     "css-minify-main": "cleancss -O1 --format breakWith=lf --output dist/css/bootstrap.min.css dist/css/bootstrap.css",
     "DISABLED___css-minify-night": "cleancss -O1 --format breakWith=lf --output dist/css/bootstrap-night.min.css dist/css/bootstrap-night.css",
     "DISABLED___css-minify-nightfall": "cleancss -O1 --format breakWith=lf --output dist/css/bootstrap-nightfall.min.css dist/css/bootstrap-nightfall.css",
