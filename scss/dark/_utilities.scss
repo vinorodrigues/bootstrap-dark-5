@@ -4,6 +4,7 @@ $utilities-alt: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $utilities-alt: map-merge(
   (
+    // ----------
     "shadow": (
       property: box-shadow,
       class: shadow,
@@ -13,7 +14,7 @@ $utilities-alt: map-merge(
         lg: $box-shadow-lg-alt,
       )
     ),
-
+    // ----------
     // *** Don't need this, covered by CSS vars ***
     // "border-color": (
     //   property: border-color,
@@ -23,14 +24,14 @@ $utilities-alt: map-merge(
     //   ),
     //   values: $utilities-border-colors-alt
     // ),
-
+    // ----------
     // *** Don't need this, covered by CSS vars ***
     // "gradient": (
     //   property: background-image,
     //   class: bg,
     //   values: (gradient: var(--#{$variable-prefix}gradient))
     // )
-
+    // ----------
     "color": (
       property: color,
       class: text,
@@ -43,7 +44,7 @@ $utilities-alt: map-merge(
         "black-50": rgba($black-alt, .5)
       )
     ),
-
+    // ----------
     // *** Don't need this, covered by CSS vars ***
     // "background-color": (
     //   property: background-color,

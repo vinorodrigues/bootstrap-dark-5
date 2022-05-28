@@ -4,3 +4,22 @@ body::selection {
   color: $selection-color-alt;
   background: $selection-bg-alt;
 }
+
+// from Pamella Gaiguer: https://github.com/vinorodrigues/bootstrap-dark-5/issues/69
+
+/* stylelint-disable selector-no-qualifying-type */
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"] {
+
+  &::-webkit-calendar-picker-indicator {
+    opacity: .6;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+/* stylelint-enable */

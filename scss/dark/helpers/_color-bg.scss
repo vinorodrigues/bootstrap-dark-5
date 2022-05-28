@@ -2,7 +2,9 @@
 @each $color, $value in $theme-colors-alt {
   $color-rgb: to-rgb($value);
   .text-bg-#{$color} {
+    /* stylelint-disable-next-line declaration-no-important */
     color: color-contrast($value) !important;
+    /* stylelint-disable-next-line function-name-case, declaration-no-important */
     background-color: RGBA($color-rgb, var(--#{$prefix}bg-opacity, 1)) !important;
   }
 }

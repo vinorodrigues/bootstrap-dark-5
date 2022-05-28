@@ -24,3 +24,7 @@
 }
 
 @import "reboot";
+@include color-scheme-alt(alternative-color-scheme($default-color-scheme)) {
+  @import "dark/dark";
+  @import "dark/reboot";
+}

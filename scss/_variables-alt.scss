@@ -369,14 +369,12 @@ $component-active-bg-alt:         $primary-alt !default;
 
 $headings-color-alt:              null !default;
 
-// $text-muted-alt:                  $gray-400-alt !default;  // ***DELETE***
-$text-muted-alt:                  rgba(var(--#{$prefix}body-color-rgb), .75) !default;
+$text-muted-alt:                  rgba($body-color-rgb, .75) !default;
 
 $blockquote-footer-color-alt:     $gray-600-alt !default;
 
-// $hr-color-alt:                    null !default;  // Deprecated in v5.2.0
-// $hr-bg-color-alt:                 currentcolor !default;
-// $hr-border-color-alt:             null !default;  // Allows for inherited colors
+$hr-color-alt:                    null !default;  // Deprecated in v5.2.0
+$hr-border-color-alt:             null !default;  // Allows for inherited colors
 $hr-opacity-alt:                  .25 !default;
 
 $mark-bg-alt:                     rgba($yellow-alt, .5) !default;
@@ -584,7 +582,7 @@ $nav-tabs-link-active-bg-alt:           $body-bg-alt !default;
 $nav-tabs-link-active-border-color-alt: $gray-700-alt $gray-700-alt $nav-tabs-link-active-bg-alt !default;
 
 $nav-pills-link-active-color-alt:       $component-active-color-alt !default;
-$nav-pills-link-active-bg-alt:          $component-active-bg-alt !default;
+// $nav-pills-link-active-bg-alt:          $component-active-bg-alt !default;
 
 
 // Navbar
@@ -655,7 +653,7 @@ $pagination-border-color-alt:           $gray-700-alt !default;
 $pagination-focus-color-alt:            $link-hover-color-alt !default;
 $pagination-focus-bg-alt:               $gray-800-alt !default;
 $pagination-focus-box-shadow-alt:       $input-btn-focus-box-shadow-alt !default;
-$pagination-focus-outline-alt:          0 !default;  // ???
+// $pagination-focus-outline-alt:          0 !default;  // ???
 
 $pagination-hover-color-alt:            $link-hover-color-alt !default;
 $pagination-hover-bg-alt:               $gray-700-alt !default;
@@ -684,7 +682,7 @@ $card-border-color-alt: rgba($white-alt, .125) !default;
 $card-cap-bg-alt:       rgba($white-alt, .03) !default;
 $card-cap-color-alt:    null !default;
 $card-color-alt:        null !default;
-$card-box-shadow-alt:   null !default;
+// $card-box-shadow-alt:   null !default;
 $card-bg-alt:           $gray-900-alt !default;
 
 
@@ -765,7 +763,7 @@ $modal-content-color-alt:               null !default;
 $modal-content-bg-alt:                  mix($gray-800-alt, $gray-900-alt, 50%) !default;
 $modal-content-border-color-alt:        rgba($white-alt, .2) !default;
 $modal-content-box-shadow-xs-alt:       $box-shadow-sm-alt !default;
-$modal-content-box-shadow-sm-up-alt:    $box-shadow-alt !default;
+// $modal-content-box-shadow-sm-up-alt:    $box-shadow-alt !default;
 
 $modal-backdrop-bg-alt:                 $black-alt !default;
 $modal-backdrop-opacity-alt:            .85 !default;
