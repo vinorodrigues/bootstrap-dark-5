@@ -7,7 +7,7 @@ body::selection {
 
 // from Pamella Gaiguer: https://github.com/vinorodrigues/bootstrap-dark-5/issues/69
 
-/* stylelint-disable selector-no-qualifying-type */
+// stylelint-disable selector-no-qualifying-type
 input[type="date"],
 input[type="datetime-local"],
 input[type="month"],
@@ -22,4 +22,4 @@ input[type="week"] {
     }
   }
 }
-/* stylelint-enable */
+// stylelint-enable

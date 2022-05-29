@@ -12,7 +12,6 @@
 
 // Configuration
 @import "functions";
-@import "dark/functions";
 @import "variables";  // defaults are here
 @import "variables-alt";  // dark color set is here
 @import "maps";
@@ -28,6 +27,7 @@
 @include color-scheme-alt(alternative-color-scheme($default-color-scheme)) {
   @import "dark/root";
 }
+
 @import "reboot";
 @import "type";
 @import "images";
