@@ -12047,7 +12047,6 @@ textarea.form-control-lg {
     background: rgba(23, 162, 184, 0.5);
   }
 
-  /* stylelint-disable selector-no-qualifying-type */
   input[type=date]::-webkit-calendar-picker-indicator,
 input[type=datetime-local]::-webkit-calendar-picker-indicator,
 input[type=month]::-webkit-calendar-picker-indicator,
@@ -12063,7 +12062,6 @@ input[type=week]::-webkit-calendar-picker-indicator:hover {
     opacity: 1;
   }
 
-  /* stylelint-enable */
   hr {
     opacity: 0.25;
   }
@@ -13237,17 +13235,6 @@ input[type=week]::-webkit-calendar-picker-indicator:hover {
     opacity: 0.5;
   }
 
-  @-webkit-keyframes placeholder-glow {
-    50% {
-      opacity: 0.2;
-    }
-  }
-
-  @keyframes placeholder-glow {
-    50% {
-      opacity: 0.2;
-    }
-  }
   .placeholder-wave {
     -webkit-mask-image: linear-gradient(130deg, #fafafa 55%, rgba(255, 255, 255, 0.8) 75%, #fafafa 95%);
     mask-image: linear-gradient(130deg, #fafafa 55%, rgba(255, 255, 255, 0.8) 75%, #fafafa 95%);

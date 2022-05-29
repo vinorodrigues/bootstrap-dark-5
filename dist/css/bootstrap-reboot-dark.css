@@ -559,7 +559,6 @@ progress {
     background: rgba(23, 162, 184, 0.5);
   }
 
-  /* stylelint-disable selector-no-qualifying-type */
   input[type=date]::-webkit-calendar-picker-indicator,
 input[type=datetime-local]::-webkit-calendar-picker-indicator,
 input[type=month]::-webkit-calendar-picker-indicator,
@@ -575,7 +574,6 @@ input[type=week]::-webkit-calendar-picker-indicator:hover {
     opacity: 1;
   }
 
-  /* stylelint-enable */
   hr {
     opacity: 0.25;
   }
