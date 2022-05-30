@@ -11,17 +11,19 @@
 >
 > Development efforts back at Bootstrap 5's core repository are currently geared at converting all color to CSS variables.
 > Obviously, this greatly modifies the methodologies used in this POC and would in essence require a major re-write of the code.
-> The addition of CSS variables also brings in some additional complexity in some of the variants *(this project shows 6 methods of attaining dark mode with Bootstrap 5)* - specifically the '***-nightshade***' and '***-backbox***' variants have major issues in accommodating for CSS variables. Specifically around the `:root` CSS vars, as one cannot `body.dark :root{ }` *('**-nightshade**')*, nor `[data-bs-color-scheme="dark"] :root {}` *('**-backbox**')*, or even for that matter core's own `[data-theme="dark"]` *(sounding a lot like '**-backbox**')*.
-> In essance the fix for this is to declare 2 sets of vars in the `:root` ... i.e. `--bs-color-bg: ..` and `--bs-color-bg-dark: ..`, and then in the remaining CSS code in the switch over ... thus negating the need for CSS vars in the first place as you'd just be duplicating the `background-color: var(..)` each time it's used *(or needs to switch mode)* and making for a much larger CSS file.
+> The addition of CSS variables also brings in some additional complexity in some of the variants *(this project shows 6 methods of attaining dark mode with Bootstrap 5)* - specifically the '***-nightshade***' and '***-blackbox***' variants have major issues in accommodating for CSS variables. Specifically around the `:root` CSS vars, as one cannot `body.dark :root{ }` *('**-nightshade**')*, nor `[data-bs-color-scheme="dark"] :root {}` *('**-blackbox**')*, or even for that matter core's own `[data-theme="dark"]` *(sounding a lot like '**-blackbox**')*.
+> In essance the fix for this is to declare 2 sets of vars in the `:root` ... i.e. `--bs-color-bg: ..` and `--bs-color-bg-dark: ..`, and then in the remaining SCSS, code in the switch over ... thus negating the need for CSS vars in the first place as you'd just be duplicating the `background-color: var(..)` each time it's used *(or needs to switch mode)* and making for a much larger CSS file.
 >
 > Other issues in Beta pertain to inconsistent use of CSS vars in the `_variables.scss` file, with some SCSS variables *(`$xxx`)* used as constants in some cases with the underlying components converting that to CSS vars, and other `_variables.scss` variables used as `var(--bs-*)` declarations, and the underlying components not converting to CSS vars.  *(This has been reported as an issue; [bootstrap#36458](https://github.com/twbs/bootstrap/issues/36458).)*
 >
-> Yet more issues in the Beta are that not all components have been converted to CSS vars, the largest of these is all the form components - this adding more inconsistencies to the core.  *(This also reported; [bootstrap#36454](https://github.com/twbs/bootstrap/issues/36454).)*
+> Yet more issues in the Beta are that not all components have been converted to CSS vars *(yet?)*, the largest of these is all the form components - this adding more inconsistencies to the core.  *(This also reported; [bootstrap#36454](https://github.com/twbs/bootstrap/issues/36454).)*
 > Obviously, this makes **this** effort hyper-complex in that I need to account for several discrepancies and each component SCSS file is looking to become a spaghetti bowl of if-else's and switching variables.  Not something I'm keen to do.
 >
 > As such - I will not be updating this project's `main` branch *(thus it remains tied to the v5.1.3 release)* until such time as it becomes clear in what direction Mark Otto et.al. are gearing their project towards.  The intent is clear - with CSS variables *(for the color elements)* - theming is much simpler.  Dark Mode capability, in essence a dual theme driven by browser/OS preference, remains to be seen.
 >
-> &#9888; In the meantime, any work aligning to BS current core repo *(a.k.a. **5.2 Beta**)* will moved over to the [`dev/v1.2.0`](https://github.com/vinorodrigues/bootstrap-dark-5/tree/dev/v1.2.0) branch of this project.  **Note** that I will attempt to align `bootstrap-dark` variant only.
+> &#9888; In the meantime, any work aligning to BS current core repo *(a.k.a. **5.2 Beta**)* will moved over to the [`dev/v1.2.0`](https://github.com/vinorodrigues/bootstrap-dark-5/tree/dev/v1.2.0) branch of this project.  **Note** that I will attempt to align '**bootstrap-dark**' variant only.
+>
+> And now back to the regular programming...
 
 -----------------------------------------------------------------------------
 
