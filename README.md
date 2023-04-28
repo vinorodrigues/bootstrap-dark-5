@@ -7,29 +7,13 @@
 
 -----------------------------------------------------------------------------
 
-> ### ![NOTE:](https://img.shields.io/badge/NOTE%3A-069)  &nbsp; A note on current state *(Bootstrap 5.2 Betas)*:
+> ### ![NOTE:](https://img.shields.io/badge/NOTE%3A-069)  &nbsp; &#9888; An important note on status of this project &#9888;:
 >
-> Development efforts back at Bootstrap 5's core repository are currently geared at converting all color to CSS variables.
-> Obviously, this greatly modifies the methodologies used in this POC and would in essence require a major re-write of the code.
-> The addition of CSS variables also brings in some additional complexity in some of the variants *(this project shows 6 methods of attaining dark mode with Bootstrap 5)* - specifically the '***-nightshade***' and '***-blackbox***' variants have major issues in accommodating for CSS variables. Specifically around the `:root` CSS vars, as one cannot `body.dark :root{ }` *('**-nightshade**')*, nor `[data-bs-color-scheme="dark"] :root {}` *('**-blackbox**')*, or even for that matter core's own `[data-theme="dark"]` *(sounding a lot like '**-blackbox**')*.
-> In essance the fix for this is to declare 2 sets of vars in the `:root` ... i.e. `--bs-color-bg: ..` and `--bs-color-bg-dark: ..`, and then in the remaining SCSS, code in the switch over ... thus negating the need for CSS vars in the first place as you'd just be duplicating the `background-color: var(..)` each time it's used *(or needs to switch mode)* and making for a much larger CSS file.
+> Development efforts back at Bootstrap 5's core repository have reached **v5.3** - that now includes "color modes" and within that an implementation of dark mode.  See:
 >
-> Other issues in Beta pertain to inconsistent use of CSS vars in the `_variables.scss` file, with some SCSS variables *(`$xxx`)* used as constants in some cases with the underlying components converting that to CSS vars, and other `_variables.scss` variables used as `var(--bs-*)` declarations, and the underlying components not converting to CSS vars.  *(This has been reported as an issue; [bootstrap#36458](https://github.com/twbs/bootstrap/issues/36458).)*
+> https://getbootstrap.com/docs/5.3/customize/color-modes/
 >
-> Yet more issues in the Beta are that not all components have been converted to CSS vars *(yet?)*, the largest of these is all the form components - this adding more inconsistencies to the core.  *(This also reported; [bootstrap#36454](https://github.com/twbs/bootstrap/issues/36454) ... and subsequently closed.)*
-> Obviously, this makes **this** effort hyper-complex in that I need to account for several discrepancies and each component SCSS file is looking to become a spaghetti bowl of if-else's and switching variables.  Not something I'm keen to do.
->
-> As such - I will not be updating this project's `main` branch *(thus it remains tied to the v5.1.3 release)* until such time as it becomes clear in what direction Mark Otto et.al. are gearing their project towards.  The intent is clear - with CSS variables *(for the color elements)* - theming is much simpler.  Dark Mode capability, in essence a dual theme driven by browser/OS preference, remains to be seen.
->
-> &#9888; In the meantime, any work aligning to BS current core repo *(a.k.a. **5.2 Beta**)* will moved over to the [`dev/v1.2.0`](https://github.com/vinorodrigues/bootstrap-dark-5/tree/dev/v1.2.0) branch of this project.  **Note** that I will attempt to align '**bootstrap-dark**' variant only.
->
-> *What's really disapointing is that when I started this -- [Bootstap-Dark](st@m.vinorodrigues.com) was first published on the 14<sup>th</sup> May 2020 -- it was with the hopes that Dark Mode could be incorporated into BS.  If not mine, then at least a functional variant.  And yet ... more that 2 years later, still we have an incoherent non-starter.*
->
-> *I'm tempted to just archive this and walk away - I'm not a dev after all.*
->
-> · · ·
->
-> And now back to the regular programming...
+> This, thus, makes this project redundant and will be retired, leaving it's code and repository here for the benefit of education.
 
 -----------------------------------------------------------------------------
 
