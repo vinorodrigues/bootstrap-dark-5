@@ -13,7 +13,7 @@
 >
 > https://getbootstrap.com/docs/5.3/customize/color-modes/
 >
-> This, thus, makes this project redundant and will be retired, leaving it's code and repository here for the benefit of education.
+> This, thus, makes this project redundant and will be retired, leaving its code and repository here for the benefit of education.
 
 -----------------------------------------------------------------------------
 
